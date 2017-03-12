@@ -6,7 +6,7 @@ $footer-margin: $grid * 5;
 
 #footer {
 
-  margin-top: $grid * 2;
+  margin-top: $grid * 8;
   
   color: rgba(white, 0.7);
 
@@ -21,6 +21,15 @@ $footer-margin: $grid * 5;
 
     @media (max-width: 600px) {
       border-top: none;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: white;
+      }
+      
     }
     
     .copyright {
@@ -40,6 +49,10 @@ $footer-margin: $grid * 5;
       
     }
     
+  }
+  
+  @media (max-width: 600px) {
+    margin-top: $grid * 2;
   }
 
 }

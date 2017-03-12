@@ -61,6 +61,9 @@
   code {
     font-family: 'Roboto Mono', monospace;
 
+    font-size: 12px;
+    font-weight: bold;
+
     border-radius: 2px;
     background-color: #333;
     color: white;
@@ -81,6 +84,9 @@
       background-color: transparent;
       padding: 0;
       margin: 0;
+      
+      font-size: inherit;
+      font-weight: normal;
     }
     
   }
@@ -94,6 +100,14 @@
       padding-left: 1ex;
     }
     
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+  
+  :last-child {
+    margin-bottom: 0;
   }
   
 }

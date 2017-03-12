@@ -93,9 +93,10 @@
           list-style-type: none;
           display: block; }
           #header .container nav ul li a {
-            border-width: 0;
+            border-width: 0px;
             border-style: solid;
             border-color: transparent;
+            transition: border-color 1s ease !important, border-width 1s ease !important;
             display: block;
             width: 100%;
             height: 48px;
@@ -183,7 +184,7 @@ body.mini-header #header {
           border-top: 2px solid #444; } }
 
 #header nav ul li a:hover {
-  border-bottom-width: 2px; }
+  border-width: 0 0 2px 0; }
   @media (max-width: 600px) {
     #header nav ul li a:hover {
       border-bottom-width: 0; } }
@@ -199,7 +200,7 @@ body[data-section=app] #header nav ul li.link-apps a,
 body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
 body[data-section=project] #header nav ul li.link-projects a {
-  border-bottom-width: 4px; }
+  border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
     body[data-title=Apps] #header nav ul li.link-apps a,
     body[data-title=Infographics] #header nav ul li.link-infographics a,
@@ -210,8 +211,7 @@ body[data-section=project] #header nav ul li.link-projects a {
     body[data-section=infographic] #header nav ul li.link-infographics a,
     body[data-section=post] #header nav ul li.link-posts a,
     body[data-section=project] #header nav ul li.link-projects a {
-      border-bottom-width: 0px;
-      border-left-width: 8px; } }
+      border-width: 0 0 0 8px; } }
   body[data-title=Apps] #header nav ul li.link-apps a span,
   body[data-title=Infographics] #header nav ul li.link-infographics a span,
   body[data-title=Posts] #header nav ul li.link-posts a span,
@@ -288,16 +288,24 @@ main.article article .headline {
 main.article article .body {
   background-color: white; }
 
+main.article article .app-info,
+main.article article .project-info,
 main.article article .content,
 main.article article .license {
-  padding: 48px 32px;
+  padding: 32px 32px;
   line-height: 1.8em; }
+  main.article article .app-info p + p,
+  main.article article .project-info p + p,
   main.article article .content p + p,
   main.article article .license p + p {
     margin-top: 0.5em; }
+  main.article article .app-info a,
+  main.article article .project-info a,
   main.article article .content a,
   main.article article .license a {
     color: #dd6644; }
+  main.article article .app-info hr:after,
+  main.article article .project-info hr:after,
   main.article article .content hr:after,
   main.article article .license hr:after {
     content: "***";
@@ -305,6 +313,8 @@ main.article article .license {
     text-align: center;
     margin: 16px 0;
     letter-spacing: 2em; }
+  main.article article .app-info blockquote,
+  main.article article .project-info blockquote,
   main.article article .content blockquote,
   main.article article .license blockquote {
     border-left: 4px solid rgba(0, 0, 0, 0.3);
@@ -312,7 +322,19 @@ main.article article .license {
     margin-right: 0;
     padding: 4px 8px;
     padding-right: 0; }
-  main.article article .content h1, main.article article .content h2, main.article article .content h3, main.article article .content h4, main.article article .content h5, main.article article .content h6,
+  main.article article .app-info h1, main.article article .app-info h2, main.article article .app-info h3, main.article article .app-info h4, main.article article .app-info h5, main.article article .app-info h6,
+  main.article article .project-info h1,
+  main.article article .project-info h2,
+  main.article article .project-info h3,
+  main.article article .project-info h4,
+  main.article article .project-info h5,
+  main.article article .project-info h6,
+  main.article article .content h1,
+  main.article article .content h2,
+  main.article article .content h3,
+  main.article article .content h4,
+  main.article article .content h5,
+  main.article article .content h6,
   main.article article .license h1,
   main.article article .license h2,
   main.article article .license h3,
@@ -321,29 +343,43 @@ main.article article .license {
   main.article article .license h6 {
     margin-top: 1em;
     margin-bottom: 1ex; }
+  main.article article .app-info h1,
+  main.article article .project-info h1,
   main.article article .content h1,
   main.article article .license h1 {
     font-size: 24px;
     font-weight: bold; }
+  main.article article .app-info h2,
+  main.article article .project-info h2,
   main.article article .content h2,
   main.article article .license h2 {
     font-size: 20px; }
+  main.article article .app-info h3,
+  main.article article .project-info h3,
   main.article article .content h3,
   main.article article .license h3 {
     font-size: 16px;
     font-weight: bold; }
+  main.article article .app-info h4,
+  main.article article .project-info h4,
   main.article article .content h4,
   main.article article .license h4 {
     font-size: 12.8px;
     font-weight: bold; }
+  main.article article .app-info code,
+  main.article article .project-info code,
   main.article article .content code,
   main.article article .license code {
     font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    font-weight: bold;
     border-radius: 2px;
     background-color: #333;
     color: white;
     padding: 1px 3px;
     margin: 0 2px; }
+  main.article article .app-info pre,
+  main.article article .project-info pre,
   main.article article .content pre,
   main.article article .license pre {
     border-radius: 2px;
@@ -351,28 +387,85 @@ main.article article .license {
     margin: 8px 0;
     padding: 8px;
     color: white; }
+    main.article article .app-info pre code,
+    main.article article .project-info pre code,
     main.article article .content pre code,
     main.article article .license pre code {
       border: none;
       background-color: transparent;
       padding: 0;
-      margin: 0; }
-  main.article article .content ul, main.article article .content ol,
+      margin: 0;
+      font-size: inherit;
+      font-weight: normal; }
+  main.article article .app-info ul, main.article article .app-info ol,
+  main.article article .project-info ul,
+  main.article article .project-info ol,
+  main.article article .content ul,
+  main.article article .content ol,
   main.article article .license ul,
   main.article article .license ol {
     margin: 16px 8px;
     padding-left: 16px; }
-    main.article article .content ul li, main.article article .content ol li,
+    main.article article .app-info ul li, main.article article .app-info ol li,
+    main.article article .project-info ul li,
+    main.article article .project-info ol li,
+    main.article article .content ul li,
+    main.article article .content ol li,
     main.article article .license ul li,
     main.article article .license ol li {
       padding-left: 1ex; }
+  main.article article .app-info :first-child,
+  main.article article .project-info :first-child,
+  main.article article .content :first-child,
+  main.article article .license :first-child {
+    margin-top: 0; }
+  main.article article .app-info :last-child,
+  main.article article .project-info :last-child,
+  main.article article .content :last-child,
+  main.article article .license :last-child {
+    margin-bottom: 0; }
   @media (max-width: 600px) {
+    main.article article .app-info,
+    main.article article .project-info,
     main.article article .content,
     main.article article .license {
       padding: 16px 16px !important; } }
+  main.article article .app-info p:empty,
+  main.article article .project-info p:empty,
   main.article article .content p:empty,
   main.article article .license p:empty {
     display: none; }
+
+main.article article .app-info,
+main.article article .project-info {
+  padding: 16px 16px;
+  padding-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  align-items: center; }
+  main.article article .app-info a,
+  main.article article .project-info a {
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    padding: 8px 16px;
+    transition: background-color 0.15s ease; }
+    main.article article .app-info a:hover,
+    main.article article .project-info a:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+
+main.article article .app-info a {
+  margin: 0 16px; }
+
+main.article article .app-info a.badge-button {
+  margin: -16px;
+  padding: 0;
+  height: 72px; }
+  main.article article .app-info a.badge-button .badge {
+    height: 72px; }
+  main.article article .app-info a.badge-button:hover {
+    background-color: transparent; }
 
 main.article article .license {
   padding: 16px 16px;
@@ -428,15 +521,16 @@ main.article.static .meta {
   display: none; }
 
 article .meta {
-  background: white;
+  background-color: #f4f4f4;
   display: flex;
-  justify-content: stretch; }
+  justify-content: space-between; }
   article .meta ul {
     background-color: #f4f4f4;
-    flex: 1;
     display: flex;
+    align-items: center;
     padding: 0 16px; }
     article .meta ul.tags {
+      margin-left: auto;
       justify-content: flex-end;
       font-family: 'Roboto Mono', monospace; }
       article .meta ul.tags li {
@@ -445,28 +539,36 @@ article .meta {
       color: rgba(0, 0, 0, 0.4);
       font-weight: bold;
       text-transform: uppercase;
-      display: inline-block; }
+      display: block; }
       article .meta ul li a {
         display: block;
-        padding: 16px 16px;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 16px;
         transition: background-color 0.15s ease; }
         article .meta ul li a:hover {
           background-color: rgba(0, 0, 0, 0.05); }
-  @media (max-width: 800px) {
-    article .meta ul {
-      flex-direction: column;
-      flex: 1;
-      padding: 0; }
-    article .meta ul + ul {
-      margin-left: 4px; } }
+  @media (max-width: 600px) {
+    article .meta {
+      background: white; }
+      article .meta ul {
+        flex-direction: column;
+        flex: 1;
+        padding: 0;
+        align-items: stretch; }
+      article .meta ul + ul {
+        margin-left: 4px !important; }
+      article .meta li a {
+        height: 40px !important;
+        line-height: 40px !important; } }
   @media (max-width: 400px) {
     article .meta {
       flex-direction: column; }
+      article .meta ul.tags {
+        margin-left: 0; }
       article .meta ul + ul {
         margin-left: 0;
-        margin-top: 4px; }
-      article .meta li a {
-        padding: 8px 16px !important; } }
+        margin-top: 4px; } }
 
 article a:hover {
   text-decoration: underline; }
@@ -520,16 +622,35 @@ article.section-term .headline .publish-time {
         font-weight: bold;
         text-transform: uppercase;
         padding: 12px 32px; }
-      @media (max-width: 820px) {
+      @media (max-width: 1080px) {
         .article-list article .headline .section {
-          margin-left: 8px; } }
+          margin-left: 16px; } }
     .article-list article .headline .title {
-      color: #777;
-      font-size: 20px;
-      font-weight: bold;
-      padding: 12px 0;
-      margin-left: 32px;
-      text-decoration: underline; }
+      margin-left: 32px; }
+      .article-list article .headline .title a {
+        color: #777;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 12px 0;
+        text-decoration: underline; }
+      .article-list article .headline .title .app-os,
+      .article-list article .headline .title .project-link {
+        margin: 0 16px;
+        width: 48px;
+        text-align: center;
+        transition: background-color 0.15s ease; }
+        .article-list article .headline .title .app-os img,
+        .article-list article .headline .title .project-link img {
+          margin-bottom: -4px;
+          opacity: 0.3;
+          width: 24px;
+          transition: opacity 0.15s ease; }
+        .article-list article .headline .title .app-os:hover,
+        .article-list article .headline .title .project-link:hover {
+          background-color: rgba(0, 0, 0, 0.07); }
+          .article-list article .headline .title .app-os:hover img,
+          .article-list article .headline .title .project-link:hover img {
+            opacity: 0.5; }
     .article-list article .headline .publish-time {
       font-style: italic;
       float: right;
@@ -593,6 +714,8 @@ article.section-term .headline .publish-time {
       font-weight: bold; }
     .article-list article .summary code {
       font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      font-weight: bold;
       border-radius: 2px;
       background-color: #333;
       color: white;
@@ -608,12 +731,18 @@ article.section-term .headline .publish-time {
         border: none;
         background-color: transparent;
         padding: 0;
-        margin: 0; }
+        margin: 0;
+        font-size: inherit;
+        font-weight: normal; }
     .article-list article .summary ul, .article-list article .summary ol {
       margin: 16px 8px;
       padding-left: 16px; }
       .article-list article .summary ul li, .article-list article .summary ol li {
         padding-left: 1ex; }
+    .article-list article .summary :first-child {
+      margin-top: 0; }
+    .article-list article .summary :last-child {
+      margin-bottom: 0; }
     @media (max-width: 600px) {
       .article-list article .summary {
         padding: 16px 16px !important; } }
@@ -767,9 +896,10 @@ main.list-project > .headline {
           list-style-type: none;
           display: block; }
           #header .container nav ul li a {
-            border-width: 0;
+            border-width: 0px;
             border-style: solid;
             border-color: transparent;
+            transition: border-color 1s ease !important, border-width 1s ease !important;
             display: block;
             width: 100%;
             height: 48px;
@@ -857,7 +987,7 @@ body.mini-header #header {
           border-top: 2px solid #444; } }
 
 #header nav ul li a:hover {
-  border-bottom-width: 2px; }
+  border-width: 0 0 2px 0; }
   @media (max-width: 600px) {
     #header nav ul li a:hover {
       border-bottom-width: 0; } }
@@ -873,7 +1003,7 @@ body[data-section=app] #header nav ul li.link-apps a,
 body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
 body[data-section=project] #header nav ul li.link-projects a {
-  border-bottom-width: 4px; }
+  border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
     body[data-title=Apps] #header nav ul li.link-apps a,
     body[data-title=Infographics] #header nav ul li.link-infographics a,
@@ -884,8 +1014,7 @@ body[data-section=project] #header nav ul li.link-projects a {
     body[data-section=infographic] #header nav ul li.link-infographics a,
     body[data-section=post] #header nav ul li.link-posts a,
     body[data-section=project] #header nav ul li.link-projects a {
-      border-bottom-width: 0px;
-      border-left-width: 8px; } }
+      border-width: 0 0 0 8px; } }
   body[data-title=Apps] #header nav ul li.link-apps a span,
   body[data-title=Infographics] #header nav ul li.link-infographics a span,
   body[data-title=Posts] #header nav ul li.link-posts a span,
@@ -914,7 +1043,7 @@ body[data-section=project] #header nav ul li.link-projects a {
   border-color: white; }
 
 #footer {
-  margin-top: 16px;
+  margin-top: 64px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px; }
   #footer > .container {
@@ -927,6 +1056,10 @@ body[data-section=project] #header nav ul li.link-projects a {
     @media (max-width: 600px) {
       #footer > .container {
         border-top: none; } }
+    #footer > .container a {
+      text-decoration: underline; }
+      #footer > .container a:hover {
+        color: white; }
     #footer > .container .copyright {
       float: right;
       font-weight: bold; }
@@ -937,6 +1070,9 @@ body[data-section=project] #header nav ul li.link-projects a {
           float: none;
           display: block;
           margin-top: 8px; } }
+  @media (max-width: 600px) {
+    #footer {
+      margin-top: 16px; } }
 
 #hero {
   margin-left: auto;

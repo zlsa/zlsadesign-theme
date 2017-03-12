@@ -1,17 +1,19 @@
 <article class="list-item app">
 
-  {{ partial "article-list-item-headline.html" . }}
+  {{ partial "article-list-item-headline-app.html" . }}
   
-  <section class="summary content">
-    {{ .Summary }}
-    
-    {{ if .Truncated }}
-    <span class="read-more">
-      <a href="{{ .RelPermalink }}">Continue reading</a>
-      <span class="reading-time">({{ .ReadingTime }} min)</span>
-    </span>
-    {{ end }}
-    
+  <section class="body">
+    <section class="summary">
+      {{ .Summary }}
+      
+      {{ if .Truncated }}
+      <span class="read-more">
+        <a href="{{ .RelPermalink }}">Continue reading</a>
+        <span class="reading-time">({{ .ReadingTime }} min)</span>
+      </span>
+      {{ end }}
+
+    </section>
   </section>
   
   {{ partial "article-meta.html" . }}

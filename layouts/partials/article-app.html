@@ -1,0 +1,33 @@
+<article class="single app">
+  
+  {{ partial "article-headline.html" . }}
+  
+  <section class="body">
+    
+    <section class="app-info">
+      
+      {{ if .Params.app.android.id }}
+      <a class="badge-button" href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Google Play Store link">
+        <img class="badge" src="/img/badge-google-play-app.png" alt="Get it on Google Play" />
+      </a>
+      {{ end }}
+
+      {{ if .Params.app.android.url }}
+      <a href="{{ .Params.app.android.url }}" title="Go to the app website">Get the app</a>
+      {{ end }}
+
+      {{ if .Params.app.android.code }}
+      <a href="{{ .Params.app.android.code }}" title="View the project source code">Source code (Android)</a>
+      {{ end }}
+
+    </section>
+    
+    <section class="content">
+      {{ .Content }}
+    </section>
+
+  </section>
+
+  {{ partial "article-meta.html" . }}
+  
+</article>

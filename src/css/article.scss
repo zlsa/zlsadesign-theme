@@ -89,9 +89,11 @@ main.article article {
     background-color: white;
   }
 
+  .app-info,
+  .project-info,
   .content,
   .license {
-    padding: $grid * 6 $grid * 4;
+    padding: $grid * 4 $grid * 4;
     
     @include text();
     
@@ -101,6 +103,59 @@ main.article article {
 
     p:empty {
       display: none;
+    }
+    
+  }
+
+  .app-info,
+  .project-info {
+    padding: $grid * 2 $grid * 2;
+    
+    padding-bottom: (($grid * 2) - 2px);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    border-bottom: 2px solid rgba(black, 0.1);
+
+    align-items: center;
+    
+    a {
+      font-weight: bold;
+      text-transform: uppercase;
+      
+      display: block;
+      padding: $grid $grid * 2;
+
+      transition: background-color $anim-fast ease;
+      
+      &:hover {
+        background-color: rgba(black, 0.05);
+      }
+      
+    }
+    
+  }
+
+  .app-info {
+
+    a {
+      margin: 0 $grid * 2;
+    }
+
+    a.badge-button {
+      margin: -$grid * 2;
+      padding: 0;
+      height: 72px;
+
+      .badge {
+        height: 72px;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+      
     }
     
   }
@@ -213,20 +268,21 @@ main.article.static {
 article {
   
   .meta {
-    background: white;
+    background-color: #f4f4f4;
     
     display: flex;
-    justify-content: stretch;
+    justify-content: space-between;
 
     ul {
       background-color: #f4f4f4;
 
-      flex: 1;
       display: flex;
+      align-items: center;
 
       padding: 0 $grid * 2;
 
       &.tags {
+        margin-left: auto;
         justify-content: flex-end;
 
         font-family: 'Roboto Mono', monospace;
@@ -240,12 +296,16 @@ article {
         font-weight: bold;
         text-transform: uppercase;
 
-        display: inline-block;
+        display: block;
 
         a {
           display: block;
-          padding: $grid * 2 $grid * 2;
 
+          height: $grid * 6;
+          line-height: $grid * 6;
+
+          padding: 0 $grid * 2;
+          
           transition: background-color $anim-fast ease;
           
           &:hover {
@@ -258,30 +318,38 @@ article {
       
     }
     
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
 
+      background: white;
+      
       ul {
         flex-direction: column;
         flex: 1;
         padding: 0;
+        align-items: stretch;
       }
       
       ul + ul {
-        margin-left: 4px;
+        margin-left: 4px !important;
+      }
+
+      li a {
+        height: $grid * 5 !important;
+        line-height: $grid * 5 !important;
       }
       
     }
 
     @media (max-width: 400px) {
       flex-direction: column;
+
+      ul.tags {
+        margin-left: 0;
+      }
       
       ul + ul {
         margin-left: 0;
         margin-top: 4px;
-      }
-
-      li a {
-        padding: $grid $grid * 2 !important;
       }
       
     }

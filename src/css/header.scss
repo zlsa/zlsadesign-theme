@@ -114,9 +114,11 @@ $header-expanded-height: $grid * 16;
           display: block;
           
           a {
-            border-width: 0;
+            border-width: 0px;
             border-style: solid;
             border-color: transparent;
+
+            transition: border-color 1s ease !important, border-width 1s ease !important;
             
             display: block;
             width: 100%;
@@ -297,7 +299,7 @@ body.mini-header #header {
 
 
 #header nav ul li a:hover {
-  border-bottom-width: 2px;
+  border-width: 0 0 2px 0;
 
   @media (max-width: 600px) {
     border-bottom-width: 0;
@@ -320,11 +322,10 @@ body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
 body[data-section=project] #header nav ul li.link-projects a {
   
-  border-bottom-width: 4px;
+  border-width: 0 0 4px 0;
 
   @media (max-width: 600px) {
-    border-bottom-width: 0px;
-    border-left-width: 8px;
+    border-width: 0 0 0 8px;
   }
 
   span {

@@ -1,0 +1,24 @@
+<article class="single project">
+  
+  {{ partial "article-headline.html" . }}
+  
+  <section class="body">
+    
+    <section class="project-info">
+      
+      <a href="{{ .Params.project.url }}" title="Go to project website">View project</a>
+
+      {{ if .Params.project.code }}
+      <a href="{{ .Params.project.code }}" title="View project source code">Source code</a>
+      {{ end }}
+    </section>
+    
+    <section class="content">
+      {{ .Content }}
+    </section>
+
+  </section>
+
+  {{ partial "article-meta.html" . }}
+  
+</article>
