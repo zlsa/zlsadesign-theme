@@ -1,0 +1,272 @@
+
+@import 'color';
+@import 'metrics';
+
+@import 'text';
+
+$headline-padding-vertical: $grid * 1.5;
+
+.article-list {
+
+  article {
+
+    background-color: white;
+
+    .headline {
+
+      padding-top: $grid;
+
+      a {
+        display: inline-block;
+      }
+
+      * {
+        display: inline-block;
+      }
+      
+      .section {
+        margin-left: -$grid;
+        
+        margin-right: -$grid * 2;
+
+        a {
+          background-color: $color-primary;
+          
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+
+          padding: $headline-padding-vertical $grid * 4;
+        }
+        
+        @media (max-width: 820px) {
+          margin-left: $grid;
+        }
+        
+      }
+
+      .title {
+        color: #777;
+        font-size: 20px;
+        font-weight: bold;
+        
+        padding: $headline-padding-vertical 0;
+        margin-left: $grid * 4;
+
+        text-decoration: underline;
+      }
+
+      .publish-time {
+        font-style: italic;
+        float: right;
+        color: $color-foreground-secondary;
+        padding: $headline-padding-vertical 0;
+        padding-right: $grid * 4;
+
+        &:hover {
+          text-decoration: none;
+        }
+        
+      }
+      
+      @media (max-width: 600px) {
+
+        padding-bottom: $grid * 4;
+        
+        .section, .title, .publish-time {
+          float: none;
+          display: block;
+          margin-left: $grid * 2;
+          margin-right: $grid * 2;
+
+          padding-top: 0;
+          padding-bottom: 0;
+
+          margin-top: 1ex;
+        }
+
+        .section {
+          margin-left: $grid * 2;
+          margin-right: $grid * 2;
+
+          a {
+            padding: $grid * 1.5 $grid * 2;
+          }
+        }
+
+        .publish-time {
+          padding: 0;
+        }
+
+      }
+      
+    }
+
+    .body {
+      clear: both;
+    }
+
+    .summary {
+      @include text();
+
+      padding: $grid * 2 $grid * 4;
+
+      @media (max-width: 600px) {
+        padding: $grid * 2 $grid * 2 !important;
+      }
+      
+      .read-more {
+        display: block;
+        color: $color-primary;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        margin-top: 1em;
+
+        .reading-time {
+          color: $color-foreground-secondary;
+          font-weight: normal;
+          text-transform: none;
+          margin-left: 1ex;
+        }
+        
+      }
+
+    }
+
+  }
+  
+  article + article {
+    margin-top: $grid * 2;
+  }
+
+}
+
+.next-prev {
+  display: flex;
+
+  justify-content: center;
+
+  margin: $grid * 2 0;
+
+  .pages {
+    
+    padding: 0 $grid * 2;
+    
+    .page {
+      display: inline-block;
+
+      a {
+        font-size: 12px;
+        border-radius: 100%;
+        
+        text-align: center;
+        
+        width: $grid * 4;
+        height: $grid * 4;
+        line-height: $grid * 4;
+        margin: $grid $grid * 0.5;
+        
+        padding: 0 0;
+      }
+
+      &.active {
+        
+        a {
+          font-size: 14px;
+          background-color: white;
+          color: $color-background;
+          
+          width: $grid * 5;
+          height: $grid * 5;
+          line-height: $grid * 5;
+          margin: $grid * 0.5 0;
+          
+        }
+        
+      }
+      
+    }
+    
+  }
+
+  a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: background-color $anim-fast ease;
+    
+    display: block;
+    
+    height: $grid * 6;
+    line-height: $grid * 6;
+    
+    padding: 0 $grid * 4;
+
+    &:hover {
+      background-color: rgba(black, 0.2);
+    }
+
+    &.hidden {
+      pointer-events: none;
+      opacity: 0.2;
+    }
+    
+  }
+  
+}
+
+main.list-app .section.section-app,
+main.list-infographic .section.section-infographic,
+main.list-project .section.section-projects,
+main.list-post .section.section-post {
+  //display: none;
+}
+
+main.list-app > .headline,
+main.list-infographic > .headline,
+main.list-post > .headline,
+main.list-project > .headline {
+  display: none !important;
+}
+  
+.article-list article.infographic {
+
+  .body {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .infographic img {
+    max-width: 480px;
+  }
+
+  @media (max-width: 800px) {
+    
+    .infographic img {
+      max-width: 320px;
+    }
+
+  }
+  
+  @media (max-width: 600px) {
+
+    .body {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .infographic, .infographic a, .infographic img {
+      width: 100%;
+    }
+
+    .infographic img {
+      max-width: none;
+    }
+    
+  }
+  
+}

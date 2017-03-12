@@ -1,0 +1,99 @@
+
+@mixin text() {
+
+  line-height: 1.8em;
+  
+  p + p {
+    margin-top: 0.5em;
+  }
+
+  a {
+    color: $color-primary;
+  }
+
+  hr {
+    
+    &:after {
+      content: "***";
+      display: block;
+      text-align: center;
+      
+      margin: $grid * 2 0;
+      letter-spacing: 2em;
+    }
+    
+  }
+
+  blockquote {
+    border-left: 4px solid rgba(black, 0.3);
+
+    margin: $grid;
+    margin-right: 0;
+    
+    padding: $grid * 0.5 $grid;
+    padding-right: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 1ex;
+  }
+
+  h1 {
+    font-size: $grid * 3;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: $grid * 2.5;
+  }
+  
+  h3 {
+    font-size: $grid * 2;
+    font-weight: bold;
+  }
+  
+  h4 {
+    font-size: $grid * 1.6;
+    font-weight: bold;
+  }
+
+  code {
+    font-family: 'Roboto Mono', monospace;
+
+    border-radius: 2px;
+    background-color: #333;
+    color: white;
+    padding: 1px 3px;
+    margin: 0 2px;
+  }
+
+  pre {
+
+    border-radius: 2px;
+    background-color: #333;
+    margin: $grid 0;
+    padding: $grid;
+    color: white;
+
+    code {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+    }
+    
+  }
+
+  ul, ol {
+    margin: $grid * 2 $grid;
+
+    padding-left: $grid * 2;
+
+    li {
+      padding-left: 1ex;
+    }
+    
+  }
+  
+}

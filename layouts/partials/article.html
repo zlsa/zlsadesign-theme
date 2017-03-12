@@ -1,0 +1,11 @@
+<article class="single section-{{ .Section }}">
+
+  {{ partial "article-headline.html" . }}
+  
+  <section class="body content">
+    {{ .Content }}
+  </section>
+  
+  {{ partial "article-meta.html" . }}
+  
+</article>

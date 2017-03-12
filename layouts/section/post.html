@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+<main role="main" class="article-list list-post">
+  <h1 class="list headline">{{ .Title }}</h1>
+  <div class="article-list">
+    
+  {{ range .Data.Pages }}
+    {{ partial "article-list-item.html" . }}
+  {{ end }}
+  
+  </div>
+</main>
+
+{{ partial "footer.html" . }}

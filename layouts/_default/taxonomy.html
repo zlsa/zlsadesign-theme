@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<main role="main" class="article-list taxonomy">
+  
+  <h1 class="list headline taxonomy"><span class="taxonomy">{{ .Data.Singular }}</span><span class="title">{{ .Title }}</span></h1>
+  
+  {{ partial "article-list.html" . }}
+
+</main>
+
+{{ partial "footer.html" . }}

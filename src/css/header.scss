@@ -1,0 +1,354 @@
+
+@import 'anim';
+@import 'metrics';
+
+$header-height: $grid * 8;
+$header-logo-size: 32px;
+
+$header-link-height: $grid * 6;
+
+$header-mini-height: $grid * 4;
+$header-mini-logo-size: $grid * 3;
+
+$header-expanded-height: $grid * 16;
+
+@mixin header-clickable() {
+  
+  &:hover {
+    background-color: rgba(white, 0.1);
+  }
+            
+}
+
+#header {
+
+  z-index: 1000;
+
+  color: blue;
+
+  width: 100%;
+  height: $header-height;
+
+  //background-color: $color-background;
+  transition: opacity $anim-slow ease, transform $anim-medium ease;
+
+  //@include anim-load($grid * 2);
+
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+
+  // The width-constrained element.
+  .container {
+
+    @include limit-width();
+
+    height: 100%;
+    
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+
+    padding-left: $grid * 3;
+    padding-right: $grid * 1;
+
+    .home-link {
+
+      display: flex;
+
+      flex-direction: row;
+      align-items: center;
+      
+      height: $header-link-height;
+      padding-left: $grid;
+      padding-right: $grid;
+      
+      transition: background-color $anim-fast ease;
+      
+      @include header-clickable();
+
+      // Logo image.
+      .logo {
+        height: $header-logo-size;
+      }
+
+      .title {
+        background: url('/img/header-logo-text.png') no-repeat;
+        background-size: 112px 48px;
+        
+        user-select: none;
+        color: transparent;
+        
+        width: 112px;
+        height: 48px;
+
+        margin-left: $grid;
+      }
+      
+    }
+
+    nav {
+      
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      ul {
+        display: flex;
+        height: 100%;
+
+        flex-direction: row;
+        align-items: center;
+
+        margin-left: $grid * 4;
+
+        li {
+          list-style-type: none;
+          
+          display: block;
+          
+          a {
+            border-width: 0;
+            border-style: solid;
+            border-color: transparent;
+            
+            display: block;
+            width: 100%;
+            height: $header-link-height;
+            
+            line-height: $header-link-height;
+            
+            padding: 0 $grid * 2;
+
+            transition: background-color $anim-fast ease;
+      
+            @include header-clickable();
+            
+            span {
+              text-transform: uppercase;
+              font-size: 14px;
+              color: rgba(white, 0.54);
+            }
+
+          }
+
+        }
+
+        &.right {
+          float: right;
+        }
+
+      }
+      
+    }
+    
+  }
+
+  &.expanded {
+    height: $header-expanded-height;
+  }
+
+}
+
+body.loaded #header {
+  opacity: 1;
+}
+
+body.hero #header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &.expanded {
+    background-color: transparent;
+  }
+  
+}
+
+@media (max-width: 800px) {
+
+  #header {
+    
+    .container .home-link .title {
+      display: none;
+    }
+    
+  }
+  
+}
+
+body.mini-header #header {
+  background-color: transparent;
+  height: $header-mini-height;
+
+  opacity: 0.5;
+
+  transition: opacity $anim-medium ease, background-color $anim-medium ease;
+
+  .home-link {
+
+    height: $header-mini-height;
+    
+    .logo {
+      height: $header-mini-logo-size;
+    }
+    
+    .title {
+      display: none;
+    }
+
+  }
+  
+  nav {
+    
+    ul li a {
+      
+      height: $header-mini-height;
+      line-height: $header-mini-height;
+      
+      span {
+        font-size: 12px;
+      }
+      
+    }
+    
+  }
+
+  &:hover {
+    background-color: $color-background;
+
+    opacity: 1;
+  }
+    
+}
+
+@media (max-width: 600px) {
+
+  #header {
+
+    position: static !important;
+    background-color: $color-background !important;
+    
+    height: auto !important;
+    margin-bottom: $grid * 2;
+    
+    .container {
+
+      padding: 0;
+
+      flex-direction: column !important;
+      align-items: flex-start;
+      
+      .home-link {
+
+        height: $grid * 8;
+
+        justify-content: center;
+
+        width: 100%;
+
+        .title {
+          display: block;
+        }
+        
+      }
+
+      nav {
+        flex-direction: column !important;
+        align-items: flex-start;
+        width: 100%;
+          
+        ul {
+          margin-left: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+
+          li {
+            width: 100%;
+          }
+
+          li a {
+            height: $grid * 6;
+            line-height: $grid * 6;
+            width: 100%;
+          }
+          
+        }
+
+        ul + ul {
+          border-top: 2px solid #444;
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+}
+
+
+#header nav ul li a:hover {
+  border-bottom-width: 2px;
+
+  @media (max-width: 600px) {
+    border-bottom-width: 0;
+  }
+
+  span {
+    color: white;
+  }
+  
+}
+
+body[data-title=Apps] #header nav ul li.link-apps a,
+body[data-title=Infographics] #header nav ul li.link-infographics a,
+body[data-title=Posts] #header nav ul li.link-posts a,
+body[data-title=Projects] #header nav ul li.link-projects a,
+body[data-title="About Me"] #header nav ul li.link-about a,
+
+body[data-section=app] #header nav ul li.link-apps a,
+body[data-section=infographic] #header nav ul li.link-infographics a,
+body[data-section=post] #header nav ul li.link-posts a,
+body[data-section=project] #header nav ul li.link-projects a {
+  
+  border-bottom-width: 4px;
+
+  @media (max-width: 600px) {
+    border-bottom-width: 0px;
+    border-left-width: 8px;
+  }
+
+  span {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+#header nav ul li.link-apps a {
+  border-color: $color-apps;
+}
+
+#header nav ul li.link-infographics a {
+  border-color: $color-infographics;
+}
+
+#header nav ul li.link-posts a {
+  border-color: $color-posts;
+}
+
+#header nav ul li.link-projects a {
+  border-color: $color-projects;
+}
+
+#header nav ul li.link-about a {
+  border-color: white;
+}

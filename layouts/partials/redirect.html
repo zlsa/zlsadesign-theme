@@ -1,0 +1,29 @@
+{{ $immediate_redirect := .Params.redirect.immediate }}
+
+<article class="single redirect">
+
+  <h1 class="headline" itemprop="headline">
+
+    <span class="section section-redirect" style="display: block !important">Redirect</span>
+    
+    <span class="title">{{ .Params.redirect.original_name }}</span>
+
+  </h1>
+
+  <section class="body content">
+    <p>
+      {{ if eq $immediate_redirect true }}
+      Redirecting to <a href="{{ .Params.redirect.url }}">{{ .Params.redirect.url | absURL }}</a>.
+      {{ else }}
+      Check it out at <a href="{{ .Params.redirect.url }}">{{ .Params.redirect.url | absURL }}</a>.
+      {{ end }}
+    </p>
+  </section>
+
+  {{ partial "article-meta.html" . }}
+
+  {{ if eq $immediate_redirect true }}
+  <script>setTimeout(function() {window.location.href = "{{ .Params.redirect.url }}";}, 2000);</script>
+  {{ end }}
+
+</article>

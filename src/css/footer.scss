@@ -1,0 +1,45 @@
+
+@import 'color';
+@import 'metrics';
+
+$footer-margin: $grid * 5;
+
+#footer {
+
+  margin-top: $grid * 2;
+  
+  color: rgba(white, 0.7);
+
+  font-size: 12px;
+
+  > .container {
+    border-top: 2px solid rgba(white, 0.1);
+
+    @include limit-width;
+
+    padding: $footer-margin $grid * 2;
+
+    @media (max-width: 600px) {
+      border-top: none;
+    }
+    
+    .copyright {
+      float: right;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+
+      background-color: $color-background;
+      
+      .copyright {
+        float: none;
+        display: block;
+        margin-top: $grid;
+      }
+      
+    }
+    
+  }
+
+}

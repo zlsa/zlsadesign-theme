@@ -1,0 +1,20 @@
+{{ if eq .Section "app" }}
+{{ partial "article-list-item-app.html" . }}
+{{ end }}
+
+{{ if eq .Section "infographic" }}
+{{ partial "article-list-item-infographic.html" . }}
+{{ end }}
+
+{{ if eq .Section "post" }}
+{{ partial "article-list-item-post.html" . }}
+{{ end }}
+
+{{ if eq .Section "project" }}
+{{ partial "article-list-item-project.html" . }}
+{{ end }}
+
+{{ if eq .Section "term" }}
+{{ partial "article-list-item-term.html" . }}
+{{ end }}
+

@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta name="description" content="{{ if eq .Description "" }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+<meta name="keywords" content="{{ delimit .Keywords  "," }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+{{ .Hugo.Generator }}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{{ "/css/style.css" | absURL }}" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Roboto+Condensed|Source+Code+Pro">
+<link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script src="/js/scroll.js"></script>

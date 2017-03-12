@@ -1,0 +1,13 @@
+{{ if eq .Paginator.PageNumber 1 }}
+
+{{ partial "hero-header.html" . }}
+{{ partial "homepage.html" . }}
+
+{{ else }}
+
+{{ partial "header.html" . }}
+{{ partial "homepage.html" . }}
+
+{{ end }}
+
+{{ partial "footer.html" . }}

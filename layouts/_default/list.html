@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<main role="main" class="article-list">
+  
+  <h1 class="list headline"><span class="title">{{ .Title }}</span></h1>
+  
+  {{ partial "article-list.html" . }}
+
+</main>
+
+{{ partial "footer.html" . }}

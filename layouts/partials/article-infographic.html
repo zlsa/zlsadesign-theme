@@ -1,0 +1,28 @@
+<article class="single infographic">
+  
+  {{ partial "article-headline.html" . }}
+  
+  <section class="body">
+    
+    <section class="infographic">
+      <a href="/infographic/{{ .Params.infographic.file }}.png" class="Direct link to high-resolution infographic">
+        <img src="/infographic/{{ .Params.infographic.file }}.jpg" />
+      </a>
+    </section>
+    
+    <section class="content">
+      {{ .Content }}
+    </section>
+
+    <section class="license">
+      <p>
+        This infographic was created by {{ $.Param "author" }}.
+        <a href="/contact/">Contact me</a> if you'd like to use it anywhere.
+      </p>
+    </section>
+    
+  </section>
+
+  {{ partial "article-meta.html" . }}
+  
+</article>

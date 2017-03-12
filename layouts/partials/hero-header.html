@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+
+    {{ partial "meta.html" . }}
+    
+    <base href="{{ .Site.BaseURL }}">
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+  </head>
+  <body class="hero">
+
+    {{ partial "subheader.html" . }}
+    
+    {{ partial "hero.html" . }}
+

@@ -1,0 +1,19 @@
+<div class="meta">
+  
+  {{ with .Params.categories }}
+  <ul class="categories">
+    {{ range . }}
+    <li><a href="/categories/{{ . | urlize }}">{{ . }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  
+  {{ with .Params.tags }}
+  <ul class="tags">
+    {{ range . }}
+    <li><a href="/tags/{{ . | urlize }}">{{ . | urlize }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  
+</div>

@@ -1,0 +1,19 @@
+<article class="list-item term">
+
+  {{ partial "article-list-item-headline.html" . }}
+  
+  <section class="summary content">
+    {{ .Summary }}
+
+    {{ if .Truncated }}
+    <span class="read-more">
+      <a href="{{ .RelPermalink }}">Continue reading</a>
+      <span class="reading-time">({{ .ReadingTime }} min)</span>
+    </span>
+    {{ end }}
+
+  </section>
+  
+  {{ partial "article-meta.html" . }}
+  
+</article>

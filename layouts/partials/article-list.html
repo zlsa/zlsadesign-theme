@@ -1,0 +1,37 @@
+{{ $paginator := .Paginator }}
+
+<div class="article-list">
+  
+  {{ range .Paginator.Pages }}
+    {{ partial "article-list-item.html" . }}
+  {{ end }}
+  
+</div>
+
+{{ if ne .Paginator.TotalPages 1 }}
+
+<div class="next-prev {{ if .Paginator.HasPrev }}has-prev{{ end }} {{ if .Paginator.HasNext }}has-next{{ end }}">
+{{ if .Paginator.HasPrev }}
+<a class="prev" href="{{ .Paginator.Prev.URL }}">Previous</a>
+{{ else }}
+<a class="prev hidden">Previous</a>
+{{ end }}
+
+<ul class="pages">
+{{ range .Paginator.Pagers }}
+{{ if eq .PageNumber $paginator.PageNumber }}
+<li class="page active"><a href="{{ .URL }}">{{ .PageNumber }}</li></a>
+{{ else }}
+<li class="page"><a href="{{ .URL }}">{{ .PageNumber }}</li></a>
+{{ end}}
+{{ end }}
+</ul>
+
+{{ if .Paginator.HasNext }}
+<a class="next" href="{{ .Paginator.Next.URL }}">Next</a>
+{{ else }}
+<a class="next hidden">Next</a>
+{{ end }}
+</div>
+
+{{ end }}

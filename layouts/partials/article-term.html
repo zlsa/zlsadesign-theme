@@ -1,0 +1,27 @@
+<article class="single infographic">
+  
+  {{ partial "article-headline.html" . }}
+  
+  <section class="body">
+    
+    <section class="content">
+      {{ .Content }}
+    </section>
+
+    <section class="further-reading">
+
+      <h1 class="title">Further reading</h1>
+
+      <ul>
+        {{ if .Params.term.wikipedia }}
+        <li><a href="https://en.wikipedia.org/wiki/{{ .Params.term.wikipedia }}">Wikipedia ({{ .Params.term.wikipedia }})</a>
+        {{ end }}
+      </ul>
+      
+    </section>
+    
+  </section>
+
+  {{ partial "article-meta.html" . }}
+  
+</article>
