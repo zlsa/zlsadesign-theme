@@ -32,7 +32,7 @@ $hero-gap: $grid * 2;
 
   margin: 0 auto;
   padding-bottom: $hero-bottom-overlap + $hero-gap;
-  margin-bottom: -$hero-bottom-overlap - $header-height;
+  margin-bottom: -$hero-bottom-overlap - $header-expanded-height;
 
   padding-top: $header-expanded-height;
 
@@ -41,6 +41,12 @@ $hero-gap: $grid * 2;
   }
   
   .hero-contents {
+    box-shadow: 0 0 $grid * 8 rgba(black, 0.6);
+    
+    @media (max-width: 600px) {
+      box-shadow: none;
+    }
+    
     background-color: rgba(black, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,7 +64,7 @@ $hero-gap: $grid * 2;
       height: $grid * 12;
     }
     
-    .message {
+    .message-box {
 
       display: flex;
       flex-direction: column;
@@ -66,7 +72,7 @@ $hero-gap: $grid * 2;
 
       margin-left: -$grid;
 
-      span {
+      .message {
         background-color: $color-infographics;
 
         color: white;

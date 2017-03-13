@@ -3,12 +3,12 @@
 </div>
 
 <div id="hero">
-  <a href="{{ .Params.hero.url }}" class="hero-contents" style="background-image: url('{{ .Params.hero.image }}')">
-    <div class="message">
-      <span class="small">Here&rsquo;s something I&rsquo;ve made:</span>
-      <span class="large">{{ .Params.hero.title }}</span>
-      <span class="small">Keep scrolling to see other things that I&rsquo;ve made.</span>
+  <div class="hero-contents" style="background-image: url('{{ .Params.hero.image }}')">
+    <div class="message-box">
+      <span class="message small">Here&rsquo;s something I&rsquo;ve made:</span>
+      <a class="message large" href="{{ .Params.hero.url }}">{{ .Params.hero.title }}</a>
+      <span class="message small">Keep scrolling to see other things that I&rsquo;ve made.</span>
     </div>
-    <!--<h1 class="title">{{ .Params.hero.title }}</h1>-->
-  </a>
+  </div>
+  <!--<h1 class="title">{{ .Params.hero.title }}</h1>-->
 </div>

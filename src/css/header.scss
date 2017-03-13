@@ -1,5 +1,6 @@
 
 @import 'anim';
+@import 'color';
 @import 'metrics';
 
 $header-height: $grid * 8;
@@ -16,6 +17,7 @@ $header-expanded-height: $grid * 16;
   
   &:hover {
     background-color: rgba(white, 0.1);
+    cursor: pointer;
   }
             
 }
@@ -29,13 +31,21 @@ $header-expanded-height: $grid * 16;
   width: 100%;
   height: $header-height;
 
-  transition: opacity $anim-slow ease, transform $anim-medium ease;
+  background-color: $color-header-background;
+  box-shadow: 0 -100px 8px 100px rgba(black, 0.7), 0 -100px 20px 100px rgba(black, 0.5);
+
+  transition: opacity $anim-slow ease, transform $anim-medium ease,
+  background-color $anim-medium ease, box-shadow $anim-medium ease, height $anim-medium ease;
 
   display: flex;
 
   flex-direction: row;
   align-items: center;
 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   // The width-constrained element.
   .container {
 
@@ -50,6 +60,10 @@ $header-expanded-height: $grid * 16;
 
     padding-left: $grid * 3;
     padding-right: $grid * 1;
+
+    .toggle-nav {
+      display: none;
+    }
 
     .home-link {
 
@@ -150,7 +164,9 @@ $header-expanded-height: $grid * 16;
   }
 
   &.expanded {
+    background-color: transparent;
     height: $header-expanded-height;
+    box-shadow: none;
   }
 
 }
@@ -165,6 +181,8 @@ body.hero #header {
   top: 0;
   left: 0;
 
+  transition: opacity $anim-slow ease, transform $anim-medium ease;
+  
   &.expanded {
     background-color: transparent;
   }
@@ -237,13 +255,32 @@ body.mini-header #header {
     
     height: auto !important;
     margin-bottom: $grid * 2;
-    
+
     .container {
 
       padding: 0;
 
       flex-direction: column !important;
       align-items: flex-start;
+      
+      height: $grid * 8;
+
+      .toggle-nav {
+        display: block;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        width: $grid * 8;
+        height: $grid * 8;
+        line-height: $grid * 8;
+        text-align: center;
+
+        transition: background-color $anim-fast ease;
+        
+        @include header-clickable();
+      }
       
       .home-link {
 
@@ -260,11 +297,27 @@ body.mini-header #header {
       }
 
       nav {
+        background-color: $color-page-background;
+        
         flex-direction: column !important;
         align-items: flex-start;
+        box-shadow: 0 0 8px rgba(black, 0.7), 0 0 20px rgba(black, 0.5);
+
+        position: absolute;
+        top: $grid * 8;
+        left: 0;
         width: 100%;
-          
+
+        height: auto;
+
+        overflow: hidden;
+        max-height: 0;
+
+        transition: max-height $anim-medium ease;
+
         ul {
+          border-top: 2px solid #444;
+          
           margin-left: 0;
           flex-direction: column;
           align-items: flex-start;
@@ -282,12 +335,12 @@ body.mini-header #header {
           
         }
 
-        ul + ul {
-          border-top: 2px solid #444;
-        }
-        
       }
       
+    }
+
+    &.nav-visible nav {
+      max-height: $grid * 6 * 6 !important;
     }
     
   }

@@ -57,6 +57,8 @@ main {
   
   transition: transform $anim-medium ease, opacity $anim-slow ease;
   
+  margin-top: $header-expanded-height;
+    
   > .headline {
     display: flex;
     align-items: center;
@@ -111,6 +113,6 @@ main {
 }
 
 body.hero main {
-  margin-top: $header-height;
+  margin-top: $header-expanded-height;
 }
 

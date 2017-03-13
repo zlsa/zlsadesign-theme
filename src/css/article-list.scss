@@ -10,6 +10,7 @@ $headline-padding-vertical: $grid * 1.5;
 
   article {
 
+    box-shadow: 0 0 $grid * 8 rgba(black, 0.6);
     background-color: white;
 
     .headline {
@@ -30,6 +31,10 @@ $headline-padding-vertical: $grid * 1.5;
         margin-right: -$grid * 2;
 
         a {
+          z-index: 50;
+          
+          box-shadow: 0 2px 4px rgba(black, 0.1);
+          
           background-color: $color-primary;
           
           color: white;
@@ -270,6 +275,7 @@ main.list-project > .headline {
 .article-list article.infographic {
 
   .body {
+    padding-top: $grid;
     display: flex;
     flex-direction: row;
   }
