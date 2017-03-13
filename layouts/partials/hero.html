@@ -1,5 +1,9 @@
 <div id="hero-background">
+  {{ if .Params.hero.background }}
   <img src="/hero/{{ .Params.hero.background }}" />
+  {{ else }}
+  <img src="/img/background.jpg" />
+  {{ end }}
 </div>
 
 <div id="hero">

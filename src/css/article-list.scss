@@ -10,7 +10,7 @@ $headline-padding-vertical: $grid * 1.5;
 
   article {
 
-    box-shadow: 0 0 $grid * 8 rgba(black, 0.6);
+    box-shadow: 0 0 $grid * 4 rgba(black, 0.6);
     background-color: white;
 
     .headline {
@@ -66,19 +66,41 @@ $headline-padding-vertical: $grid * 1.5;
         .links {
           padding: 0 $grid;
           
+          position: relative;
+          bottom: -6px;
+          
+          display: inline-flex;
+          justify-content: flex-start;
+          align-items: start;
+            
           a {
-
-            width: $grid * 6;
-
+            
             text-align: center;
 
             transition: background-color $anim-fast ease;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            
+            text-decoration: none !important;
             
             img {
-              margin-bottom: -4px;
               opacity: 0.3;
               width: 24px;
+              padding: 0 $grid;
+              box-sizing: content-box;
               transition: opacity $anim-fast ease;
+            }
+
+            .name {
+              display: none;
+              
+              font-size: 14px;
+              font-weight: bold;
+              text-transform: uppercase;
+              
+              padding: 0 $grid * 2;
             }
 
             &:hover {
@@ -92,6 +114,23 @@ $headline-padding-vertical: $grid * 1.5;
 
           }
             
+          @media (max-width: 800px) {
+            display: flex;
+            padding: 0;
+            bottom: 0;
+
+            margin-left: -$grid * 2;
+            
+            .name {
+              display: inline-block !important;
+            }
+
+            img {
+              display: none;
+            }
+            
+          }
+          
         }
         
       }
@@ -109,7 +148,7 @@ $headline-padding-vertical: $grid * 1.5;
         
       }
       
-      @media (max-width: 600px) {
+      @media (max-width: 800px) {
 
         padding-bottom: $grid * 4;
         
@@ -279,12 +318,16 @@ main.list-project > .headline {
     display: flex;
     flex-direction: row;
   }
+
+  .infographic a {
+    display: block;
+  }
   
   .infographic img {
     max-width: 480px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     
     .infographic img {
       max-width: 320px;
@@ -292,7 +335,7 @@ main.list-project > .headline {
 
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
 
     .body {
       flex-direction: column;
@@ -301,10 +344,11 @@ main.list-project > .headline {
 
     .infographic, .infographic a, .infographic img {
       width: 100%;
+      text-align: center;
     }
 
     .infographic img {
-      max-width: none;
+      max-width: 480px;
     }
     
   }

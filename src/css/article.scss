@@ -61,6 +61,10 @@ main.article article {
 
       align-self: flex-end;
       padding-bottom: $grid * 0.5;
+
+      time {
+        white-space: nowrap;
+      }
     }
     
     @media (max-width: 800px) {
@@ -95,8 +99,7 @@ main.article article {
     box-shadow: 0 0 $grid * 8 black;
   }
 
-  .app-info,
-  .project-info,
+  .actions,
   .content,
   .attribution,
   .license {
@@ -114,8 +117,8 @@ main.article article {
     
   }
 
-  .app-info,
-  .project-info {
+  .actions.app-info,
+  .actions.project-info {
     padding: $grid * 2 $grid * 2;
     
     padding-bottom: (($grid * 2) - 2px);
@@ -130,7 +133,7 @@ main.article article {
     
   }
 
-  .app-info {
+  .actions.app-info {
 
     a {
       margin: 0 $grid * 2;
@@ -372,7 +375,7 @@ article {
     
   }
   
-  a:hover {
+  a[href]:hover {
     text-decoration: underline;
   }
         
@@ -397,16 +400,44 @@ article .section.section-app a {
   background-color: $color-apps !important;
 }
 
+article.app .body .actions a[href],
+article.app .content a[href],
+article.app .body .read-more a[href] {
+  color: $color-apps !important;
+}
+
 article .section.section-infographic a {
   background-color: $color-infographics !important;
+}
+
+article.infographic .body .actions a[href],
+article.infographic .content a[href],
+article.infographic .links .name,
+article.infographic .body .read-more a[href] {
+  color: $color-infographics !important;
+}
+
+article.infographic .license a[href] {
+  color: white !important;
 }
 
 article .section.section-post a {
   background-color: $color-posts !important;
 }
 
+article.post .content a[href],
+article.post .body .read-more a[href] {
+  color: $color-posts !important;
+}
+
 article .section.section-project a {
   background-color: $color-projects !important;
+}
+
+article.project .body .actions a[href],
+article.project .content a[href],
+article.project .body .read-more a[href] {
+  color: $color-projects !important;
 }
 
 article .section.section-term a {

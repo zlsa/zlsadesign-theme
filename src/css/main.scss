@@ -59,6 +59,10 @@ main {
   
   margin-top: $header-expanded-height;
     
+  @media (max-width: 600px) {
+    margin-top: 0;
+  }
+  
   > .headline {
     display: flex;
     align-items: center;

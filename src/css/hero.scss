@@ -73,6 +73,8 @@ $hero-gap: $grid * 2;
       margin-left: -$grid;
 
       .message {
+        box-shadow: 0 2px 4px rgba(black, 0.3);
+          
         background-color: $color-infographics;
 
         color: white;
@@ -86,10 +88,6 @@ $hero-gap: $grid * 2;
           font-size: $grid * 4;
           padding: $grid * 2 $grid * 3;
 
-          &:hover {
-            text-decoration: underline;
-          }
-          
         }
 
         &.small {
@@ -97,6 +95,10 @@ $hero-gap: $grid * 2;
           font-style: italic;
         }
         
+      }
+      
+      a.message:hover {
+        text-decoration: underline;
       }
       
     }

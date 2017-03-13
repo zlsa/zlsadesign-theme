@@ -7,7 +7,7 @@ function clerp(il, i, ih, ol, oh) {
   return lerp(il, Math.max(il, Math.min(ih, i)), ih, ol, oh);
 }
 
-var body, hero, header;
+var body, header;
 
 function parallax() {
 
@@ -26,7 +26,8 @@ function parallax() {
     
     header.css('background-color', 'rgba('+ color + ', ' + color + ', ' + color + ', ' + scroll + ')');
     header.css('height', clerp(0, scroll, 1, 128, 64));
-    
+
+    $('#hero .message-box').css('transform', 'translateY(' + scroll_px * 0.1 + 'px)');
   } else {
     if(scroll_px > 24) {
       header.removeClass('expanded');
@@ -38,15 +39,12 @@ function parallax() {
   var parallax_offset = scroll_px * 0.5;
   $('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
 
-  if(hero) {
-    hero.css('transform', 'translateY(' + parallax_offset + 'px)');
-  }
+  $('#hero-background').css('transform', 'translateY(' + parallax_offset + 'px)');
   
 }
 
 $(document).ready(function() {
   body = $('body');
-  hero = $('#hero-background');
   header = $('#header');
 
   $('body').addClass('loaded');
@@ -65,6 +63,10 @@ $(document).ready(function() {
     parallax();
   });
 
+  $('a[href*="No page found with path or logical name"]').each(function() {
+    $(this).removeAttr('href');
+  });
+  
   // Toggle navigation area
 
   $('#header .toggle-nav').click(function() {

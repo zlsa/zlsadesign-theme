@@ -24,6 +24,8 @@ $header-expanded-height: $grid * 16;
 
 #header {
 
+  user-select: none;
+
   z-index: 1000;
 
   color: blue;
@@ -58,7 +60,7 @@ $header-expanded-height: $grid * 16;
     flex-direction: row;
     align-items: center;
 
-    padding-left: $grid * 3;
+    padding-left: $grid * 1;
     padding-right: $grid * 1;
 
     .toggle-nav {
@@ -266,7 +268,9 @@ body.mini-header #header {
       height: $grid * 8;
 
       .toggle-nav {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         position: absolute;
         top: 0;
@@ -274,11 +278,17 @@ body.mini-header #header {
         
         width: $grid * 8;
         height: $grid * 8;
-        line-height: $grid * 8;
-        text-align: center;
 
         transition: background-color $anim-fast ease;
-        
+
+        img {
+          display: block;
+          width: 24px;
+          height: 24px;
+
+          transition: transform $anim-fast ease;
+        }
+
         @include header-clickable();
       }
       
@@ -301,7 +311,6 @@ body.mini-header #header {
         
         flex-direction: column !important;
         align-items: flex-start;
-        box-shadow: 0 0 8px rgba(black, 0.7), 0 0 20px rgba(black, 0.5);
 
         position: absolute;
         top: $grid * 8;
@@ -339,8 +348,20 @@ body.mini-header #header {
       
     }
 
-    &.nav-visible nav {
-      max-height: $grid * 6 * 6 !important;
+    &.nav-visible {
+
+      .toggle-nav {
+        
+        img {
+          transform: rotate(180deg);
+        }
+        
+      }
+      
+      nav {
+        max-height: $grid * 6 * 6 !important;
+      }
+      
     }
     
   }

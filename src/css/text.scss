@@ -2,12 +2,12 @@
 @mixin text() {
 
   line-height: 1.8em;
-  
+
   p + p {
     margin-top: 0.5em;
   }
 
-  a {
+  a[href] {
     color: $color-primary;
   }
 

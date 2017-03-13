@@ -11,12 +11,14 @@
       {{ if .Params.app.android.play }}
       <a class="app-os app-os-android" href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Get {{ .Params.app.name }} on Google Play">
         <img src="/img/app-store-google-play.png" alt="{{ .Params.app.name }}" />
+        <span class="name">Get {{ .Params.app.name }} on Google Play</span>
       </a>
       {{ end }}
       
       {{ if .Params.app.android.url }}
       <a class="app-os app-os-android" href="{{ .Params.app.android.url }}" title="Get {{ .Params.app.name }}">
         <img src="/img/app-os-android.png" alt="Get the app" />
+        <span class="name">Get {{ .Params.app.name }}</span>
       </a>
       {{ end }}
       {{ end }}
