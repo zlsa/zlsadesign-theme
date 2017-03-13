@@ -7,9 +7,13 @@
     <section class="actions app-info">
       
       {{ if .Params.app.android.play }}
-      <a class="badge-button" href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Google Play Store link">
+      
+      <a href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Google Play Store link">Get {{ .Params.app.name }} on Google Play</a>
+      
+      <!--<a class="badge-button" href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Google Play Store link">
         <img class="badge" src="/img/badge-google-play-app.png" alt="Get it on Google Play" />
-      </a>
+      </a>-->
+      
       {{ end }}
 
       {{ if .Params.app.android.url }}

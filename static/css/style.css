@@ -294,321 +294,316 @@ body[data-section=project] #header nav ul li.link-projects a {
 #header nav ul li.link-about a {
   border-color: white; }
 
-main.article article .headline {
-  padding: 8px 32px;
-  padding-top: 0;
-  position: relative;
-  display: flex; }
-  main.article article .headline * {
-    display: block; }
-  main.article article .headline .section {
-    margin-right: 16px; }
-    main.article article .headline .section a {
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-      background-color: rgba(255, 255, 255, 0.7);
+main.article article {
+  /*
+  .actions.app-info {
+
+    a {
+      height: $grid * 8;
+      line-height: $grid * 8;
+    }
+
+    a.badge-button {
+      padding: 0;
+      height: $grid * 8;
+      margin-top: -$grid;
+
+      .badge {
+        height: 72px;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+      
+    }
+    
+  }
+*/ }
+  main.article article .headline {
+    padding: 8px 32px;
+    padding-top: 0;
+    position: relative;
+    display: flex; }
+    main.article article .headline * {
+      display: block; }
+    main.article article .headline .section {
+      margin-right: 16px; }
+      main.article article .headline .section a {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.7);
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 16px; }
+    main.article article .headline .title {
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      margin-right: 32px; }
+    main.article article .headline .publish-time {
+      color: white;
+      font-style: italic;
+      text-align: right;
+      opacity: 0;
+      transition: opacity 0.08s ease;
+      flex: 1;
+      align-self: flex-end;
+      padding-bottom: 4px; }
+      main.article article .headline .publish-time time {
+        white-space: nowrap; }
+    @media (max-width: 800px) {
+      main.article article .headline {
+        flex-direction: column;
+        padding: 8px 16px; }
+        main.article article .headline .section, main.article article .headline .title, main.article article .headline .publish-time {
+          display: block;
+          position: static;
+          margin-top: 1ex;
+          align-self: flex-start; }
+        main.article article .headline .title {
+          font-size: 24px; } }
+    @media (max-width: 400px) {
+      main.article article .headline {
+        padding-left: 16px;
+        padding-right: 16px; } }
+  main.article article .body {
+    background-color: white;
+    box-shadow: 0 0 64px black; }
+  main.article article .actions,
+  main.article article .content,
+  main.article article .attribution,
+  main.article article .license {
+    padding: 32px 32px;
+    line-height: 1.8em; }
+    main.article article .actions p + p,
+    main.article article .content p + p,
+    main.article article .attribution p + p,
+    main.article article .license p + p {
+      margin-top: 0.5em; }
+    main.article article .actions a[href],
+    main.article article .content a[href],
+    main.article article .attribution a[href],
+    main.article article .license a[href] {
+      color: #dd6644; }
+    main.article article .actions em,
+    main.article article .content em,
+    main.article article .attribution em,
+    main.article article .license em {
+      font-style: italic; }
+    main.article article .actions strong,
+    main.article article .content strong,
+    main.article article .attribution strong,
+    main.article article .license strong {
+      font-weight: bold; }
+    main.article article .actions hr:after,
+    main.article article .content hr:after,
+    main.article article .attribution hr:after,
+    main.article article .license hr:after {
+      content: "***";
       display: block;
-      height: 40px;
-      line-height: 40px;
+      text-align: center;
+      margin: 16px 0;
+      letter-spacing: 2em; }
+    main.article article .actions blockquote,
+    main.article article .content blockquote,
+    main.article article .attribution blockquote,
+    main.article article .license blockquote {
+      border-left: 4px solid rgba(0, 0, 0, 0.3);
+      margin: 8px;
+      margin-right: 0;
+      padding: 4px 8px;
+      padding-right: 0; }
+    main.article article .actions h1, main.article article .actions h2, main.article article .actions h3, main.article article .actions h4, main.article article .actions h5, main.article article .actions h6,
+    main.article article .content h1,
+    main.article article .content h2,
+    main.article article .content h3,
+    main.article article .content h4,
+    main.article article .content h5,
+    main.article article .content h6,
+    main.article article .attribution h1,
+    main.article article .attribution h2,
+    main.article article .attribution h3,
+    main.article article .attribution h4,
+    main.article article .attribution h5,
+    main.article article .attribution h6,
+    main.article article .license h1,
+    main.article article .license h2,
+    main.article article .license h3,
+    main.article article .license h4,
+    main.article article .license h5,
+    main.article article .license h6 {
+      margin-top: 1em;
+      margin-bottom: 1ex; }
+    main.article article .actions h1,
+    main.article article .content h1,
+    main.article article .attribution h1,
+    main.article article .license h1 {
+      font-size: 24px;
+      font-weight: bold; }
+    main.article article .actions h2,
+    main.article article .content h2,
+    main.article article .attribution h2,
+    main.article article .license h2 {
+      font-size: 20px; }
+    main.article article .actions h3,
+    main.article article .content h3,
+    main.article article .attribution h3,
+    main.article article .license h3 {
       font-size: 16px;
+      font-weight: bold; }
+    main.article article .actions h4,
+    main.article article .content h4,
+    main.article article .attribution h4,
+    main.article article .license h4 {
+      font-size: 12.8px;
+      font-weight: bold; }
+    main.article article .actions code,
+    main.article article .content code,
+    main.article article .attribution code,
+    main.article article .license code {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 2px;
+      background-color: #333;
+      color: white;
+      padding: 1px 3px;
+      margin: 0 2px; }
+    main.article article .actions pre,
+    main.article article .content pre,
+    main.article article .attribution pre,
+    main.article article .license pre {
+      border-radius: 2px;
+      background-color: #333;
+      margin: 8px 0;
+      padding: 8px;
+      color: white; }
+      main.article article .actions pre code,
+      main.article article .content pre code,
+      main.article article .attribution pre code,
+      main.article article .license pre code {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        font-size: inherit;
+        font-weight: normal; }
+    main.article article .actions ul, main.article article .actions ol,
+    main.article article .content ul,
+    main.article article .content ol,
+    main.article article .attribution ul,
+    main.article article .attribution ol,
+    main.article article .license ul,
+    main.article article .license ol {
+      margin: 16px 8px;
+      padding-left: 16px; }
+      main.article article .actions ul li, main.article article .actions ol li,
+      main.article article .content ul li,
+      main.article article .content ol li,
+      main.article article .attribution ul li,
+      main.article article .attribution ol li,
+      main.article article .license ul li,
+      main.article article .license ol li {
+        padding-left: 1ex; }
+    main.article article .actions :first-child,
+    main.article article .content :first-child,
+    main.article article .attribution :first-child,
+    main.article article .license :first-child {
+      margin-top: 0; }
+    main.article article .actions :last-child,
+    main.article article .content :last-child,
+    main.article article .attribution :last-child,
+    main.article article .license :last-child {
+      margin-bottom: 0; }
+    @media (max-width: 600px) {
+      main.article article .actions,
+      main.article article .content,
+      main.article article .attribution,
+      main.article article .license {
+        padding: 16px 16px !important; } }
+    main.article article .actions p:empty,
+    main.article article .content p:empty,
+    main.article article .attribution p:empty,
+    main.article article .license p:empty {
+      display: none; }
+  main.article article .actions {
+    background-color: #f4f4f4;
+    padding: 8px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 16px;
+    height: auto; }
+    main.article article .actions a {
+      display: block;
+      color: #dd6644;
       font-weight: bold;
       text-transform: uppercase;
-      padding: 0 16px; }
-  main.article article .headline .title {
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-    margin-right: 32px; }
-  main.article article .headline .publish-time {
-    color: white;
-    font-style: italic;
+      padding: 8px 16px;
+      transition: background-color 0.15s ease;
+      height: 48px;
+      line-height: 48px;
+      padding: 0 16px;
+      margin-right: 16px; }
+      main.article article .actions a:hover {
+        background-color: rgba(0, 0, 0, 0.05); }
+  main.article article .attribution {
+    padding: 0 32px;
+    padding-bottom: 8px;
+    margin-top: 16px;
     text-align: right;
-    opacity: 0;
-    transition: opacity 0.08s ease;
-    flex: 1;
-    align-self: flex-end;
-    padding-bottom: 4px; }
-    main.article article .headline .publish-time time {
-      white-space: nowrap; }
-  @media (max-width: 800px) {
-    main.article article .headline {
-      flex-direction: column;
-      padding: 8px 16px; }
-      main.article article .headline .section, main.article article .headline .title, main.article article .headline .publish-time {
-        display: block;
-        position: static;
-        margin-top: 1ex;
-        align-self: flex-start; }
-      main.article article .headline .title {
-        font-size: 24px; } }
-  @media (max-width: 400px) {
-    main.article article .headline {
-      padding-left: 16px;
-      padding-right: 16px; } }
-
-main.article article .body {
-  background-color: white;
-  box-shadow: 0 0 64px black; }
-
-main.article article .actions,
-main.article article .content,
-main.article article .attribution,
-main.article article .license {
-  padding: 32px 32px;
-  line-height: 1.8em; }
-  main.article article .actions p + p,
-  main.article article .content p + p,
-  main.article article .attribution p + p,
-  main.article article .license p + p {
-    margin-top: 0.5em; }
-  main.article article .actions a[href],
-  main.article article .content a[href],
-  main.article article .attribution a[href],
-  main.article article .license a[href] {
-    color: #dd6644; }
-  main.article article .actions em,
-  main.article article .content em,
-  main.article article .attribution em,
-  main.article article .license em {
+    color: rgba(0, 0, 0, 0.54);
     font-style: italic; }
-  main.article article .actions strong,
-  main.article article .content strong,
-  main.article article .attribution strong,
-  main.article article .license strong {
-    font-weight: bold; }
-  main.article article .actions hr:after,
-  main.article article .content hr:after,
-  main.article article .attribution hr:after,
-  main.article article .license hr:after {
-    content: "***";
-    display: block;
-    text-align: center;
-    margin: 16px 0;
-    letter-spacing: 2em; }
-  main.article article .actions blockquote,
-  main.article article .content blockquote,
-  main.article article .attribution blockquote,
-  main.article article .license blockquote {
-    border-left: 4px solid rgba(0, 0, 0, 0.3);
-    margin: 8px;
-    margin-right: 0;
-    padding: 4px 8px;
-    padding-right: 0; }
-  main.article article .actions h1, main.article article .actions h2, main.article article .actions h3, main.article article .actions h4, main.article article .actions h5, main.article article .actions h6,
-  main.article article .content h1,
-  main.article article .content h2,
-  main.article article .content h3,
-  main.article article .content h4,
-  main.article article .content h5,
-  main.article article .content h6,
-  main.article article .attribution h1,
-  main.article article .attribution h2,
-  main.article article .attribution h3,
-  main.article article .attribution h4,
-  main.article article .attribution h5,
-  main.article article .attribution h6,
-  main.article article .license h1,
-  main.article article .license h2,
-  main.article article .license h3,
-  main.article article .license h4,
-  main.article article .license h5,
-  main.article article .license h6 {
-    margin-top: 1em;
-    margin-bottom: 1ex; }
-  main.article article .actions h1,
-  main.article article .content h1,
-  main.article article .attribution h1,
-  main.article article .license h1 {
+  main.article article .license {
+    padding: 16px 16px;
+    padding-top: 0;
+    margin-top: 16px; }
+    main.article article .license p {
+      background-color: #009688;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 8px 16px; }
+      main.article article .license p a {
+        color: white;
+        text-decoration: underline; }
+  main.article article .further-reading {
+    padding: 16px 32px;
+    padding-top: 0; }
+    @media (max-width: 600px) {
+      main.article article .further-reading {
+        padding: 16px 16px; } }
+    main.article article .further-reading .title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 1em;
+      margin-bottom: 1ex;
+      display: none; }
+    main.article article .further-reading ul {
+      border-top: 2px solid rgba(0, 0, 0, 0.1);
+      padding-top: 16px; }
+      main.article article .further-reading ul li {
+        list-style-type: none; }
+        main.article article .further-reading ul li a {
+          color: #dd6644;
+          font-weight: bold; }
+  main.article article.infographic .infographic {
+    padding: 0; }
+    main.article article.infographic .infographic img {
+      width: 100%; }
+  main.article article.infographic .actions {
+    padding: 8px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.1); }
+  main.article article.redirect .content {
     font-size: 24px;
     font-weight: bold; }
-  main.article article .actions h2,
-  main.article article .content h2,
-  main.article article .attribution h2,
-  main.article article .license h2 {
-    font-size: 20px; }
-  main.article article .actions h3,
-  main.article article .content h3,
-  main.article article .attribution h3,
-  main.article article .license h3 {
-    font-size: 16px;
-    font-weight: bold; }
-  main.article article .actions h4,
-  main.article article .content h4,
-  main.article article .attribution h4,
-  main.article article .license h4 {
-    font-size: 12.8px;
-    font-weight: bold; }
-  main.article article .actions code,
-  main.article article .content code,
-  main.article article .attribution code,
-  main.article article .license code {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 2px;
-    background-color: #333;
-    color: white;
-    padding: 1px 3px;
-    margin: 0 2px; }
-  main.article article .actions pre,
-  main.article article .content pre,
-  main.article article .attribution pre,
-  main.article article .license pre {
-    border-radius: 2px;
-    background-color: #333;
-    margin: 8px 0;
-    padding: 8px;
-    color: white; }
-    main.article article .actions pre code,
-    main.article article .content pre code,
-    main.article article .attribution pre code,
-    main.article article .license pre code {
-      border: none;
-      background-color: transparent;
-      padding: 0;
-      margin: 0;
-      font-size: inherit;
-      font-weight: normal; }
-  main.article article .actions ul, main.article article .actions ol,
-  main.article article .content ul,
-  main.article article .content ol,
-  main.article article .attribution ul,
-  main.article article .attribution ol,
-  main.article article .license ul,
-  main.article article .license ol {
-    margin: 16px 8px;
-    padding-left: 16px; }
-    main.article article .actions ul li, main.article article .actions ol li,
-    main.article article .content ul li,
-    main.article article .content ol li,
-    main.article article .attribution ul li,
-    main.article article .attribution ol li,
-    main.article article .license ul li,
-    main.article article .license ol li {
-      padding-left: 1ex; }
-  main.article article .actions :first-child,
-  main.article article .content :first-child,
-  main.article article .attribution :first-child,
-  main.article article .license :first-child {
-    margin-top: 0; }
-  main.article article .actions :last-child,
-  main.article article .content :last-child,
-  main.article article .attribution :last-child,
-  main.article article .license :last-child {
-    margin-bottom: 0; }
-  @media (max-width: 600px) {
-    main.article article .actions,
-    main.article article .content,
-    main.article article .attribution,
-    main.article article .license {
-      padding: 16px 16px !important; } }
-  main.article article .actions p:empty,
-  main.article article .content p:empty,
-  main.article article .attribution p:empty,
-  main.article article .license p:empty {
-    display: none; }
-
-main.article article .actions {
-  background-color: #f4f4f4;
-  padding: 8px 16px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0 16px;
-  height: auto; }
-  main.article article .actions a {
-    display: block;
-    color: #dd6644;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 8px 16px;
-    transition: background-color 0.15s ease;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 16px;
-    margin-right: 16px; }
-    main.article article .actions a:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
-
-main.article article .actions.app-info a {
-  height: 64px;
-  line-height: 64px; }
-
-main.article article .actions.app-info a.badge-button {
-  padding: 0;
-  height: 64px;
-  margin-top: -8px; }
-  main.article article .actions.app-info a.badge-button .badge {
-    height: 72px; }
-  main.article article .actions.app-info a.badge-button:hover {
-    background-color: transparent; }
-
-main.article article .attribution {
-  padding: 0 32px;
-  padding-bottom: 8px;
-  margin-top: 16px;
-  text-align: right;
-  color: rgba(0, 0, 0, 0.54);
-  font-style: italic; }
-
-main.article article .license {
-  padding: 16px 16px;
-  padding-top: 0;
-  margin-top: 16px; }
-  main.article article .license p {
-    background-color: #009688;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding: 8px 16px; }
-    main.article article .license p a {
-      color: white;
-      text-decoration: underline; }
-
-main.article article .further-reading {
-  padding: 16px 32px;
-  padding-top: 0; }
-  @media (max-width: 600px) {
-    main.article article .further-reading {
-      padding: 16px 16px; } }
-  main.article article .further-reading .title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 1em;
-    margin-bottom: 1ex;
-    display: none; }
-  main.article article .further-reading ul {
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
-    padding-top: 16px; }
-    main.article article .further-reading ul li {
-      list-style-type: none; }
-      main.article article .further-reading ul li a {
-        color: #dd6644;
-        font-weight: bold; }
-
-main.article article.infographic .infographic {
-  padding: 0; }
-  main.article article.infographic .infographic img {
-    width: 100%; }
-
-main.article article.infographic .actions {
-  padding: 8px 16px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border-top: 2px solid rgba(0, 0, 0, 0.1); }
-  main.article article.infographic .actions .full-size.button {
-    display: block;
-    color: #dd6644;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 8px 16px;
-    transition: background-color 0.15s ease; }
-    main.article article.infographic .actions .full-size.button:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
-
-main.article article.redirect .content {
-  font-size: 24px;
-  font-weight: bold; }
 
 main.article.static .section {
   display: none !important; }

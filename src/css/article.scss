@@ -140,6 +140,7 @@ main.article article {
     
   }
 
+  /*
   .actions.app-info {
 
     a {
@@ -163,6 +164,7 @@ main.article article {
     }
     
   }
+*/
 
   .attribution {
     padding: 0 $grid * 4;
@@ -256,11 +258,6 @@ main.article article {
       @include button-row();
 
       border-top: $style-border;
-
-      .full-size.button {
-        @include button();
-      }
-      
     }
     
   }

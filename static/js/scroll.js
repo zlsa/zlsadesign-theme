@@ -17,7 +17,7 @@ function parallax() {
 
   var scroll = Math.pow(lerp(0, scroll_px, $(window).height() - $('#header').height() * 3, 0, 1), 0.5);
 
-  if(body.hasClass('hero')) {
+  if(body.hasClass('hero') && false) {
     var alpha = clerp(0, Math.pow(scroll, 2), 1, 0, 1).toFixed(2);
     var color = Math.round(clerp(0, Math.pow(scroll, 2), 1, 0, 48));
     
