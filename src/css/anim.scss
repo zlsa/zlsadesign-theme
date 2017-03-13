@@ -1,10 +1,11 @@
 
+$anim-load: 0.08s;
 $anim-fast: 0.15s;
 $anim-medium: 0.3s;
 $anim-slow: 0.8s;
 
-@mixin anim-load($offset: $grid) {
-}
+//@mixin anim-load($offset: $grid) {
+//}
 
 /*
   transform: translateY(-$offset);

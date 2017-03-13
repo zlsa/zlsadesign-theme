@@ -9,6 +9,8 @@
     
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
   </head>
-  <body data-title="{{ .Title }}" data-section="{{ .Section }}">
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js">
+    
+    <script>$('body').removeClass('no-js');</script>
 
     {{ partial "subheader.html" . }}

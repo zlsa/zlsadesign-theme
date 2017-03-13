@@ -3,7 +3,7 @@
   {{ with .Params.categories }}
   <ul class="categories">
     {{ range . }}
-    <li><a href="/categories/{{ . | urlize }}">{{ . }}</a></li>
+    <li><a href="/categories/{{ . | urlize }}"><span>{{ . }}</span></a></li>
     {{ end }}
   </ul>
   {{ end }}
@@ -11,7 +11,7 @@
   {{ with .Params.tags }}
   <ul class="tags">
     {{ range . }}
-    <li><a href="/tags/{{ . | urlize }}">{{ . | urlize }}</a></li>
+    <li><a href="/tags/{{ . | urlize }}"><span>{{ . | urlize }}</span></a></li>
     {{ end }}
   </ul>
   {{ end }}

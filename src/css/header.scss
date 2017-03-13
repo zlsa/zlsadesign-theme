@@ -13,6 +13,9 @@ $header-mini-logo-size: $grid * 3;
 
 $header-expanded-height: $grid * 16;
 
+$header-logo-title-width: 112px;
+$header-logo-title-height: 48px;
+
 @mixin header-clickable() {
   
   &:hover {
@@ -85,6 +88,8 @@ $header-expanded-height: $grid * 16;
       // Logo image.
       .logo {
         height: $header-logo-size;
+
+        position: relative;
       }
 
       .title {
@@ -93,9 +98,9 @@ $header-expanded-height: $grid * 16;
         
         user-select: none;
         color: transparent;
-        
-        width: 112px;
-        height: 48px;
+
+        width: $header-logo-title-width;
+        height: $header-logo-title-height;
 
         margin-left: $grid;
       }
@@ -289,7 +294,6 @@ body.mini-header #header {
           transition: transform $anim-fast ease;
         }
 
-        @include header-clickable();
       }
       
       .home-link {
@@ -348,26 +352,47 @@ body.mini-header #header {
       
     }
 
-    &.nav-visible {
+  }
 
-      .toggle-nav {
-        
-        img {
-          transform: rotate(180deg);
-        }
-        
-      }
-      
-      nav {
-        max-height: $grid * 6 * 6 !important;
-      }
-      
+}
+
+body.no-js,
+#header.nav-visible {
+
+  .toggle-nav {
+    
+    img {
+      transform: rotate(180deg);
+    }
+    
+  }
+  
+  nav {
+    max-height: $grid * 6 * 6 !important;
+  }
+  
+}
+
+body.no-js {
+  
+  #header {
+    height: auto !important;
+
+    .toggle-nav {
+      display: none;
+    }
+
+    nav {
+      position: static;
+    }
+
+    .container {
+      height: auto;
     }
     
   }
   
 }
-
 
 #header nav ul li a:hover {
   border-width: 0 0 2px 0;

@@ -52,7 +52,6 @@ main {
   margin: 0 16px;
   flex: 1;
 
-  @include anim-load($grid * 0.7);
   @include limit-width();
   
   transition: transform $anim-medium ease, opacity $anim-slow ease;

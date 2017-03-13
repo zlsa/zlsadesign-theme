@@ -79,8 +79,10 @@ $headline-padding-vertical: $grid * 1.5;
 
             transition: background-color $anim-fast ease;
 
+            min-width: $grid * 6;
+
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             
             text-decoration: none !important;
@@ -116,6 +118,9 @@ $headline-padding-vertical: $grid * 1.5;
             
           @media (max-width: 800px) {
             display: flex;
+            
+            display: none;
+            
             padding: 0;
             bottom: 0;
 
@@ -142,6 +147,10 @@ $headline-padding-vertical: $grid * 1.5;
         padding: $headline-padding-vertical 0;
         padding-right: $grid * 4;
 
+        transition: opacity $anim-load ease;
+
+        opacity: 0;
+      
         &:hover {
           text-decoration: none;
         }
@@ -150,7 +159,7 @@ $headline-padding-vertical: $grid * 1.5;
       
       @media (max-width: 800px) {
 
-        padding-bottom: $grid * 4;
+        padding-bottom: $grid * 2;
         
         .section, .title, .publish-time {
           float: none;
@@ -231,6 +240,8 @@ $headline-padding-vertical: $grid * 1.5;
   .pages {
     
     padding: 0 $grid * 2;
+
+    text-align: center;
     
     .page {
       display: inline-block;
@@ -241,10 +252,10 @@ $headline-padding-vertical: $grid * 1.5;
         
         text-align: center;
         
-        width: $grid * 4;
-        height: $grid * 4;
-        line-height: $grid * 4;
-        margin: $grid $grid * 0.5;
+        width: $grid * 5;
+        height: $grid * 5;
+        line-height: $grid * 5;
+        margin: $grid * 0.5;
         
         padding: 0 0;
       }
@@ -254,7 +265,7 @@ $headline-padding-vertical: $grid * 1.5;
         a {
           font-size: 14px;
           background-color: white;
-          color: $color-background;
+          color: $color-page-background;
           
           width: $grid * 5;
           height: $grid * 5;
@@ -324,6 +335,7 @@ main.list-project > .headline {
   }
   
   .infographic img {
+    display: block;
     max-width: 480px;
   }
 
@@ -353,4 +365,9 @@ main.list-project > .headline {
     
   }
   
+}
+
+body.no-js main.article-list article .headline .publish-time,
+body.loaded main.article-list article .headline .publish-time {
+  opacity: 1 !important;
 }

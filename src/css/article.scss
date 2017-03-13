@@ -56,7 +56,11 @@ main.article article {
       color: white;
       font-style: italic;
       text-align: right;
+
+      opacity: 0;
       
+      transition: opacity $anim-load ease;
+
       flex: 1;
 
       align-self: flex-end;
@@ -117,18 +121,21 @@ main.article article {
     
   }
 
-  .actions.app-info,
-  .actions.project-info {
-    padding: $grid * 2 $grid * 2;
-    
-    padding-bottom: (($grid * 2) - 2px);
-
-    border-bottom: $style-border;
+  .actions {
+    background-color: $color-meta-background;
 
     @include button-row();
 
+    padding: 0 $grid * 2;
+    height: auto;
+
     a {
       @include button();
+      height: $grid * 6;
+      line-height: $grid * 6;
+      
+      padding: 0 $grid * 2;
+      margin-right: $grid * 2;
     }
     
   }
@@ -136,13 +143,14 @@ main.article article {
   .actions.app-info {
 
     a {
-      margin: 0 $grid * 2;
+      height: $grid * 8;
+      line-height: $grid * 8;
     }
 
     a.badge-button {
-      margin: -$grid * 2;
       padding: 0;
-      height: 72px;
+      height: $grid * 8;
+      margin-top: -$grid;
 
       .badge {
         height: 72px;
@@ -287,18 +295,26 @@ main.article.static {
 article {
   
   .meta {
-    background-color: $color-background-meta;
+    background-color: $color-meta-background;
     
     display: flex;
     justify-content: space-between;
 
+    flex-wrap: wrap;
+
+    font-size: 12px;
+
     ul {
-      background-color: $color-background-meta;
+      background-color: $color-meta-background;
 
       display: flex;
       align-items: center;
 
       padding: 0 $grid * 2;
+
+      min-height: $grid * 6;
+
+      flex-wrap: wrap;
 
       &.tags {
         margin-left: auto;
@@ -316,14 +332,20 @@ article {
         text-transform: uppercase;
 
         display: block;
+        height: 100%;
 
         a {
-          display: block;
+          display: flex;
+          height: 100%;
 
-          height: $grid * 6;
-          line-height: $grid * 6;
+          justify-content: center;
+          align-items: center;
 
-          padding: 0 $grid * 2;
+          span {
+            vertical-align: middle;
+          }
+
+          padding: 0 $grid * 1.5;
           
           transition: background-color $anim-fast ease;
           
@@ -337,38 +359,50 @@ article {
       
     }
     
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
 
-      background: $color-background;
+      background: $color-meta-background;
+      align-items: flex-start;
       
       ul {
         flex-direction: column;
         flex: 1;
-        padding: 0;
         align-items: stretch;
+        justify-content: flex-start;
+        
+        min-height: $grid * 4;
+        padding: 0;
       }
       
       ul + ul {
-        margin-left: 4px !important;
+        border-left: 4px solid $color-background;
+      }
+
+      li {
+        height: auto;
       }
 
       li a {
-        height: $grid * 5 !important;
-        line-height: $grid * 5 !important;
+        min-height: $grid * 4 !important;
+        
+        justify-content: flex-start !important;
+        
+        padding: 0 $grid * 2;
       }
       
     }
 
     @media (max-width: 400px) {
+      align-items: stretch !important;
       flex-direction: column;
 
-      ul.tags {
-        margin-left: 0;
+      ul {
+        border-left: none;
+        width: 100%;
       }
       
       ul + ul {
-        margin-left: 0;
-        margin-top: 4px;
+        border-top: 4px solid $color-background;
       }
       
     }
@@ -386,6 +420,11 @@ main.article article .section.section-infographic,
 main.article article .section.section-post,
 main.article article .section.section-project {
   display: none;
+  
+  @media (max-width: 600px) {
+    display: block;
+  }
+  
 }
   
 article .section.section-app a,
@@ -402,6 +441,7 @@ article .section.section-app a {
 
 article.app .body .actions a[href],
 article.app .content a[href],
+article.app .links .name,
 article.app .body .read-more a[href] {
   color: $color-apps !important;
 }
@@ -436,6 +476,7 @@ article .section.section-project a {
 
 article.project .body .actions a[href],
 article.project .content a[href],
+article.project .links .name,
 article.project .body .read-more a[href] {
   color: $color-projects !important;
 }
@@ -446,4 +487,9 @@ article .section.section-term a {
 
 article.section-term .headline .publish-time {
   display: none;
+}
+
+body.no-js article .headline .publish-time,
+body.loaded article .headline .publish-time {
+  opacity: 1 !important;
 }
