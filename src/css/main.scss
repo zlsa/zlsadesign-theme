@@ -18,6 +18,7 @@ html {
   background-image: url('/img/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   
   background-color: $color-page-background;
 
@@ -111,10 +112,5 @@ main {
 
 body.hero main {
   margin-top: $header-height;
-  
-  @media (max-width: 600px) {
-    margin-top: 0;
-  }
-  
 }
 

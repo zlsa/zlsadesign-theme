@@ -24,10 +24,13 @@ $hero-gap: $grid * 2;
 
 #hero {
   z-index: 10;
+
   @include limit-width();
   
   min-height: $header-height + $hero-bottom-overlap;
   height: 100vh;
+
+  margin: 0 auto;
   padding-bottom: $hero-bottom-overlap + $hero-gap;
   margin-bottom: -$hero-bottom-overlap - $header-height;
 
@@ -38,21 +41,76 @@ $hero-gap: $grid * 2;
   }
   
   .hero-contents {
-    width: 100%;
-    height: 100%;
     background-color: rgba(black, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
 
-    h1 {
-      color: rgba(white, 0.2);
-      font-size: 10vh;
+    width: 100%;
+    height: 100%;
+
+    .spacer {
+      height: $grid * 12;
+    }
+    
+    .message {
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-left: -$grid;
+
+      span {
+        background-color: $color-infographics;
+
+        color: white;
+        font-size: $grid * 2;
+        font-weight: bold;
+        
+        padding: $grid * 1 $grid * 2;
+        margin: $grid * 0.5 0;
+
+        &.large {
+          font-size: $grid * 4;
+          padding: $grid * 2 $grid * 3;
+
+          &:hover {
+            text-decoration: underline;
+          }
+          
+        }
+
+        &.small {
+          background-color: $color-page-background;
+          font-style: italic;
+        }
+        
+      }
+      
+    }
+    
+    .title {
+      width: 100%;
+      
+      background-color: rgba(black, 0.7);
+      background: linear-gradient(to bottom, rgba(black, 0), rgba(black, 0.7));
+      
+      color: white;
+      font-size: $grid * 4;
       font-weight: bold;
-      text-transform: uppercase;
+
+      text-decoration: underline;
 
       display: inline-block;
+      padding: $grid * 4;
+      
+      padding-top: $grid * 16;
     }
     
   }

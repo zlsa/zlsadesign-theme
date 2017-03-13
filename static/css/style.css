@@ -307,6 +307,18 @@ main.article article .license {
   main.article article .attribution a,
   main.article article .license a {
     color: #dd6644; }
+  main.article article .app-info em,
+  main.article article .project-info em,
+  main.article article .content em,
+  main.article article .attribution em,
+  main.article article .license em {
+    font-style: italic; }
+  main.article article .app-info strong,
+  main.article article .project-info strong,
+  main.article article .content strong,
+  main.article article .attribution strong,
+  main.article article .license strong {
+    font-weight: bold; }
   main.article article .app-info hr:after,
   main.article article .project-info hr:after,
   main.article article .content hr:after,
@@ -477,7 +489,7 @@ main.article article .project-info {
     color: #dd6644;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 12px 16px;
+    padding: 8px 16px;
     transition: background-color 0.15s ease; }
     main.article article .app-info a:hover,
     main.article article .project-info a:hover {
@@ -554,7 +566,7 @@ main.article article.infographic .actions {
     color: #dd6644;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 12px 16px;
+    padding: 8px 16px;
     transition: background-color 0.15s ease; }
     main.article article.infographic .actions .full-size.button:hover {
       background-color: rgba(0, 0, 0, 0.05); }
@@ -735,6 +747,10 @@ article.section-term .headline .publish-time {
       margin-top: 0.5em; }
     .article-list article .summary a {
       color: #dd6644; }
+    .article-list article .summary em {
+      font-style: italic; }
+    .article-list article .summary strong {
+      font-weight: bold; }
     .article-list article .summary hr:after {
       content: "***";
       display: block;
@@ -1140,6 +1156,7 @@ body[data-section=project] #header nav ul li.link-projects a {
   width: 100%;
   min-height: 112px;
   height: 100vh;
+  margin: 0 auto;
   padding-bottom: 64px;
   margin-bottom: -112px;
   padding-top: 128px; }
@@ -1147,24 +1164,56 @@ body[data-section=project] #header nav ul li.link-projects a {
     #hero {
       padding-top: 0; } }
   #hero .hero-contents {
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
-    justify-content: center; }
-    #hero .hero-contents h1 {
-      color: rgba(255, 255, 255, 0.2);
-      font-size: 10vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%; }
+    #hero .hero-contents .spacer {
+      height: 96px; }
+    #hero .hero-contents .message {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: -8px; }
+      #hero .hero-contents .message span {
+        background-color: #009688;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 8px 16px;
+        margin: 4px 0; }
+        #hero .hero-contents .message span.large {
+          font-size: 32px;
+          padding: 16px 24px; }
+          #hero .hero-contents .message span.large:hover {
+            text-decoration: underline; }
+        #hero .hero-contents .message span.small {
+          background-color: #242424;
+          font-style: italic; }
+    #hero .hero-contents .title {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+      color: white;
+      font-size: 32px;
       font-weight: bold;
-      text-transform: uppercase;
-      display: inline-block; }
+      text-decoration: underline;
+      display: inline-block;
+      padding: 32px;
+      padding-top: 128px; }
 
 html {
   height: 100%;
   background-image: url("/img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-color: #242424; }
   @media (max-width: 600px) {
     html {
@@ -1224,8 +1273,5 @@ main {
 
 body.hero main {
   margin-top: 64px; }
-  @media (max-width: 600px) {
-    body.hero main {
-      margin-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */

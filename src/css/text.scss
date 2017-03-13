@@ -11,6 +11,14 @@
     color: $color-primary;
   }
 
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
   hr {
     
     &:after {
