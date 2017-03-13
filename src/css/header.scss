@@ -188,7 +188,7 @@ body.hero #header {
   top: 0;
   left: 0;
 
-  transition: opacity $anim-slow ease, transform $anim-medium ease;
+  //transition: opacity $anim-slow ease, transform $anim-medium ease;
   
   &.expanded {
     background-color: transparent;
@@ -373,10 +373,17 @@ body.no-js,
   
 }
 
+body.no-js #header {
+}
+  
 body.no-js {
   
   #header {
+    background: $color-header-background !important;
+    box-shadow: 0 -100px 8px 100px rgba(black, 0.7), 0 -100px 20px 100px rgba(black, 0.5);
+    
     height: auto !important;
+    min-height: $grid * 10 !important;
 
     .toggle-nav {
       display: none;
@@ -449,3 +456,4 @@ body[data-section=project] #header nav ul li.link-projects a {
 #header nav ul li.link-about a {
   border-color: white;
 }
+

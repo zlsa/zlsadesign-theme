@@ -39,7 +39,7 @@ function parallax() {
   }
 
   var parallax_offset = scroll_px * 0.5;
-  $('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
+  //$('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
 
   $('#hero-background').css('transform', 'translateY(' + parallax_offset + 'px)');
   
