@@ -19,12 +19,17 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   
-  background-color: $color-background;
+  background-color: $color-page-background;
 
   @media (max-width: 600px) {
     background-image: none;
     background-color: #111;
   }
+
+  &.hero {
+    background-image: none;
+  }
+  
 }
 
 body {
@@ -40,6 +45,7 @@ body {
 }
 
 main {
+  z-index: 20;
   color: $color-foreground-primary;
 
   margin: 0 16px;
@@ -53,6 +59,7 @@ main {
   > .headline {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     
     font-size: $grid * 4;
     color: white;
@@ -63,6 +70,10 @@ main {
     margin-left: $grid * 4;
     margin-bottom: $grid * 2;
 
+    @media (max-width: 600px) {
+      margin-left: $grid * 2;
+    }
+    
     &.taxonomy {
       
       .title {
@@ -84,8 +95,14 @@ main {
       font-size: $grid * 2;
       text-transform: uppercase;
       
-      padding: $grid * 1 $grid * 2;
+      padding: $grid $grid * 2;
       margin-right: $grid * 3;
+      
+      @media (max-width: 600px) {
+        padding: $grid;
+        margin-right: $grid * 2;
+      }
+      
     }
     
   }

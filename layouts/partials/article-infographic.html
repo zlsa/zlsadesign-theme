@@ -5,9 +5,14 @@
   <section class="body">
     
     <section class="infographic">
-      <a href="/infographic/{{ .Params.infographic.file }}.png" class="Direct link to high-resolution infographic">
-        <img src="/infographic/{{ .Params.infographic.file }}.jpg" />
+      <a href="/infographic/{{ .Params.infographic.file }}.png" title="Direct link to full-size infographic">
+        <img src="/infographic/{{ .Params.infographic.file }}.jpg" alt="{{ .Title }}" />
       </a>
+
+      <div class="actions">
+        <a class="full-size button" href="/infographic/{{ .Params.infographic.file }}.png" title="Direct link to high-resolution infographic">View full-size</a>
+      </div>
+      
     </section>
     
     <section class="content">

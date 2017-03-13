@@ -8,7 +8,22 @@ $hero-bottom-overlap: $grid * 6;
 
 $hero-gap: $grid * 2;
 
+#hero-background {
+  position: absolute;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    display: none;
+  }
+  
+}
+
 #hero {
+  z-index: 10;
   @include limit-width();
   
   min-height: $header-height + $hero-bottom-overlap;

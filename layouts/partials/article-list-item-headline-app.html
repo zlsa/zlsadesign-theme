@@ -2,19 +2,27 @@
   
   <span class="section section-{{ .Section }}"><a href="{{ .Section | absURL }}" title="View all {{ .Section }}s">{{ .Section }}</a></span>
   
-  <span class="title"><a href="{{ .RelPermalink }}" title="Read more">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</a>
-    {{ if .Params.app.android }}
-    {{ if .Params.app.android.id }}
-      <a class="app-os app-os-android" href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Google Play Store link">
-        <img src="/img/app-os-android.png" alt="Get it on Google Play" />
+  <span class="title"><a href="{{ .RelPermalink }}" title="Open full article">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</a>
+
+    <span class="links">
+      
+      {{ if .Params.app.android }}
+      
+      {{ if .Params.app.android.play }}
+      <a class="app-os app-os-android" href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Get {{ .Params.app.name }} on Google Play">
+        <img src="/img/app-store-google-play.png" alt="{{ .Params.app.name }}" />
       </a>
-    {{ end }}
-    {{ if .Params.app.android.url }}
-      <a class="app-os app-os-android" href="{{ .Params.app.android.url }}" title="Get the app">
-        <img src="/img/external-link.png" alt="Get the app" />
+      {{ end }}
+      
+      {{ if .Params.app.android.url }}
+      <a class="app-os app-os-android" href="{{ .Params.app.android.url }}" title="Get {{ .Params.app.name }}">
+        <img src="/img/app-os-android.png" alt="Get the app" />
       </a>
-    {{ end }}
-    {{ end }}
+      {{ end }}
+      {{ end }}
+      
+    </span>
+    
   </span>
   
   <span class="publish-time"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>

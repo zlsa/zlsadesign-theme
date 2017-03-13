@@ -291,22 +291,26 @@ main.article article .body {
 main.article article .app-info,
 main.article article .project-info,
 main.article article .content,
+main.article article .attribution,
 main.article article .license {
   padding: 32px 32px;
   line-height: 1.8em; }
   main.article article .app-info p + p,
   main.article article .project-info p + p,
   main.article article .content p + p,
+  main.article article .attribution p + p,
   main.article article .license p + p {
     margin-top: 0.5em; }
   main.article article .app-info a,
   main.article article .project-info a,
   main.article article .content a,
+  main.article article .attribution a,
   main.article article .license a {
     color: #dd6644; }
   main.article article .app-info hr:after,
   main.article article .project-info hr:after,
   main.article article .content hr:after,
+  main.article article .attribution hr:after,
   main.article article .license hr:after {
     content: "***";
     display: block;
@@ -316,6 +320,7 @@ main.article article .license {
   main.article article .app-info blockquote,
   main.article article .project-info blockquote,
   main.article article .content blockquote,
+  main.article article .attribution blockquote,
   main.article article .license blockquote {
     border-left: 4px solid rgba(0, 0, 0, 0.3);
     margin: 8px;
@@ -335,6 +340,12 @@ main.article article .license {
   main.article article .content h4,
   main.article article .content h5,
   main.article article .content h6,
+  main.article article .attribution h1,
+  main.article article .attribution h2,
+  main.article article .attribution h3,
+  main.article article .attribution h4,
+  main.article article .attribution h5,
+  main.article article .attribution h6,
   main.article article .license h1,
   main.article article .license h2,
   main.article article .license h3,
@@ -346,29 +357,34 @@ main.article article .license {
   main.article article .app-info h1,
   main.article article .project-info h1,
   main.article article .content h1,
+  main.article article .attribution h1,
   main.article article .license h1 {
     font-size: 24px;
     font-weight: bold; }
   main.article article .app-info h2,
   main.article article .project-info h2,
   main.article article .content h2,
+  main.article article .attribution h2,
   main.article article .license h2 {
     font-size: 20px; }
   main.article article .app-info h3,
   main.article article .project-info h3,
   main.article article .content h3,
+  main.article article .attribution h3,
   main.article article .license h3 {
     font-size: 16px;
     font-weight: bold; }
   main.article article .app-info h4,
   main.article article .project-info h4,
   main.article article .content h4,
+  main.article article .attribution h4,
   main.article article .license h4 {
     font-size: 12.8px;
     font-weight: bold; }
   main.article article .app-info code,
   main.article article .project-info code,
   main.article article .content code,
+  main.article article .attribution code,
   main.article article .license code {
     font-family: 'Roboto Mono', monospace;
     font-size: 12px;
@@ -381,6 +397,7 @@ main.article article .license {
   main.article article .app-info pre,
   main.article article .project-info pre,
   main.article article .content pre,
+  main.article article .attribution pre,
   main.article article .license pre {
     border-radius: 2px;
     background-color: #333;
@@ -390,6 +407,7 @@ main.article article .license {
     main.article article .app-info pre code,
     main.article article .project-info pre code,
     main.article article .content pre code,
+    main.article article .attribution pre code,
     main.article article .license pre code {
       border: none;
       background-color: transparent;
@@ -402,6 +420,8 @@ main.article article .license {
   main.article article .project-info ol,
   main.article article .content ul,
   main.article article .content ol,
+  main.article article .attribution ul,
+  main.article article .attribution ol,
   main.article article .license ul,
   main.article article .license ol {
     margin: 16px 8px;
@@ -411,28 +431,34 @@ main.article article .license {
     main.article article .project-info ol li,
     main.article article .content ul li,
     main.article article .content ol li,
+    main.article article .attribution ul li,
+    main.article article .attribution ol li,
     main.article article .license ul li,
     main.article article .license ol li {
       padding-left: 1ex; }
   main.article article .app-info :first-child,
   main.article article .project-info :first-child,
   main.article article .content :first-child,
+  main.article article .attribution :first-child,
   main.article article .license :first-child {
     margin-top: 0; }
   main.article article .app-info :last-child,
   main.article article .project-info :last-child,
   main.article article .content :last-child,
+  main.article article .attribution :last-child,
   main.article article .license :last-child {
     margin-bottom: 0; }
   @media (max-width: 600px) {
     main.article article .app-info,
     main.article article .project-info,
     main.article article .content,
+    main.article article .attribution,
     main.article article .license {
       padding: 16px 16px !important; } }
   main.article article .app-info p:empty,
   main.article article .project-info p:empty,
   main.article article .content p:empty,
+  main.article article .attribution p:empty,
   main.article article .license p:empty {
     display: none; }
 
@@ -440,16 +466,18 @@ main.article article .app-info,
 main.article article .project-info {
   padding: 16px 16px;
   padding-bottom: 14px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 16px;
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   align-items: center; }
   main.article article .app-info a,
   main.article article .project-info a {
+    display: block;
+    color: #dd6644;
     font-weight: bold;
     text-transform: uppercase;
-    display: block;
-    padding: 8px 16px;
+    padding: 12px 16px;
     transition: background-color 0.15s ease; }
     main.article article .app-info a:hover,
     main.article article .project-info a:hover {
@@ -467,10 +495,18 @@ main.article article .app-info a.badge-button {
   main.article article .app-info a.badge-button:hover {
     background-color: transparent; }
 
+main.article article .attribution {
+  padding: 0 32px;
+  padding-bottom: 8px;
+  margin-top: 16px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.54);
+  font-style: italic; }
+
 main.article article .license {
   padding: 16px 16px;
   padding-top: 0;
-  margin-top: -16px; }
+  margin-top: 16px; }
   main.article article .license p {
     background-color: #009688;
     color: white;
@@ -506,6 +542,22 @@ main.article article.infographic .infographic {
   padding: 0; }
   main.article article.infographic .infographic img {
     width: 100%; }
+
+main.article article.infographic .actions {
+  padding: 8px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-top: 2px solid rgba(0, 0, 0, 0.1); }
+  main.article article.infographic .actions .full-size.button {
+    display: block;
+    color: #dd6644;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    transition: background-color 0.15s ease; }
+    main.article article.infographic .actions .full-size.button:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
 
 main.article article.redirect .content {
   font-size: 24px;
@@ -550,7 +602,7 @@ article .meta {
           background-color: rgba(0, 0, 0, 0.05); }
   @media (max-width: 600px) {
     article .meta {
-      background: white; }
+      background: #fff; }
       article .meta ul {
         flex-direction: column;
         flex: 1;
@@ -633,24 +685,21 @@ article.section-term .headline .publish-time {
         font-weight: bold;
         padding: 12px 0;
         text-decoration: underline; }
-      .article-list article .headline .title .app-os,
-      .article-list article .headline .title .project-link {
-        margin: 0 16px;
-        width: 48px;
-        text-align: center;
-        transition: background-color 0.15s ease; }
-        .article-list article .headline .title .app-os img,
-        .article-list article .headline .title .project-link img {
-          margin-bottom: -4px;
-          opacity: 0.3;
-          width: 24px;
-          transition: opacity 0.15s ease; }
-        .article-list article .headline .title .app-os:hover,
-        .article-list article .headline .title .project-link:hover {
-          background-color: rgba(0, 0, 0, 0.07); }
-          .article-list article .headline .title .app-os:hover img,
-          .article-list article .headline .title .project-link:hover img {
-            opacity: 0.5; }
+      .article-list article .headline .title .links {
+        padding: 0 8px; }
+        .article-list article .headline .title .links a {
+          width: 48px;
+          text-align: center;
+          transition: background-color 0.15s ease; }
+          .article-list article .headline .title .links a img {
+            margin-bottom: -4px;
+            opacity: 0.3;
+            width: 24px;
+            transition: opacity 0.15s ease; }
+          .article-list article .headline .title .links a:hover {
+            background-color: rgba(0, 0, 0, 0.07); }
+            .article-list article .headline .title .links a:hover img {
+              opacity: 0.5; }
     .article-list article .headline .publish-time {
       font-style: italic;
       float: right;
@@ -781,7 +830,7 @@ article.section-term .headline .publish-time {
       .next-prev .pages .page.active a {
         font-size: 14px;
         background-color: white;
-        color: #242424;
+        color: #fff;
         width: 40px;
         height: 40px;
         line-height: 40px;
@@ -1047,7 +1096,7 @@ body[data-section=project] #header nav ul li.link-projects a {
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px; }
   #footer > .container {
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
     margin-left: auto;
     margin-right: auto;
     max-width: 1024px;
@@ -1074,7 +1123,17 @@ body[data-section=project] #header nav ul li.link-projects a {
     #footer {
       margin-top: 16px; } }
 
+#hero-background {
+  position: absolute; }
+  #hero-background img {
+    object-fit: cover;
+    width: 100%; }
+  @media (max-width: 600px) {
+    #hero-background {
+      display: none; } }
+
 #hero {
+  z-index: 10;
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
@@ -1111,6 +1170,8 @@ html {
     html {
       background-image: none;
       background-color: #111; } }
+  html.hero {
+    background-image: none; }
 
 body {
   display: flex;
@@ -1120,6 +1181,7 @@ body {
   min-height: 100%; }
 
 main {
+  z-index: 20;
   color: rgba(0, 0, 0, 0.87);
   margin: 0 16px;
   flex: 1;
@@ -1131,12 +1193,16 @@ main {
   main > .headline {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     font-size: 32px;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
     margin-left: 32px;
     margin-bottom: 16px; }
+    @media (max-width: 600px) {
+      main > .headline {
+        margin-left: 16px; } }
     main > .headline.taxonomy .title {
       text-transform: none;
       font-family: 'Roboto Mono', monospace;
@@ -1151,6 +1217,10 @@ main {
       text-transform: uppercase;
       padding: 8px 16px;
       margin-right: 24px; }
+      @media (max-width: 600px) {
+        main > .headline .taxonomy {
+          padding: 8px;
+          margin-right: 16px; } }
 
 body.hero main {
   margin-top: 64px; }

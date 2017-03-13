@@ -29,10 +29,7 @@ $header-expanded-height: $grid * 16;
   width: 100%;
   height: $header-height;
 
-  //background-color: $color-background;
   transition: opacity $anim-slow ease, transform $anim-medium ease;
-
-  //@include anim-load($grid * 2);
 
   display: flex;
 
@@ -224,7 +221,7 @@ body.mini-header #header {
   }
 
   &:hover {
-    background-color: $color-background;
+    background-color: $color-page-background;
 
     opacity: 1;
   }
@@ -236,7 +233,7 @@ body.mini-header #header {
   #header {
 
     position: static !important;
-    background-color: $color-background !important;
+    background-color: $color-page-background !important;
     
     height: auto !important;
     margin-bottom: $grid * 2;

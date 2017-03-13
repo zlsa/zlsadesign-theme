@@ -2,6 +2,8 @@
 @import 'color';
 @import 'metrics';
 
+@import 'button';
+
 @import 'text';
 
 main.article article {
@@ -92,9 +94,10 @@ main.article article {
   .app-info,
   .project-info,
   .content,
+  .attribution,
   .license {
     padding: $grid * 4 $grid * 4;
-    
+
     @include text();
     
     @media (max-width: 600px) {
@@ -113,26 +116,12 @@ main.article article {
     
     padding-bottom: (($grid * 2) - 2px);
 
-    display: flex;
-    flex-wrap: wrap;
+    border-bottom: $style-border;
 
-    border-bottom: 2px solid rgba(black, 0.1);
+    @include button-row();
 
-    align-items: center;
-    
     a {
-      font-weight: bold;
-      text-transform: uppercase;
-      
-      display: block;
-      padding: $grid $grid * 2;
-
-      transition: background-color $anim-fast ease;
-      
-      &:hover {
-        background-color: rgba(black, 0.05);
-      }
-      
+      @include button();
     }
     
   }
@@ -160,13 +149,25 @@ main.article article {
     
   }
 
+  .attribution {
+    padding: 0 $grid * 4;
+    padding-bottom: $grid;
+    margin-top: $grid * 2;
+
+    text-align: right;
+
+    color: $color-foreground-secondary;
+
+    font-style: italic;
+  }
+  
   .license {
     padding: $grid * 2 $grid * 2;
 
     padding-top: 0;
 
-    margin-top: -$grid * 2;
-
+    margin-top: $grid * 2;
+    
     p {
       background-color: $color-infographics;
       color: white;
@@ -207,7 +208,7 @@ main.article article {
     
     ul {
       
-      border-top: 2px solid rgba(black, 0.1);
+      border-top: $style-border;
       padding-top: $grid * 2;
     
       li {
@@ -234,6 +235,17 @@ main.article article {
       img {
         width: 100%;
       }
+    }
+
+    .actions {
+      @include button-row();
+
+      border-top: $style-border;
+
+      .full-size.button {
+        @include button();
+      }
+      
     }
     
   }
@@ -268,13 +280,13 @@ main.article.static {
 article {
   
   .meta {
-    background-color: #f4f4f4;
+    background-color: $color-background-meta;
     
     display: flex;
     justify-content: space-between;
 
     ul {
-      background-color: #f4f4f4;
+      background-color: $color-background-meta;
 
       display: flex;
       align-items: center;
@@ -320,7 +332,7 @@ article {
     
     @media (max-width: 600px) {
 
-      background: white;
+      background: $color-background;
       
       ul {
         flex-direction: column;

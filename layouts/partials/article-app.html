@@ -6,7 +6,7 @@
     
     <section class="app-info">
       
-      {{ if .Params.app.android.id }}
+      {{ if .Params.app.android.play }}
       <a class="badge-button" href="https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}" title="Google Play Store link">
         <img class="badge" src="/img/badge-google-play-app.png" alt="Get it on Google Play" />
       </a>
@@ -26,7 +26,11 @@
       {{ .Content }}
     </section>
 
-  </section>
+    {{ if .Params.app.android.play }}
+    <section class="attribution">
+      Google Play and the Google Play logo are trademarks of Google Inc.
+    </section>
+    {{ end }}
 
   {{ partial "article-meta.html" . }}
   

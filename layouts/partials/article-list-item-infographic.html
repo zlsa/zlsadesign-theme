@@ -1,10 +1,10 @@
 <article class="list-item infographic">
   
-  {{ partial "article-list-item-headline.html" . }}
+  {{ partial "article-list-item-headline-infographic.html" . }}
   
   <section class="body">
     <section class="infographic">
-      <a href="{{ .RelPermalink }}" title="Go to infographic page">
+      <a href="{{ .RelPermalink }}" title="Open full-resolution infographic">
         <img src="/infographic/{{ .Params.infographic.file }}.jpg" />
       </a>
     </section>
@@ -14,7 +14,7 @@
       
       {{ if .Truncated }}
       <span class="read-more">
-        <a href="{{ .RelPermalink }}" title="Read more">Read more</a>
+        <a href="{{ .RelPermalink }}" title="Open full article">Read more</a>
         <span class="reading-time">({{ .ReadingTime }} min)</span>
       </span>
       {{ end }}

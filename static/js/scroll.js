@@ -9,42 +9,51 @@ function clerp(il, i, ih, ol, oh) {
 
 var body, hero, header;
 
-function parallax(scroll) {
+function parallax() {
 
-  scroll = clerp(0, scroll, $(window).height() - $('#header').height() * 3, 0, 1);
+  var scroll = $(window).scrollTop();
 
-  var color = clerp(0, Math.pow(scroll, 2), 1, 0, 36);
-
-  color = Math.round(color);
+  scroll = lerp(0, scroll, $(window).height() - $('#header').height() * 3, 0, 1);
 
   if(body.hasClass('hero')) {
+    var alpha = clerp(0, Math.pow(scroll, 2), 1, 0, 1).toFixed(2);
+    var color = Math.round(clerp(0, Math.pow(scroll, 2), 1, 0, 48));
+    
+    header.css('box-shadow', [
+      '0 -100px 8px 100px rgba(0, 0, 0, ' + alpha * 0.7 + ')',
+      '0 -100px 20px 100px rgba(0, 0, 0, ' + alpha * 0.5 + ')'
+    ].join(', '));
+    
     header.css('background-color', 'rgba('+ color + ', ' + color + ', ' + color + ', ' + scroll + ')');
     header.css('height', clerp(0, scroll, 1, 128, 64));
     
     var parallax_offset = scroll * $(window).height() * 0.5;
     $('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
-  }
-
   
-  //hero.css('transform', 'translateY(-' + parallax_offset + 'px)');
+    hero.css('transform', 'translateY(' + parallax_offset + 'px)');
+  }
 
 }
 
 $(document).ready(function() {
   body = $('body');
-  hero = $('#hero');
+  hero = $('#hero-background');
   header = $('#header');
 
   $('body').addClass('loaded');
 
-  parallax($(window).scrollTop());
+  parallax();
   
   setTimeout(function() {
-    parallax($(window).scrollTop());
+    parallax();
   }, 0);
   
   $(window).scroll(function(ev) {
-    parallax($(window).scrollTop());
+    parallax();
+  });
+  
+  $(window).resize(function(ev) {
+    parallax();
   });
   
 });

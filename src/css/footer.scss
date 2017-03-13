@@ -13,7 +13,7 @@ $footer-margin: $grid * 5;
   font-size: 12px;
 
   > .container {
-    border-top: 2px solid rgba(white, 0.1);
+    border-top: $style-page-border;
 
     @include limit-width;
 
@@ -39,7 +39,7 @@ $footer-margin: $grid * 5;
 
     @media (max-width: 600px) {
 
-      background-color: $color-background;
+      background-color: $color-page-background;
       
       .copyright {
         float: none;
