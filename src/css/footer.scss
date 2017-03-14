@@ -6,6 +6,8 @@ $footer-margin: $grid * 5;
 
 #footer {
 
+  z-index: 100;
+
   margin-top: $grid * 8;
   
   color: rgba(white, 0.7);

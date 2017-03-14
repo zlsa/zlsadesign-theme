@@ -1364,6 +1364,7 @@ body[data-section=project] #header nav ul li.link-projects a {
   border-color: white; }
 
 #footer {
+  z-index: 100;
   margin-top: 64px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px; }
