@@ -22,7 +22,7 @@ body[data-title=Infographics] {
       flex-wrap: wrap;
 
       align-items: flex-end;
-
+      
       article.infographic {
 
         margin-top: $grid * 2;
@@ -58,8 +58,9 @@ body[data-title=Infographics] {
           width: 100%;
 
           padding: $grid * 2 $grid * 2;
-          padding-bottom: 0;
-
+          padding-bottom: $grid;
+          
+          background-color: rgba(black, 0.5);
           background-color: transparent;
 
           display: flex;
@@ -91,8 +92,11 @@ body[data-title=Infographics] {
         }
 
         .body {
+
+          padding-top: 0;
           
           .infographic {
+            box-shadow: 0 0 $grid * 4 rgba(black, 0.6);
             
             img {
               width: 100%;

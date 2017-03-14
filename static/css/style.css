@@ -794,7 +794,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       min-height: 48px;
       width: 100%;
       padding: 16px 16px;
-      padding-bottom: 0;
+      padding-bottom: 8px;
+      background-color: rgba(0, 0, 0, 0.5);
       background-color: transparent;
       display: flex;
       align-items: flex-end; }
@@ -811,11 +812,15 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
           text-decoration: underline; }
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .section, body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .links, body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .publish-time {
         display: none; }
-    body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body .infographic img {
-      width: 100%;
-      max-width: none; }
-    body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body .content {
-      display: none; }
+    body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body {
+      padding-top: 0; }
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body .infographic {
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.6); }
+        body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body .infographic img {
+          width: 100%;
+          max-width: none; }
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body .content {
+        display: none; }
     body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .meta {
       display: none; }
 
