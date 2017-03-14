@@ -767,11 +767,13 @@ body.loaded article .headline .publish-time {
 body[data-title=Infographics] main.article-list.condensed .article-list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: flex-end; }
   body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
     margin-top: 16px;
-    position: relative;
-    padding-top: 48px; }
+    background-color: transparent;
+    box-shadow: none;
+    position: relative; }
     @media (min-width: 900px) {
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
         flex: 0 0 calc(50% - 8px * 2);
@@ -787,20 +789,19 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
         flex: 0 0 calc(20% - 8px * 2); } }
     body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline {
-      position: absolute;
       top: 0;
       left: 0;
       min-height: 48px;
       width: 100%;
-      padding: 8px 0;
-      background-color: #009688;
-      padding: 0;
+      padding: 16px 16px;
+      padding-bottom: 0;
+      background-color: transparent;
       display: flex;
-      align-items: center; }
+      align-items: flex-end; }
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title {
         display: block;
         margin: 0;
-        padding: 0 16px; }
+        padding: 0; }
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title a {
         color: white;
         font-size: 16px;

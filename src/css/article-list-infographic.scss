@@ -21,6 +21,8 @@ body[data-title=Infographics] {
       flex-direction: row;
       flex-wrap: wrap;
 
+      align-items: flex-end;
+
       article.infographic {
 
         margin-top: $grid * 2;
@@ -42,32 +44,31 @@ body[data-title=Infographics] {
         @media (min-width: 2400px) {
           flex: 0 0 calc(20% - #{$grid} * 2);
         }
+
+        background-color: transparent;
+        box-shadow: none;
         
         position: relative;
 
-        padding-top: $grid * 6;
-        
         .headline {
-          position: absolute;
           top: 0;
           left: 0;
 
           min-height: $grid * 6;
           width: 100%;
 
-          padding: $grid 0;
+          padding: $grid * 2 $grid * 2;
+          padding-bottom: 0;
 
-          background-color: $color-infographics;
-
-          padding: 0;
+          background-color: transparent;
 
           display: flex;
-          align-items: center;
+          align-items: flex-end;
 
           .title {
             display: block;
             margin: 0;
-            padding: 0 $grid * 2;
+            padding: 0;
           }
 
           .title a {
