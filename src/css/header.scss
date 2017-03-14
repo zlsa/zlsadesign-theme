@@ -39,9 +39,6 @@ $header-logo-title-height: 48px;
   background-color: $color-header-background;
   box-shadow: 0 -100px 8px 100px rgba(black, 0.7), 0 -100px 20px 100px rgba(black, 0.5);
 
-  transition: opacity $anim-slow ease, transform $anim-medium ease,
-  background-color $anim-medium ease, box-shadow $anim-medium ease, height $anim-medium ease;
-
   display: flex;
 
   flex-direction: row;
@@ -180,6 +177,8 @@ $header-logo-title-height: 48px;
 
 body.loaded #header {
   opacity: 1;
+  transition: opacity $anim-slow ease, transform $anim-medium ease,
+  background-color $anim-medium ease, box-shadow $anim-medium ease, height $anim-medium ease;
 }
 
 body.hero #header {

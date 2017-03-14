@@ -249,15 +249,18 @@ main.article article {
     .infographic {
       padding: 0;
 
+      a {
+        display: block;
+      }
+
       img {
+        display: block;
         width: 100%;
       }
     }
 
     .actions {
       @include button-row();
-
-      border-top: $style-border;
     }
     
   }

@@ -44,7 +44,6 @@
   height: 64px;
   background-color: #303030;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.8s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -129,7 +128,8 @@
     box-shadow: none; }
 
 body.loaded #header {
-  opacity: 1; }
+  opacity: 1;
+  transition: opacity 0.8s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; }
 
 body.hero #header {
   position: fixed;
@@ -595,14 +595,16 @@ main.article article {
           font-weight: bold; }
   main.article article.infographic .infographic {
     padding: 0; }
+    main.article article.infographic .infographic a {
+      display: block; }
     main.article article.infographic .infographic img {
+      display: block;
       width: 100%; }
   main.article article.infographic .actions {
     padding: 8px 16px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    border-top: 2px solid rgba(0, 0, 0, 0.1); }
+    align-items: center; }
   main.article article.redirect .content {
     font-size: 24px;
     font-weight: bold; }
@@ -749,6 +751,55 @@ article.section-term .headline .publish-time {
 body.no-js article .headline .publish-time,
 body.loaded article .headline .publish-time {
   opacity: 1 !important; }
+
+@media (min-width: 1500px) {
+  body[data-title=Infographics] main.article-list.condensed {
+    max-width: 1500px; } }
+
+body[data-title=Infographics] main.article-list.condensed .article-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
+    margin-top: 16px;
+    position: relative;
+    padding-top: 40px; }
+    @media (min-width: 900px) {
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
+        flex: 0 0 calc(50% - 8px * 2);
+        margin-right: 8px;
+        margin-left: 8px; } }
+    @media (min-width: 1500px) {
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
+        flex: 0 0 calc(33.3% - 8px * 2); } }
+    body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #009688;
+      padding: 0; }
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title {
+        display: block;
+        height: 100%;
+        margin: 0; }
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        display: block;
+        padding: 16px 16px; }
+        body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title a:hover {
+          text-decoration: underline; }
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .section, body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .links, body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .publish-time {
+        display: none; }
+    body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body .infographic img {
+      width: 100%;
+      max-width: none; }
+    body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .body .content {
+      display: none; }
+    body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .meta {
+      display: none; }
 
 .article-list article {
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.6);
@@ -1037,7 +1088,6 @@ body.loaded main.article-list article .headline .publish-time {
   height: 64px;
   background-color: #303030;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.8s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1122,7 +1172,8 @@ body.loaded main.article-list article .headline .publish-time {
     box-shadow: none; }
 
 body.loaded #header {
-  opacity: 1; }
+  opacity: 1;
+  transition: opacity 0.8s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; }
 
 body.hero #header {
   position: fixed;
