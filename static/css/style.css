@@ -756,6 +756,14 @@ body.loaded article .headline .publish-time {
   body[data-title=Infographics] main.article-list.condensed {
     max-width: 1500px; } }
 
+@media (min-width: 1900px) {
+  body[data-title=Infographics] main.article-list.condensed {
+    max-width: 1900px; } }
+
+@media (min-width: 2400px) {
+  body[data-title=Infographics] main.article-list.condensed {
+    max-width: 2400px; } }
+
 body[data-title=Infographics] main.article-list.condensed .article-list {
   display: flex;
   flex-direction: row;
@@ -763,7 +771,7 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
   body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
     margin-top: 16px;
     position: relative;
-    padding-top: 40px; }
+    padding-top: 48px; }
     @media (min-width: 900px) {
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
         flex: 0 0 calc(50% - 8px * 2);
@@ -772,23 +780,32 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
     @media (min-width: 1500px) {
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
         flex: 0 0 calc(33.3% - 8px * 2); } }
+    @media (min-width: 1900px) {
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
+        flex: 0 0 calc(25% - 8px * 2); } }
+    @media (min-width: 2400px) {
+      body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
+        flex: 0 0 calc(20% - 8px * 2); } }
     body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline {
       position: absolute;
       top: 0;
       left: 0;
+      min-height: 48px;
       width: 100%;
+      padding: 8px 0;
       background-color: #009688;
-      padding: 0; }
+      padding: 0;
+      display: flex;
+      align-items: center; }
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title {
         display: block;
-        height: 100%;
-        margin: 0; }
+        margin: 0;
+        padding: 0 16px; }
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title a {
         color: white;
         font-size: 16px;
         text-decoration: none;
-        display: block;
-        padding: 16px 16px; }
+        padding: 0; }
         body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title a:hover {
           text-decoration: underline; }
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .section, body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .links, body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .publish-time {

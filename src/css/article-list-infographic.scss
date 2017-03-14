@@ -7,6 +7,14 @@ body[data-title=Infographics] {
       max-width: 1500px;
     }
     
+    @media (min-width: 1900px) {
+      max-width: 1900px;
+    }
+    
+    @media (min-width: 2400px) {
+      max-width: 2400px;
+    }
+    
     .article-list {
 
       display: flex;
@@ -27,25 +35,39 @@ body[data-title=Infographics] {
           flex: 0 0 calc(33.3% - #{$grid} * 2);
         }
         
+        @media (min-width: 1900px) {
+          flex: 0 0 calc(25% - #{$grid} * 2);
+        }
+        
+        @media (min-width: 2400px) {
+          flex: 0 0 calc(20% - #{$grid} * 2);
+        }
+        
         position: relative;
 
-        padding-top: $grid * 5;
+        padding-top: $grid * 6;
         
         .headline {
           position: absolute;
           top: 0;
           left: 0;
 
+          min-height: $grid * 6;
           width: 100%;
+
+          padding: $grid 0;
 
           background-color: $color-infographics;
 
           padding: 0;
 
+          display: flex;
+          align-items: center;
+
           .title {
             display: block;
-            height: 100%;
             margin: 0;
+            padding: 0 $grid * 2;
           }
 
           .title a {
@@ -53,8 +75,7 @@ body[data-title=Infographics] {
             font-size: $grid * 2;
             text-decoration: none;
 
-            display: block;
-            padding: $grid * 2 $grid * 2;
+            padding: 0;
 
             &:hover {
               text-decoration: underline;
