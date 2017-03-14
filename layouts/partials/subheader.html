@@ -27,3 +27,12 @@
       
   </div>
 </header>
+
+<div id="background">
+  {{ if .Params.hero.background }}
+  <img src="{{ .Params.hero.background }}" />
+  {{ else }}
+  <img src="/img/background.jpg" />
+  {{ end }}
+</div>
+

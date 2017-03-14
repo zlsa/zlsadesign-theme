@@ -17,9 +17,9 @@ function parallax() {
 
   var scroll = Math.pow(lerp(0, scroll_px, $(window).height() - $('#header').height() * 3, 0, 1), 0.5);
 
-  if(body.hasClass('hero')) {
-    $('#hero .message-box').css('transform', 'translateY(' + scroll_px * 0.1 + 'px)');
-  }
+  //if(body.hasClass('hero')) {
+  //  $('#hero .message-box').css('transform', 'translateY(' + scroll_px * 0.1 + 'px)');
+  //}
   
   if(false) {
     var alpha = clerp(0, Math.pow(scroll, 2), 1, 0, 1).toFixed(2);
@@ -42,9 +42,10 @@ function parallax() {
   }
 
   var parallax_offset = scroll_px * 0.5;
-  $('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
+  
+  //$('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
 
-  $('#hero-background').css('transform', 'translateY(' + parallax_offset + 'px)');
+  $('#background').css('transform', 'translateY(' + -parallax_offset + 'px)');
   
 }
 

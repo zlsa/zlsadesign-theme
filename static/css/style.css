@@ -1321,13 +1321,13 @@ body[data-section=project] #header nav ul li.link-projects a {
     #footer {
       margin-top: 16px; } }
 
-#hero-background {
-  position: absolute; }
-  #hero-background img {
+#background {
+  position: fixed; }
+  #background img {
     object-fit: cover;
     width: 100%; }
   @media (max-width: 600px) {
-    #hero-background {
+    #background {
       display: none; } }
 
 #hero {

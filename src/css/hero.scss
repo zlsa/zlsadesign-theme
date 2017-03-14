@@ -8,8 +8,8 @@ $hero-bottom-overlap: $grid * 6;
 
 $hero-gap: $grid * 2;
 
-#hero-background {
-  position: absolute;
+#background {
+  position: fixed;
 
   img {
     object-fit: cover;
