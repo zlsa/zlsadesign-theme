@@ -463,6 +463,11 @@ main.article article {
     main.article article .license h4 {
       font-size: 12.8px;
       font-weight: bold; }
+    main.article article .actions img,
+    main.article article .content img,
+    main.article article .attribution img,
+    main.article article .license img {
+      max-width: 100%; }
     main.article article .actions code,
     main.article article .content code,
     main.article article .attribution code,
@@ -526,7 +531,7 @@ main.article article {
       main.article article .content,
       main.article article .attribution,
       main.article article .license {
-        padding: 16px 16px !important; } }
+        padding: 16px 16px; } }
     main.article article .actions p:empty,
     main.article article .content p:empty,
     main.article article .attribution p:empty,
@@ -538,7 +543,7 @@ main.article article {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 16px;
+    padding: 8px 16px;
     height: auto; }
     main.article article .actions a {
       background-color: transparent;
@@ -554,6 +559,10 @@ main.article article {
       margin-right: 16px; }
       main.article article .actions a:hover {
         background-color: rgba(0, 0, 0, 0.05); }
+      @media (max-width: 800px) {
+        main.article article .actions a {
+          height: 32px;
+          line-height: 32px; } }
   main.article article .attribution {
     padding: 0 32px;
     padding-bottom: 8px;
@@ -594,18 +603,27 @@ main.article article {
         main.article article .further-reading ul li a {
           color: #dd6644;
           font-weight: bold; }
-  main.article article.infographic .infographic {
-    padding: 0; }
-    main.article article.infographic .infographic a {
-      display: block; }
-    main.article article.infographic .infographic img {
-      display: block;
-      width: 100%; }
-  main.article article.infographic .actions {
-    padding: 8px 16px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; }
+  main.article article.infographic {
+    margin-top: -16px; }
+    main.article article.infographic .infographic {
+      padding: 0; }
+      main.article article.infographic .infographic a {
+        display: block; }
+      main.article article.infographic .infographic img {
+        display: block;
+        width: 100%; }
+    @media (min-width: 1100px) {
+      main.article article.infographic .headline .title {
+        display: none;
+        font-size: 16px; }
+      main.article article.infographic.aspect-wide .body {
+        display: flex;
+        flex-direction: column; }
+        main.article article.infographic.aspect-wide .body .infographic {
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+          align-self: center;
+          width: 1820px;
+          max-width: 95vw; } }
   main.article article.redirect .content {
     font-size: 24px;
     font-weight: bold; }
@@ -679,7 +697,7 @@ article .meta {
       align-items: stretch !important;
       flex-direction: column; }
       article .meta ul {
-        border-left: none;
+        border-left: none !important;
         width: 100%; }
       article .meta ul + ul {
         border-top: 4px solid #fff; } }
@@ -967,6 +985,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
     .article-list article .summary h4 {
       font-size: 12.8px;
       font-weight: bold; }
+    .article-list article .summary img {
+      max-width: 100%; }
     .article-list article .summary code {
       font-family: 'Roboto Mono', monospace;
       font-size: 12px;

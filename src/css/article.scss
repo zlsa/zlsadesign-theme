@@ -112,7 +112,7 @@ main.article article {
     @include text();
     
     @media (max-width: 600px) {
-      padding: $grid * 2 $grid * 2 !important;
+      padding: $grid * 2 $grid * 2;
     }
 
     p:empty {
@@ -126,7 +126,7 @@ main.article article {
 
     @include button-row();
 
-    padding: 0 $grid * 2;
+    padding: $grid $grid * 2;
     height: auto;
 
     a {
@@ -136,6 +136,12 @@ main.article article {
       
       padding: 0 $grid * 2;
       margin-right: $grid * 2;
+      
+      @media (max-width: 800px) {
+        height: $grid * 4;
+        line-height: $grid * 4;
+      }
+      
     }
     
   }
@@ -245,7 +251,9 @@ main.article article {
   // Handling of different types
 
   &.infographic {
-    
+
+    margin-top: -$grid * 2;
+
     .infographic {
       padding: 0;
 
@@ -260,7 +268,35 @@ main.article article {
     }
 
     .actions {
-      @include button-row();
+      //@include button-row();
+    }
+
+    @media (min-width: 1100px) {
+      
+      .headline .title {
+        display: none;
+        font-size: $grid * 2;
+      }
+      
+      &.aspect-wide {
+
+        .body {
+          display: flex;
+          flex-direction: column;
+
+          .infographic {
+            box-shadow: 0 0 $grid * 2 rgba(black, 0.5);
+            
+            align-self: center;
+            
+            width: 1820px;
+            max-width: 95vw;
+          }
+
+        }
+
+      }
+      
     }
     
   }
@@ -397,7 +433,7 @@ article {
       flex-direction: column;
 
       ul {
-        border-left: none;
+        border-left: none !important;
         width: 100%;
       }
       

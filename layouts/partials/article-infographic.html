@@ -1,4 +1,4 @@
-<article class="single infographic">
+<article class="single infographic aspect-{{ .Params.infographic.aspect }}">
   
   {{ partial "article-headline.html" . }}
   
@@ -6,7 +6,7 @@
     
     <section class="infographic">
       <a href="/infographic/{{ .Params.infographic.file }}.png" title="Direct link to full-size infographic">
-        <img src="/infographic/{{ .Params.infographic.file }}.jpg" alt="{{ .Title }}" />
+        <img src="/infographic/{{ .Params.infographic.file }}-{{ .Params.infographic.aspect }}.jpg" alt="{{ .Title }}" />
       </a>
 
       <div class="actions infographic-info">
