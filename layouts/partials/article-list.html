@@ -1,7 +1,7 @@
 
 <div class="article-list">
   
-  {{ range .Paginator.Pages }}
+  {{ range where .Paginator.Pages "Section" "!=" "term" }}
     {{ partial "article-list-item.html" . }}
   {{ end }}
   

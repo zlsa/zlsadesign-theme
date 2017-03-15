@@ -541,6 +541,7 @@ main.article article {
     padding: 0 16px;
     height: auto; }
     main.article article .actions a {
+      background-color: transparent;
       display: block;
       color: #dd6644;
       font-weight: bold;
@@ -802,7 +803,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title {
         display: block;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        writing-mode: bt-lr; }
       body[data-title=Infographics] main.article-list.condensed .article-list article.infographic .headline .title a {
         color: white;
         font-size: 16px;
@@ -1374,36 +1376,62 @@ body[data-section=project] #header nav ul li.link-projects a {
     margin-right: auto;
     max-width: 1024px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 40px 16px; }
-    @media (max-width: 600px) {
-      #footer > .container {
-        border-top: none; } }
     #footer > .container a {
       text-decoration: underline; }
       #footer > .container a:hover {
         color: white; }
-    #footer > .container .contact {
-      float: right;
+    #footer > .container > * {
+      flex: 0 0 33%; }
+    #footer > .container .donate {
+      text-align: center;
       font-weight: bold; }
+      #footer > .container .donate a {
+        background-color: #FFC107;
+        display: block;
+        color: #242424;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        transition: background-color 0.15s ease;
+        font-size: 14px;
+        padding: 8px 16px;
+        display: inline-block;
+        text-decoration: none; }
+        #footer > .container .donate a:hover {
+          background-color: rgba(0, 0, 0, 0.05); }
+        #footer > .container .donate a:hover {
+          background-color: #ffce3a;
+          text-decoration: underline; }
+    #footer > .container .contact {
+      text-align: right; }
     @media (max-width: 600px) {
       #footer > .container {
-        background-color: #242424; }
-        #footer > .container .contact {
-          float: none;
-          display: block;
-          margin-top: 8px; } }
+        border-top: none;
+        background-color: #242424; } }
+    @media (max-width: 800px) {
+      #footer > .container {
+        flex-direction: column; }
+        #footer > .container > * {
+          margin: 8px 0; } }
   @media (max-width: 600px) {
     #footer {
       margin-top: 16px; } }
 
 #background {
-  position: fixed; }
+  position: absolute; }
   #background img {
     object-fit: cover;
     width: 100%; }
   @media (max-width: 600px) {
     #background {
       display: none; } }
+
+body.loaded #background {
+  position: fixed; }
 
 #hero {
   z-index: 10;
@@ -1472,17 +1500,10 @@ body[data-section=project] #header nav ul li.link-projects a {
 
 html {
   height: 100%;
-  background-image: url("/img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   background-color: #242424; }
   @media (max-width: 600px) {
     html {
-      background-image: none;
       background-color: #111; } }
-  html.hero {
-    background-image: none; }
 
 body {
   display: flex;

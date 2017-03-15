@@ -70,6 +70,8 @@ body[data-title=Infographics] {
             display: block;
             margin: 0;
             padding: 0;
+
+            writing-mode: bt-lr;
           }
 
           .title a {

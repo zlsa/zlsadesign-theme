@@ -1,4 +1,5 @@
 
+@import 'button';
 @import 'color';
 @import 'metrics';
 
@@ -16,14 +17,14 @@ $footer-margin: $grid * 5;
 
   > .container {
     border-top: $style-page-border;
-
+    
     @include limit-width;
 
-    padding: $footer-margin $grid * 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @media (max-width: 600px) {
-      border-top: none;
-    }
+    padding: $footer-margin $grid * 2;
 
     a {
       text-decoration: underline;
@@ -33,20 +34,49 @@ $footer-margin: $grid * 5;
       }
       
     }
+
+    > * {
+      flex: 0 0 33%;
+    }
     
-    .contact {
-      float: right;
+    .donate {
+      text-align: center;
       font-weight: bold;
+
+      a {
+        @include button($color-donate, $color-page-background);
+
+        font-size: 14px;
+        padding: $grid $grid * 2;
+        
+        display: inline-block;
+
+        text-decoration: none;
+        
+        &:hover {
+          background-color: lighten($color-donate, 10%);
+          text-decoration: underline;
+        }
+        
+      }
+      
+    }
+
+    .contact {
+      text-align: right;
     }
 
     @media (max-width: 600px) {
-
+      border-top: none;
       background-color: $color-page-background;
-      
-      .contact {
-        float: none;
-        display: block;
-        margin-top: $grid;
+    }
+    
+    @media (max-width: 800px) {
+
+      flex-direction: column;
+
+      > * {
+        margin: $grid 0;
       }
       
     }

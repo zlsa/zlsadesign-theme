@@ -10,10 +10,12 @@
   align-items: center;
 }
 
-@mixin button() {
+@mixin button($background: transparent, $color: $color-primary) {
+  background-color: $background;
+  
   display: block;
   
-  color: $color-primary;
+  color: $color;
   font-weight: bold;
   text-transform: uppercase;
   

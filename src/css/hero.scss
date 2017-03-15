@@ -9,7 +9,7 @@ $hero-bottom-overlap: $grid * 6;
 $hero-gap: $grid * 2;
 
 #background {
-  position: fixed;
+  position: absolute;
 
   img {
     object-fit: cover;
@@ -20,6 +20,10 @@ $hero-gap: $grid * 2;
     display: none;
   }
   
+}
+
+body.loaded #background {
+  position: fixed;
 }
 
 #hero {

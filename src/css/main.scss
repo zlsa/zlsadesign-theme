@@ -15,22 +15,12 @@
 html {
   height: 100%;
 
-  background-image: url('/img/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
   background-color: $color-page-background;
 
   @media (max-width: 600px) {
-    background-image: none;
     background-color: #111;
   }
 
-  &.hero {
-    background-image: none;
-  }
-  
 }
 
 body {
