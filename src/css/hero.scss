@@ -11,6 +11,8 @@ $hero-gap: $grid * 2;
 #background {
   position: absolute;
 
+  width: 100% !important;
+
   img {
     object-fit: cover;
     width: 100%;

@@ -803,7 +803,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-end; }
+  align-items: flex-end;
+  justify-content: center; }
   body[data-title=Infographics] main.article-list.condensed .article-list article.infographic {
     margin-top: 16px;
     background-color: transparent;
@@ -1463,7 +1464,8 @@ body[data-section=project] #header nav ul li.link-projects a {
       margin-top: 16px; } }
 
 #background {
-  position: absolute; }
+  position: absolute;
+  width: 100% !important; }
   #background img {
     object-fit: cover;
     width: 100%; }
