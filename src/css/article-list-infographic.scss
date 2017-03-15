@@ -1,6 +1,35 @@
 
 body[data-title=Infographics] {
 
+  main.article-list {
+    
+    .request-infographic {
+
+      display: flex;
+      justify-content: center;
+
+      p {
+        background-color: $color-infographics;
+        color: white;
+        
+        font-weight: bold;
+        text-align: center;
+        
+        padding: $grid * 2 $grid * 4;
+        margin: 0 auto;
+        width: auto;
+
+        a {
+          color: white;
+          text-decoration: underline;
+        }
+
+      }
+
+    }
+    
+  }
+  
   main.article-list.condensed {
 
     @media (min-width: 1500px) {

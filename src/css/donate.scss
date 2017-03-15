@@ -1,0 +1,65 @@
+
+body[data-title=Donate] {
+
+  #footer {
+
+    .container {
+      
+      .donate {
+        display: none;
+      }
+      
+      .donate-thanks {
+        display: block;
+      }
+      
+    }
+    
+  }
+
+  .content {
+
+    blockquote {
+
+      margin: $grid * 2 !important;
+      padding: 0 !important;
+      margin-top: $grid * 4 !important;
+
+      border-left: none !important;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      strong {
+        @include button($color-meta-background, $color-page-background);
+
+        color: $color-page-background !important;
+        
+        font-size: 24px;
+        padding: $grid * 2 $grid * 4;
+
+        margin: $grid $grid * 2;
+        
+        display: inline-block;
+
+        text-transform: none;
+        text-decoration: none;
+        
+        transition: background-color $anim-fast ease;
+      }
+
+      a strong {
+        background-color: $color-donate;
+      }
+      
+      a:hover strong {
+        background-color: lighten($color-donate, 10%);
+        text-decoration: underline;
+      }
+      
+    }
+    
+  }
+
+}

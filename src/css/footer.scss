@@ -46,6 +46,8 @@ $footer-margin: $grid * 5;
       a {
         @include button($color-donate, $color-page-background);
 
+        //background-color: rgba($color-donate, 0.7);
+        
         font-size: 14px;
         padding: $grid $grid * 2;
         
@@ -53,6 +55,8 @@ $footer-margin: $grid * 5;
 
         text-decoration: none;
         
+        transition: background-color $anim-fast ease;
+
         &:hover {
           background-color: lighten($color-donate, 10%);
           text-decoration: underline;
@@ -62,6 +66,11 @@ $footer-margin: $grid * 5;
       
     }
 
+    .donate-thanks {
+      display: none;
+      text-align: center;
+    }
+    
     .contact {
       text-align: right;
     }

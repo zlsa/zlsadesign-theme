@@ -26,7 +26,8 @@
       display: block;
       text-align: center;
       
-      margin: $grid * 2 0;
+      margin: $grid * 2 auto;
+      padding-left: 2em;
       letter-spacing: 2em;
     }
     
