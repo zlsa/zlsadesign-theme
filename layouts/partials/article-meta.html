@@ -7,13 +7,23 @@
     {{ end }}
   </ul>
   {{ end }}
-  
+
+  {{ if .Params.visible_tags }}
+  {{ with .Params.visible_tags }}
+  <ul class="tags">
+    {{ range . }}
+    <li><a href="/tags/{{ . | urlize }}"><span>{{ . | urlize }}</span></a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  {{ else }}
   {{ with .Params.tags }}
   <ul class="tags">
     {{ range . }}
     <li><a href="/tags/{{ . | urlize }}"><span>{{ . | urlize }}</span></a></li>
     {{ end }}
   </ul>
+  {{ end }}
   {{ end }}
   
 </div>
