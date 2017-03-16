@@ -1501,7 +1501,7 @@ body.loaded #background {
       padding-top: 0; } }
   #hero .hero-contents {
     box-shadow: 0 0 64px rgba(0, 0, 0, 0.6);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #ddd;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
