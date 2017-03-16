@@ -348,7 +348,7 @@ article {
 
       padding: 0 $grid * 2;
 
-      min-height: $grid * 6;
+      min-height: $grid * 4;
 
       flex-wrap: wrap;
 
@@ -357,9 +357,11 @@ article {
         justify-content: flex-end;
 
         font-family: 'Roboto Mono', monospace;
+        
         li {
           text-transform: none !important;
         }
+        
       }
 
       li {
@@ -368,7 +370,7 @@ article {
         text-transform: uppercase;
 
         display: block;
-        height: 100%;
+        height: $grid * 4;
 
         a {
           display: flex;
@@ -401,12 +403,15 @@ article {
       align-items: flex-start;
       
       ul {
-        flex-direction: column;
         flex: 1;
+        
+        /*
+        flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
+       */
         
-        min-height: $grid * 4;
+        //min-height: $grid * 4;
         padding: 0;
       }
       
@@ -428,6 +433,7 @@ article {
       
     }
 
+    /*
     @media (max-width: 400px) {
       align-items: stretch !important;
       flex-direction: column;
@@ -442,6 +448,7 @@ article {
       }
       
     }
+   */
     
   }
   

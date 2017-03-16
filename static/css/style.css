@@ -643,13 +643,29 @@ article .meta {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 12px; }
+  font-size: 12px;
+  /*
+    @media (max-width: 400px) {
+      align-items: stretch !important;
+      flex-direction: column;
+
+      ul {
+        border-left: none !important;
+        width: 100%;
+      }
+      
+      ul + ul {
+        border-top: 4px solid $color-background;
+      }
+      
+    }
+   */ }
   article .meta ul {
     background-color: #f4f4f4;
     display: flex;
     align-items: center;
     padding: 0 16px;
-    min-height: 48px;
+    min-height: 32px;
     flex-wrap: wrap; }
     article .meta ul.tags {
       margin-left: auto;
@@ -662,7 +678,7 @@ article .meta {
       font-weight: bold;
       text-transform: uppercase;
       display: block;
-      height: 100%; }
+      height: 32px; }
       article .meta ul li a {
         display: flex;
         height: 100%;
@@ -679,11 +695,12 @@ article .meta {
       background: #f4f4f4;
       align-items: flex-start; }
       article .meta ul {
-        flex-direction: column;
         flex: 1;
+        /*
+        flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
-        min-height: 32px;
+       */
         padding: 0; }
       article .meta ul + ul {
         border-left: 4px solid #fff; }
@@ -693,15 +710,6 @@ article .meta {
         min-height: 32px !important;
         justify-content: flex-start !important;
         padding: 0 16px; } }
-  @media (max-width: 400px) {
-    article .meta {
-      align-items: stretch !important;
-      flex-direction: column; }
-      article .meta ul {
-        border-left: none !important;
-        width: 100%; }
-      article .meta ul + ul {
-        border-top: 4px solid #fff; } }
 
 article a[href]:hover {
   text-decoration: underline; }
