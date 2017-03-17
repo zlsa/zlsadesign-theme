@@ -1,0 +1,18 @@
+
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "author": "Jon Ross",
+  "dateModified": {{ time .Date }},
+
+  "name": "{{ .Title }}",
+
+  {{ if eq .Section "infographic" }}
+  "@type": "MediaObject",
+  "encodingFormat": "png",
+    
+  "contentUrl": "/infographic/{{ .Params.infographic.file }}.png",
+  {{ end }}
+  }
+</script>

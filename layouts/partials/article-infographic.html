@@ -1,7 +1,22 @@
-<article class="single infographic aspect-{{ .Params.infographic.aspect }}">
+<article class="single infographic aspect-{{ .Params.infographic.aspect }}"
+         itemscope="itemscope" itemtype="http://schema.org/MediaObject">
   
   {{ partial "article-headline.html" . }}
   
+  <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "MediaObject",
+    "author": "Jon Ross",
+    "dateModified": {{ time .Date }},
+    "name": "{{ .Title }}",
+
+    "encodingFormat": "png",
+    
+    "contentUrl": "/infographic/{{ .Params.infographic.file }}.png",
+    }
+  </script>
+
   <section class="body">
     
     <section class="infographic">

@@ -2,6 +2,17 @@
 
   {{ partial "article-headline.html" . }}
   
+  <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    "author": "Jon Ross",
+    "dateModified": {{ time .Date }},
+
+    "name": "{{ .Title }}"
+    }
+  </script>
+
   <section class="body content">
     {{ .Content }}
   </section>

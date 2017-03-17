@@ -2,6 +2,22 @@
   
   {{ partial "article-headline.html" . }}
   
+  <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "MobileApplication",
+    "author": "Jon Ross",
+    "dateModified": {{ time .Date }},
+
+    "name": "{{ .Params.app.name }}",
+    {{ if .Params.app.android.play }}
+    "installUrl": "https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}"
+    {{ else }}
+    "installUrl": "{{ .Params.app.android.url }}"
+    {{ end }}
+    }
+  </script>
+
   <section class="body">
     
     <section class="actions app-info">
