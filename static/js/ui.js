@@ -89,9 +89,13 @@ $(document).ready(function() {
   $('time').each(function() {
     var _this = $(this);
 
-    _this.attr('title', moment(_this.text()).format("MMMM Do, YYYY k:mm"));
+    var date = moment(_this.attr('datetime'), "YYYY-MM-DD");
+
+    console.log(date);
+
+    _this.attr('title', date.format("MMMM Do, YYYY k:mm"));
     
-    _this.text(calculateElapsed(_this.attr('datetime')));
+    _this.text(calculateElapsed(date));
   });
   
   // Toggle navigation area
