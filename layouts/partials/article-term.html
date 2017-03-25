@@ -1,4 +1,4 @@
-<article class="single infographic">
+<article class="single">
   
   {{ partial "article-headline.html" . }}
   
@@ -8,21 +8,23 @@
       {{ .Content }}
     </section>
 
-    <!--
-
+    {{ if .Params.more }}
+    
     <section class="further-reading">
 
       <h1 class="title">Further reading</h1>
 
       <ul>
-        {{ if .Params.term.wikipedia }}
-        <li><a href="https://en.wikipedia.org/wiki/{{ .Params.term.wikipedia }}">Wikipedia ({{ .Params.term.wikipedia }})</a>
+        
+        {{ range .Params.more }}
+        <li>Read more from {{ .source }}: <a href="{{ .url }}">{{ .name }}</a></li>
         {{ end }}
+          
       </ul>
       
     </section>
 
-    -->
+    {{ end }}
     
     {{ partial "article-comments.html" . }}
     {{ partial "article-meta.html" . }}
