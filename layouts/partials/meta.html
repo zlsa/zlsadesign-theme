@@ -7,7 +7,11 @@
 
 <link rel="stylesheet" href="{{ "/css/style.css" | absURL }}" type="text/css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
-<link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+
+{{ if .IsHome }}
+  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
