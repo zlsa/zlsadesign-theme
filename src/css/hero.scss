@@ -33,7 +33,7 @@ body.loaded #background {
 
   @include limit-width();
   
-  min-height: $header-height + $hero-bottom-overlap;
+  min-height: 30em;
   height: 100vh;
 
   margin: 0 auto;

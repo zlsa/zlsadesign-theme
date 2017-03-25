@@ -3,26 +3,44 @@
   {{ partial "article-headline.html" . }}
   
   <script type="application/ld+json">
-    {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "author": "Jon Ross",
-    "dateModified": {{ time .Date }},
+  {
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "author": "Jon Ross",
+  "dateModified": {{ time .Date }},
 
-    "name": "{{ .Title }}"
-    }
+  "name": "{{ .Title }}"
+  }
   </script>
 
   <section class="body">
     
+    {{ if .Params.embed }}
+    
+    {{ if eq .Params.embed.type "sketchfab" }}
+    <section class="embed sketchfab">
+
+      <div class="sketchfab-embed-wrapper">
+        <iframe width="640" height="480" src="https://sketchfab.com/models/{{ .Params.embed.id }}/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+      </div>
+
+    </section>
+    {{ end }}
+    
+    {{ else }}
+    
     <section class="actions project-info">
+
       
       <a href="{{ .Params.project.url }}" title="Go to project website">View project</a>
 
       {{ if .Params.project.code }}
       <a href="{{ .Params.project.code }}" title="View project source code">Source code</a>
       {{ end }}
+
     </section>
+    
+    {{ end }}
     
     <section class="content">
       {{ .Content }}

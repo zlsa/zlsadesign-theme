@@ -604,6 +604,11 @@ main.article article {
         main.article article .further-reading ul li a {
           color: #dd6644;
           font-weight: bold; }
+  main.article article.project .embed {
+    background-color: #607D8B; }
+    main.article article.project .embed.sketchfab iframe {
+      display: block;
+      width: 100%; }
   main.article article.infographic {
     margin-top: -16px; }
     main.article article.infographic .infographic {
@@ -1490,7 +1495,7 @@ body.loaded #background {
   margin-right: auto;
   max-width: 1024px;
   width: 100%;
-  min-height: 112px;
+  min-height: 30em;
   height: 100vh;
   margin: 0 auto;
   padding-bottom: 64px;
@@ -1589,6 +1594,7 @@ body[data-title=Donate] .content blockquote {
 
 html {
   height: 100%;
+  overflow-x: hidden;
   background-color: #242424; }
   @media (max-width: 600px) {
     html {

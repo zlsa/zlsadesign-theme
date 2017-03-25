@@ -250,6 +250,21 @@ main.article article {
   
   // Handling of different types
 
+  &.project {
+    
+    .embed {
+
+      background-color: $color-projects;
+
+      &.sketchfab iframe {
+        display: block;
+        width: 100%;
+      }
+      
+    }
+    
+  }
+
   &.infographic {
 
     margin-top: -$grid * 2;

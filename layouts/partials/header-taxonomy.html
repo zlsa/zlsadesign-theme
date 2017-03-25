@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+    {{ partial "meta.html" . }}
+    
+    <base href="{{ .Site.BaseURL }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+    
+    <title>{{ .Title | lower }} - {{ .Site.Title }}</title>
+  </head>
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js">
+    
+    <script>$('body').removeClass('no-js');</script>
+
+    {{ partial "subheader.html" . }}
