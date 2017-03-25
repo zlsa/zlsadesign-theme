@@ -612,6 +612,7 @@ main.article article {
   main.article article.infographic {
     margin-top: -16px; }
     main.article article.infographic .infographic {
+      background-color: #009688;
       padding: 0; }
       main.article article.infographic .infographic a {
         display: block; }

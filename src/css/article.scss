@@ -270,6 +270,7 @@ main.article article {
     margin-top: -$grid * 2;
 
     .infographic {
+      background-color: $color-infographics;
       padding: 0;
 
       a {
