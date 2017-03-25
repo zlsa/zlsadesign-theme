@@ -698,8 +698,6 @@ article .meta {
         transition: background-color 0.15s ease; }
         article .meta ul li a span {
           vertical-align: middle; }
-        article .meta ul li a:hover {
-          background-color: rgba(0, 0, 0, 0.05); }
   @media (max-width: 800px) {
     article .meta {
       background: #f4f4f4;
