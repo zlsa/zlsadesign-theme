@@ -91,8 +91,6 @@ $(document).ready(function() {
 
     var date = moment(_this.attr('datetime'), "YYYY-MM-DD");
 
-    console.log(date);
-
     _this.attr('title', date.format("MMMM Do, YYYY k:mm"));
     
     _this.text(calculateElapsed(date));

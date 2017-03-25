@@ -643,12 +643,16 @@ main.article.static .publish-time {
 main.article.static .meta {
   display: none; }
 
+article .comments {
+  margin: 16px 32px; }
+
 article .meta {
   background-color: #f4f4f4;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: 12px;
+  min-height: 48px;
   /*
     @media (max-width: 400px) {
       align-items: stretch !important;

@@ -344,6 +344,12 @@ main.article.static {
 }
 
 article {
+
+  .comments {
+
+    margin: $grid * 2 $grid * 4;
+    
+  }
   
   .meta {
     background-color: $color-meta-background;
@@ -354,6 +360,8 @@ article {
     flex-wrap: wrap;
 
     font-size: 12px;
+
+    min-height: $grid * 6;
 
     ul {
       background-color: $color-meta-background;

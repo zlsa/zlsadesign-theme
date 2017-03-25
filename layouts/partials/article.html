@@ -13,10 +13,15 @@
     }
   </script>
 
-  <section class="body content">
-    {{ .Content }}
-  </section>
+  <section class="body">
+    
+    <section class="content">
+      {{ .Content }}
+    </section>
+    
+    {{ partial "article-comments.html" . }}
+    {{ partial "article-meta.html" . }}
   
-  {{ partial "article-meta.html" . }}
+  </section>
   
 </article>
