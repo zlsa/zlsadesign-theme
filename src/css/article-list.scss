@@ -196,6 +196,11 @@ $headline-padding-vertical: $grid * 1.5;
       clear: both;
     }
 
+    .warning {
+      color: $color-articles;
+      font-style: italic;
+    }
+    
     .summary {
       @include text();
 

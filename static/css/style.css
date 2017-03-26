@@ -1123,6 +1123,9 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
           padding: 0; } }
   .article-list article .body {
     clear: both; }
+  .article-list article .warning {
+    color: #C33;
+    font-style: italic; }
   .article-list article .summary {
     line-height: 1.8em;
     padding: 16px 32px; }
