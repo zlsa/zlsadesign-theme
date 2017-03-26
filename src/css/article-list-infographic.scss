@@ -32,6 +32,17 @@ body[data-title=Infographics] {
   
   main.article-list.condensed {
 
+    .category.headline {
+      color: white;
+      font-size: $grid * 3;
+      text-align: center;
+      font-weight: bold;
+
+      display: block;
+      margin: 0 $grid * 4;
+      margin-top: $grid * 6;
+    }
+
     @media (min-width: 1500px) {
       max-width: 1500px;
     }

@@ -945,6 +945,15 @@ body[data-title=Infographics] main.article-list .request-infographic {
       color: white;
       text-decoration: underline; }
 
+body[data-title=Infographics] main.article-list.condensed .category.headline {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  margin: 0 32px;
+  margin-top: 48px; }
+
 @media (min-width: 1500px) {
   body[data-title=Infographics] main.article-list.condensed {
     max-width: 1500px; } }

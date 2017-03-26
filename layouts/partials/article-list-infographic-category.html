@@ -1,0 +1,17 @@
+{{ $tag := .tag }}
+<section class="category {{ .tag }}">
+
+  <h2 class="category headline">{{ .name }}</h2>
+
+  <div class="article-list">
+    
+    {{ range .pages }}
+    {{ if in .Params.tags $tag }}
+    {{ partial "article-list-item.html" . }}
+    {{ end }}
+    {{ end }}
+    
+  </div>
+
+</section>
+

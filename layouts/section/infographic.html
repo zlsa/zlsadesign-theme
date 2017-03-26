@@ -9,8 +9,10 @@
   
   <h1 class="list headline">{{ .Title }}</h1>
 
-  {{ partial "article-list-infographic.html" . }}
-  
+  {{ partial "article-list-infographic-category.html" (dict "pages" .Pages "name" "Blue Origin" "tag" "blue-origin") }}
+  {{ partial "article-list-infographic-category.html" (dict "pages" .Pages "name" "SpaceX" "tag" "spacex") }}
+  {{ partial "article-list-infographic-category.html" (dict "pages" .Pages "name" "ULA" "tag" "ula") }}
+
 </main>
 
 {{ partial "footer.html" . }}
