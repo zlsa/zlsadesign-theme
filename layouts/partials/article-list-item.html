@@ -18,3 +18,7 @@
 {{ partial "article-list-item-term.html" . }}
 {{ end }}
 
+{{ if eq .Section "article" }}
+{{ partial "article-list-item-article.html" . }}
+{{ end }}
+

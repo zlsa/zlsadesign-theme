@@ -23,7 +23,7 @@
   {{ partial "article-meta.html" . }}
 
   {{ if eq $immediate_redirect true }}
-  <script>setTimeout(function() {window.location.href = "{{ .Params.redirect.url }}";}, 2000);</script>
+  <script>window.location.href = "{{ .Params.redirect.url }}";</script>
   {{ end }}
 
 </article>

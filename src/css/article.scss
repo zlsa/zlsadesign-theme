@@ -121,6 +121,14 @@ main.article article {
     
   }
 
+  &.section-article {
+
+    .content {
+      font-size: 1.2em;
+    }
+    
+  }
+
   .actions {
     background-color: $color-meta-background;
 
@@ -192,8 +200,8 @@ main.article article {
     margin-top: $grid * 2;
     
     p {
-      background-color: $color-infographics;
-      color: white;
+//      background-color: ;
+      color: $color-infographics;
       
       font-weight: bold;
       text-align: center;
@@ -201,7 +209,7 @@ main.article article {
       padding: $grid * 1 $grid * 2;
 
       a {
-        color: white;
+        color: $color-infographics !important;
         text-decoration: underline;
       }
       
@@ -284,7 +292,7 @@ main.article article {
     }
 
     .actions {
-      //@include button-row();
+
     }
 
     @media (min-width: 1100px) {
@@ -478,6 +486,7 @@ article {
 }
 
 main.article article .section.section-app,
+main.article article .section.section-article,
 main.article article .section.section-infographic,
 main.article article .section.section-post,
 main.article article .section.section-project {
@@ -490,6 +499,7 @@ main.article article .section.section-project {
 }
   
 article .section.section-app a,
+article .section.section-article a,
 article .section.section-infographic a,
 article .section.section-post a,
 article .section.section-project a,
@@ -508,6 +518,17 @@ article.app .body .read-more a[href] {
   color: $color-apps !important;
 }
 
+article .section.section-article a {
+  background-color: $color-articles !important;
+}
+
+article.article .body .actions a[href],
+article.article .content a[href],
+article.article .links .name,
+article.article .body .read-more a[href] {
+  color: $color-articles !important;
+}
+
 article .section.section-infographic a {
   background-color: $color-infographics !important;
 }
@@ -520,7 +541,7 @@ article.infographic .body .read-more a[href] {
 }
 
 article.infographic .license a[href] {
-  color: white !important;
+  //color: white !important;
 }
 
 article .section.section-post a {
@@ -554,4 +575,19 @@ article.section-term .headline .publish-time {
 body.no-js article .headline .publish-time,
 body.loaded article .headline .publish-time {
   opacity: 1 !important;
+}
+
+article .infographic .actions a[href].button.right {
+  margin-left: auto;
+  
+  @media (max-width: 600px) {
+    margin-left: $grid * 2;
+  }
+  
+}
+
+article .infographic .actions a[href].button.buy {
+  box-shadow: 0 0 0 $grid / 4 $color-page-background;
+  background-color: $color-donate !important;
+  color: $color-page-background !important;
 }

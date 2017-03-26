@@ -25,7 +25,12 @@
       </a>
 
       <div class="actions infographic-info">
+        
         <a class="full-size button" href="/infographic/{{ .Params.infographic.file }}.png" title="Direct link to high-resolution infographic">View full-size</a>
+
+        {{ if .Params.infographic.redbubble }}
+        <a class="full-size button buy right" href="{{ .Params.infographic.redbubble }}" title="Buy poster from RedBubble">Buy poster from RedBubble</a>
+        {{ end }}
       </div>
       
     </section>

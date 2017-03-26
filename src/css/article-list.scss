@@ -311,6 +311,7 @@ $headline-padding-vertical: $grid * 1.5;
 }
 
 main.list-app .section.section-app,
+main.list-article .section.section-article,
 main.list-infographic .section.section-infographic,
 main.list-project .section.section-projects,
 main.list-post .section.section-post {
@@ -318,6 +319,7 @@ main.list-post .section.section-post {
 }
 
 main.list-app > .headline,
+main.list-article > .headline,
 main.list-infographic > .headline,
 main.list-post > .headline,
 main.list-project > .headline {

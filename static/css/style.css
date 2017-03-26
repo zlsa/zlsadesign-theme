@@ -226,7 +226,7 @@ body.no-js .toggle-nav img,
 
 body.no-js nav,
 #header.nav-visible nav {
-  max-height: 288px !important; }
+  max-height: 336px !important; }
 
 body.no-js #header {
   background: #303030 !important;
@@ -249,32 +249,38 @@ body.no-js #header {
     color: white; }
 
 body[data-title=Apps] #header nav ul li.link-apps a,
+body[data-title=Articles] #header nav ul li.link-articles a,
 body[data-title=Infographics] #header nav ul li.link-infographics a,
 body[data-title=Posts] #header nav ul li.link-posts a,
 body[data-title=Projects] #header nav ul li.link-projects a,
 body[data-title="About Me"] #header nav ul li.link-about a,
 body[data-section=app] #header nav ul li.link-apps a,
+body[data-section=article] #header nav ul li.link-articles a,
 body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
 body[data-section=project] #header nav ul li.link-projects a {
   border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
     body[data-title=Apps] #header nav ul li.link-apps a,
+    body[data-title=Articles] #header nav ul li.link-articles a,
     body[data-title=Infographics] #header nav ul li.link-infographics a,
     body[data-title=Posts] #header nav ul li.link-posts a,
     body[data-title=Projects] #header nav ul li.link-projects a,
     body[data-title="About Me"] #header nav ul li.link-about a,
     body[data-section=app] #header nav ul li.link-apps a,
+    body[data-section=article] #header nav ul li.link-articles a,
     body[data-section=infographic] #header nav ul li.link-infographics a,
     body[data-section=post] #header nav ul li.link-posts a,
     body[data-section=project] #header nav ul li.link-projects a {
       border-width: 0 0 0 8px; } }
   body[data-title=Apps] #header nav ul li.link-apps a span,
+  body[data-title=Articles] #header nav ul li.link-articles a span,
   body[data-title=Infographics] #header nav ul li.link-infographics a span,
   body[data-title=Posts] #header nav ul li.link-posts a span,
   body[data-title=Projects] #header nav ul li.link-projects a span,
   body[data-title="About Me"] #header nav ul li.link-about a span,
   body[data-section=app] #header nav ul li.link-apps a span,
+  body[data-section=article] #header nav ul li.link-articles a span,
   body[data-section=infographic] #header nav ul li.link-infographics a span,
   body[data-section=post] #header nav ul li.link-posts a span,
   body[data-section=project] #header nav ul li.link-projects a span {
@@ -283,6 +289,9 @@ body[data-section=project] #header nav ul li.link-projects a {
 
 #header nav ul li.link-apps a {
   border-color: #8BC34A; }
+
+#header nav ul li.link-articles a {
+  border-color: #C33; }
 
 #header nav ul li.link-infographics a {
   border-color: #009688; }
@@ -381,11 +390,11 @@ main.article article {
   main.article article .license {
     padding: 32px 32px;
     line-height: 1.8em; }
-    main.article article .actions p + p,
-    main.article article .content p + p,
-    main.article article .attribution p + p,
-    main.article article .license p + p {
-      margin-top: 0.5em; }
+    main.article article .actions * + p,
+    main.article article .content * + p,
+    main.article article .attribution * + p,
+    main.article article .license * + p {
+      margin-top: 1.5em; }
     main.article article .actions a[href],
     main.article article .content a[href],
     main.article article .attribution a[href],
@@ -474,7 +483,7 @@ main.article article {
     main.article article .attribution code,
     main.article article .license code {
       font-family: 'Roboto Mono', monospace;
-      font-size: 12px;
+      font-size: 1em;
       font-weight: bold;
       border-radius: 2px;
       background-color: #333;
@@ -517,6 +526,103 @@ main.article article {
       main.article article .license ul li,
       main.article article .license ol li {
         padding-left: 1ex; }
+    main.article article .actions figure,
+    main.article article .content figure,
+    main.article article .attribution figure,
+    main.article article .license figure {
+      background: white;
+      padding: 16px 0;
+      margin: 16px auto; }
+      main.article article .actions figure img,
+      main.article article .content figure img,
+      main.article article .attribution figure img,
+      main.article article .license figure img {
+        width: 100%; }
+      main.article article .actions figure.left, main.article article .actions figure.right, main.article article .actions figure.small,
+      main.article article .content figure.left,
+      main.article article .content figure.right,
+      main.article article .content figure.small,
+      main.article article .attribution figure.left,
+      main.article article .attribution figure.right,
+      main.article article .attribution figure.small,
+      main.article article .license figure.left,
+      main.article article .license figure.right,
+      main.article article .license figure.small {
+        max-width: 640px; }
+      main.article article .actions figure.full-bleed,
+      main.article article .content figure.full-bleed,
+      main.article article .attribution figure.full-bleed,
+      main.article article .license figure.full-bleed {
+        margin-left: -32px;
+        margin-right: -32px;
+        padding-left: 0;
+        padding-right: 0; }
+      @media (max-width: 600px) {
+        main.article article .actions figure.full-bleed,
+        main.article article .content figure.full-bleed,
+        main.article article .attribution figure.full-bleed,
+        main.article article .license figure.full-bleed {
+          margin-left: -16px;
+          margin-right: -16px; } }
+      @media (min-width: 800px) {
+        main.article article .actions figure.left, main.article article .actions figure.right,
+        main.article article .content figure.left,
+        main.article article .content figure.right,
+        main.article article .attribution figure.left,
+        main.article article .attribution figure.right,
+        main.article article .license figure.left,
+        main.article article .license figure.right {
+          padding: 16px;
+          margin: 16px;
+          width: 50%;
+          max-width: 480px; }
+        main.article article .actions figure.left,
+        main.article article .content figure.left,
+        main.article article .attribution figure.left,
+        main.article article .license figure.left {
+          float: left;
+          padding-left: 0;
+          margin-left: 0; }
+        main.article article .actions figure.right,
+        main.article article .content figure.right,
+        main.article article .attribution figure.right,
+        main.article article .license figure.right {
+          float: right;
+          padding-right: 0;
+          margin-right: 0; } }
+      main.article article .actions figure figcaption,
+      main.article article .content figure figcaption,
+      main.article article .attribution figure figcaption,
+      main.article article .license figure figcaption {
+        font-size: 12px;
+        font-style: italic;
+        text-align: center; }
+        main.article article .actions figure figcaption .credit,
+        main.article article .content figure figcaption .credit,
+        main.article article .attribution figure figcaption .credit,
+        main.article article .license figure figcaption .credit {
+          display: block; }
+      @media (min-width: 1440px) {
+        main.article article .actions figure.left, main.article article .actions figure.right,
+        main.article article .content figure.left,
+        main.article article .content figure.right,
+        main.article article .attribution figure.left,
+        main.article article .attribution figure.right,
+        main.article article .license figure.left,
+        main.article article .license figure.right {
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          padding: 16px;
+          margin: 16px 32px; }
+        main.article article .actions figure.left,
+        main.article article .content figure.left,
+        main.article article .attribution figure.left,
+        main.article article .license figure.left {
+          margin-left: -256px; }
+        main.article article .actions figure.right,
+        main.article article .content figure.right,
+        main.article article .attribution figure.right,
+        main.article article .license figure.right {
+          margin-right: -256px; } }
     main.article article .actions :first-child,
     main.article article .content :first-child,
     main.article article .attribution :first-child,
@@ -538,6 +644,8 @@ main.article article {
     main.article article .attribution p:empty,
     main.article article .license p:empty {
       display: none; }
+  main.article article.section-article .content {
+    font-size: 1.2em; }
   main.article article .actions {
     background-color: #f4f4f4;
     padding: 8px 16px;
@@ -576,13 +684,12 @@ main.article article {
     padding-top: 0;
     margin-top: 16px; }
     main.article article .license p {
-      background-color: #009688;
-      color: white;
+      color: #009688;
       font-weight: bold;
       text-align: center;
       padding: 8px 16px; }
       main.article article .license p a {
-        color: white;
+        color: #009688 !important;
         text-decoration: underline; }
   main.article article .further-reading {
     padding: 16px 32px;
@@ -723,18 +830,21 @@ article a[href]:hover {
   text-decoration: underline; }
 
 main.article article .section.section-app,
+main.article article .section.section-article,
 main.article article .section.section-infographic,
 main.article article .section.section-post,
 main.article article .section.section-project {
   display: none; }
   @media (max-width: 600px) {
     main.article article .section.section-app,
+    main.article article .section.section-article,
     main.article article .section.section-infographic,
     main.article article .section.section-post,
     main.article article .section.section-project {
       display: block; } }
 
 article .section.section-app a,
+article .section.section-article a,
 article .section.section-infographic a,
 article .section.section-post a,
 article .section.section-project a,
@@ -750,6 +860,15 @@ article.app .links .name,
 article.app .body .read-more a[href] {
   color: #8BC34A !important; }
 
+article .section.section-article a {
+  background-color: #C33 !important; }
+
+article.article .body .actions a[href],
+article.article .content a[href],
+article.article .links .name,
+article.article .body .read-more a[href] {
+  color: #C33 !important; }
+
 article .section.section-infographic a {
   background-color: #009688 !important; }
 
@@ -758,9 +877,6 @@ article.infographic .content a[href],
 article.infographic .links .name,
 article.infographic .body .read-more a[href] {
   color: #009688 !important; }
-
-article.infographic .license a[href] {
-  color: white !important; }
 
 article .section.section-post a {
   background-color: #dd6644 !important; }
@@ -787,6 +903,17 @@ article.section-term .headline .publish-time {
 body.no-js article .headline .publish-time,
 body.loaded article .headline .publish-time {
   opacity: 1 !important; }
+
+article .infographic .actions a[href].button.right {
+  margin-left: auto; }
+  @media (max-width: 600px) {
+    article .infographic .actions a[href].button.right {
+      margin-left: 16px; } }
+
+article .infographic .actions a[href].button.buy {
+  box-shadow: 0 0 0 2px #242424;
+  background-color: #FFC107 !important;
+  color: #242424 !important; }
 
 body[data-title=Infographics] main.article-list .request-infographic {
   display: flex;
@@ -984,8 +1111,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
   .article-list article .summary {
     line-height: 1.8em;
     padding: 16px 32px; }
-    .article-list article .summary p + p {
-      margin-top: 0.5em; }
+    .article-list article .summary * + p {
+      margin-top: 1.5em; }
     .article-list article .summary a[href] {
       color: #dd6644; }
     .article-list article .summary em {
@@ -1023,7 +1150,7 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       max-width: 100%; }
     .article-list article .summary code {
       font-family: 'Roboto Mono', monospace;
-      font-size: 12px;
+      font-size: 1em;
       font-weight: bold;
       border-radius: 2px;
       background-color: #333;
@@ -1048,6 +1175,52 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       padding-left: 16px; }
       .article-list article .summary ul li, .article-list article .summary ol li {
         padding-left: 1ex; }
+    .article-list article .summary figure {
+      background: white;
+      padding: 16px 0;
+      margin: 16px auto; }
+      .article-list article .summary figure img {
+        width: 100%; }
+      .article-list article .summary figure.left, .article-list article .summary figure.right, .article-list article .summary figure.small {
+        max-width: 640px; }
+      .article-list article .summary figure.full-bleed {
+        margin-left: -32px;
+        margin-right: -32px;
+        padding-left: 0;
+        padding-right: 0; }
+      @media (max-width: 600px) {
+        .article-list article .summary figure.full-bleed {
+          margin-left: -16px;
+          margin-right: -16px; } }
+      @media (min-width: 800px) {
+        .article-list article .summary figure.left, .article-list article .summary figure.right {
+          padding: 16px;
+          margin: 16px;
+          width: 50%;
+          max-width: 480px; }
+        .article-list article .summary figure.left {
+          float: left;
+          padding-left: 0;
+          margin-left: 0; }
+        .article-list article .summary figure.right {
+          float: right;
+          padding-right: 0;
+          margin-right: 0; } }
+      .article-list article .summary figure figcaption {
+        font-size: 12px;
+        font-style: italic;
+        text-align: center; }
+        .article-list article .summary figure figcaption .credit {
+          display: block; }
+      @media (min-width: 1440px) {
+        .article-list article .summary figure.left, .article-list article .summary figure.right {
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          padding: 16px;
+          margin: 16px 32px; }
+        .article-list article .summary figure.left {
+          margin-left: -256px; }
+        .article-list article .summary figure.right {
+          margin-right: -256px; } }
     .article-list article .summary :first-child {
       margin-top: 0; }
     .article-list article .summary :last-child {
@@ -1113,6 +1286,7 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       opacity: 0.2; }
 
 main.list-app > .headline,
+main.list-article > .headline,
 main.list-infographic > .headline,
 main.list-post > .headline,
 main.list-project > .headline {
@@ -1349,7 +1523,7 @@ body.no-js .toggle-nav img,
 
 body.no-js nav,
 #header.nav-visible nav {
-  max-height: 288px !important; }
+  max-height: 336px !important; }
 
 body.no-js #header {
   background: #303030 !important;
@@ -1372,32 +1546,38 @@ body.no-js #header {
     color: white; }
 
 body[data-title=Apps] #header nav ul li.link-apps a,
+body[data-title=Articles] #header nav ul li.link-articles a,
 body[data-title=Infographics] #header nav ul li.link-infographics a,
 body[data-title=Posts] #header nav ul li.link-posts a,
 body[data-title=Projects] #header nav ul li.link-projects a,
 body[data-title="About Me"] #header nav ul li.link-about a,
 body[data-section=app] #header nav ul li.link-apps a,
+body[data-section=article] #header nav ul li.link-articles a,
 body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
 body[data-section=project] #header nav ul li.link-projects a {
   border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
     body[data-title=Apps] #header nav ul li.link-apps a,
+    body[data-title=Articles] #header nav ul li.link-articles a,
     body[data-title=Infographics] #header nav ul li.link-infographics a,
     body[data-title=Posts] #header nav ul li.link-posts a,
     body[data-title=Projects] #header nav ul li.link-projects a,
     body[data-title="About Me"] #header nav ul li.link-about a,
     body[data-section=app] #header nav ul li.link-apps a,
+    body[data-section=article] #header nav ul li.link-articles a,
     body[data-section=infographic] #header nav ul li.link-infographics a,
     body[data-section=post] #header nav ul li.link-posts a,
     body[data-section=project] #header nav ul li.link-projects a {
       border-width: 0 0 0 8px; } }
   body[data-title=Apps] #header nav ul li.link-apps a span,
+  body[data-title=Articles] #header nav ul li.link-articles a span,
   body[data-title=Infographics] #header nav ul li.link-infographics a span,
   body[data-title=Posts] #header nav ul li.link-posts a span,
   body[data-title=Projects] #header nav ul li.link-projects a span,
   body[data-title="About Me"] #header nav ul li.link-about a span,
   body[data-section=app] #header nav ul li.link-apps a span,
+  body[data-section=article] #header nav ul li.link-articles a span,
   body[data-section=infographic] #header nav ul li.link-infographics a span,
   body[data-section=post] #header nav ul li.link-posts a span,
   body[data-section=project] #header nav ul li.link-projects a span {
@@ -1406,6 +1586,9 @@ body[data-section=project] #header nav ul li.link-projects a {
 
 #header nav ul li.link-apps a {
   border-color: #8BC34A; }
+
+#header nav ul li.link-articles a {
+  border-color: #C33; }
 
 #header nav ul li.link-infographics a {
   border-color: #009688; }
@@ -1483,8 +1666,19 @@ body[data-section=project] #header nav ul li.link-projects a {
   position: absolute;
   width: 100% !important; }
   #background img {
+    position: relative;
     object-fit: cover;
     width: 100%; }
+  #background:after {
+    background: linear-gradient(to bottom, transparent, rgba(36, 36, 36, 0.1), rgba(36, 36, 36, 0.25), rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.6), rgba(36, 36, 36, 0.75), rgba(36, 36, 36, 0.88), rgba(36, 36, 36, 0.95), #242424);
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 20vh; }
   @media (max-width: 600px) {
     #background {
       display: none; } }
@@ -1498,11 +1692,12 @@ body.loaded #background {
   margin-right: auto;
   max-width: 1024px;
   width: 100%;
-  min-height: 30em;
+  min-height: 20em;
   height: 100vh;
+  max-height: 150vw;
   margin: 0 auto;
-  padding-bottom: 64px;
-  margin-bottom: -176px;
+  padding-bottom: 112px;
+  margin-bottom: -224px;
   padding-top: 128px; }
   @media (max-width: 600px) {
     #hero {
@@ -1656,7 +1851,7 @@ main {
           padding: 8px;
           margin-right: 16px; } }
 
-body.hero main {
-  margin-top: 128px; }
+body.hero-background main {
+  margin-top: 60vh; }
 
 /*# sourceMappingURL=style.css.map */

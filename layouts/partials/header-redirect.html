@@ -1,18 +1,16 @@
+{{ $immediate_redirect := .Params.redirect.immediate }}
+
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   <head>
     {{ partial "meta.html" . }}
     
     <base href="{{ .Site.BaseURL }}">
-    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="canonical" href="{{ .Params.redirect.url | absURL }}">
     
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
   </head>
-  {{ if .Params.hero.background }}
-  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js hero-background">
-  {{ else}}
   <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js">
-  {{ end }}    
     
     <script>$('body').removeClass('no-js');</script>
 

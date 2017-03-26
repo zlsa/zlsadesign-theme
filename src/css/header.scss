@@ -367,7 +367,7 @@ body.no-js,
   }
   
   nav {
-    max-height: $grid * 6 * 6 !important;
+    max-height: $grid * 6 * 7 !important;
   }
   
 }
@@ -414,12 +414,14 @@ body.no-js {
 }
 
 body[data-title=Apps] #header nav ul li.link-apps a,
+body[data-title=Articles] #header nav ul li.link-articles a,
 body[data-title=Infographics] #header nav ul li.link-infographics a,
 body[data-title=Posts] #header nav ul li.link-posts a,
 body[data-title=Projects] #header nav ul li.link-projects a,
 body[data-title="About Me"] #header nav ul li.link-about a,
 
 body[data-section=app] #header nav ul li.link-apps a,
+body[data-section=article] #header nav ul li.link-articles a,
 body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
 body[data-section=project] #header nav ul li.link-projects a {
@@ -438,6 +440,10 @@ body[data-section=project] #header nav ul li.link-projects a {
 
 #header nav ul li.link-apps a {
   border-color: $color-apps;
+}
+
+#header nav ul li.link-articles a {
+  border-color: $color-articles;
 }
 
 #header nav ul li.link-infographics a {
