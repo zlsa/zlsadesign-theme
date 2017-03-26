@@ -484,7 +484,6 @@ main.article article {
     main.article article .license code {
       font-family: 'Roboto Mono', monospace;
       font-size: 1em;
-      font-weight: bold;
       border-radius: 2px;
       background-color: #333;
       color: white;
@@ -1151,7 +1150,6 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
     .article-list article .summary code {
       font-family: 'Roboto Mono', monospace;
       font-size: 1em;
-      font-weight: bold;
       border-radius: 2px;
       background-color: #333;
       color: white;
