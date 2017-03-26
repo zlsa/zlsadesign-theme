@@ -643,13 +643,6 @@ main.article article {
     main.article article .attribution p:empty,
     main.article article .license p:empty {
       display: none; }
-  @media (min-width: 800px) {
-    main.article article.section-article .headline {
-      padding-top: 32px;
-      padding-bottom: 32px; } }
-  main.article article.section-article .content {
-    padding-top: 3em;
-    font-size: 1.2em; }
   main.article article .actions {
     background-color: #f4f4f4;
     padding: 8px 16px;
@@ -720,6 +713,24 @@ main.article article {
     main.article article.project .embed.sketchfab iframe {
       display: block;
       width: 100%; }
+  main.article article.article .warning {
+    background-color: #C33;
+    color: white;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    margin-top: -32px;
+    margin-bottom: 48px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 8px 16px; }
+  @media (min-width: 800px) {
+    main.article article.article .headline {
+      padding-top: 32px;
+      padding-bottom: 32px; } }
+  main.article article.article .content {
+    padding-top: 48px;
+    font-size: 1.2em; }
   main.article article.infographic {
     margin-top: -16px; }
     main.article article.infographic .infographic {

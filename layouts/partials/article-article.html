@@ -1,0 +1,27 @@
+<article class="single section-{{ .Section }} article">
+
+  {{ partial "article-headline.html" . }}
+  
+  <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    "author": "Jon Ross",
+    "dateModified": {{ time .Date }},
+
+    "name": "{{ .Title }}"
+    }
+  </script>
+
+  <section class="body">
+    
+    <section class="content">
+      {{ .Content }}
+    </section>
+    
+    {{ partial "article-comments.html" . }}
+    {{ partial "article-meta.html" . }}
+  
+  </section>
+  
+</article>

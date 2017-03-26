@@ -121,22 +121,6 @@ main.article article {
     
   }
 
-  &.section-article {
-
-    @media (min-width: 800px) {
-      .headline {
-        padding-top: $grid * 4;
-        padding-bottom: $grid * 4;
-      }
-    }
-
-    .content {
-      padding-top: 3em;
-      font-size: 1.2em;
-    }
-    
-  }
-
   .actions {
     background-color: $color-meta-background;
 
@@ -277,6 +261,38 @@ main.article article {
         width: 100%;
       }
       
+    }
+    
+  }
+
+  &.article {
+
+    .warning {
+      background-color: $color-articles;
+      color: white;
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+      
+      margin-top: -$grid * 4;
+      margin-bottom: $grid * 6;
+
+      margin-left: -$grid * 2;
+      margin-right: -$grid * 2;
+
+      padding: $grid $grid * 2;
+    }
+
+    @media (min-width: 800px) {
+      .headline {
+        padding-top: $grid * 4;
+        padding-bottom: $grid * 4;
+      }
+    }
+
+    .content {
+      padding-top: $grid * 6;
+      font-size: 1.2em;
     }
     
   }
