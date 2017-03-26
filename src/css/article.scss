@@ -123,7 +123,12 @@ main.article article {
 
   &.section-article {
 
+    .headline {
+      margin-bottom: $grid;
+    }
+
     .content {
+      padding-top: 2.5em;
       font-size: 1.2em;
     }
     
