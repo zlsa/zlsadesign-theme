@@ -163,7 +163,7 @@ body.mini-header #header {
     background-color: #242424;
     opacity: 1; }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #header {
     position: static !important;
     background-color: #242424 !important;
@@ -835,7 +835,7 @@ main.article article .section.section-infographic,
 main.article article .section.section-post,
 main.article article .section.section-project {
   display: none; }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     main.article article .section.section-app,
     main.article article .section.section-article,
     main.article article .section.section-infographic,
@@ -1460,7 +1460,7 @@ body.mini-header #header {
     background-color: #242424;
     opacity: 1; }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #header {
     position: static !important;
     background-color: #242424 !important;
@@ -1851,7 +1851,8 @@ main {
           padding: 8px;
           margin-right: 16px; } }
 
-body.hero-background main {
-  margin-top: 60vh; }
+@media (min-width: 701px) {
+  body.hero-background main {
+    margin-top: 60vh; } }
 
 /*# sourceMappingURL=style.css.map */
