@@ -718,7 +718,7 @@ main.article article {
   main.article article.infographic {
     margin-top: -16px; }
     main.article article.infographic .infographic {
-      background-color: #009688;
+      background-color: white;
       padding: 0; }
       main.article article.infographic .infographic a {
         display: block; }
@@ -1299,6 +1299,7 @@ main.list-project > .headline {
   display: block; }
 
 .article-list article.infographic .infographic img {
+  background-color: white;
   display: block;
   max-width: 480px; }
 
