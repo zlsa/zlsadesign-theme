@@ -28,6 +28,10 @@
         
         <a class="full-size button" href="/infographic/{{ .Params.infographic.file }}.png" title="Direct link to high-resolution infographic">View full-size</a>
 
+        {{ if .Params.infographic.flightclub }}
+        <a class="full-size button" target="_blank" href="{{ .Params.infographic.flightclub }}" title="Direct link to Flight Club trajectory recreation">Trajectory from Flight Club</a>
+        {{ end }}
+
         {{ if .Params.infographic.redbubble }}
         <a class="full-size button buy right" href="{{ .Params.infographic.redbubble }}" title="Buy poster from RedBubble">Buy poster from RedBubble</a>
         {{ end }}
