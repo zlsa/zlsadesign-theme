@@ -643,10 +643,12 @@ main.article article {
     main.article article .attribution p:empty,
     main.article article .license p:empty {
       display: none; }
-  main.article article.section-article .headline {
-    margin-bottom: 8px; }
+  @media (min-width: 800px) {
+    main.article article.section-article .headline {
+      padding-top: 32px;
+      padding-bottom: 32px; } }
   main.article article.section-article .content {
-    padding-top: 2.5em;
+    padding-top: 3em;
     font-size: 1.2em; }
   main.article article .actions {
     background-color: #f4f4f4;

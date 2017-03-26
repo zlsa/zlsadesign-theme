@@ -123,8 +123,11 @@ main.article article {
 
   &.section-article {
 
-    .headline {
-      margin-bottom: $grid;
+    @media (min-width: 800px) {
+      .headline {
+        padding-top: $grid * 4;
+        padding-bottom: $grid * 4;
+      }
     }
 
     .content {
