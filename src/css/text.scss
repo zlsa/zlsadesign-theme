@@ -74,22 +74,22 @@
   code {
     font-family: 'Roboto Mono', monospace;
 
-    font-size: 1em;
+    font-size: 0.8em;
 
     border-radius: 2px;
-    background-color: #333;
-    color: white;
+    background-color: #eee;
     padding: 1px 3px;
     margin: 0 2px;
   }
 
   pre {
 
+    font-size: 0.8em;
+
     border-radius: 2px;
-    background-color: #333;
-    margin: $grid 0;
-    padding: $grid;
-    color: white;
+    background-color: #eee;
+    padding: 1px 3px;
+    margin: 0 2px;
 
     code {
       border: none;

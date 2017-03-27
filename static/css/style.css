@@ -492,21 +492,20 @@ main.article article {
     main.article article .attribution code,
     main.article article .license code {
       font-family: 'Roboto Mono', monospace;
-      font-size: 1em;
+      font-size: 0.8em;
       border-radius: 2px;
-      background-color: #333;
-      color: white;
+      background-color: #eee;
       padding: 1px 3px;
       margin: 0 2px; }
     main.article article .actions pre,
     main.article article .content pre,
     main.article article .attribution pre,
     main.article article .license pre {
+      font-size: 0.8em;
       border-radius: 2px;
-      background-color: #333;
-      margin: 8px 0;
-      padding: 8px;
-      color: white; }
+      background-color: #eee;
+      padding: 1px 3px;
+      margin: 0 2px; }
       main.article article .actions pre code,
       main.article article .content pre code,
       main.article article .attribution pre code,
@@ -1206,18 +1205,17 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       max-width: 100%; }
     .article-list article .summary code {
       font-family: 'Roboto Mono', monospace;
-      font-size: 1em;
+      font-size: 0.8em;
       border-radius: 2px;
-      background-color: #333;
-      color: white;
+      background-color: #eee;
       padding: 1px 3px;
       margin: 0 2px; }
     .article-list article .summary pre {
+      font-size: 0.8em;
       border-radius: 2px;
-      background-color: #333;
-      margin: 8px 0;
-      padding: 8px;
-      color: white; }
+      background-color: #eee;
+      padding: 1px 3px;
+      margin: 0 2px; }
       .article-list article .summary pre code {
         border: none;
         background-color: transparent;
