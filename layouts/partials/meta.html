@@ -16,3 +16,19 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <script src="/js/ui.js"></script>
+
+{{ if .IsPage }}
+<meta property="og:url"                content="{{ .Permalink }}" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="{{ .Title }}" />
+<meta property="og:description"        content="{{ .Summary }}" />
+
+{{ if .Params.art.image }}
+<meta property="og:image"              content="/images/art/{{ .Params.art.image }}-preview.jpg" />
+{{ end }}
+
+{{ if .Params.infographic.file }}
+<meta property="og:image"              content="/infographics/{{ .Params.infographic.file }}.png" />
+{{ end }}
+
+{{ end }}
