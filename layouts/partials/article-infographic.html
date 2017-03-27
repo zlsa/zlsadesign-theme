@@ -19,7 +19,7 @@
 
   <section class="body">
     
-    <section class="infographic">
+    <section class="infographic image">
       <a href="/infographic/{{ .Params.infographic.file }}.png" title="Direct link to full-size infographic">
         <img src="/infographic/{{ .Params.infographic.file }}-{{ .Params.infographic.aspect }}.jpg" alt="{{ .Title }}" />
       </a>
@@ -33,7 +33,7 @@
         {{ end }}
 
         {{ if .Params.infographic.redbubble }}
-        <a class="full-size button buy right" href="{{ .Params.infographic.redbubble }}" title="Buy poster from RedBubble">Buy poster from RedBubble</a>
+        <a class="full-size button buy right" target="_blank" href="{{ .Params.infographic.redbubble }}" title="Buy poster from RedBubble">Buy poster from RedBubble</a>
         {{ end }}
       </div>
       

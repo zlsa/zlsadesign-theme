@@ -1,0 +1,47 @@
+<article class="single art aspect-wide"
+         itemscope="itemscope" itemtype="http://schema.org/MediaObject">
+  
+  {{ partial "article-headline.html" . }}
+  
+  <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "MediaObject",
+    "author": "Jon Ross",
+    "dateModified": {{ time .Date }},
+    "name": "{{ .Title }}",
+
+    "encodingFormat": "png",
+    
+    "contentUrl": "/images/art/{{ .Params.art.image }}.png",
+    }
+  </script>
+
+  <section class="body">
+    
+    <section class="art image">
+      <a href="/images/art/{{ .Params.art.image }}.png" title="Direct link to full-size image">
+        <img src="/images/art/{{ .Params.art.image }}-preview.jpg" alt="{{ .Title }}" />
+      </a>
+
+      <div class="actions art-info">
+        
+        <a class="full-size button" href="/images/art/{{ .Params.art.image }}.png" title="Direct link to high-resolution image">View full-size</a>
+
+        {{ if .Params.art.redbubble }}
+        <a class="full-size button buy right" target="_blank" href="{{ .Params.art.redbubble }}" title="Buy poster from RedBubble">Buy poster from RedBubble</a>
+        {{ end }}
+      </div>
+      
+    </section>
+    
+    <section class="content">
+      {{ .Content }}
+    </section>
+
+    {{ partial "article-comments.html" . }}
+    {{ partial "article-meta.html" . }}
+    
+  </section>
+
+</article>

@@ -1,4 +1,4 @@
-<div id="hero">
+<div id="hero" class="{{ .Params.hero.class }}">
   <div class="hero-contents" style="background-image: url('{{ .Params.hero.image }}')">
     <div class="message-box">
       <span class="message small">Here&rsquo;s something I&rsquo;ve made:</span>
@@ -6,5 +6,4 @@
       <span class="message small">Keep scrolling to see other things that I&rsquo;ve made.</span>
     </div>
   </div>
-  <!--<h1 class="title">{{ .Params.hero.title }}</h1>-->
 </div>

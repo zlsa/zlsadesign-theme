@@ -22,3 +22,7 @@
 {{ partial "article-list-item-article.html" . }}
 {{ end }}
 
+{{ if eq .Section "art" }}
+{{ partial "article-list-item-art.html" . }}
+{{ end }}
+

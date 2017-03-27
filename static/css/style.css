@@ -226,7 +226,7 @@ body.no-js .toggle-nav img,
 
 body.no-js nav,
 #header.nav-visible nav {
-  max-height: 336px !important; }
+  max-height: 392px !important; }
 
 body.no-js #header {
   background: #303030 !important;
@@ -249,12 +249,14 @@ body.no-js #header {
     color: white; }
 
 body[data-title=Apps] #header nav ul li.link-apps a,
+body[data-title=Art] #header nav ul li.link-art a,
 body[data-title=Articles] #header nav ul li.link-articles a,
 body[data-title=Infographics] #header nav ul li.link-infographics a,
 body[data-title=Posts] #header nav ul li.link-posts a,
 body[data-title=Projects] #header nav ul li.link-projects a,
 body[data-title="About Me"] #header nav ul li.link-about a,
 body[data-section=app] #header nav ul li.link-apps a,
+body[data-section=art] #header nav ul li.link-art a,
 body[data-section=article] #header nav ul li.link-articles a,
 body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
@@ -262,24 +264,28 @@ body[data-section=project] #header nav ul li.link-projects a {
   border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
     body[data-title=Apps] #header nav ul li.link-apps a,
+    body[data-title=Art] #header nav ul li.link-art a,
     body[data-title=Articles] #header nav ul li.link-articles a,
     body[data-title=Infographics] #header nav ul li.link-infographics a,
     body[data-title=Posts] #header nav ul li.link-posts a,
     body[data-title=Projects] #header nav ul li.link-projects a,
     body[data-title="About Me"] #header nav ul li.link-about a,
     body[data-section=app] #header nav ul li.link-apps a,
+    body[data-section=art] #header nav ul li.link-art a,
     body[data-section=article] #header nav ul li.link-articles a,
     body[data-section=infographic] #header nav ul li.link-infographics a,
     body[data-section=post] #header nav ul li.link-posts a,
     body[data-section=project] #header nav ul li.link-projects a {
       border-width: 0 0 0 8px; } }
   body[data-title=Apps] #header nav ul li.link-apps a span,
+  body[data-title=Art] #header nav ul li.link-art a span,
   body[data-title=Articles] #header nav ul li.link-articles a span,
   body[data-title=Infographics] #header nav ul li.link-infographics a span,
   body[data-title=Posts] #header nav ul li.link-posts a span,
   body[data-title=Projects] #header nav ul li.link-projects a span,
   body[data-title="About Me"] #header nav ul li.link-about a span,
   body[data-section=app] #header nav ul li.link-apps a span,
+  body[data-section=art] #header nav ul li.link-art a span,
   body[data-section=article] #header nav ul li.link-articles a span,
   body[data-section=infographic] #header nav ul li.link-infographics a span,
   body[data-section=post] #header nav ul li.link-posts a span,
@@ -289,6 +295,9 @@ body[data-section=project] #header nav ul li.link-projects a {
 
 #header nav ul li.link-apps a {
   border-color: #8BC34A; }
+
+#header nav ul li.link-art a {
+  border-color: #FFF; }
 
 #header nav ul li.link-articles a {
   border-color: #C33; }
@@ -731,24 +740,30 @@ main.article article {
   main.article article.article .content {
     padding-top: 48px;
     font-size: 1.2em; }
-  main.article article.infographic {
+  main.article article.art, main.article article.infographic {
     margin-top: -16px; }
+    main.article article.art .art,
+    main.article article.art .infographic, main.article article.infographic .art,
     main.article article.infographic .infographic {
       background-color: white;
       padding: 0; }
+      main.article article.art .art a,
+      main.article article.art .infographic a, main.article article.infographic .art a,
       main.article article.infographic .infographic a {
         display: block; }
+      main.article article.art .art img,
+      main.article article.art .infographic img, main.article article.infographic .art img,
       main.article article.infographic .infographic img {
         display: block;
         width: 100%; }
     @media (min-width: 1100px) {
-      main.article article.infographic .headline .title {
+      main.article article.art.infographic .headline .title, main.article article.infographic.infographic .headline .title {
         display: none;
         font-size: 16px; }
-      main.article article.infographic.aspect-wide .body {
+      main.article article.art.aspect-wide .body, main.article article.infographic.aspect-wide .body {
         display: flex;
         flex-direction: column; }
-        main.article article.infographic.aspect-wide .body .infographic {
+        main.article article.art.aspect-wide .body .image, main.article article.infographic.aspect-wide .body .image {
           box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
           align-self: center;
           width: 1820px;
@@ -845,6 +860,7 @@ article a[href]:hover {
   text-decoration: underline; }
 
 main.article article .section.section-app,
+main.article article .section.section-art,
 main.article article .section.section-article,
 main.article article .section.section-infographic,
 main.article article .section.section-post,
@@ -852,6 +868,7 @@ main.article article .section.section-project {
   display: none; }
   @media (max-width: 700px) {
     main.article article .section.section-app,
+    main.article article .section.section-art,
     main.article article .section.section-article,
     main.article article .section.section-infographic,
     main.article article .section.section-post,
@@ -874,6 +891,18 @@ article.app .content a[href],
 article.app .links .name,
 article.app .body .read-more a[href] {
   color: #8BC34A !important; }
+
+article .section.section-art a {
+  background-color: #FFF !important;
+  color: #242424 !important; }
+
+article.art .body .actions a[href],
+article.art .links .name,
+article.art .body .read-more a[href] {
+  color: #242424 !important; }
+
+article.art .content a[href] {
+  color: #dd6644 !important; }
 
 article .section.section-article a {
   background-color: #C33 !important; }
@@ -919,13 +948,13 @@ body.no-js article .headline .publish-time,
 body.loaded article .headline .publish-time {
   opacity: 1 !important; }
 
-article .infographic .actions a[href].button.right {
+article .actions a[href].button.right {
   margin-left: auto; }
   @media (max-width: 600px) {
-    article .infographic .actions a[href].button.right {
+    article .actions a[href].button.right {
       margin-left: 16px; } }
 
-article .infographic .actions a[href].button.buy {
+article .actions a[href].button.buy {
   box-shadow: 0 0 0 2px #242424;
   background-color: #FFC107 !important;
   color: #242424 !important; }
@@ -1318,31 +1347,40 @@ main.list-post > .headline,
 main.list-project > .headline {
   display: none !important; }
 
+.article-list article.art .body,
 .article-list article.infographic .body {
   padding-top: 8px;
   display: flex;
   flex-direction: row; }
 
-.article-list article.infographic .infographic a {
+.article-list article.art .image a,
+.article-list article.infographic .image a {
   display: block; }
 
-.article-list article.infographic .infographic img {
+.article-list article.art .image img,
+.article-list article.infographic .image img {
   background-color: white;
   display: block;
   max-width: 480px; }
 
 @media (max-width: 900px) {
-  .article-list article.infographic .infographic img {
+  .article-list article.art .image img,
+  .article-list article.infographic .image img {
     max-width: 320px; } }
 
 @media (max-width: 700px) {
+  .article-list article.art .body,
   .article-list article.infographic .body {
     flex-direction: column;
     align-items: stretch; }
-  .article-list article.infographic .infographic, .article-list article.infographic .infographic a, .article-list article.infographic .infographic img {
+  .article-list article.art .image, .article-list article.art .image a, .article-list article.art .image img,
+  .article-list article.infographic .image,
+  .article-list article.infographic .image a,
+  .article-list article.infographic .image img {
     width: 100%;
     text-align: center; }
-  .article-list article.infographic .infographic img {
+  .article-list article.art .image img,
+  .article-list article.infographic .image img {
     max-width: 480px; } }
 
 body.no-js main.article-list article .headline .publish-time,
@@ -1550,7 +1588,7 @@ body.no-js .toggle-nav img,
 
 body.no-js nav,
 #header.nav-visible nav {
-  max-height: 336px !important; }
+  max-height: 392px !important; }
 
 body.no-js #header {
   background: #303030 !important;
@@ -1573,12 +1611,14 @@ body.no-js #header {
     color: white; }
 
 body[data-title=Apps] #header nav ul li.link-apps a,
+body[data-title=Art] #header nav ul li.link-art a,
 body[data-title=Articles] #header nav ul li.link-articles a,
 body[data-title=Infographics] #header nav ul li.link-infographics a,
 body[data-title=Posts] #header nav ul li.link-posts a,
 body[data-title=Projects] #header nav ul li.link-projects a,
 body[data-title="About Me"] #header nav ul li.link-about a,
 body[data-section=app] #header nav ul li.link-apps a,
+body[data-section=art] #header nav ul li.link-art a,
 body[data-section=article] #header nav ul li.link-articles a,
 body[data-section=infographic] #header nav ul li.link-infographics a,
 body[data-section=post] #header nav ul li.link-posts a,
@@ -1586,24 +1626,28 @@ body[data-section=project] #header nav ul li.link-projects a {
   border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
     body[data-title=Apps] #header nav ul li.link-apps a,
+    body[data-title=Art] #header nav ul li.link-art a,
     body[data-title=Articles] #header nav ul li.link-articles a,
     body[data-title=Infographics] #header nav ul li.link-infographics a,
     body[data-title=Posts] #header nav ul li.link-posts a,
     body[data-title=Projects] #header nav ul li.link-projects a,
     body[data-title="About Me"] #header nav ul li.link-about a,
     body[data-section=app] #header nav ul li.link-apps a,
+    body[data-section=art] #header nav ul li.link-art a,
     body[data-section=article] #header nav ul li.link-articles a,
     body[data-section=infographic] #header nav ul li.link-infographics a,
     body[data-section=post] #header nav ul li.link-posts a,
     body[data-section=project] #header nav ul li.link-projects a {
       border-width: 0 0 0 8px; } }
   body[data-title=Apps] #header nav ul li.link-apps a span,
+  body[data-title=Art] #header nav ul li.link-art a span,
   body[data-title=Articles] #header nav ul li.link-articles a span,
   body[data-title=Infographics] #header nav ul li.link-infographics a span,
   body[data-title=Posts] #header nav ul li.link-posts a span,
   body[data-title=Projects] #header nav ul li.link-projects a span,
   body[data-title="About Me"] #header nav ul li.link-about a span,
   body[data-section=app] #header nav ul li.link-apps a span,
+  body[data-section=art] #header nav ul li.link-art a span,
   body[data-section=article] #header nav ul li.link-articles a span,
   body[data-section=infographic] #header nav ul li.link-infographics a span,
   body[data-section=post] #header nav ul li.link-posts a span,
@@ -1613,6 +1657,9 @@ body[data-section=project] #header nav ul li.link-projects a {
 
 #header nav ul li.link-apps a {
   border-color: #8BC34A; }
+
+#header nav ul li.link-art a {
+  border-color: #FFF; }
 
 #header nav ul li.link-articles a {
   border-color: #C33; }
@@ -1728,7 +1775,8 @@ body.loaded #background {
   padding-top: 128px; }
   @media (max-width: 600px) {
     #hero {
-      padding-top: 0; } }
+      padding-top: 0;
+      margin-bottom: -96px; } }
   #hero .hero-contents {
     box-shadow: 0 0 64px rgba(0, 0, 0, 0.6);
     background-color: #ddd;
@@ -1753,7 +1801,6 @@ body.loaded #background {
       margin-left: -8px; }
       #hero .hero-contents .message-box .message {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        background-color: #009688;
         color: white;
         font-size: 16px;
         font-weight: bold;
@@ -1778,6 +1825,29 @@ body.loaded #background {
       display: inline-block;
       padding: 32px;
       padding-top: 128px; }
+
+#hero.message-bottom .hero-contents {
+  justify-content: flex-end !important;
+  padding-bottom: 1em; }
+
+#hero.apps .message {
+  background-color: #8BC34A; }
+
+#hero.art .message:not(.small) {
+  background-color: #FFF;
+  color: #242424 !important; }
+
+#hero.articles .message {
+  background-color: #C33; }
+
+#hero.infographics .message {
+  background-color: #009688; }
+
+#hero.posts .message {
+  background-color: #dd6644; }
+
+#hero.projects .message {
+  background-color: #607D8B; }
 
 body[data-title=Donate] #footer .container .donate {
   display: none; }

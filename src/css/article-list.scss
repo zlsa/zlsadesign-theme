@@ -331,6 +331,7 @@ main.list-project > .headline {
   display: none !important;
 }
   
+.article-list article.art,
 .article-list article.infographic {
 
   .body {
@@ -339,11 +340,11 @@ main.list-project > .headline {
     flex-direction: row;
   }
 
-  .infographic a {
+  .image a {
     display: block;
   }
   
-  .infographic img {
+  .image img {
     background-color: white;
     display: block;
     max-width: 480px;
@@ -351,7 +352,7 @@ main.list-project > .headline {
 
   @media (max-width: 900px) {
     
-    .infographic img {
+    .image img {
       max-width: 320px;
     }
 
@@ -364,12 +365,12 @@ main.list-project > .headline {
       align-items: stretch;
     }
 
-    .infographic, .infographic a, .infographic img {
+    .image, .image a, .image img {
       width: 100%;
       text-align: center;
     }
 
-    .infographic img {
+    .image img {
       max-width: 480px;
     }
     
