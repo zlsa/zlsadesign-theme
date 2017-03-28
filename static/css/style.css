@@ -497,15 +497,94 @@ main.article article {
       background-color: #eee;
       padding: 1px 3px;
       margin: 0 2px; }
+      main.article article .actions code[data-lang] .kd,
+      main.article article .content code[data-lang] .kd,
+      main.article article .attribution code[data-lang] .kd,
+      main.article article .license code[data-lang] .kd {
+        color: #BF360C; }
+      main.article article .actions code[data-lang] .k,
+      main.article article .content code[data-lang] .k,
+      main.article article .attribution code[data-lang] .k,
+      main.article article .license code[data-lang] .k {
+        color: #4A148C; }
+      main.article article .actions code[data-lang] .nd,
+      main.article article .content code[data-lang] .nd,
+      main.article article .attribution code[data-lang] .nd,
+      main.article article .license code[data-lang] .nd {
+        color: rgba(0, 0, 0, 0.5); }
+      main.article article .actions code[data-lang] .na, main.article article .actions code[data-lang] .nc,
+      main.article article .content code[data-lang] .na,
+      main.article article .content code[data-lang] .nc,
+      main.article article .attribution code[data-lang] .na,
+      main.article article .attribution code[data-lang] .nc,
+      main.article article .license code[data-lang] .na,
+      main.article article .license code[data-lang] .nc {
+        font-weight: bold; }
+      main.article article .actions code[data-lang] .nt,
+      main.article article .content code[data-lang] .nt,
+      main.article article .attribution code[data-lang] .nt,
+      main.article article .license code[data-lang] .nt {
+        color: #CC1111; }
+      main.article article .actions code[data-lang] .s,
+      main.article article .content code[data-lang] .s,
+      main.article article .attribution code[data-lang] .s,
+      main.article article .license code[data-lang] .s {
+        color: #1B5E20; }
+      main.article article .actions code[data-lang] .c, main.article article .actions code[data-lang] .cm, main.article article .actions code[data-lang] .cp, main.article article .actions code[data-lang] .c1, main.article article .actions code[data-lang] .cs,
+      main.article article .content code[data-lang] .c,
+      main.article article .content code[data-lang] .cm,
+      main.article article .content code[data-lang] .cp,
+      main.article article .content code[data-lang] .c1,
+      main.article article .content code[data-lang] .cs,
+      main.article article .attribution code[data-lang] .c,
+      main.article article .attribution code[data-lang] .cm,
+      main.article article .attribution code[data-lang] .cp,
+      main.article article .attribution code[data-lang] .c1,
+      main.article article .attribution code[data-lang] .cs,
+      main.article article .license code[data-lang] .c,
+      main.article article .license code[data-lang] .cm,
+      main.article article .license code[data-lang] .cp,
+      main.article article .license code[data-lang] .c1,
+      main.article article .license code[data-lang] .cs {
+        color: rgba(27, 94, 32, 0.7); }
+      main.article article .actions code[data-lang] .m, main.article article .actions code[data-lang] .mb, main.article article .actions code[data-lang] .mf, main.article article .actions code[data-lang] .mh, main.article article .actions code[data-lang] .mi, main.article article .actions code[data-lang] .il, main.article article .actions code[data-lang] .mo,
+      main.article article .content code[data-lang] .m,
+      main.article article .content code[data-lang] .mb,
+      main.article article .content code[data-lang] .mf,
+      main.article article .content code[data-lang] .mh,
+      main.article article .content code[data-lang] .mi,
+      main.article article .content code[data-lang] .il,
+      main.article article .content code[data-lang] .mo,
+      main.article article .attribution code[data-lang] .m,
+      main.article article .attribution code[data-lang] .mb,
+      main.article article .attribution code[data-lang] .mf,
+      main.article article .attribution code[data-lang] .mh,
+      main.article article .attribution code[data-lang] .mi,
+      main.article article .attribution code[data-lang] .il,
+      main.article article .attribution code[data-lang] .mo,
+      main.article article .license code[data-lang] .m,
+      main.article article .license code[data-lang] .mb,
+      main.article article .license code[data-lang] .mf,
+      main.article article .license code[data-lang] .mh,
+      main.article article .license code[data-lang] .mi,
+      main.article article .license code[data-lang] .il,
+      main.article article .license code[data-lang] .mo {
+        font-weight: bold; }
     main.article article .actions pre,
     main.article article .content pre,
     main.article article .attribution pre,
     main.article article .license pre {
       font-size: 0.8em;
-      border-radius: 2px;
       background-color: #eee;
-      padding: 1px 3px;
-      margin: 0 2px; }
+      padding: 16px 32px;
+      margin: 16px 0 !important;
+      line-height: 140%; }
+      @media (max-width: 800px) {
+        main.article article .actions pre,
+        main.article article .content pre,
+        main.article article .attribution pre,
+        main.article article .license pre {
+          padding: 16px 16px; } }
       main.article article .actions pre code,
       main.article article .content pre code,
       main.article article .attribution pre code,
@@ -1070,7 +1149,7 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       margin-right: -16px; }
       .article-list article .headline .section a {
         z-index: 50;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         background-color: #dd6644;
         color: white;
         font-size: 14px;
@@ -1210,12 +1289,31 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       background-color: #eee;
       padding: 1px 3px;
       margin: 0 2px; }
+      .article-list article .summary code[data-lang] .kd {
+        color: #BF360C; }
+      .article-list article .summary code[data-lang] .k {
+        color: #4A148C; }
+      .article-list article .summary code[data-lang] .nd {
+        color: rgba(0, 0, 0, 0.5); }
+      .article-list article .summary code[data-lang] .na, .article-list article .summary code[data-lang] .nc {
+        font-weight: bold; }
+      .article-list article .summary code[data-lang] .nt {
+        color: #CC1111; }
+      .article-list article .summary code[data-lang] .s {
+        color: #1B5E20; }
+      .article-list article .summary code[data-lang] .c, .article-list article .summary code[data-lang] .cm, .article-list article .summary code[data-lang] .cp, .article-list article .summary code[data-lang] .c1, .article-list article .summary code[data-lang] .cs {
+        color: rgba(27, 94, 32, 0.7); }
+      .article-list article .summary code[data-lang] .m, .article-list article .summary code[data-lang] .mb, .article-list article .summary code[data-lang] .mf, .article-list article .summary code[data-lang] .mh, .article-list article .summary code[data-lang] .mi, .article-list article .summary code[data-lang] .il, .article-list article .summary code[data-lang] .mo {
+        font-weight: bold; }
     .article-list article .summary pre {
       font-size: 0.8em;
-      border-radius: 2px;
       background-color: #eee;
-      padding: 1px 3px;
-      margin: 0 2px; }
+      padding: 16px 32px;
+      margin: 16px 0 !important;
+      line-height: 140%; }
+      @media (max-width: 800px) {
+        .article-list article .summary pre {
+          padding: 16px 16px; } }
       .article-list article .summary pre code {
         border: none;
         background-color: transparent;

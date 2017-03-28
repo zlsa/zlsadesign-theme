@@ -1,4 +1,9 @@
 
+$code-red: #CC1111;
+$code-orange: #BF360C;
+$code-green: #1B5E20;
+$code-purple: #4A148C;
+
 @mixin text() {
 
   line-height: 1.8em;
@@ -80,17 +85,64 @@
     background-color: #eee;
     padding: 1px 3px;
     margin: 0 2px;
+
+    &[data-lang] {
+
+      .kd {
+        color: $code-orange;
+      }
+
+      .k {
+        color: $code-purple;
+      }
+
+      .n,
+      .nc {
+        //color: rgba(black, 0.5);
+      }
+      
+      .nd {
+        color: rgba(black, 0.5);
+      }
+      
+      .na, .nc {
+        font-weight: bold;
+      }
+      
+      .nt {
+        color: $code-red;
+      }
+      
+      .s {
+        color: $code-green;
+      }
+
+      .c, .cm, .cp, .c1, .cs {
+        color: rgba($code-green, 0.7);
+      }
+
+      .m, .mb, .mf, .mh, .mi, .il, .mo {
+        font-weight: bold;
+      }
+
+    }
+    
   }
 
   pre {
 
     font-size: 0.8em;
 
-    border-radius: 2px;
     background-color: #eee;
-    padding: 1px 3px;
-    margin: 0 2px;
+    padding: $grid * 2 $grid * 4;
+    margin: $grid * 2 0 !important;
 
+    line-height: 140%;
+
+    @media (max-width: 800px) {
+      padding: $grid * 2 $grid * 2;
+    }
+    
     code {
       border: none;
       background-color: transparent;

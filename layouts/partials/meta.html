@@ -21,7 +21,12 @@
 <meta property="og:url"                content="{{ .Permalink }}" />
 <meta property="og:type"               content="article" />
 <meta property="og:title"              content="{{ .Title }}" />
+
+{{ if .Params.description }}
+<meta property="og:description"        content="{{ .Params.description }}" />
+{{ else }}
 <meta property="og:description"        content="{{ .Summary }}" />
+{{ end }}
 
 {{ if .Params.art.image }}
 <meta property="og:image"              content="/images/art/{{ .Params.art.image }}-preview.jpg" />
