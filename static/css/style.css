@@ -609,19 +609,22 @@ main.article article {
     main.article article .content div.language,
     main.article article .attribution div.language,
     main.article article .license div.language {
+      background-color: #f8f8f8;
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8em;
-      padding: 8px 0;
-      margin-bottom: -24px;
+      padding: 4px 0;
+      margin-bottom: -16px;
       margin-top: 24px;
-      margin-left: 16px; }
+      margin-left: -32px;
+      margin-right: -32px;
+      padding-left: 48px; }
       @media (max-width: 800px) {
         main.article article .actions div.language,
         main.article article .content div.language,
         main.article article .attribution div.language,
         main.article article .license div.language {
-          margin-left: 0; } }
+          padding-left: 32px; } }
       main.article article .actions div.language .language,
       main.article article .content div.language .language,
       main.article article .attribution div.language .language,
@@ -1371,16 +1374,19 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
         font-size: inherit;
         font-weight: normal; }
     .article-list article .summary div.language {
+      background-color: #f8f8f8;
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8em;
-      padding: 8px 0;
-      margin-bottom: -24px;
+      padding: 4px 0;
+      margin-bottom: -16px;
       margin-top: 24px;
-      margin-left: 16px; }
+      margin-left: -32px;
+      margin-right: -32px;
+      padding-left: 48px; }
       @media (max-width: 800px) {
         .article-list article .summary div.language {
-          margin-left: 0; } }
+          padding-left: 32px; } }
       .article-list article .summary div.language .language {
         font-weight: bold; }
       .article-list article .summary div.language .file {

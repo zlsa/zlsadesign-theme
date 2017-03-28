@@ -165,18 +165,23 @@ $code-purple: #4A148C;
   }
 
   div.language {
+    background-color: #f8f8f8;
+    
     color: rgba(black, 0.7);
     font-family: 'Roboto Mono', monospace;
     font-size: 0.8em;
 
-    padding: $grid 0;
-    margin-bottom: -$grid * 3;
+    padding: $grid / 2 0;
+    margin-bottom: -$grid * 2;
     margin-top: $grid * 3;
 
-    margin-left: $grid * 2;
+    margin-left: -$grid * 4;
+    margin-right: -$grid * 4;
+    
+    padding-left: $grid * 6;
 
     @media (max-width: 800px) {
-      margin-left: 0;
+      padding-left: $grid * 4;
     }
     
     .language {
