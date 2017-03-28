@@ -576,8 +576,8 @@ main.article article {
     main.article article .license pre {
       font-size: 0.8em;
       background-color: #eee;
-      padding: 16px 32px;
-      margin: 16px 0 !important;
+      padding: 16px 48px;
+      margin: 16px -32px !important;
       line-height: 140%; }
       @media (max-width: 800px) {
         main.article article .actions pre,
@@ -585,6 +585,12 @@ main.article article {
         main.article article .attribution pre,
         main.article article .license pre {
           padding: 16px 16px; } }
+      @media (max-width: 600px) {
+        main.article article .actions pre,
+        main.article article .content pre,
+        main.article article .attribution pre,
+        main.article article .license pre {
+          margin: 16px -16px !important; } }
       main.article article .actions pre code,
       main.article article .content pre code,
       main.article article .attribution pre code,
@@ -595,6 +601,48 @@ main.article article {
         margin: 0;
         font-size: inherit;
         font-weight: normal; }
+    main.article article .actions div.language,
+    main.article article .content div.language,
+    main.article article .attribution div.language,
+    main.article article .license div.language {
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.8em;
+      margin: 16px 0;
+      float: right;
+      position: relative;
+      top: 10px; }
+      main.article article .actions div.language .file,
+      main.article article .content div.language .file,
+      main.article article .attribution div.language .file,
+      main.article article .license div.language .file {
+        color: rgba(0, 0, 0, 0.4);
+        margin-right: 8px; }
+      main.article article .actions div.language .language,
+      main.article article .content div.language .language,
+      main.article article .attribution div.language .language,
+      main.article article .license div.language .language {
+        font-weight: bold; }
+      @media (max-width: 800px) {
+        main.article article .actions div.language,
+        main.article article .content div.language,
+        main.article article .attribution div.language,
+        main.article article .license div.language {
+          float: none;
+          position: static;
+          margin-bottom: -16px;
+          margin-top: 24px; }
+          main.article article .actions div.language .language,
+          main.article article .content div.language .language,
+          main.article article .attribution div.language .language,
+          main.article article .license div.language .language {
+            float: left;
+            margin-right: 8px; } }
+    main.article article .actions div.language pre,
+    main.article article .content div.language pre,
+    main.article article .attribution div.language pre,
+    main.article article .license div.language pre {
+      margin-top: 0 !important; }
     main.article article .actions ul, main.article article .actions ol,
     main.article article .content ul,
     main.article article .content ol,
@@ -1308,12 +1356,15 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
     .article-list article .summary pre {
       font-size: 0.8em;
       background-color: #eee;
-      padding: 16px 32px;
-      margin: 16px 0 !important;
+      padding: 16px 48px;
+      margin: 16px -32px !important;
       line-height: 140%; }
       @media (max-width: 800px) {
         .article-list article .summary pre {
           padding: 16px 16px; } }
+      @media (max-width: 600px) {
+        .article-list article .summary pre {
+          margin: 16px -16px !important; } }
       .article-list article .summary pre code {
         border: none;
         background-color: transparent;
@@ -1321,6 +1372,30 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
         margin: 0;
         font-size: inherit;
         font-weight: normal; }
+    .article-list article .summary div.language {
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.8em;
+      margin: 16px 0;
+      float: right;
+      position: relative;
+      top: 10px; }
+      .article-list article .summary div.language .file {
+        color: rgba(0, 0, 0, 0.4);
+        margin-right: 8px; }
+      .article-list article .summary div.language .language {
+        font-weight: bold; }
+      @media (max-width: 800px) {
+        .article-list article .summary div.language {
+          float: none;
+          position: static;
+          margin-bottom: -16px;
+          margin-top: 24px; }
+          .article-list article .summary div.language .language {
+            float: left;
+            margin-right: 8px; } }
+    .article-list article .summary div.language pre {
+      margin-top: 0 !important; }
     .article-list article .summary ul, .article-list article .summary ol {
       margin: 16px 8px;
       padding-left: 16px; }

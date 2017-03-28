@@ -134,13 +134,17 @@ $code-purple: #4A148C;
     font-size: 0.8em;
 
     background-color: #eee;
-    padding: $grid * 2 $grid * 4;
-    margin: $grid * 2 0 !important;
+    padding: $grid * 2 $grid * 6;
+    margin: $grid * 2 (-$grid * 4) !important;
 
     line-height: 140%;
 
     @media (max-width: 800px) {
       padding: $grid * 2 $grid * 2;
+    }
+    
+    @media (max-width: 600px) {
+      margin: $grid * 2 (-$grid * 2) !important;
     }
     
     code {
@@ -153,6 +157,44 @@ $code-purple: #4A148C;
       font-weight: normal;
     }
     
+  }
+
+  div.language {
+    color: rgba(black, 0.7);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8em;
+
+    margin: $grid * 2 0;
+    float: right;
+    position: relative;
+    top: $grid * 1 + 2px;
+
+    .file {
+      color: rgba(black, 0.4);
+      margin-right: $grid;
+    }
+    
+    .language {
+      font-weight: bold;
+    }
+
+    @media (max-width: 800px) {
+      float: none;
+      position: static;
+      margin-bottom: -$grid * 2;
+      margin-top: $grid * 3;
+
+      .language {
+        float: left;
+        margin-right: $grid;
+      }
+      
+    }
+    
+  }
+
+  div.language pre {
+    margin-top: 0 !important;
   }
 
   ul, ol {
