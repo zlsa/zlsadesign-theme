@@ -605,41 +605,56 @@ main.article article {
         margin: 0;
         font-size: inherit;
         font-weight: normal; }
-    main.article article .actions div.language,
-    main.article article .content div.language,
-    main.article article .attribution div.language,
-    main.article article .license div.language {
-      background-color: #f8f8f8;
+    main.article article .actions div.language-file-indicator,
+    main.article article .content div.language-file-indicator,
+    main.article article .attribution div.language-file-indicator,
+    main.article article .license div.language-file-indicator {
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8em;
-      padding: 4px 0;
       margin-bottom: -16px;
       margin-top: 24px;
       margin-left: -32px;
       margin-right: -32px;
-      padding-left: 48px; }
+      padding-left: 32px; }
       @media (max-width: 800px) {
-        main.article article .actions div.language,
-        main.article article .content div.language,
-        main.article article .attribution div.language,
-        main.article article .license div.language {
-          padding-left: 32px; } }
-      main.article article .actions div.language .language,
-      main.article article .content div.language .language,
-      main.article article .attribution div.language .language,
-      main.article article .license div.language .language {
+        main.article article .actions div.language-file-indicator,
+        main.article article .content div.language-file-indicator,
+        main.article article .attribution div.language-file-indicator,
+        main.article article .license div.language-file-indicator {
+          padding-left: 8px;
+          margin-left: -8px; } }
+      main.article article .actions div.language-file-indicator .indicator,
+      main.article article .content div.language-file-indicator .indicator,
+      main.article article .attribution div.language-file-indicator .indicator,
+      main.article article .license div.language-file-indicator .indicator {
+        display: inline-block;
+        padding: 4px 16px;
+        border-bottom: 2px solid #aaa;
+        margin: 0;
+        position: relative; }
+        main.article article .actions div.language-file-indicator .indicator:after,
+        main.article article .content div.language-file-indicator .indicator:after,
+        main.article article .attribution div.language-file-indicator .indicator:after,
+        main.article article .license div.language-file-indicator .indicator:after {
+          border: 8px solid transparent;
+          border-top-color: #aaa;
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -18px;
+          left: 24px;
+          opacity: 0; }
+      main.article article .actions div.language-file-indicator .language,
+      main.article article .content div.language-file-indicator .language,
+      main.article article .attribution div.language-file-indicator .language,
+      main.article article .license div.language-file-indicator .language {
         font-weight: bold; }
-      main.article article .actions div.language .file,
-      main.article article .content div.language .file,
-      main.article article .attribution div.language .file,
-      main.article article .license div.language .file {
+      main.article article .actions div.language-file-indicator .file,
+      main.article article .content div.language-file-indicator .file,
+      main.article article .attribution div.language-file-indicator .file,
+      main.article article .license div.language-file-indicator .file {
         color: rgba(0, 0, 0, 0.4); }
-    main.article article .actions div.language pre,
-    main.article article .content div.language pre,
-    main.article article .attribution div.language pre,
-    main.article article .license div.language pre {
-      margin-top: 0 !important; }
     main.article article .actions ul, main.article article .actions ol,
     main.article article .content ul,
     main.article article .content ol,
@@ -1373,26 +1388,38 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
         margin: 0;
         font-size: inherit;
         font-weight: normal; }
-    .article-list article .summary div.language {
-      background-color: #f8f8f8;
+    .article-list article .summary div.language-file-indicator {
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8em;
-      padding: 4px 0;
       margin-bottom: -16px;
       margin-top: 24px;
       margin-left: -32px;
       margin-right: -32px;
-      padding-left: 48px; }
+      padding-left: 32px; }
       @media (max-width: 800px) {
-        .article-list article .summary div.language {
-          padding-left: 32px; } }
-      .article-list article .summary div.language .language {
+        .article-list article .summary div.language-file-indicator {
+          padding-left: 8px;
+          margin-left: -8px; } }
+      .article-list article .summary div.language-file-indicator .indicator {
+        display: inline-block;
+        padding: 4px 16px;
+        border-bottom: 2px solid #aaa;
+        margin: 0;
+        position: relative; }
+        .article-list article .summary div.language-file-indicator .indicator:after {
+          border: 8px solid transparent;
+          border-top-color: #aaa;
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -18px;
+          left: 24px;
+          opacity: 0; }
+      .article-list article .summary div.language-file-indicator .language {
         font-weight: bold; }
-      .article-list article .summary div.language .file {
+      .article-list article .summary div.language-file-indicator .file {
         color: rgba(0, 0, 0, 0.4); }
-    .article-list article .summary div.language pre {
-      margin-top: 0 !important; }
     .article-list article .summary ul, .article-list article .summary ol {
       margin: 16px 8px;
       padding-left: 16px; }

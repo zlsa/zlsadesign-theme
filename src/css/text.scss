@@ -164,24 +164,49 @@ $code-purple: #4A148C;
     
   }
 
-  div.language {
-    background-color: #f8f8f8;
+  div.language-file-indicator {
+    //background-color: #f8f8f8;
+    //background: linear-gradient(to bottom, #f8f8f8, #fcfcfc);
     
     color: rgba(black, 0.7);
     font-family: 'Roboto Mono', monospace;
     font-size: 0.8em;
 
-    padding: $grid / 2 0;
     margin-bottom: -$grid * 2;
     margin-top: $grid * 3;
 
     margin-left: -$grid * 4;
     margin-right: -$grid * 4;
     
-    padding-left: $grid * 6;
+    padding-left: $grid * 4;
 
     @media (max-width: 800px) {
-      padding-left: $grid * 4;
+      padding-left: $grid * 1;
+      margin-left: -$grid;
+    }
+
+    .indicator {
+      display: inline-block;
+      padding: $grid / 2 $grid * 2;
+      border-bottom: 2px solid #aaa;
+      margin: 0;
+
+      position: relative;
+
+      &:after {
+        border: 8px solid transparent;
+        border-top-color: #aaa;
+        
+        content: '';
+        display: block;
+
+        position: absolute;
+        bottom: -18px;
+        left: $grid * 2 + 8px;
+        
+        opacity: 0;
+      }
+      
     }
     
     .language {
@@ -192,10 +217,6 @@ $code-purple: #4A148C;
       color: rgba(black, 0.4);
     }
     
-  }
-
-  div.language pre {
-    margin-top: 0 !important;
   }
 
   ul, ol {
