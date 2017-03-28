@@ -574,6 +574,8 @@ main.article article {
     main.article article .content pre,
     main.article article .attribution pre,
     main.article article .license pre {
+      overflow-x: auto;
+      width: calc(100% + $grid * 4);
       font-size: 0.8em;
       background-color: #eee;
       padding: 16px 48px;
@@ -584,13 +586,15 @@ main.article article {
         main.article article .content pre,
         main.article article .attribution pre,
         main.article article .license pre {
-          padding: 16px 16px; } }
+          padding: 16px 32px; } }
       @media (max-width: 600px) {
         main.article article .actions pre,
         main.article article .content pre,
         main.article article .attribution pre,
         main.article article .license pre {
-          margin: 16px -16px !important; } }
+          padding: 16px 16px;
+          margin: 16px -16px !important;
+          width: calc(100% + $grid * 2); } }
       main.article article .actions pre code,
       main.article article .content pre code,
       main.article article .attribution pre code,
@@ -608,36 +612,26 @@ main.article article {
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8em;
-      margin: 16px 0;
-      float: right;
-      position: relative;
-      top: 10px; }
-      main.article article .actions div.language .file,
-      main.article article .content div.language .file,
-      main.article article .attribution div.language .file,
-      main.article article .license div.language .file {
-        color: rgba(0, 0, 0, 0.4);
-        margin-right: 8px; }
-      main.article article .actions div.language .language,
-      main.article article .content div.language .language,
-      main.article article .attribution div.language .language,
-      main.article article .license div.language .language {
-        font-weight: bold; }
+      padding: 8px 0;
+      margin-bottom: -24px;
+      margin-top: 24px;
+      margin-left: 16px; }
       @media (max-width: 800px) {
         main.article article .actions div.language,
         main.article article .content div.language,
         main.article article .attribution div.language,
         main.article article .license div.language {
-          float: none;
-          position: static;
-          margin-bottom: -16px;
-          margin-top: 24px; }
-          main.article article .actions div.language .language,
-          main.article article .content div.language .language,
-          main.article article .attribution div.language .language,
-          main.article article .license div.language .language {
-            float: left;
-            margin-right: 8px; } }
+          margin-left: 0; } }
+      main.article article .actions div.language .language,
+      main.article article .content div.language .language,
+      main.article article .attribution div.language .language,
+      main.article article .license div.language .language {
+        font-weight: bold; }
+      main.article article .actions div.language .file,
+      main.article article .content div.language .file,
+      main.article article .attribution div.language .file,
+      main.article article .license div.language .file {
+        color: rgba(0, 0, 0, 0.4); }
     main.article article .actions div.language pre,
     main.article article .content div.language pre,
     main.article article .attribution div.language pre,
@@ -1354,6 +1348,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       .article-list article .summary code[data-lang] .m, .article-list article .summary code[data-lang] .mb, .article-list article .summary code[data-lang] .mf, .article-list article .summary code[data-lang] .mh, .article-list article .summary code[data-lang] .mi, .article-list article .summary code[data-lang] .il, .article-list article .summary code[data-lang] .mo {
         font-weight: bold; }
     .article-list article .summary pre {
+      overflow-x: auto;
+      width: calc(100% + $grid * 4);
       font-size: 0.8em;
       background-color: #eee;
       padding: 16px 48px;
@@ -1361,10 +1357,12 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       line-height: 140%; }
       @media (max-width: 800px) {
         .article-list article .summary pre {
-          padding: 16px 16px; } }
+          padding: 16px 32px; } }
       @media (max-width: 600px) {
         .article-list article .summary pre {
-          margin: 16px -16px !important; } }
+          padding: 16px 16px;
+          margin: 16px -16px !important;
+          width: calc(100% + $grid * 2); } }
       .article-list article .summary pre code {
         border: none;
         background-color: transparent;
@@ -1376,24 +1374,17 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8em;
-      margin: 16px 0;
-      float: right;
-      position: relative;
-      top: 10px; }
-      .article-list article .summary div.language .file {
-        color: rgba(0, 0, 0, 0.4);
-        margin-right: 8px; }
-      .article-list article .summary div.language .language {
-        font-weight: bold; }
+      padding: 8px 0;
+      margin-bottom: -24px;
+      margin-top: 24px;
+      margin-left: 16px; }
       @media (max-width: 800px) {
         .article-list article .summary div.language {
-          float: none;
-          position: static;
-          margin-bottom: -16px;
-          margin-top: 24px; }
-          .article-list article .summary div.language .language {
-            float: left;
-            margin-right: 8px; } }
+          margin-left: 0; } }
+      .article-list article .summary div.language .language {
+        font-weight: bold; }
+      .article-list article .summary div.language .file {
+        color: rgba(0, 0, 0, 0.4); }
     .article-list article .summary div.language pre {
       margin-top: 0 !important; }
     .article-list article .summary ul, .article-list article .summary ol {
