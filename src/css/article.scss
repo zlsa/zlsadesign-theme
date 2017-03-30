@@ -391,6 +391,7 @@ article {
     
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 
     flex-wrap: wrap;
 
@@ -407,12 +408,11 @@ article {
       padding: 0 $grid * 2;
 
       min-height: $grid * 4;
-
+      
       flex-wrap: wrap;
-
+      
       &.tags {
-        margin-left: auto;
-        justify-content: flex-end;
+        border-top: 4px solid $color-background;
 
         font-family: 'Roboto Mono', monospace;
         
@@ -453,7 +453,7 @@ article {
     @media (max-width: 800px) {
 
       background: $color-meta-background;
-      align-items: flex-start;
+      //align-items: flex-start;
       
       ul {
         flex: 1;

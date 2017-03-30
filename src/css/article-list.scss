@@ -209,6 +209,10 @@ $headline-padding-vertical: $grid * 1.5;
       @media (max-width: 600px) {
         padding: $grid * 2 $grid * 2 !important;
       }
+
+      img, figure {
+        display: none;
+      }
       
       .read-more {
         display: block;
@@ -227,6 +231,16 @@ $headline-padding-vertical: $grid * 1.5;
         
       }
 
+    }
+
+    .meta {
+
+      justify-content: center;
+      
+      .tags {
+        display: none;
+      }
+      
     }
 
   }

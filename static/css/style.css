@@ -926,6 +926,7 @@ article .meta {
   background-color: #f4f4f4;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   flex-wrap: wrap;
   font-size: 12px;
   min-height: 48px;
@@ -953,8 +954,7 @@ article .meta {
     min-height: 32px;
     flex-wrap: wrap; }
     article .meta ul.tags {
-      margin-left: auto;
-      justify-content: flex-end;
+      border-top: 4px solid #fff;
       font-family: 'Roboto Mono', monospace; }
       article .meta ul.tags li {
         text-transform: none !important; }
@@ -975,8 +975,7 @@ article .meta {
           vertical-align: middle; }
   @media (max-width: 800px) {
     article .meta {
-      background: #f4f4f4;
-      align-items: flex-start; }
+      background: #f4f4f4; }
       article .meta ul {
         flex: 1;
         /*
@@ -1478,6 +1477,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
     @media (max-width: 600px) {
       .article-list article .summary {
         padding: 16px 16px !important; } }
+    .article-list article .summary img, .article-list article .summary figure {
+      display: none; }
     .article-list article .summary .read-more {
       display: block;
       color: #dd6644;
@@ -1489,6 +1490,10 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
         font-weight: normal;
         text-transform: none;
         margin-left: 1ex; }
+  .article-list article .meta {
+    justify-content: center; }
+    .article-list article .meta .tags {
+      display: none; }
 
 .article-list article + article {
   margin-top: 16px; }
