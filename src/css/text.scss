@@ -277,12 +277,14 @@ $code-purple: #4A148C;
         float: left;
         padding-left: 0;
         margin-left: 0;
+        clear: left;
       }
       
       &.right {
         float: right;
         padding-right: 0;
         margin-right: 0;
+        clear: right;
       }
       
     }
@@ -303,16 +305,35 @@ $code-purple: #4A148C;
 
       &.left, &.right {
         box-shadow: 0 2px 10px rgba(black, 0.3);
-        padding: $grid * 2;
+        padding: $grid;
         margin: $grid * 2 $grid * 4;
       }
     
       &.left {
         margin-left: -256px;
+        max-width: 320px;
       }
       
       &.right {
         margin-right: -256px;
+      }
+      
+    }
+    
+    @media (min-width: 1900px) {
+
+      &.left, &.right {
+        max-width: 480px;
+        padding: $grid;
+        margin: $grid * 2 $grid * 4;
+      }
+      
+      &.left {
+        margin-left: -384px;
+      }
+      
+      &.right {
+        margin-right: -384px;
       }
       
     }

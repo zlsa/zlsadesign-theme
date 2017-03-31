@@ -2,7 +2,7 @@
   
   <span class="section section-{{ .Section }}"><a href="{{ .Section | absURL }}" title="View all {{ .Section }}s">{{ .Section }}</a></span>
   
-  <span class="title">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</span>
+  <span class="title" title="{{ .WordCount }} words">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</span>
   
   <span class="publish-time"><time itemprop="datePublished" datetime="{{ time .Date }}">{{ time .Date }}</time></span>
   

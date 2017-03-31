@@ -292,7 +292,7 @@ main.article article {
 
     .content {
       padding-top: $grid * 6;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
     
   }
@@ -392,6 +392,8 @@ article {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
+    clear: both;
 
     flex-wrap: wrap;
 
