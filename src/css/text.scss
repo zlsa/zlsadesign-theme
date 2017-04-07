@@ -3,6 +3,7 @@ $code-red: #CC1111;
 $code-orange: #BF360C;
 $code-green: #1B5E20;
 $code-purple: #4A148C;
+$code-blue: #1177aa;
 
 @mixin text() {
 
@@ -86,7 +87,11 @@ $code-purple: #4A148C;
     padding: 1px 3px;
     margin: 0 2px;
 
+    overflow-wrap: break-word;
+
     &[data-lang] {
+
+      color: rgba(black, 0.75);
 
       .kd {
         color: $code-orange;
@@ -96,9 +101,14 @@ $code-purple: #4A148C;
         color: $code-purple;
       }
 
+      .kt {
+        color: $code-blue;
+        font-weight: bold;
+      }
+
       .n,
       .nc {
-        //color: rgba(black, 0.5);
+        color: rgba(black, 1);
       }
       
       .nd {
@@ -113,7 +123,7 @@ $code-purple: #4A148C;
         color: $code-red;
       }
       
-      .s {
+      .s, .s1 {
         color: $code-green;
       }
 
