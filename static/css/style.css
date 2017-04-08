@@ -434,9 +434,9 @@ main.article article {
     main.article article .attribution blockquote,
     main.article article .license blockquote {
       border-left: 4px solid rgba(0, 0, 0, 0.3);
-      margin: 8px;
+      margin: 32px 8px;
       margin-right: 0;
-      padding: 4px 8px;
+      padding: 16px 24px;
       padding-right: 0; }
     main.article article .actions h1, main.article article .actions h2, main.article article .actions h3, main.article article .actions h4, main.article article .actions h5, main.article article .actions h6,
     main.article article .content h1,
@@ -457,7 +457,7 @@ main.article article {
     main.article article .license h4,
     main.article article .license h5,
     main.article article .license h6 {
-      margin-top: 1em;
+      margin-top: 2em;
       margin-bottom: 1ex; }
     main.article article .actions h1,
     main.article article .content h1,
@@ -570,7 +570,7 @@ main.article article {
         main.article article .license code[data-lang] .cp,
         main.article article .license code[data-lang] .c1,
         main.article article .license code[data-lang] .cs {
-          color: rgba(27, 94, 32, 0.7); }
+          color: rgba(191, 117, 80, 0.8); }
         main.article article .actions code[data-lang] .m, main.article article .actions code[data-lang] .mb, main.article article .actions code[data-lang] .mf, main.article article .actions code[data-lang] .mh, main.article article .actions code[data-lang] .mi, main.article article .actions code[data-lang] .il, main.article article .actions code[data-lang] .mo,
         main.article article .content code[data-lang] .m,
         main.article article .content code[data-lang] .mb,
@@ -1368,12 +1368,12 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       letter-spacing: 2em; }
     .article-list article .summary blockquote {
       border-left: 4px solid rgba(0, 0, 0, 0.3);
-      margin: 8px;
+      margin: 32px 8px;
       margin-right: 0;
-      padding: 4px 8px;
+      padding: 16px 24px;
       padding-right: 0; }
     .article-list article .summary h1, .article-list article .summary h2, .article-list article .summary h3, .article-list article .summary h4, .article-list article .summary h5, .article-list article .summary h6 {
-      margin-top: 1em;
+      margin-top: 2em;
       margin-bottom: 1ex; }
     .article-list article .summary h1 {
       font-size: 24px;
@@ -1417,7 +1417,7 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
         .article-list article .summary code[data-lang] .s, .article-list article .summary code[data-lang] .s1 {
           color: #1B5E20; }
         .article-list article .summary code[data-lang] .c, .article-list article .summary code[data-lang] .cm, .article-list article .summary code[data-lang] .cp, .article-list article .summary code[data-lang] .c1, .article-list article .summary code[data-lang] .cs {
-          color: rgba(27, 94, 32, 0.7); }
+          color: rgba(191, 117, 80, 0.8); }
         .article-list article .summary code[data-lang] .m, .article-list article .summary code[data-lang] .mb, .article-list article .summary code[data-lang] .mf, .article-list article .summary code[data-lang] .mh, .article-list article .summary code[data-lang] .mi, .article-list article .summary code[data-lang] .il, .article-list article .summary code[data-lang] .mo {
           font-weight: bold; }
     .article-list article .summary pre {
