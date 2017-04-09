@@ -594,6 +594,12 @@ main.article article {
         main.article article .license code[data-lang] .il,
         main.article article .license code[data-lang] .mo {
           font-weight: bold; }
+    main.article article .actions a[href] code,
+    main.article article .content a[href] code,
+    main.article article .attribution a[href] code,
+    main.article article .license a[href] code {
+      font-weight: bold;
+      background: transparent; }
     main.article article .actions pre,
     main.article article .content pre,
     main.article article .attribution pre,
@@ -817,6 +823,55 @@ main.article article {
         main.article article .attribution figure.right,
         main.article article .license figure.right {
           margin-right: -384px; } }
+    main.article article .actions table,
+    main.article article .content table,
+    main.article article .attribution table,
+    main.article article .license table {
+      display: block;
+      margin: 32px 0;
+      width: 100%;
+      box-sizing: content-box;
+      border-collapse: collapse; }
+      main.article article .actions table th, main.article article .actions table td,
+      main.article article .content table th,
+      main.article article .content table td,
+      main.article article .attribution table th,
+      main.article article .attribution table td,
+      main.article article .license table th,
+      main.article article .license table td {
+        border: none;
+        padding: 4px 16px;
+        vertical-align: top; }
+      main.article article .actions table th,
+      main.article article .content table th,
+      main.article article .attribution table th,
+      main.article article .license table th {
+        border-bottom: 2px solid #e6e6e6;
+        font-weight: bold;
+        padding: 8px 16px; }
+      main.article article .actions table td:first-child, main.article article .actions table th:first-child,
+      main.article article .content table td:first-child,
+      main.article article .content table th:first-child,
+      main.article article .attribution table td:first-child,
+      main.article article .attribution table th:first-child,
+      main.article article .license table td:first-child,
+      main.article article .license table th:first-child {
+        border-left: none; }
+      main.article article .actions table tr:last-child td,
+      main.article article .content table tr:last-child td,
+      main.article article .attribution table tr:last-child td,
+      main.article article .license table tr:last-child td {
+        border-bottom: none; }
+      @media (max-width: 800px) {
+        main.article article .actions table th, main.article article .actions table td,
+        main.article article .content table th,
+        main.article article .content table td,
+        main.article article .attribution table th,
+        main.article article .attribution table td,
+        main.article article .license table th,
+        main.article article .license table td {
+          padding-left: 8px;
+          padding-right: 8px; } }
     main.article article .actions :first-child,
     main.article article .content :first-child,
     main.article article .attribution :first-child,
@@ -1420,6 +1475,9 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
           color: rgba(191, 117, 80, 0.8); }
         .article-list article .summary code[data-lang] .m, .article-list article .summary code[data-lang] .mb, .article-list article .summary code[data-lang] .mf, .article-list article .summary code[data-lang] .mh, .article-list article .summary code[data-lang] .mi, .article-list article .summary code[data-lang] .il, .article-list article .summary code[data-lang] .mo {
           font-weight: bold; }
+    .article-list article .summary a[href] code {
+      font-weight: bold;
+      background: transparent; }
     .article-list article .summary pre {
       overflow-x: auto;
       width: calc(100% + $grid * 4);
@@ -1538,6 +1596,28 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
           margin-left: -384px; }
         .article-list article .summary figure.right {
           margin-right: -384px; } }
+    .article-list article .summary table {
+      display: block;
+      margin: 32px 0;
+      width: 100%;
+      box-sizing: content-box;
+      border-collapse: collapse; }
+      .article-list article .summary table th, .article-list article .summary table td {
+        border: none;
+        padding: 4px 16px;
+        vertical-align: top; }
+      .article-list article .summary table th {
+        border-bottom: 2px solid #e6e6e6;
+        font-weight: bold;
+        padding: 8px 16px; }
+      .article-list article .summary table td:first-child, .article-list article .summary table th:first-child {
+        border-left: none; }
+      .article-list article .summary table tr:last-child td {
+        border-bottom: none; }
+      @media (max-width: 800px) {
+        .article-list article .summary table th, .article-list article .summary table td {
+          padding-left: 8px;
+          padding-right: 8px; } }
     .article-list article .summary :first-child {
       margin-top: 0; }
     .article-list article .summary :last-child {

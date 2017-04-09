@@ -138,9 +138,14 @@ $code-blue: #1177aa;
       }
 
     }
-    
+
   }
 
+  a[href] code {
+    font-weight: bold;
+    background: transparent;
+  }
+    
   pre {
 
     overflow-x: auto;
@@ -346,6 +351,49 @@ $code-blue: #1177aa;
       
       &.right {
         margin-right: -384px;
+      }
+      
+    }
+    
+  }
+
+  table {
+    display: block;
+    margin: $grid * 4 0;
+    width: 100%;
+
+    box-sizing: content-box;
+
+    border-collapse: collapse;
+
+    th, td {
+      border: none;
+      padding: $grid/2 $grid * 2;
+
+      vertical-align: top;
+    }
+
+    th {
+      border-bottom: $style-solid-border;
+      
+      font-weight: bold;
+
+      padding: $grid $grid * 2;
+    }
+
+    td:first-child, th:first-child {
+      border-left: none;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    @media (max-width: 800px) {
+      
+      th, td {
+        padding-left: $grid;
+        padding-right: $grid;
       }
       
     }

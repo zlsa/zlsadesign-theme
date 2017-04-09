@@ -23,3 +23,7 @@ $color-meta-background: #f4f4f4;
 
 $style-page-border: 2px solid rgba(white, 0.2);
 $style-border: 2px solid rgba(black, 0.1);
+$style-border-thin: 1px solid rgba(black, 0.05);
+
+$style-solid-border: 2px solid lighten(black, 90%);
+$style-solid-border-thin: 1px solid lighten(black, 95%);
