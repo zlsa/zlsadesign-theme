@@ -15,7 +15,7 @@ function parallax() {
 
   var scroll_px = $(window).scrollTop();
 
-  var scroll = Math.pow(lerp(0, scroll_px, $(window).height() - $('#header').height() * 3, 0, 1), 0.5);
+  var scroll = Math.pow(lerp(0, scroll_px, $(window).height() - $('#page-header').height() * 3, 0, 1), 0.5);
 
   //if(body.hasClass('hero')) {
   //  $('#hero .message-box').css('transform', 'translateY(' + scroll_px * 0.1 + 'px)');
@@ -45,7 +45,7 @@ function parallax() {
   
   //$('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
 
-  $('#background').css('transform', 'translateY(' + -parallax_offset + 'px)');
+  $('#page-background').css('transform', 'translateY(' + -parallax_offset + 'px)');
   
 }
 
@@ -64,7 +64,7 @@ function parallaxWrapper() {
   
 $(document).ready(function() {
   body = $('body');
-  header = $('#header');
+  header = $('#page-header');
 
   setTimeout(function() {
     $('body').addClass('loaded');
@@ -98,8 +98,8 @@ $(document).ready(function() {
   
   // Toggle navigation area
 
-  $('#header .toggle-nav').click(function() {
-    $('#header').toggleClass('nav-visible');
+  $('#page-header .toggle-nav').click(function() {
+    $('#page-header').toggleClass('nav-visible');
   });
   
 });

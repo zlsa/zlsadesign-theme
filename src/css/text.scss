@@ -358,9 +358,7 @@ $code-blue: #1177aa;
   }
 
   table {
-    display: block;
-    margin: $grid * 4 0;
-    width: 100%;
+    margin: $grid * 4 auto;
 
     box-sizing: content-box;
 
@@ -379,6 +377,8 @@ $code-blue: #1177aa;
       font-weight: bold;
 
       padding: $grid $grid * 2;
+
+      white-space: nowrap;
     }
 
     td:first-child, th:first-child {

@@ -25,7 +25,7 @@ $header-logo-title-height: 48px;
             
 }
 
-#header {
+#page-header {
 
   user-select: none;
 
@@ -175,13 +175,13 @@ $header-logo-title-height: 48px;
 
 }
 
-body.loaded #header {
+body.loaded #page-header {
   opacity: 1;
   transition: opacity $anim-slow ease, transform $anim-medium ease,
   background-color $anim-medium ease, box-shadow $anim-medium ease, height $anim-medium ease;
 }
 
-body.hero #header {
+body.hero #page-header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -197,7 +197,7 @@ body.hero #header {
 
 @media (max-width: 800px) {
 
-  #header {
+  #page-header {
     
     .container .home-link .title {
       display: none;
@@ -207,7 +207,7 @@ body.hero #header {
   
 }
 
-body.mini-header #header {
+body.mini-header #page-header {
   background-color: transparent;
   height: $header-mini-height;
 
@@ -254,7 +254,7 @@ body.mini-header #header {
 
 @media (max-width: 700px) {
 
-  #header {
+  #page-header {
 
     position: static !important;
     background-color: $color-page-background !important;
@@ -362,7 +362,7 @@ body.mini-header #header {
 }
 
 body.no-js,
-#header.nav-visible {
+#page-header.nav-visible {
 
   .toggle-nav {
     
@@ -378,12 +378,9 @@ body.no-js,
   
 }
 
-body.no-js #header {
-}
-  
 body.no-js {
   
-  #header {
+  #page-header {
     background: $color-header-background !important;
     box-shadow: 0 -100px 8px 100px rgba(black, 0.7), 0 -100px 20px 100px rgba(black, 0.5);
     
@@ -406,7 +403,7 @@ body.no-js {
   
 }
 
-#header nav ul li a:hover {
+#page-header nav ul li a:hover {
   border-width: 0 0 2px 0;
 
   @media (max-width: 600px) {
@@ -419,20 +416,20 @@ body.no-js {
   
 }
 
-body[data-title=Apps] #header nav ul li.link-apps a,
-body[data-title=Art] #header nav ul li.link-art a,
-body[data-title=Articles] #header nav ul li.link-articles a,
-body[data-title=Infographics] #header nav ul li.link-infographics a,
-body[data-title=Posts] #header nav ul li.link-posts a,
-body[data-title=Projects] #header nav ul li.link-projects a,
-body[data-title="About Me"] #header nav ul li.link-about a,
+body[data-title=Apps] #page-header nav ul li.link-apps a,
+body[data-title=Art] #page-header nav ul li.link-art a,
+body[data-title=Articles] #page-header nav ul li.link-articles a,
+body[data-title=Infographics] #page-header nav ul li.link-infographics a,
+body[data-title=Posts] #page-header nav ul li.link-posts a,
+body[data-title=Projects] #page-header nav ul li.link-projects a,
+body[data-title="About Me"] #page-header nav ul li.link-about a,
 
-body[data-section=app] #header nav ul li.link-apps a,
-body[data-section=art] #header nav ul li.link-art a,
-body[data-section=article] #header nav ul li.link-articles a,
-body[data-section=infographic] #header nav ul li.link-infographics a,
-body[data-section=post] #header nav ul li.link-posts a,
-body[data-section=project] #header nav ul li.link-projects a {
+body[data-section=app] #page-header nav ul li.link-apps a,
+body[data-section=art] #page-header nav ul li.link-art a,
+body[data-section=article] #page-header nav ul li.link-articles a,
+body[data-section=infographic] #page-header nav ul li.link-infographics a,
+body[data-section=post] #page-header nav ul li.link-posts a,
+body[data-section=project] #page-header nav ul li.link-projects a {
   
   border-width: 0 0 4px 0;
 
@@ -446,31 +443,31 @@ body[data-section=project] #header nav ul li.link-projects a {
   }
 }
 
-#header nav ul li.link-apps a {
+#page-header nav ul li.link-apps a {
   border-color: $color-apps;
 }
 
-#header nav ul li.link-art a {
+#page-header nav ul li.link-art a {
   border-color: $color-art;
 }
 
-#header nav ul li.link-articles a {
+#page-header nav ul li.link-articles a {
   border-color: $color-articles;
 }
 
-#header nav ul li.link-infographics a {
+#page-header nav ul li.link-infographics a {
   border-color: $color-infographics;
 }
 
-#header nav ul li.link-posts a {
+#page-header nav ul li.link-posts a {
   border-color: $color-posts;
 }
 
-#header nav ul li.link-projects a {
+#page-header nav ul li.link-projects a {
   border-color: $color-projects;
 }
 
-#header nav ul li.link-about a {
+#page-header nav ul li.link-about a {
   border-color: white;
 }
 

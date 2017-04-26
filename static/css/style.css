@@ -36,7 +36,7 @@
   
 }
 */
-#header {
+#page-header {
   user-select: none;
   z-index: 1000;
   color: blue;
@@ -51,7 +51,7 @@
   width: 100%;
   top: 0;
   left: 0; }
-  #header .container {
+  #page-header .container {
     margin-left: auto;
     margin-right: auto;
     max-width: 1024px;
@@ -62,9 +62,9 @@
     align-items: center;
     padding-left: 8px;
     padding-right: 8px; }
-    #header .container .toggle-nav {
+    #page-header .container .toggle-nav {
       display: none; }
-    #header .container .home-link {
+    #page-header .container .home-link {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -72,13 +72,13 @@
       padding-left: 8px;
       padding-right: 8px;
       transition: background-color 0.15s ease; }
-      #header .container .home-link:hover {
+      #page-header .container .home-link:hover {
         background-color: rgba(255, 255, 255, 0.1);
         cursor: pointer; }
-      #header .container .home-link .logo {
+      #page-header .container .home-link .logo {
         height: 32px;
         position: relative; }
-      #header .container .home-link .title {
+      #page-header .container .home-link .title {
         background: url("/img/header-logo-text.png") no-repeat;
         background-size: 112px 48px;
         user-select: none;
@@ -86,23 +86,23 @@
         width: 112px;
         height: 48px;
         margin-left: 8px; }
-    #header .container nav {
+    #page-header .container nav {
       display: flex;
       width: 100%;
       height: 100%;
       flex-direction: row;
       align-items: center;
       justify-content: space-between; }
-      #header .container nav ul {
+      #page-header .container nav ul {
         display: flex;
         height: 100%;
         flex-direction: row;
         align-items: center;
         margin-left: 32px; }
-        #header .container nav ul li {
+        #page-header .container nav ul li {
           list-style-type: none;
           display: block; }
-          #header .container nav ul li a {
+          #page-header .container nav ul li a {
             border-width: 0px;
             border-style: solid;
             border-color: transparent;
@@ -113,68 +113,68 @@
             line-height: 48px;
             padding: 0 16px;
             transition: background-color 0.15s ease; }
-            #header .container nav ul li a:hover {
+            #page-header .container nav ul li a:hover {
               background-color: rgba(255, 255, 255, 0.1);
               cursor: pointer; }
-            #header .container nav ul li a span {
+            #page-header .container nav ul li a span {
               text-transform: uppercase;
               font-size: 14px;
               color: rgba(255, 255, 255, 0.54); }
-        #header .container nav ul.right {
+        #page-header .container nav ul.right {
           float: right; }
-  #header.expanded {
+  #page-header.expanded {
     background-color: transparent;
     height: 128px;
     box-shadow: none; }
 
-body.loaded #header {
+body.loaded #page-header {
   opacity: 1;
   transition: opacity 0.8s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; }
 
-body.hero #header {
+body.hero #page-header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0; }
-  body.hero #header.expanded {
+  body.hero #page-header.expanded {
     background-color: transparent; }
 
 @media (max-width: 800px) {
-  #header .container .home-link .title {
+  #page-header .container .home-link .title {
     display: none; } }
 
-body.mini-header #header {
+body.mini-header #page-header {
   background-color: transparent;
   height: 32px;
   opacity: 0.5;
   transition: opacity 0.3s ease, background-color 0.3s ease; }
-  body.mini-header #header .home-link {
+  body.mini-header #page-header .home-link {
     height: 32px; }
-    body.mini-header #header .home-link .logo {
+    body.mini-header #page-header .home-link .logo {
       height: 24px; }
-    body.mini-header #header .home-link .title {
+    body.mini-header #page-header .home-link .title {
       display: none; }
-  body.mini-header #header nav ul li a {
+  body.mini-header #page-header nav ul li a {
     height: 32px;
     line-height: 32px; }
-    body.mini-header #header nav ul li a span {
+    body.mini-header #page-header nav ul li a span {
       font-size: 12px; }
-  body.mini-header #header:hover {
+  body.mini-header #page-header:hover {
     background-color: #242424;
     opacity: 1; }
 
 @media (max-width: 700px) {
-  #header {
+  #page-header {
     position: static !important;
     background-color: #242424 !important;
     height: auto !important;
     margin-bottom: 16px; }
-    #header .container {
+    #page-header .container {
       padding: 0;
       flex-direction: column !important;
       align-items: flex-start;
       height: 64px; }
-      #header .container .toggle-nav {
+      #page-header .container .toggle-nav {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -184,18 +184,18 @@ body.mini-header #header {
         width: 64px;
         height: 64px;
         transition: background-color 0.15s ease; }
-        #header .container .toggle-nav img {
+        #page-header .container .toggle-nav img {
           display: block;
           width: 24px;
           height: 24px;
           transition: transform 0.15s ease; }
-      #header .container .home-link {
+      #page-header .container .home-link {
         height: 64px;
         justify-content: center;
         width: 100%; }
-        #header .container .home-link .title {
+        #page-header .container .home-link .title {
           display: block; }
-      #header .container nav {
+      #page-header .container nav {
         background-color: #242424;
         flex-direction: column !important;
         align-items: flex-start;
@@ -207,111 +207,111 @@ body.mini-header #header {
         overflow: hidden;
         max-height: 0;
         transition: max-height 0.3s ease; }
-        #header .container nav ul {
+        #page-header .container nav ul {
           border-top: 2px solid #444;
           margin-left: 0;
           flex-direction: column;
           align-items: flex-start;
           width: 100%; }
-          #header .container nav ul li {
+          #page-header .container nav ul li {
             width: 100%; }
-          #header .container nav ul li a {
+          #page-header .container nav ul li a {
             height: 48px;
             line-height: 48px;
             width: 100%; } }
 
 body.no-js .toggle-nav img,
-#header.nav-visible .toggle-nav img {
+#page-header.nav-visible .toggle-nav img {
   transform: rotate(180deg); }
 
 body.no-js nav,
-#header.nav-visible nav {
+#page-header.nav-visible nav {
   max-height: 392px !important; }
 
-body.no-js #header {
+body.no-js #page-header {
   background: #303030 !important;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
   height: auto !important;
   min-height: 80px !important; }
-  body.no-js #header .toggle-nav {
+  body.no-js #page-header .toggle-nav {
     display: none; }
-  body.no-js #header nav {
+  body.no-js #page-header nav {
     position: static; }
-  body.no-js #header .container {
+  body.no-js #page-header .container {
     height: auto; }
 
-#header nav ul li a:hover {
+#page-header nav ul li a:hover {
   border-width: 0 0 2px 0; }
   @media (max-width: 600px) {
-    #header nav ul li a:hover {
+    #page-header nav ul li a:hover {
       border-bottom-width: 0; } }
-  #header nav ul li a:hover span {
+  #page-header nav ul li a:hover span {
     color: white; }
 
-body[data-title=Apps] #header nav ul li.link-apps a,
-body[data-title=Art] #header nav ul li.link-art a,
-body[data-title=Articles] #header nav ul li.link-articles a,
-body[data-title=Infographics] #header nav ul li.link-infographics a,
-body[data-title=Posts] #header nav ul li.link-posts a,
-body[data-title=Projects] #header nav ul li.link-projects a,
-body[data-title="About Me"] #header nav ul li.link-about a,
-body[data-section=app] #header nav ul li.link-apps a,
-body[data-section=art] #header nav ul li.link-art a,
-body[data-section=article] #header nav ul li.link-articles a,
-body[data-section=infographic] #header nav ul li.link-infographics a,
-body[data-section=post] #header nav ul li.link-posts a,
-body[data-section=project] #header nav ul li.link-projects a {
+body[data-title=Apps] #page-header nav ul li.link-apps a,
+body[data-title=Art] #page-header nav ul li.link-art a,
+body[data-title=Articles] #page-header nav ul li.link-articles a,
+body[data-title=Infographics] #page-header nav ul li.link-infographics a,
+body[data-title=Posts] #page-header nav ul li.link-posts a,
+body[data-title=Projects] #page-header nav ul li.link-projects a,
+body[data-title="About Me"] #page-header nav ul li.link-about a,
+body[data-section=app] #page-header nav ul li.link-apps a,
+body[data-section=art] #page-header nav ul li.link-art a,
+body[data-section=article] #page-header nav ul li.link-articles a,
+body[data-section=infographic] #page-header nav ul li.link-infographics a,
+body[data-section=post] #page-header nav ul li.link-posts a,
+body[data-section=project] #page-header nav ul li.link-projects a {
   border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
-    body[data-title=Apps] #header nav ul li.link-apps a,
-    body[data-title=Art] #header nav ul li.link-art a,
-    body[data-title=Articles] #header nav ul li.link-articles a,
-    body[data-title=Infographics] #header nav ul li.link-infographics a,
-    body[data-title=Posts] #header nav ul li.link-posts a,
-    body[data-title=Projects] #header nav ul li.link-projects a,
-    body[data-title="About Me"] #header nav ul li.link-about a,
-    body[data-section=app] #header nav ul li.link-apps a,
-    body[data-section=art] #header nav ul li.link-art a,
-    body[data-section=article] #header nav ul li.link-articles a,
-    body[data-section=infographic] #header nav ul li.link-infographics a,
-    body[data-section=post] #header nav ul li.link-posts a,
-    body[data-section=project] #header nav ul li.link-projects a {
+    body[data-title=Apps] #page-header nav ul li.link-apps a,
+    body[data-title=Art] #page-header nav ul li.link-art a,
+    body[data-title=Articles] #page-header nav ul li.link-articles a,
+    body[data-title=Infographics] #page-header nav ul li.link-infographics a,
+    body[data-title=Posts] #page-header nav ul li.link-posts a,
+    body[data-title=Projects] #page-header nav ul li.link-projects a,
+    body[data-title="About Me"] #page-header nav ul li.link-about a,
+    body[data-section=app] #page-header nav ul li.link-apps a,
+    body[data-section=art] #page-header nav ul li.link-art a,
+    body[data-section=article] #page-header nav ul li.link-articles a,
+    body[data-section=infographic] #page-header nav ul li.link-infographics a,
+    body[data-section=post] #page-header nav ul li.link-posts a,
+    body[data-section=project] #page-header nav ul li.link-projects a {
       border-width: 0 0 0 8px; } }
-  body[data-title=Apps] #header nav ul li.link-apps a span,
-  body[data-title=Art] #header nav ul li.link-art a span,
-  body[data-title=Articles] #header nav ul li.link-articles a span,
-  body[data-title=Infographics] #header nav ul li.link-infographics a span,
-  body[data-title=Posts] #header nav ul li.link-posts a span,
-  body[data-title=Projects] #header nav ul li.link-projects a span,
-  body[data-title="About Me"] #header nav ul li.link-about a span,
-  body[data-section=app] #header nav ul li.link-apps a span,
-  body[data-section=art] #header nav ul li.link-art a span,
-  body[data-section=article] #header nav ul li.link-articles a span,
-  body[data-section=infographic] #header nav ul li.link-infographics a span,
-  body[data-section=post] #header nav ul li.link-posts a span,
-  body[data-section=project] #header nav ul li.link-projects a span {
+  body[data-title=Apps] #page-header nav ul li.link-apps a span,
+  body[data-title=Art] #page-header nav ul li.link-art a span,
+  body[data-title=Articles] #page-header nav ul li.link-articles a span,
+  body[data-title=Infographics] #page-header nav ul li.link-infographics a span,
+  body[data-title=Posts] #page-header nav ul li.link-posts a span,
+  body[data-title=Projects] #page-header nav ul li.link-projects a span,
+  body[data-title="About Me"] #page-header nav ul li.link-about a span,
+  body[data-section=app] #page-header nav ul li.link-apps a span,
+  body[data-section=art] #page-header nav ul li.link-art a span,
+  body[data-section=article] #page-header nav ul li.link-articles a span,
+  body[data-section=infographic] #page-header nav ul li.link-infographics a span,
+  body[data-section=post] #page-header nav ul li.link-posts a span,
+  body[data-section=project] #page-header nav ul li.link-projects a span {
     color: white;
     font-weight: bold; }
 
-#header nav ul li.link-apps a {
+#page-header nav ul li.link-apps a {
   border-color: #8BC34A; }
 
-#header nav ul li.link-art a {
+#page-header nav ul li.link-art a {
   border-color: #FFF; }
 
-#header nav ul li.link-articles a {
+#page-header nav ul li.link-articles a {
   border-color: #C33; }
 
-#header nav ul li.link-infographics a {
+#page-header nav ul li.link-infographics a {
   border-color: #009688; }
 
-#header nav ul li.link-posts a {
+#page-header nav ul li.link-posts a {
   border-color: #dd6644; }
 
-#header nav ul li.link-projects a {
+#page-header nav ul li.link-projects a {
   border-color: #607D8B; }
 
-#header nav ul li.link-about a {
+#page-header nav ul li.link-about a {
   border-color: white; }
 
 main.article article {
@@ -827,9 +827,7 @@ main.article article {
     main.article article .content table,
     main.article article .attribution table,
     main.article article .license table {
-      display: block;
-      margin: 32px 0;
-      width: 100%;
+      margin: 32px auto;
       box-sizing: content-box;
       border-collapse: collapse; }
       main.article article .actions table th, main.article article .actions table td,
@@ -848,7 +846,8 @@ main.article article {
       main.article article .license table th {
         border-bottom: 2px solid #e6e6e6;
         font-weight: bold;
-        padding: 8px 16px; }
+        padding: 8px 16px;
+        white-space: nowrap; }
       main.article article .actions table td:first-child, main.article article .actions table th:first-child,
       main.article article .content table td:first-child,
       main.article article .content table th:first-child,
@@ -1597,9 +1596,7 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
         .article-list article .summary figure.right {
           margin-right: -384px; } }
     .article-list article .summary table {
-      display: block;
-      margin: 32px 0;
-      width: 100%;
+      margin: 32px auto;
       box-sizing: content-box;
       border-collapse: collapse; }
       .article-list article .summary table th, .article-list article .summary table td {
@@ -1609,7 +1606,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       .article-list article .summary table th {
         border-bottom: 2px solid #e6e6e6;
         font-weight: bold;
-        padding: 8px 16px; }
+        padding: 8px 16px;
+        white-space: nowrap; }
       .article-list article .summary table td:first-child, .article-list article .summary table th:first-child {
         border-left: none; }
       .article-list article .summary table tr:last-child td {
@@ -1746,7 +1744,7 @@ body.loaded main.article-list article .headline .publish-time {
   
 }
 */
-#header {
+#page-header {
   user-select: none;
   z-index: 1000;
   color: blue;
@@ -1761,7 +1759,7 @@ body.loaded main.article-list article .headline .publish-time {
   width: 100%;
   top: 0;
   left: 0; }
-  #header .container {
+  #page-header .container {
     margin-left: auto;
     margin-right: auto;
     max-width: 1024px;
@@ -1772,9 +1770,9 @@ body.loaded main.article-list article .headline .publish-time {
     align-items: center;
     padding-left: 8px;
     padding-right: 8px; }
-    #header .container .toggle-nav {
+    #page-header .container .toggle-nav {
       display: none; }
-    #header .container .home-link {
+    #page-header .container .home-link {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -1782,13 +1780,13 @@ body.loaded main.article-list article .headline .publish-time {
       padding-left: 8px;
       padding-right: 8px;
       transition: background-color 0.15s ease; }
-      #header .container .home-link:hover {
+      #page-header .container .home-link:hover {
         background-color: rgba(255, 255, 255, 0.1);
         cursor: pointer; }
-      #header .container .home-link .logo {
+      #page-header .container .home-link .logo {
         height: 32px;
         position: relative; }
-      #header .container .home-link .title {
+      #page-header .container .home-link .title {
         background: url("/img/header-logo-text.png") no-repeat;
         background-size: 112px 48px;
         user-select: none;
@@ -1796,23 +1794,23 @@ body.loaded main.article-list article .headline .publish-time {
         width: 112px;
         height: 48px;
         margin-left: 8px; }
-    #header .container nav {
+    #page-header .container nav {
       display: flex;
       width: 100%;
       height: 100%;
       flex-direction: row;
       align-items: center;
       justify-content: space-between; }
-      #header .container nav ul {
+      #page-header .container nav ul {
         display: flex;
         height: 100%;
         flex-direction: row;
         align-items: center;
         margin-left: 32px; }
-        #header .container nav ul li {
+        #page-header .container nav ul li {
           list-style-type: none;
           display: block; }
-          #header .container nav ul li a {
+          #page-header .container nav ul li a {
             border-width: 0px;
             border-style: solid;
             border-color: transparent;
@@ -1823,68 +1821,68 @@ body.loaded main.article-list article .headline .publish-time {
             line-height: 48px;
             padding: 0 16px;
             transition: background-color 0.15s ease; }
-            #header .container nav ul li a:hover {
+            #page-header .container nav ul li a:hover {
               background-color: rgba(255, 255, 255, 0.1);
               cursor: pointer; }
-            #header .container nav ul li a span {
+            #page-header .container nav ul li a span {
               text-transform: uppercase;
               font-size: 14px;
               color: rgba(255, 255, 255, 0.54); }
-        #header .container nav ul.right {
+        #page-header .container nav ul.right {
           float: right; }
-  #header.expanded {
+  #page-header.expanded {
     background-color: transparent;
     height: 128px;
     box-shadow: none; }
 
-body.loaded #header {
+body.loaded #page-header {
   opacity: 1;
   transition: opacity 0.8s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; }
 
-body.hero #header {
+body.hero #page-header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0; }
-  body.hero #header.expanded {
+  body.hero #page-header.expanded {
     background-color: transparent; }
 
 @media (max-width: 800px) {
-  #header .container .home-link .title {
+  #page-header .container .home-link .title {
     display: none; } }
 
-body.mini-header #header {
+body.mini-header #page-header {
   background-color: transparent;
   height: 32px;
   opacity: 0.5;
   transition: opacity 0.3s ease, background-color 0.3s ease; }
-  body.mini-header #header .home-link {
+  body.mini-header #page-header .home-link {
     height: 32px; }
-    body.mini-header #header .home-link .logo {
+    body.mini-header #page-header .home-link .logo {
       height: 24px; }
-    body.mini-header #header .home-link .title {
+    body.mini-header #page-header .home-link .title {
       display: none; }
-  body.mini-header #header nav ul li a {
+  body.mini-header #page-header nav ul li a {
     height: 32px;
     line-height: 32px; }
-    body.mini-header #header nav ul li a span {
+    body.mini-header #page-header nav ul li a span {
       font-size: 12px; }
-  body.mini-header #header:hover {
+  body.mini-header #page-header:hover {
     background-color: #242424;
     opacity: 1; }
 
 @media (max-width: 700px) {
-  #header {
+  #page-header {
     position: static !important;
     background-color: #242424 !important;
     height: auto !important;
     margin-bottom: 16px; }
-    #header .container {
+    #page-header .container {
       padding: 0;
       flex-direction: column !important;
       align-items: flex-start;
       height: 64px; }
-      #header .container .toggle-nav {
+      #page-header .container .toggle-nav {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1894,18 +1892,18 @@ body.mini-header #header {
         width: 64px;
         height: 64px;
         transition: background-color 0.15s ease; }
-        #header .container .toggle-nav img {
+        #page-header .container .toggle-nav img {
           display: block;
           width: 24px;
           height: 24px;
           transition: transform 0.15s ease; }
-      #header .container .home-link {
+      #page-header .container .home-link {
         height: 64px;
         justify-content: center;
         width: 100%; }
-        #header .container .home-link .title {
+        #page-header .container .home-link .title {
           display: block; }
-      #header .container nav {
+      #page-header .container nav {
         background-color: #242424;
         flex-direction: column !important;
         align-items: flex-start;
@@ -1917,111 +1915,111 @@ body.mini-header #header {
         overflow: hidden;
         max-height: 0;
         transition: max-height 0.3s ease; }
-        #header .container nav ul {
+        #page-header .container nav ul {
           border-top: 2px solid #444;
           margin-left: 0;
           flex-direction: column;
           align-items: flex-start;
           width: 100%; }
-          #header .container nav ul li {
+          #page-header .container nav ul li {
             width: 100%; }
-          #header .container nav ul li a {
+          #page-header .container nav ul li a {
             height: 48px;
             line-height: 48px;
             width: 100%; } }
 
 body.no-js .toggle-nav img,
-#header.nav-visible .toggle-nav img {
+#page-header.nav-visible .toggle-nav img {
   transform: rotate(180deg); }
 
 body.no-js nav,
-#header.nav-visible nav {
+#page-header.nav-visible nav {
   max-height: 392px !important; }
 
-body.no-js #header {
+body.no-js #page-header {
   background: #303030 !important;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
   height: auto !important;
   min-height: 80px !important; }
-  body.no-js #header .toggle-nav {
+  body.no-js #page-header .toggle-nav {
     display: none; }
-  body.no-js #header nav {
+  body.no-js #page-header nav {
     position: static; }
-  body.no-js #header .container {
+  body.no-js #page-header .container {
     height: auto; }
 
-#header nav ul li a:hover {
+#page-header nav ul li a:hover {
   border-width: 0 0 2px 0; }
   @media (max-width: 600px) {
-    #header nav ul li a:hover {
+    #page-header nav ul li a:hover {
       border-bottom-width: 0; } }
-  #header nav ul li a:hover span {
+  #page-header nav ul li a:hover span {
     color: white; }
 
-body[data-title=Apps] #header nav ul li.link-apps a,
-body[data-title=Art] #header nav ul li.link-art a,
-body[data-title=Articles] #header nav ul li.link-articles a,
-body[data-title=Infographics] #header nav ul li.link-infographics a,
-body[data-title=Posts] #header nav ul li.link-posts a,
-body[data-title=Projects] #header nav ul li.link-projects a,
-body[data-title="About Me"] #header nav ul li.link-about a,
-body[data-section=app] #header nav ul li.link-apps a,
-body[data-section=art] #header nav ul li.link-art a,
-body[data-section=article] #header nav ul li.link-articles a,
-body[data-section=infographic] #header nav ul li.link-infographics a,
-body[data-section=post] #header nav ul li.link-posts a,
-body[data-section=project] #header nav ul li.link-projects a {
+body[data-title=Apps] #page-header nav ul li.link-apps a,
+body[data-title=Art] #page-header nav ul li.link-art a,
+body[data-title=Articles] #page-header nav ul li.link-articles a,
+body[data-title=Infographics] #page-header nav ul li.link-infographics a,
+body[data-title=Posts] #page-header nav ul li.link-posts a,
+body[data-title=Projects] #page-header nav ul li.link-projects a,
+body[data-title="About Me"] #page-header nav ul li.link-about a,
+body[data-section=app] #page-header nav ul li.link-apps a,
+body[data-section=art] #page-header nav ul li.link-art a,
+body[data-section=article] #page-header nav ul li.link-articles a,
+body[data-section=infographic] #page-header nav ul li.link-infographics a,
+body[data-section=post] #page-header nav ul li.link-posts a,
+body[data-section=project] #page-header nav ul li.link-projects a {
   border-width: 0 0 4px 0; }
   @media (max-width: 600px) {
-    body[data-title=Apps] #header nav ul li.link-apps a,
-    body[data-title=Art] #header nav ul li.link-art a,
-    body[data-title=Articles] #header nav ul li.link-articles a,
-    body[data-title=Infographics] #header nav ul li.link-infographics a,
-    body[data-title=Posts] #header nav ul li.link-posts a,
-    body[data-title=Projects] #header nav ul li.link-projects a,
-    body[data-title="About Me"] #header nav ul li.link-about a,
-    body[data-section=app] #header nav ul li.link-apps a,
-    body[data-section=art] #header nav ul li.link-art a,
-    body[data-section=article] #header nav ul li.link-articles a,
-    body[data-section=infographic] #header nav ul li.link-infographics a,
-    body[data-section=post] #header nav ul li.link-posts a,
-    body[data-section=project] #header nav ul li.link-projects a {
+    body[data-title=Apps] #page-header nav ul li.link-apps a,
+    body[data-title=Art] #page-header nav ul li.link-art a,
+    body[data-title=Articles] #page-header nav ul li.link-articles a,
+    body[data-title=Infographics] #page-header nav ul li.link-infographics a,
+    body[data-title=Posts] #page-header nav ul li.link-posts a,
+    body[data-title=Projects] #page-header nav ul li.link-projects a,
+    body[data-title="About Me"] #page-header nav ul li.link-about a,
+    body[data-section=app] #page-header nav ul li.link-apps a,
+    body[data-section=art] #page-header nav ul li.link-art a,
+    body[data-section=article] #page-header nav ul li.link-articles a,
+    body[data-section=infographic] #page-header nav ul li.link-infographics a,
+    body[data-section=post] #page-header nav ul li.link-posts a,
+    body[data-section=project] #page-header nav ul li.link-projects a {
       border-width: 0 0 0 8px; } }
-  body[data-title=Apps] #header nav ul li.link-apps a span,
-  body[data-title=Art] #header nav ul li.link-art a span,
-  body[data-title=Articles] #header nav ul li.link-articles a span,
-  body[data-title=Infographics] #header nav ul li.link-infographics a span,
-  body[data-title=Posts] #header nav ul li.link-posts a span,
-  body[data-title=Projects] #header nav ul li.link-projects a span,
-  body[data-title="About Me"] #header nav ul li.link-about a span,
-  body[data-section=app] #header nav ul li.link-apps a span,
-  body[data-section=art] #header nav ul li.link-art a span,
-  body[data-section=article] #header nav ul li.link-articles a span,
-  body[data-section=infographic] #header nav ul li.link-infographics a span,
-  body[data-section=post] #header nav ul li.link-posts a span,
-  body[data-section=project] #header nav ul li.link-projects a span {
+  body[data-title=Apps] #page-header nav ul li.link-apps a span,
+  body[data-title=Art] #page-header nav ul li.link-art a span,
+  body[data-title=Articles] #page-header nav ul li.link-articles a span,
+  body[data-title=Infographics] #page-header nav ul li.link-infographics a span,
+  body[data-title=Posts] #page-header nav ul li.link-posts a span,
+  body[data-title=Projects] #page-header nav ul li.link-projects a span,
+  body[data-title="About Me"] #page-header nav ul li.link-about a span,
+  body[data-section=app] #page-header nav ul li.link-apps a span,
+  body[data-section=art] #page-header nav ul li.link-art a span,
+  body[data-section=article] #page-header nav ul li.link-articles a span,
+  body[data-section=infographic] #page-header nav ul li.link-infographics a span,
+  body[data-section=post] #page-header nav ul li.link-posts a span,
+  body[data-section=project] #page-header nav ul li.link-projects a span {
     color: white;
     font-weight: bold; }
 
-#header nav ul li.link-apps a {
+#page-header nav ul li.link-apps a {
   border-color: #8BC34A; }
 
-#header nav ul li.link-art a {
+#page-header nav ul li.link-art a {
   border-color: #FFF; }
 
-#header nav ul li.link-articles a {
+#page-header nav ul li.link-articles a {
   border-color: #C33; }
 
-#header nav ul li.link-infographics a {
+#page-header nav ul li.link-infographics a {
   border-color: #009688; }
 
-#header nav ul li.link-posts a {
+#page-header nav ul li.link-posts a {
   border-color: #dd6644; }
 
-#header nav ul li.link-projects a {
+#page-header nav ul li.link-projects a {
   border-color: #607D8B; }
 
-#header nav ul li.link-about a {
+#page-header nav ul li.link-about a {
   border-color: white; }
 
 #footer {
@@ -2084,14 +2082,14 @@ body[data-section=project] #header nav ul li.link-projects a {
     #footer {
       margin-top: 16px; } }
 
-#background {
+#page-background {
   position: absolute;
   width: 100% !important; }
-  #background img {
+  #page-background img {
     position: relative;
     object-fit: cover;
     width: 100%; }
-  #background:after {
+  #page-background:after {
     background: linear-gradient(to bottom, transparent, rgba(36, 36, 36, 0.1), rgba(36, 36, 36, 0.25), rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.6), rgba(36, 36, 36, 0.75), rgba(36, 36, 36, 0.88), rgba(36, 36, 36, 0.95), #242424);
     display: block;
     content: '';
@@ -2102,10 +2100,10 @@ body[data-section=project] #header nav ul li.link-projects a {
     height: 100%;
     max-height: 20vh; }
   @media (max-width: 600px) {
-    #background {
+    #page-background {
       display: none; } }
 
-body.loaded #background {
+body.loaded #page-background {
   position: fixed; }
 
 #hero {

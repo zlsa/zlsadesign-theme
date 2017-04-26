@@ -8,7 +8,7 @@ $hero-bottom-overlap: $grid * 12;
 
 $hero-gap: $grid * 2;
 
-#background {
+#page-background {
   position: absolute;
 
   width: 100% !important;
@@ -49,7 +49,7 @@ $hero-gap: $grid * 2;
   
 }
 
-body.loaded #background {
+body.loaded #page-background {
   position: fixed;
 }
 
