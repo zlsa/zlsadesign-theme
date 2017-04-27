@@ -106,6 +106,7 @@ main.article article {
   .actions,
   .content,
   .attribution,
+  .patreon-link,
   .license {
     padding: $grid * 4 $grid * 4;
 
@@ -202,6 +203,31 @@ main.article article {
 
       a {
         color: $color-infographics !important;
+        text-decoration: underline;
+      }
+      
+    }
+
+  }
+  
+  .patreon-link {
+    padding: $grid * 2 $grid * 2;
+
+    padding-top: 0;
+
+    margin-top: $grid * 2;
+    
+    p {
+      background-color: $color-donate;
+      color: #444;
+      
+      font-weight: bold;
+      text-align: center;
+      
+      padding: $grid * 1 $grid * 2;
+
+      a {
+        color: #444 !important;
         text-decoration: underline;
       }
       

@@ -396,32 +396,38 @@ main.article article {
   main.article article .actions,
   main.article article .content,
   main.article article .attribution,
+  main.article article .patreon-link,
   main.article article .license {
     padding: 32px 32px;
     line-height: 1.8em; }
     main.article article .actions * + p,
     main.article article .content * + p,
     main.article article .attribution * + p,
+    main.article article .patreon-link * + p,
     main.article article .license * + p {
       margin-top: 1.5em; }
     main.article article .actions a[href],
     main.article article .content a[href],
     main.article article .attribution a[href],
+    main.article article .patreon-link a[href],
     main.article article .license a[href] {
       color: #dd6644; }
     main.article article .actions em,
     main.article article .content em,
     main.article article .attribution em,
+    main.article article .patreon-link em,
     main.article article .license em {
       font-style: italic; }
     main.article article .actions strong,
     main.article article .content strong,
     main.article article .attribution strong,
+    main.article article .patreon-link strong,
     main.article article .license strong {
       font-weight: bold; }
     main.article article .actions hr:after,
     main.article article .content hr:after,
     main.article article .attribution hr:after,
+    main.article article .patreon-link hr:after,
     main.article article .license hr:after {
       content: "***";
       display: block;
@@ -432,6 +438,7 @@ main.article article {
     main.article article .actions blockquote,
     main.article article .content blockquote,
     main.article article .attribution blockquote,
+    main.article article .patreon-link blockquote,
     main.article article .license blockquote {
       border-left: 4px solid rgba(0, 0, 0, 0.3);
       margin: 32px 8px;
@@ -451,6 +458,12 @@ main.article article {
     main.article article .attribution h4,
     main.article article .attribution h5,
     main.article article .attribution h6,
+    main.article article .patreon-link h1,
+    main.article article .patreon-link h2,
+    main.article article .patreon-link h3,
+    main.article article .patreon-link h4,
+    main.article article .patreon-link h5,
+    main.article article .patreon-link h6,
     main.article article .license h1,
     main.article article .license h2,
     main.article article .license h3,
@@ -462,34 +475,40 @@ main.article article {
     main.article article .actions h1,
     main.article article .content h1,
     main.article article .attribution h1,
+    main.article article .patreon-link h1,
     main.article article .license h1 {
       font-size: 24px;
       font-weight: bold; }
     main.article article .actions h2,
     main.article article .content h2,
     main.article article .attribution h2,
+    main.article article .patreon-link h2,
     main.article article .license h2 {
       font-size: 20px; }
     main.article article .actions h3,
     main.article article .content h3,
     main.article article .attribution h3,
+    main.article article .patreon-link h3,
     main.article article .license h3 {
       font-size: 16px;
       font-weight: bold; }
     main.article article .actions h4,
     main.article article .content h4,
     main.article article .attribution h4,
+    main.article article .patreon-link h4,
     main.article article .license h4 {
       font-size: 12.8px;
       font-weight: bold; }
     main.article article .actions img,
     main.article article .content img,
     main.article article .attribution img,
+    main.article article .patreon-link img,
     main.article article .license img {
       max-width: 100%; }
     main.article article .actions code,
     main.article article .content code,
     main.article article .attribution code,
+    main.article article .patreon-link code,
     main.article article .license code {
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8em;
@@ -501,21 +520,25 @@ main.article article {
       main.article article .actions code[data-lang],
       main.article article .content code[data-lang],
       main.article article .attribution code[data-lang],
+      main.article article .patreon-link code[data-lang],
       main.article article .license code[data-lang] {
         color: rgba(0, 0, 0, 0.75); }
         main.article article .actions code[data-lang] .kd,
         main.article article .content code[data-lang] .kd,
         main.article article .attribution code[data-lang] .kd,
+        main.article article .patreon-link code[data-lang] .kd,
         main.article article .license code[data-lang] .kd {
           color: #BF360C; }
         main.article article .actions code[data-lang] .k,
         main.article article .content code[data-lang] .k,
         main.article article .attribution code[data-lang] .k,
+        main.article article .patreon-link code[data-lang] .k,
         main.article article .license code[data-lang] .k {
           color: #4A148C; }
         main.article article .actions code[data-lang] .kt,
         main.article article .content code[data-lang] .kt,
         main.article article .attribution code[data-lang] .kt,
+        main.article article .patreon-link code[data-lang] .kt,
         main.article article .license code[data-lang] .kt {
           color: #1177aa;
           font-weight: bold; }
@@ -525,12 +548,15 @@ main.article article {
         main.article article .content code[data-lang] .nc,
         main.article article .attribution code[data-lang] .n,
         main.article article .attribution code[data-lang] .nc,
+        main.article article .patreon-link code[data-lang] .n,
+        main.article article .patreon-link code[data-lang] .nc,
         main.article article .license code[data-lang] .n,
         main.article article .license code[data-lang] .nc {
           color: black; }
         main.article article .actions code[data-lang] .nd,
         main.article article .content code[data-lang] .nd,
         main.article article .attribution code[data-lang] .nd,
+        main.article article .patreon-link code[data-lang] .nd,
         main.article article .license code[data-lang] .nd {
           color: rgba(0, 0, 0, 0.5); }
         main.article article .actions code[data-lang] .na, main.article article .actions code[data-lang] .nc,
@@ -538,12 +564,15 @@ main.article article {
         main.article article .content code[data-lang] .nc,
         main.article article .attribution code[data-lang] .na,
         main.article article .attribution code[data-lang] .nc,
+        main.article article .patreon-link code[data-lang] .na,
+        main.article article .patreon-link code[data-lang] .nc,
         main.article article .license code[data-lang] .na,
         main.article article .license code[data-lang] .nc {
           font-weight: bold; }
         main.article article .actions code[data-lang] .nt,
         main.article article .content code[data-lang] .nt,
         main.article article .attribution code[data-lang] .nt,
+        main.article article .patreon-link code[data-lang] .nt,
         main.article article .license code[data-lang] .nt {
           color: #CC1111; }
         main.article article .actions code[data-lang] .s, main.article article .actions code[data-lang] .s1,
@@ -551,6 +580,8 @@ main.article article {
         main.article article .content code[data-lang] .s1,
         main.article article .attribution code[data-lang] .s,
         main.article article .attribution code[data-lang] .s1,
+        main.article article .patreon-link code[data-lang] .s,
+        main.article article .patreon-link code[data-lang] .s1,
         main.article article .license code[data-lang] .s,
         main.article article .license code[data-lang] .s1 {
           color: #1B5E20; }
@@ -565,6 +596,11 @@ main.article article {
         main.article article .attribution code[data-lang] .cp,
         main.article article .attribution code[data-lang] .c1,
         main.article article .attribution code[data-lang] .cs,
+        main.article article .patreon-link code[data-lang] .c,
+        main.article article .patreon-link code[data-lang] .cm,
+        main.article article .patreon-link code[data-lang] .cp,
+        main.article article .patreon-link code[data-lang] .c1,
+        main.article article .patreon-link code[data-lang] .cs,
         main.article article .license code[data-lang] .c,
         main.article article .license code[data-lang] .cm,
         main.article article .license code[data-lang] .cp,
@@ -586,6 +622,13 @@ main.article article {
         main.article article .attribution code[data-lang] .mi,
         main.article article .attribution code[data-lang] .il,
         main.article article .attribution code[data-lang] .mo,
+        main.article article .patreon-link code[data-lang] .m,
+        main.article article .patreon-link code[data-lang] .mb,
+        main.article article .patreon-link code[data-lang] .mf,
+        main.article article .patreon-link code[data-lang] .mh,
+        main.article article .patreon-link code[data-lang] .mi,
+        main.article article .patreon-link code[data-lang] .il,
+        main.article article .patreon-link code[data-lang] .mo,
         main.article article .license code[data-lang] .m,
         main.article article .license code[data-lang] .mb,
         main.article article .license code[data-lang] .mf,
@@ -597,12 +640,14 @@ main.article article {
     main.article article .actions a[href] code,
     main.article article .content a[href] code,
     main.article article .attribution a[href] code,
+    main.article article .patreon-link a[href] code,
     main.article article .license a[href] code {
       font-weight: bold;
       background: transparent; }
     main.article article .actions pre,
     main.article article .content pre,
     main.article article .attribution pre,
+    main.article article .patreon-link pre,
     main.article article .license pre {
       overflow-x: auto;
       width: calc(100% + $grid * 4);
@@ -615,12 +660,14 @@ main.article article {
         main.article article .actions pre,
         main.article article .content pre,
         main.article article .attribution pre,
+        main.article article .patreon-link pre,
         main.article article .license pre {
           padding: 16px 32px; } }
       @media (max-width: 600px) {
         main.article article .actions pre,
         main.article article .content pre,
         main.article article .attribution pre,
+        main.article article .patreon-link pre,
         main.article article .license pre {
           padding: 16px 16px;
           margin: 16px -16px !important;
@@ -628,6 +675,7 @@ main.article article {
       main.article article .actions pre code,
       main.article article .content pre code,
       main.article article .attribution pre code,
+      main.article article .patreon-link pre code,
       main.article article .license pre code {
         border: none;
         background-color: transparent;
@@ -638,6 +686,7 @@ main.article article {
     main.article article .actions div.language-file-indicator,
     main.article article .content div.language-file-indicator,
     main.article article .attribution div.language-file-indicator,
+    main.article article .patreon-link div.language-file-indicator,
     main.article article .license div.language-file-indicator {
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Roboto Mono', monospace;
@@ -651,12 +700,14 @@ main.article article {
         main.article article .actions div.language-file-indicator,
         main.article article .content div.language-file-indicator,
         main.article article .attribution div.language-file-indicator,
+        main.article article .patreon-link div.language-file-indicator,
         main.article article .license div.language-file-indicator {
           padding-left: 8px;
           margin-left: -8px; } }
       main.article article .actions div.language-file-indicator .indicator,
       main.article article .content div.language-file-indicator .indicator,
       main.article article .attribution div.language-file-indicator .indicator,
+      main.article article .patreon-link div.language-file-indicator .indicator,
       main.article article .license div.language-file-indicator .indicator {
         display: inline-block;
         padding: 4px 16px;
@@ -666,6 +717,7 @@ main.article article {
         main.article article .actions div.language-file-indicator .indicator:after,
         main.article article .content div.language-file-indicator .indicator:after,
         main.article article .attribution div.language-file-indicator .indicator:after,
+        main.article article .patreon-link div.language-file-indicator .indicator:after,
         main.article article .license div.language-file-indicator .indicator:after {
           border: 8px solid transparent;
           border-top-color: #aaa;
@@ -678,11 +730,13 @@ main.article article {
       main.article article .actions div.language-file-indicator .language,
       main.article article .content div.language-file-indicator .language,
       main.article article .attribution div.language-file-indicator .language,
+      main.article article .patreon-link div.language-file-indicator .language,
       main.article article .license div.language-file-indicator .language {
         font-weight: bold; }
       main.article article .actions div.language-file-indicator .file,
       main.article article .content div.language-file-indicator .file,
       main.article article .attribution div.language-file-indicator .file,
+      main.article article .patreon-link div.language-file-indicator .file,
       main.article article .license div.language-file-indicator .file {
         color: rgba(0, 0, 0, 0.4); }
     main.article article .actions ul, main.article article .actions ol,
@@ -690,6 +744,8 @@ main.article article {
     main.article article .content ol,
     main.article article .attribution ul,
     main.article article .attribution ol,
+    main.article article .patreon-link ul,
+    main.article article .patreon-link ol,
     main.article article .license ul,
     main.article article .license ol {
       margin: 16px 8px;
@@ -699,12 +755,15 @@ main.article article {
       main.article article .content ol li,
       main.article article .attribution ul li,
       main.article article .attribution ol li,
+      main.article article .patreon-link ul li,
+      main.article article .patreon-link ol li,
       main.article article .license ul li,
       main.article article .license ol li {
         padding-left: 1ex; }
     main.article article .actions figure,
     main.article article .content figure,
     main.article article .attribution figure,
+    main.article article .patreon-link figure,
     main.article article .license figure {
       background: white;
       padding: 16px 0;
@@ -712,6 +771,7 @@ main.article article {
       main.article article .actions figure img,
       main.article article .content figure img,
       main.article article .attribution figure img,
+      main.article article .patreon-link figure img,
       main.article article .license figure img {
         width: 100%; }
       main.article article .actions figure.left, main.article article .actions figure.right, main.article article .actions figure.small,
@@ -721,6 +781,9 @@ main.article article {
       main.article article .attribution figure.left,
       main.article article .attribution figure.right,
       main.article article .attribution figure.small,
+      main.article article .patreon-link figure.left,
+      main.article article .patreon-link figure.right,
+      main.article article .patreon-link figure.small,
       main.article article .license figure.left,
       main.article article .license figure.right,
       main.article article .license figure.small {
@@ -728,6 +791,7 @@ main.article article {
       main.article article .actions figure.full-bleed,
       main.article article .content figure.full-bleed,
       main.article article .attribution figure.full-bleed,
+      main.article article .patreon-link figure.full-bleed,
       main.article article .license figure.full-bleed {
         margin-left: -32px;
         margin-right: -32px;
@@ -737,6 +801,7 @@ main.article article {
         main.article article .actions figure.full-bleed,
         main.article article .content figure.full-bleed,
         main.article article .attribution figure.full-bleed,
+        main.article article .patreon-link figure.full-bleed,
         main.article article .license figure.full-bleed {
           margin-left: -16px;
           margin-right: -16px; } }
@@ -746,6 +811,8 @@ main.article article {
         main.article article .content figure.right,
         main.article article .attribution figure.left,
         main.article article .attribution figure.right,
+        main.article article .patreon-link figure.left,
+        main.article article .patreon-link figure.right,
         main.article article .license figure.left,
         main.article article .license figure.right {
           padding: 16px;
@@ -755,6 +822,7 @@ main.article article {
         main.article article .actions figure.left,
         main.article article .content figure.left,
         main.article article .attribution figure.left,
+        main.article article .patreon-link figure.left,
         main.article article .license figure.left {
           float: left;
           padding-left: 0;
@@ -763,6 +831,7 @@ main.article article {
         main.article article .actions figure.right,
         main.article article .content figure.right,
         main.article article .attribution figure.right,
+        main.article article .patreon-link figure.right,
         main.article article .license figure.right {
           float: right;
           padding-right: 0;
@@ -771,6 +840,7 @@ main.article article {
       main.article article .actions figure figcaption,
       main.article article .content figure figcaption,
       main.article article .attribution figure figcaption,
+      main.article article .patreon-link figure figcaption,
       main.article article .license figure figcaption {
         font-size: 12px;
         font-style: italic;
@@ -778,6 +848,7 @@ main.article article {
         main.article article .actions figure figcaption .credit,
         main.article article .content figure figcaption .credit,
         main.article article .attribution figure figcaption .credit,
+        main.article article .patreon-link figure figcaption .credit,
         main.article article .license figure figcaption .credit {
           display: block; }
       @media (min-width: 1440px) {
@@ -786,6 +857,8 @@ main.article article {
         main.article article .content figure.right,
         main.article article .attribution figure.left,
         main.article article .attribution figure.right,
+        main.article article .patreon-link figure.left,
+        main.article article .patreon-link figure.right,
         main.article article .license figure.left,
         main.article article .license figure.right {
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -794,12 +867,14 @@ main.article article {
         main.article article .actions figure.left,
         main.article article .content figure.left,
         main.article article .attribution figure.left,
+        main.article article .patreon-link figure.left,
         main.article article .license figure.left {
           margin-left: -256px;
           max-width: 320px; }
         main.article article .actions figure.right,
         main.article article .content figure.right,
         main.article article .attribution figure.right,
+        main.article article .patreon-link figure.right,
         main.article article .license figure.right {
           margin-right: -256px; } }
       @media (min-width: 1900px) {
@@ -808,6 +883,8 @@ main.article article {
         main.article article .content figure.right,
         main.article article .attribution figure.left,
         main.article article .attribution figure.right,
+        main.article article .patreon-link figure.left,
+        main.article article .patreon-link figure.right,
         main.article article .license figure.left,
         main.article article .license figure.right {
           max-width: 480px;
@@ -816,16 +893,19 @@ main.article article {
         main.article article .actions figure.left,
         main.article article .content figure.left,
         main.article article .attribution figure.left,
+        main.article article .patreon-link figure.left,
         main.article article .license figure.left {
           margin-left: -384px; }
         main.article article .actions figure.right,
         main.article article .content figure.right,
         main.article article .attribution figure.right,
+        main.article article .patreon-link figure.right,
         main.article article .license figure.right {
           margin-right: -384px; } }
     main.article article .actions table,
     main.article article .content table,
     main.article article .attribution table,
+    main.article article .patreon-link table,
     main.article article .license table {
       margin: 32px auto;
       box-sizing: content-box;
@@ -835,6 +915,8 @@ main.article article {
       main.article article .content table td,
       main.article article .attribution table th,
       main.article article .attribution table td,
+      main.article article .patreon-link table th,
+      main.article article .patreon-link table td,
       main.article article .license table th,
       main.article article .license table td {
         border: none;
@@ -843,6 +925,7 @@ main.article article {
       main.article article .actions table th,
       main.article article .content table th,
       main.article article .attribution table th,
+      main.article article .patreon-link table th,
       main.article article .license table th {
         border-bottom: 2px solid #e6e6e6;
         font-weight: bold;
@@ -853,12 +936,15 @@ main.article article {
       main.article article .content table th:first-child,
       main.article article .attribution table td:first-child,
       main.article article .attribution table th:first-child,
+      main.article article .patreon-link table td:first-child,
+      main.article article .patreon-link table th:first-child,
       main.article article .license table td:first-child,
       main.article article .license table th:first-child {
         border-left: none; }
       main.article article .actions table tr:last-child td,
       main.article article .content table tr:last-child td,
       main.article article .attribution table tr:last-child td,
+      main.article article .patreon-link table tr:last-child td,
       main.article article .license table tr:last-child td {
         border-bottom: none; }
       @media (max-width: 800px) {
@@ -867,6 +953,8 @@ main.article article {
         main.article article .content table td,
         main.article article .attribution table th,
         main.article article .attribution table td,
+        main.article article .patreon-link table th,
+        main.article article .patreon-link table td,
         main.article article .license table th,
         main.article article .license table td {
           padding-left: 8px;
@@ -874,22 +962,26 @@ main.article article {
     main.article article .actions :first-child,
     main.article article .content :first-child,
     main.article article .attribution :first-child,
+    main.article article .patreon-link :first-child,
     main.article article .license :first-child {
       margin-top: 0; }
     main.article article .actions :last-child,
     main.article article .content :last-child,
     main.article article .attribution :last-child,
+    main.article article .patreon-link :last-child,
     main.article article .license :last-child {
       margin-bottom: 0; }
     @media (max-width: 600px) {
       main.article article .actions,
       main.article article .content,
       main.article article .attribution,
+      main.article article .patreon-link,
       main.article article .license {
         padding: 16px 16px; } }
     main.article article .actions p:empty,
     main.article article .content p:empty,
     main.article article .attribution p:empty,
+    main.article article .patreon-link p:empty,
     main.article article .license p:empty {
       display: none; }
   main.article article .actions {
@@ -936,6 +1028,19 @@ main.article article {
       padding: 8px 16px; }
       main.article article .license p a {
         color: #009688 !important;
+        text-decoration: underline; }
+  main.article article .patreon-link {
+    padding: 16px 16px;
+    padding-top: 0;
+    margin-top: 16px; }
+    main.article article .patreon-link p {
+      background-color: #FFC107;
+      color: #444;
+      font-weight: bold;
+      text-align: center;
+      padding: 8px 16px; }
+      main.article article .patreon-link p a {
+        color: #444 !important;
         text-decoration: underline; }
   main.article article .further-reading {
     padding: 16px 32px;
