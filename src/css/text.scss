@@ -208,7 +208,7 @@ $code-blue: #1177aa;
   pre {
 
     overflow-x: auto;
-    width: calc(100% + $grid * 4);
+    width: calc(100% + #{$grid} * 4);
 
     font-size: 0.8em;
 
@@ -225,7 +225,7 @@ $code-blue: #1177aa;
     @media (max-width: 600px) {
       padding: $grid * 2 $grid * 2;
       margin: $grid * 2 (-$grid * 2) !important;
-      width: calc(100% + $grid * 2);
+      width: calc(100% + #{$grid} * 2);
     }
     
     code {
@@ -353,7 +353,7 @@ $code-blue: #1177aa;
         padding: $grid * 2;
         margin: $grid * 2;
     
-        width: calc(50% - (#{$grid} * 4));
+        width: calc(50% - (#{$grid} * 2));
         max-width: 50%;
       }
 
