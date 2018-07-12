@@ -13,10 +13,18 @@ $footer-margin: $grid * 5;
   
   color: rgba(white, 0.7);
 
+  body.story & {
+    color: rgba(black, 0.54);
+  }
+
   font-size: 12px;
 
   > .container {
     border-top: $style-page-border;
+
+    body.story & {
+      border-color: rgba(black, 0.05);
+    }
     
     @include limit-width;
 
@@ -45,6 +53,12 @@ $footer-margin: $grid * 5;
 
       a {
         @include button($color-donate, $color-page-background);
+
+        body.story & {
+          background-color: transparent;
+
+          color: $color-donate;
+        }
 
         //background-color: rgba($color-donate, 0.7);
         

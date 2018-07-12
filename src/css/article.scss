@@ -50,6 +50,11 @@ main.article article {
       font-weight: bold;
 
       margin-right: $grid * 4;
+
+      body.story & {
+        color: $color-foreground-primary;
+      }
+
     }
 
     .publish-time {
@@ -69,6 +74,11 @@ main.article article {
       time {
         white-space: nowrap;
       }
+
+      body.story & {
+        color: $color-foreground-secondary;
+      }
+
     }
     
     @media (max-width: 800px) {
@@ -101,6 +111,10 @@ main.article article {
     background-color: white;
     
     box-shadow: 0 0 $grid * 8 black;
+
+    body.story & {
+      box-shadow: 0 $grid/4 $grid rgba(black, 0.2);
+    }
   }
 
   .actions,
@@ -414,7 +428,8 @@ article {
   
   .meta {
     background-color: $color-meta-background;
-    
+
+
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -427,9 +442,21 @@ article {
 
     min-height: $grid * 6;
 
+    body.story & {
+      background-color: transparent;
+
+      border-top: $style-solid-border-thin;
+
+      padding: ($grid * 2) 0;
+    }
+
     ul {
       background-color: $color-meta-background;
 
+      body.story & {
+        background-color: transparent;
+      }
+    
       display: flex;
       align-items: center;
 
@@ -660,4 +687,9 @@ article .actions a[href].button.buy {
   box-shadow: 0 0 0 $grid / 4 $color-page-background;
   background-color: $color-donate !important;
   color: $color-page-background !important;
+}
+
+body.story article .content .body a[href] {
+  color: $color-link !important;
+  text-decoration: underline;
 }

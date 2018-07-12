@@ -1,4 +1,4 @@
-<h2 class="headline" itemprop="headline">
+<h2 class="headline{{ if .Draft }} draft{{ end }}" itemprop="headline">
   
   <span class="section section-{{ .Section }}"><a href="{{ .Section | absURL }}" title="View all {{ .Section }}s">{{ .Section }}</a></span>
   

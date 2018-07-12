@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sassc -m main.scss ../../static/css/style.css
+sass main.scss ../../static/css/style.css

@@ -6,7 +6,11 @@
     </a>
     
     <a class="path home-link" href="{{ .Site.BaseURL }}">
+      {{ if .Params.story }}
+      <img class="logo" src="/img/header-logo-dark.png" />
+      {{ else }}
       <img class="logo" src="/img/header-logo.png" />
+      {{ end }}
       <h1 class="title">{{ .Site.Title }}</h1>
     </a>
 

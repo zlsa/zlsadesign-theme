@@ -48,6 +48,11 @@ $header-logo-title-height: 48px;
   width: 100%;
   top: 0;
   left: 0;
+
+  opacity: 0;
+  transition: opacity $anim-load ease;
+
+
   // The width-constrained element.
   .container {
 
@@ -91,6 +96,7 @@ $header-logo-title-height: 48px;
 
       .title {
         background: url('/img/header-logo-text.png') no-repeat;
+
         background-size: 112px 48px;
         
         user-select: none;
@@ -100,8 +106,13 @@ $header-logo-title-height: 48px;
         height: $header-logo-title-height;
 
         margin-left: $grid;
+
+        body.story & {
+          background-image: url('/img/header-logo-text-dark.png');
+        }
+
       }
-      
+
     }
 
     nav {
@@ -151,6 +162,15 @@ $header-logo-title-height: 48px;
               text-transform: uppercase;
               font-size: 14px;
               color: rgba(white, 0.54);
+
+              body.story & {
+
+                @media (min-width: 600px) {
+                  color: rgba(black, 0.54);
+                }
+
+              }
+
             }
 
           }
@@ -167,17 +187,22 @@ $header-logo-title-height: 48px;
     
   }
 
-  &.expanded {
-    background-color: transparent;
-    height: $header-expanded-height;
-    box-shadow: none;
-  }
+}
 
+body:not(.story) #page-header.expanded, body.story #page-header {
+  background-color: transparent;
+  height: $header-expanded-height;
+  box-shadow: none;
+}
+
+body.story #page-header {
+  position: static;
+  margin-bottom: -$header-expanded-height;
 }
 
 body.loaded #page-header {
   opacity: 1;
-  transition: opacity $anim-slow ease, transform $anim-medium ease,
+  transition: opacity $anim-load ease, transform $anim-medium ease,
   background-color $anim-medium ease, box-shadow $anim-medium ease, height $anim-medium ease;
 }
 
@@ -406,6 +431,10 @@ body.no-js {
 #page-header nav ul li a:hover {
   border-width: 0 0 2px 0;
 
+  body.story & {
+    border-color: rgba(black, 0.54) !important;
+  }
+
   @media (max-width: 600px) {
     border-bottom-width: 0;
   }
@@ -440,34 +469,63 @@ body[data-section=project] #page-header nav ul li.link-projects a {
   span {
     color: white;
     font-weight: bold;
+
   }
+
+}
+
+body.story[data-title=Apps] #page-header nav ul li.link-apps a,
+body.story[data-title=Art] #page-header nav ul li.link-art a,
+body.story[data-title=Articles] #page-header nav ul li.link-articles a,
+body.story[data-title=Infographics] #page-header nav ul li.link-infographics a,
+body.story[data-title=Posts] #page-header nav ul li.link-posts a,
+body.story[data-title=Projects] #page-header nav ul li.link-projects a,
+body.story[data-title="About Me"] #page-header nav ul li.link-about a,
+
+body.story[data-section=app] #page-header nav ul li.link-apps a,
+body.story[data-section=art] #page-header nav ul li.link-art a,
+body.story[data-section=article] #page-header nav ul li.link-articles a,
+body.story[data-section=infographic] #page-header nav ul li.link-infographics a,
+body.story[data-section=post] #page-header nav ul li.link-posts a,
+body.story[data-section=project] #page-header nav ul li.link-projects a {
+
+  span {
+    color: rgba(black, 0.87);
+  }
+
+  border-color: rgba(black, 0.54) !important;
+
+}
+
+@mixin header-link-active($color) {
+  border-color: $color;
 }
 
 #page-header nav ul li.link-apps a {
-  border-color: $color-apps;
+  @include header-link-active($color-apps);
 }
 
 #page-header nav ul li.link-art a {
-  border-color: $color-art;
+  @include header-link-active($color-art);
 }
 
 #page-header nav ul li.link-articles a {
-  border-color: $color-articles;
+  @include header-link-active($color-articles);
 }
 
 #page-header nav ul li.link-infographics a {
-  border-color: $color-infographics;
+  @include header-link-active($color-infographics);
 }
 
 #page-header nav ul li.link-posts a {
-  border-color: $color-posts;
+  @include header-link-active($color-posts);
 }
 
 #page-header nav ul li.link-projects a {
-  border-color: $color-projects;
+  @include header-link-active($color-projects);
 }
 
 #page-header nav ul li.link-about a {
-  border-color: white;
+  @include header-link-active(white);
 }
 

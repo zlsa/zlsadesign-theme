@@ -9,9 +9,9 @@
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
   </head>
   {{ if .Params.hero.background }}
-  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js hero-background">
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js hero-background{{ if .Params.story }} story{{ end }}">
   {{ else}}
-  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js">
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js{{ if .Params.story }} story{{ end }}">
   {{ end }}    
     
     <script>$('body').removeClass('no-js');</script>

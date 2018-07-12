@@ -1,4 +1,4 @@
-<article class="list-item post">
+<article class="list-item post{{ if .Draft }} draft{{ end }}">
 
   {{ partial "article-list-item-headline.html" . }}
   
