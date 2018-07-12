@@ -53,7 +53,7 @@
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 0.08s ease;
+  transition: opacity 0.2s ease;
 }
 #page-header .container {
   margin-left: auto;
@@ -139,10 +139,8 @@ body.story #page-header .container .home-link .title {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.54);
 }
-@media (min-width: 600px) {
-  body.story #page-header .container nav ul li a span {
-    color: rgba(0, 0, 0, 0.54);
-  }
+body.story #page-header .container nav ul li a span {
+  color: rgba(0, 0, 0, 0.54);
 }
 #page-header .container nav ul.right {
   float: right;
@@ -154,14 +152,16 @@ body:not(.story) #page-header.expanded, body.story #page-header {
   box-shadow: none;
 }
 
-body.story #page-header {
-  position: static;
-  margin-bottom: -128px;
+@media (min-width: 751px) {
+  body.story #page-header {
+    position: static;
+    margin-bottom: -128px;
+  }
 }
 
 body.loaded #page-header {
   opacity: 1;
-  transition: opacity 0.08s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
 }
 
 body.hero #page-header {
@@ -174,7 +174,7 @@ body.hero #page-header.expanded {
   background-color: transparent;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   #page-header .container .home-link .title {
     display: none;
   }
@@ -206,12 +206,15 @@ body.mini-header #page-header:hover {
   opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   #page-header {
     position: static !important;
     background-color: #242424 !important;
     height: auto !important;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
+  }
+  body.story #page-header {
+    background-color: #f4f4f4 !important;
   }
   #page-header .container {
     padding: 0;
@@ -257,6 +260,9 @@ body.mini-header #page-header:hover {
     max-height: 0;
     transition: max-height 0.3s ease;
   }
+  body.story #page-header .container nav {
+    background-color: #f4f4f4;
+  }
   #page-header .container nav ul {
     border-top: 2px solid #444;
     margin-left: 0;
@@ -264,13 +270,20 @@ body.mini-header #page-header:hover {
     align-items: flex-start;
     width: 100%;
   }
+  body.story #page-header .container nav ul {
+    border-color: #ddd;
+  }
   #page-header .container nav ul li {
     width: 100%;
   }
   #page-header .container nav ul li a {
+    border-width: 0;
     height: 48px;
     line-height: 48px;
     width: 100%;
+  }
+  body.story #page-header .container nav ul li a {
+    color: black !important;
   }
 }
 body.no-js .toggle-nav img,
@@ -301,12 +314,9 @@ body.no-js #page-header .container {
 #page-header nav ul li a:hover {
   border-width: 0 0 2px 0;
 }
-body.story #page-header nav ul li a:hover {
-  border-color: rgba(0, 0, 0, 0.54) !important;
-}
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   #page-header nav ul li a:hover {
-    border-bottom-width: 0;
+    border-width: 0;
   }
 }
 #page-header nav ul li a:hover span {
@@ -328,7 +338,7 @@ body[data-section=post] #page-header nav ul li.link-posts a,
 body[data-section=project] #page-header nav ul li.link-projects a {
   border-width: 0 0 4px 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   body[data-title=Apps] #page-header nav ul li.link-apps a,
 body[data-title=Art] #page-header nav ul li.link-art a,
 body[data-title=Articles] #page-header nav ul li.link-articles a,
@@ -362,21 +372,6 @@ body[data-section=project] #page-header nav ul li.link-projects a span {
   font-weight: bold;
 }
 
-body.story[data-title=Apps] #page-header nav ul li.link-apps a,
-body.story[data-title=Art] #page-header nav ul li.link-art a,
-body.story[data-title=Articles] #page-header nav ul li.link-articles a,
-body.story[data-title=Infographics] #page-header nav ul li.link-infographics a,
-body.story[data-title=Posts] #page-header nav ul li.link-posts a,
-body.story[data-title=Projects] #page-header nav ul li.link-projects a,
-body.story[data-title="About Me"] #page-header nav ul li.link-about a,
-body.story[data-section=app] #page-header nav ul li.link-apps a,
-body.story[data-section=art] #page-header nav ul li.link-art a,
-body.story[data-section=article] #page-header nav ul li.link-articles a,
-body.story[data-section=infographic] #page-header nav ul li.link-infographics a,
-body.story[data-section=post] #page-header nav ul li.link-posts a,
-body.story[data-section=project] #page-header nav ul li.link-projects a {
-  border-color: rgba(0, 0, 0, 0.54) !important;
-}
 body.story[data-title=Apps] #page-header nav ul li.link-apps a span,
 body.story[data-title=Art] #page-header nav ul li.link-art a span,
 body.story[data-title=Articles] #page-header nav ul li.link-articles a span,
@@ -485,7 +480,7 @@ main.article article .headline .publish-time {
   font-style: italic;
   text-align: right;
   opacity: 0;
-  transition: opacity 0.08s ease;
+  transition: opacity 0.2s ease;
   flex: 1;
   align-self: flex-end;
   padding-bottom: 4px;
@@ -496,7 +491,7 @@ main.article article .headline .publish-time time {
 body.story main.article article .headline .publish-time {
   color: rgba(0, 0, 0, 0.54);
 }
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   main.article article .headline {
     flex-direction: column;
     padding: 8px 16px;
@@ -511,7 +506,7 @@ body.story main.article article .headline .publish-time {
     font-size: 24px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   main.article article .headline {
     padding-left: 16px;
     padding-right: 16px;
@@ -1014,6 +1009,15 @@ main.article article .attribution figure img,
 main.article article .patreon-link figure img,
 main.article article .license figure img {
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+body.loaded main.article article .actions figure img,
+body.loaded main.article article .content figure img,
+body.loaded main.article article .attribution figure img,
+body.loaded main.article article .patreon-link figure img,
+body.loaded main.article article .license figure img {
+  opacity: 1;
 }
 main.article article .actions figure.left, main.article article .actions figure.right, main.article article .actions figure.small,
 main.article article .content figure.left,
@@ -1239,7 +1243,7 @@ main.article article .patreon-link :last-child,
 main.article article .license :last-child {
   margin-bottom: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   main.article article .actions,
 main.article article .content,
 main.article article .attribution,
@@ -1280,7 +1284,7 @@ main.article article .actions a {
 main.article article .actions a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   main.article article .actions a {
     height: 32px;
     line-height: 32px;
@@ -1536,14 +1540,14 @@ main.article article .section.section-post,
 main.article article .section.section-project {
   display: none;
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   main.article article .section.section-app,
 main.article article .section.section-art,
 main.article article .section.section-article,
 main.article article .section.section-infographic,
 main.article article .section.section-post,
 main.article article .section.section-project {
-    display: block;
+    display: none;
   }
 }
 
@@ -1640,7 +1644,7 @@ body.loaded article .headline .publish-time {
 article .actions a[href].button.right {
   margin-left: auto;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   article .actions a[href].button.right {
     margin-left: 16px;
   }
@@ -1883,7 +1887,7 @@ body.story .article-list article {
   color: rgba(0, 0, 0, 0.54);
   padding: 12px 0;
   padding-right: 32px;
-  transition: opacity 0.08s ease;
+  transition: opacity 0.2s ease;
   opacity: 0;
 }
 .article-list article .headline .publish-time:hover {
@@ -2142,6 +2146,11 @@ body.story .article-list article {
 }
 .article-list article .summary figure img {
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+body.loaded .article-list article .summary figure img {
+  opacity: 1;
 }
 .article-list article .summary figure.left, .article-list article .summary figure.right, .article-list article .summary figure.small {
   max-width: 640px;
@@ -2393,6 +2402,17 @@ body.loaded main.article-list article .headline .publish-time {
 
 }
 */
+/*
+  transform: translateY(-$offset);
+  opacity: 0;
+
+  @at-root body.loaded  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+*/
 #page-header {
   user-select: none;
   z-index: 1000;
@@ -2409,7 +2429,7 @@ body.loaded main.article-list article .headline .publish-time {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 0.08s ease;
+  transition: opacity 0.2s ease;
 }
 #page-header .container {
   margin-left: auto;
@@ -2495,10 +2515,8 @@ body.story #page-header .container .home-link .title {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.54);
 }
-@media (min-width: 600px) {
-  body.story #page-header .container nav ul li a span {
-    color: rgba(0, 0, 0, 0.54);
-  }
+body.story #page-header .container nav ul li a span {
+  color: rgba(0, 0, 0, 0.54);
 }
 #page-header .container nav ul.right {
   float: right;
@@ -2510,14 +2528,16 @@ body:not(.story) #page-header.expanded, body.story #page-header {
   box-shadow: none;
 }
 
-body.story #page-header {
-  position: static;
-  margin-bottom: -128px;
+@media (min-width: 751px) {
+  body.story #page-header {
+    position: static;
+    margin-bottom: -128px;
+  }
 }
 
 body.loaded #page-header {
   opacity: 1;
-  transition: opacity 0.08s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
 }
 
 body.hero #page-header {
@@ -2530,7 +2550,7 @@ body.hero #page-header.expanded {
   background-color: transparent;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   #page-header .container .home-link .title {
     display: none;
   }
@@ -2562,12 +2582,15 @@ body.mini-header #page-header:hover {
   opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   #page-header {
     position: static !important;
     background-color: #242424 !important;
     height: auto !important;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
+  }
+  body.story #page-header {
+    background-color: #f4f4f4 !important;
   }
   #page-header .container {
     padding: 0;
@@ -2613,6 +2636,9 @@ body.mini-header #page-header:hover {
     max-height: 0;
     transition: max-height 0.3s ease;
   }
+  body.story #page-header .container nav {
+    background-color: #f4f4f4;
+  }
   #page-header .container nav ul {
     border-top: 2px solid #444;
     margin-left: 0;
@@ -2620,13 +2646,20 @@ body.mini-header #page-header:hover {
     align-items: flex-start;
     width: 100%;
   }
+  body.story #page-header .container nav ul {
+    border-color: #ddd;
+  }
   #page-header .container nav ul li {
     width: 100%;
   }
   #page-header .container nav ul li a {
+    border-width: 0;
     height: 48px;
     line-height: 48px;
     width: 100%;
+  }
+  body.story #page-header .container nav ul li a {
+    color: black !important;
   }
 }
 body.no-js .toggle-nav img,
@@ -2657,12 +2690,9 @@ body.no-js #page-header .container {
 #page-header nav ul li a:hover {
   border-width: 0 0 2px 0;
 }
-body.story #page-header nav ul li a:hover {
-  border-color: rgba(0, 0, 0, 0.54) !important;
-}
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   #page-header nav ul li a:hover {
-    border-bottom-width: 0;
+    border-width: 0;
   }
 }
 #page-header nav ul li a:hover span {
@@ -2684,7 +2714,7 @@ body[data-section=post] #page-header nav ul li.link-posts a,
 body[data-section=project] #page-header nav ul li.link-projects a {
   border-width: 0 0 4px 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   body[data-title=Apps] #page-header nav ul li.link-apps a,
 body[data-title=Art] #page-header nav ul li.link-art a,
 body[data-title=Articles] #page-header nav ul li.link-articles a,
@@ -2718,21 +2748,6 @@ body[data-section=project] #page-header nav ul li.link-projects a span {
   font-weight: bold;
 }
 
-body.story[data-title=Apps] #page-header nav ul li.link-apps a,
-body.story[data-title=Art] #page-header nav ul li.link-art a,
-body.story[data-title=Articles] #page-header nav ul li.link-articles a,
-body.story[data-title=Infographics] #page-header nav ul li.link-infographics a,
-body.story[data-title=Posts] #page-header nav ul li.link-posts a,
-body.story[data-title=Projects] #page-header nav ul li.link-projects a,
-body.story[data-title="About Me"] #page-header nav ul li.link-about a,
-body.story[data-section=app] #page-header nav ul li.link-apps a,
-body.story[data-section=art] #page-header nav ul li.link-art a,
-body.story[data-section=article] #page-header nav ul li.link-articles a,
-body.story[data-section=infographic] #page-header nav ul li.link-infographics a,
-body.story[data-section=post] #page-header nav ul li.link-posts a,
-body.story[data-section=project] #page-header nav ul li.link-projects a {
-  border-color: rgba(0, 0, 0, 0.54) !important;
-}
 body.story[data-title=Apps] #page-header nav ul li.link-apps a span,
 body.story[data-title=Art] #page-header nav ul li.link-art a span,
 body.story[data-title=Articles] #page-header nav ul li.link-articles a span,
@@ -2850,6 +2865,9 @@ body.story #footer > .container .donate a {
     border-top: none;
     background-color: #242424;
   }
+  body.story #footer > .container {
+    background-color: transparent;
+  }
 }
 @media (max-width: 800px) {
   #footer > .container {
@@ -2887,14 +2905,10 @@ body.story #footer > .container .donate a {
   height: 100%;
   max-height: 20vh;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   #page-background {
     display: none;
   }
-}
-
-body.hero-background #page-background {
-  display: block;
 }
 
 body.loaded #page-background {
@@ -2922,7 +2936,7 @@ body.story #page-background:after {
   margin-bottom: -224px;
   padding-top: 128px;
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   #hero {
     padding-top: 0;
     margin-bottom: -96px;
@@ -2941,7 +2955,7 @@ body.story #page-background:after {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   #hero .hero-contents {
     box-shadow: none;
   }
@@ -3073,7 +3087,7 @@ body {
   min-height: 100%;
   background-color: #242424;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   body {
     background-color: #111;
   }
@@ -3094,7 +3108,7 @@ main {
   transition: transform 0.3s ease, opacity 0.8s ease;
   margin-top: 128px;
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   main {
     margin-top: 0;
   }
@@ -3138,7 +3152,7 @@ main > .headline .taxonomy {
   }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 1100px) {
   body.hero-background:not(.hero-compressed) main {
     margin-top: 60vh;
   }

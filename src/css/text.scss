@@ -315,6 +315,14 @@ $code-blue: #1177aa;
 
     img {
       width: 100%;
+      opacity: 0;
+
+      transition: opacity $anim-load ease-out;
+
+      body.loaded & {
+        opacity: 1;
+      }
+
     }
 
     &.left,

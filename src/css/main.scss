@@ -35,7 +35,7 @@ body {
 
   background-color: $color-page-background;
 
-  @media (max-width: 600px) {
+  @media (max-width: $breakpoint-mobile) {
     background-color: #111;
   }
 
@@ -57,7 +57,7 @@ main {
   
   margin-top: $header-expanded-height;
     
-  @media (max-width: 700px) {
+  @media (max-width: $breakpoint-mobile) {
     margin-top: 0;
   }
   
@@ -114,7 +114,7 @@ main {
 
 }
 
-@media (min-width: 701px) {
+@media (min-width: $breakpoint-hero) {
   
   body.hero-background:not(.hero-compressed) main {
     margin-top: 60vh;

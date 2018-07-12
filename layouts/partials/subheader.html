@@ -2,7 +2,11 @@
   <div class="container">
     
     <a class="toggle-nav">
+      {{ if .Params.story }}
+      <img src="/img/nav-arrow-expand-dark.png" />
+      {{ else }}
       <img src="/img/nav-arrow-expand.png" />
+      {{ end }}
     </a>
     
     <a class="path home-link" href="{{ .Site.BaseURL }}">

@@ -9,10 +9,8 @@
         <span class="title">{{ .Get "title" }}</span>{{ end }}
         {{ if or (.Get "caption") (.Get "attr")}}<p>
         {{ .Get "caption" }}
-          {{ with .Get "attrlink"}}
-          <span class="credit">Credit: <a href="{{.}}"> {{ end }}
-            {{ .Get "attr" }}
-        {{ if .Get "attrlink"}}</a></span> {{ end }}
+          <span class="credit">Credit:
+          {{ with .Get "attrlink"}}<a href="{{.}}">{{ else }}<a>{{ end }}{{ .Get "attr" }}</a></span>
         </p> {{ end }}
     </figcaption>
     {{ end }}

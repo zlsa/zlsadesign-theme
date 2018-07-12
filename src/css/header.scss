@@ -164,13 +164,8 @@ $header-logo-title-height: 48px;
               color: rgba(white, 0.54);
 
               body.story & {
-
-                @media (min-width: 600px) {
-                  color: rgba(black, 0.54);
-                }
-
+                color: $color-foreground-secondary;
               }
-
             }
 
           }
@@ -196,8 +191,12 @@ body:not(.story) #page-header.expanded, body.story #page-header {
 }
 
 body.story #page-header {
-  position: static;
-  margin-bottom: -$header-expanded-height;
+
+  @media (min-width: $breakpoint-mobile + 1px) {
+    position: static;
+    margin-bottom: -$header-expanded-height;
+  }
+
 }
 
 body.loaded #page-header {
@@ -220,7 +219,7 @@ body.hero #page-header {
   
 }
 
-@media (max-width: 800px) {
+@media (max-width: $breakpoint-tablet) {
 
   #page-header {
     
@@ -277,15 +276,19 @@ body.mini-header #page-header {
     
 }
 
-@media (max-width: 700px) {
+@media (max-width: $breakpoint-mobile) {
 
   #page-header {
 
     position: static !important;
     background-color: $color-page-background !important;
+
+    body.story & {
+      background-color: $color-story-background !important;
+    }
     
     height: auto !important;
-    margin-bottom: $grid * 2;
+    margin-bottom: $grid * 2 !important;
 
     .container {
 
@@ -336,6 +339,10 @@ body.mini-header #page-header {
 
       nav {
         background-color: $color-page-background;
+
+        body.story & {
+          background-color: $color-story-background;
+        }
         
         flex-direction: column !important;
         align-items: flex-start;
@@ -354,6 +361,10 @@ body.mini-header #page-header {
 
         ul {
           border-top: 2px solid #444;
+
+          body.story & {
+            border-color: #ddd;
+          }
           
           margin-left: 0;
           flex-direction: column;
@@ -365,9 +376,16 @@ body.mini-header #page-header {
           }
 
           li a {
+            border-width: 0;
+
             height: $grid * 6;
             line-height: $grid * 6;
             width: 100%;
+
+            body.story & {
+              color: black !important;
+            }
+
           }
           
         }
@@ -378,12 +396,6 @@ body.mini-header #page-header {
 
   }
 
-}
-
-@media (max-width: 800px) {
-
-  
-  
 }
 
 body.no-js,
@@ -432,11 +444,11 @@ body.no-js {
   border-width: 0 0 2px 0;
 
   body.story & {
-    border-color: rgba(black, 0.54) !important;
+    //border-color: rgba(black, 0.54) !important;
   }
 
-  @media (max-width: 600px) {
-    border-bottom-width: 0;
+  @media (max-width: $breakpoint-mobile) {
+    border-width: 0;
   }
 
   span {
@@ -462,14 +474,13 @@ body[data-section=project] #page-header nav ul li.link-projects a {
   
   border-width: 0 0 4px 0;
 
-  @media (max-width: 600px) {
+  @media (max-width: $breakpoint-mobile) {
     border-width: 0 0 0 8px;
   }
 
   span {
     color: white;
     font-weight: bold;
-
   }
 
 }
@@ -493,7 +504,7 @@ body.story[data-section=project] #page-header nav ul li.link-projects a {
     color: rgba(black, 0.87);
   }
 
-  border-color: rgba(black, 0.54) !important;
+  //border-color: rgba(black, 0.54) !important;
 
 }
 

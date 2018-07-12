@@ -81,7 +81,7 @@ main.article article {
 
     }
     
-    @media (max-width: 800px) {
+    @media (max-width: $breakpoint-mobile) {
 
       flex-direction: column;
       padding: $grid * 1 $grid * 2;
@@ -100,7 +100,7 @@ main.article article {
 
     }
       
-    @media (max-width: 400px) {
+    @media (max-width: $breakpoint-mini) {
       padding-left: $grid * 2;
       padding-right: $grid * 2;
     }
@@ -126,7 +126,7 @@ main.article article {
 
     @include text();
     
-    @media (max-width: 600px) {
+    @media (max-width: $breakpoint-mini) {
       padding: $grid * 2 $grid * 2;
     }
 
@@ -152,7 +152,7 @@ main.article article {
       padding: 0 $grid * 2;
       margin-right: $grid * 2;
       
-      @media (max-width: 800px) {
+      @media (max-width: $breakpoint-tablet) {
         height: $grid * 4;
         line-height: $grid * 4;
       }
@@ -574,8 +574,8 @@ main.article article .section.section-post,
 main.article article .section.section-project {
   display: none;
   
-  @media (max-width: 700px) {
-    display: block;
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
   }
   
 }
@@ -677,7 +677,7 @@ body.loaded article .headline .publish-time {
 article .actions a[href].button.right {
   margin-left: auto;
   
-  @media (max-width: 600px) {
+  @media (max-width: $breakpoint-mobile) {
     margin-left: $grid * 2;
   }
   
