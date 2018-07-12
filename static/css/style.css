@@ -642,6 +642,73 @@ main.article article .license h4 {
   font-size: 12.8px;
   font-weight: bold;
 }
+main.article article .actions .footnote,
+main.article article .content .footnote,
+main.article article .attribution .footnote,
+main.article article .patreon-link .footnote,
+main.article article .license .footnote {
+  position: relative;
+}
+main.article article .actions .footnote a,
+main.article article .content .footnote a,
+main.article article .attribution .footnote a,
+main.article article .patreon-link .footnote a,
+main.article article .license .footnote a {
+  color: inherit !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 0 0 #ffc, inset 0 -0.2em 0 0 #ffc;
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}
+main.article article .actions .footnote a[href],
+main.article article .content .footnote a[href],
+main.article article .attribution .footnote a[href],
+main.article article .patreon-link .footnote a[href],
+main.article article .license .footnote a[href] {
+  box-shadow: 0 2px 0 0 #def, inset 0 -0.2em 0 0 #def;
+}
+main.article article .actions .footnote .hover,
+main.article article .content .footnote .hover,
+main.article article .attribution .footnote .hover,
+main.article article .patreon-link .footnote .hover,
+main.article article .license .footnote .hover {
+  position: absolute;
+  top: 1em;
+  left: -8px;
+  margin-top: 4px;
+  background-color: #3b3b3b;
+  border-radius: 4px;
+  display: table;
+  padding: 4px 8px;
+  z-index: 1000;
+  pointer-events: none;
+  color: white;
+  font-style: italic;
+  font-size: 80%;
+  line-height: 135%;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+main.article article .actions .footnote:hover a,
+main.article article .content .footnote:hover a,
+main.article article .attribution .footnote:hover a,
+main.article article .patreon-link .footnote:hover a,
+main.article article .license .footnote:hover a {
+  background-color: #ffc;
+}
+main.article article .actions .footnote:hover a[href],
+main.article article .content .footnote:hover a[href],
+main.article article .attribution .footnote:hover a[href],
+main.article article .patreon-link .footnote:hover a[href],
+main.article article .license .footnote:hover a[href] {
+  background-color: #def;
+}
+main.article article .actions .footnote:hover .hover,
+main.article article .content .footnote:hover .hover,
+main.article article .attribution .footnote:hover .hover,
+main.article article .patreon-link .footnote:hover .hover,
+main.article article .license .footnote:hover .hover {
+  opacity: 1;
+}
 main.article article .actions img,
 main.article article .content img,
 main.article article .attribution img,
@@ -1902,6 +1969,45 @@ body.story .article-list article {
 .article-list article .summary h4 {
   font-size: 12.8px;
   font-weight: bold;
+}
+.article-list article .summary .footnote {
+  position: relative;
+}
+.article-list article .summary .footnote a {
+  color: inherit !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 0 0 #ffc, inset 0 -0.2em 0 0 #ffc;
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.article-list article .summary .footnote a[href] {
+  box-shadow: 0 2px 0 0 #def, inset 0 -0.2em 0 0 #def;
+}
+.article-list article .summary .footnote .hover {
+  position: absolute;
+  top: 1em;
+  left: -8px;
+  margin-top: 4px;
+  background-color: #3b3b3b;
+  border-radius: 4px;
+  display: table;
+  padding: 4px 8px;
+  z-index: 1000;
+  pointer-events: none;
+  color: white;
+  font-style: italic;
+  font-size: 80%;
+  line-height: 135%;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.article-list article .summary .footnote:hover a {
+  background-color: #ffc;
+}
+.article-list article .summary .footnote:hover a[href] {
+  background-color: #def;
+}
+.article-list article .summary .footnote:hover .hover {
+  opacity: 1;
 }
 .article-list article .summary img {
   max-width: 100%;
