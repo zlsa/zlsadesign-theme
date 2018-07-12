@@ -2787,6 +2787,10 @@ body.story #footer > .container .donate a {
   }
 }
 
+body.hero-background #page-background {
+  display: block;
+}
+
 body.loaded #page-background {
   position: fixed;
 }
@@ -2794,8 +2798,8 @@ body.loaded #page-background img {
   opacity: 1;
 }
 
-body.story #page-background {
-  display: none;
+body.story #page-background:after {
+  background: linear-gradient(to bottom, transparent, rgba(244, 244, 244, 0.1), rgba(244, 244, 244, 0.25), rgba(244, 244, 244, 0.4), rgba(244, 244, 244, 0.6), rgba(244, 244, 244, 0.75), rgba(244, 244, 244, 0.88), rgba(244, 244, 244, 0.95), #f4f4f4) !important;
 }
 
 #hero {
@@ -2969,7 +2973,7 @@ body {
   }
 }
 body.story {
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
 }
 
 main {
@@ -3029,7 +3033,7 @@ main > .headline .taxonomy {
 }
 
 @media (min-width: 701px) {
-  body.hero-background main {
+  body.hero-background:not(.hero-compressed) main {
     margin-top: 60vh;
   }
 }

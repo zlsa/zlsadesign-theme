@@ -8,9 +8,11 @@
     
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
   </head>
-  {{ if .Params.hero.background }}
-  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js hero-background{{ if .Params.story }} story{{ end }}">
-  {{ else}}
+  {{ if eq .Params.hero.background "none" }}
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js{{ if .Params.story }} story{{ end }}">
+  {{ else if .Params.hero.background }}
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js {{ if .Params.hero.compressed }}hero-compressed{{ end }} hero-background{{ if .Params.story }} story{{ end }}">
+  {{ else }}
   <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js{{ if .Params.story }} story{{ end }}">
   {{ end }}    
     

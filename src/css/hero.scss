@@ -51,6 +51,10 @@ $hero-gap: $grid * 2;
   
 }
 
+body.hero-background #page-background {
+  display: block;
+}
+
 body.loaded #page-background {
   position: fixed;
 
@@ -60,7 +64,24 @@ body.loaded #page-background {
 }
 
 body.story #page-background {
-  display: none;
+
+  img {
+
+  }
+
+  &:after {
+    background: linear-gradient(to bottom, transparent,
+                                rgba($color-story-background, 0.1),
+                                rgba($color-story-background, 0.25),
+                                rgba($color-story-background, 0.4),
+                                rgba($color-story-background, 0.6),
+                                rgba($color-story-background, 0.75),
+                                rgba($color-story-background, 0.88),
+                                rgba($color-story-background, 0.95),
+                                $color-story-background) !important;
+
+  }
+
 }
 
 #hero {

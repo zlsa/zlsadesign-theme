@@ -35,7 +35,8 @@
 </header>
 
 <div id="page-background">
-  {{ if .Params.hero.background }}
+  {{ if eq .Params.hero.background "none" }}
+  {{ else if .Params.hero.background }}
   <img src="{{ .Params.hero.background }}" />
   {{ else }}
   <img src="/background/default.jpg" />

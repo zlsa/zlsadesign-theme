@@ -40,7 +40,7 @@ body {
   }
 
   &.story {
-    background-color: #f8f8f8;
+    background-color: $color-story-background;
   }
 }
 
@@ -116,7 +116,7 @@ main {
 
 @media (min-width: 701px) {
   
-  body.hero-background main {
+  body.hero-background:not(.hero-compressed) main {
     margin-top: 60vh;
   }
   
