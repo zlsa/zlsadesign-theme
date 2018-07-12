@@ -1165,6 +1165,22 @@ main.article article .license figure.right {
     margin-right: -384px;
   }
 }
+@media (min-width: 2400px) {
+  main.article article .actions figure.left,
+main.article article .content figure.left,
+main.article article .attribution figure.left,
+main.article article .patreon-link figure.left,
+main.article article .license figure.left {
+    margin-left: -460px;
+  }
+  main.article article .actions figure.right,
+main.article article .content figure.right,
+main.article article .attribution figure.right,
+main.article article .patreon-link figure.right,
+main.article article .license figure.right {
+    margin-right: -460px;
+  }
+}
 main.article article .actions table,
 main.article article .content table,
 main.article article .attribution table,
@@ -2220,6 +2236,14 @@ body.loaded .article-list article .summary figure img {
   }
   .article-list article .summary figure.right {
     margin-right: -384px;
+  }
+}
+@media (min-width: 2400px) {
+  .article-list article .summary figure.left {
+    margin-left: -460px;
+  }
+  .article-list article .summary figure.right {
+    margin-right: -460px;
   }
 }
 .article-list article .summary table {

@@ -422,6 +422,18 @@ $code-blue: #1177aa;
       
     }
     
+    @media (min-width: 2400px) {
+
+      &.left {
+        margin-left: -460px;
+      }
+      
+      &.right {
+        margin-right: -460px;
+      }
+      
+    }
+    
   }
 
   table {
