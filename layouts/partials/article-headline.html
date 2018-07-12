@@ -4,7 +4,7 @@
   
   <span class="title" title="{{ .WordCount }} words">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</span>
   
-  <span class="publish-time"><time itemprop="datePublished" datetime="{{ time .Date }}">{{ time .Date }}</time></span>
+  <span class="publish-time"><span class="reading-time">~{{ .ReadingTime }} minute read</span><time itemprop="datePublished" datetime="{{ time .Date }}">{{ time .Date }}</time></span>
   
 </h1>
 

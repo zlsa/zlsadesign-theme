@@ -485,8 +485,14 @@ main.article article .headline .publish-time {
   align-self: flex-end;
   padding-bottom: 4px;
 }
-main.article article .headline .publish-time time {
+main.article article .headline .publish-time time, main.article article .headline .publish-time .reading-time {
+  display: inline-block;
   white-space: nowrap;
+}
+main.article article .headline .publish-time .reading-time:after {
+  content: "/";
+  display: inline-block;
+  padding: 0 4px;
 }
 body.story main.article article .headline .publish-time {
   color: rgba(0, 0, 0, 0.54);
@@ -1066,8 +1072,8 @@ main.article article .license figure.left,
 main.article article .license figure.right {
     padding: 16px;
     margin: 16px;
-    width: 50%;
-    max-width: 480px;
+    width: calc(50% - (8px * 4));
+    max-width: 50%;
   }
   main.article article .actions figure.left,
 main.article article .content figure.left,
@@ -1398,8 +1404,8 @@ main.article article.article .warning {
   }
 }
 main.article article.article .content {
-  padding-top: 48px;
   font-size: 1.1em;
+  padding-top: 32px;
 }
 main.article article.art, main.article article.infographic {
   margin-top: -16px;
@@ -2187,8 +2193,8 @@ body.loaded .article-list article .summary figure img {
   .article-list article .summary figure.left, .article-list article .summary figure.right {
     padding: 16px;
     margin: 16px;
-    width: 50%;
-    max-width: 480px;
+    width: calc(50% - (8px * 4));
+    max-width: 50%;
   }
   .article-list article .summary figure.left {
     float: left;

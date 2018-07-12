@@ -353,8 +353,8 @@ $code-blue: #1177aa;
         padding: $grid * 2;
         margin: $grid * 2;
     
-        width: 50%;
-        max-width: 480px;
+        width: calc(50% - (#{$grid} * 4));
+        max-width: 50%;
       }
 
       &.left {
