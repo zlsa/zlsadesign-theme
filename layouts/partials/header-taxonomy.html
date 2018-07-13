@@ -9,7 +9,14 @@
     
     <title>{{ .Title | lower }} - {{ .Site.Title }}</title>
   </head>
-  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js">
+
+  {{ if eq .Params.hero.background "none" }}
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js{{ if .Params.story }} story{{ end }}">
+  {{ else if .Params.hero.background }}
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js {{ if .Params.hero.compressed }}hero-compressed{{ end }} hero-background{{ if .Params.story }} story{{ end }}">
+  {{ else }}
+  <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js{{ if .Params.story }} story{{ end }}">
+  {{ end }}    
     
     <script>$('body').removeClass('no-js');</script>
 

@@ -2,7 +2,7 @@
 
 <main role="main" class="article-list taxonomy">
   
-  <h1 class="list headline taxonomy"><span class="taxonomy">{{ .Data.Singular }}</span><span class="title">{{ .Title | lower }}</span></h1>
+  <h1 class="list headline taxonomy"><span class="taxonomy" style="display: none">{{ .Data.Singular }}</span><span class="title">{{ .Title | lower }}</span></h1>
   
   {{ partial "article-list.html" . }}
 

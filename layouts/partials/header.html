@@ -8,6 +8,7 @@
     
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
   </head>
+  
   {{ if eq .Params.hero.background "none" }}
   <body data-title="{{ .Title }}" data-section="{{ .Section }}" class="no-js{{ if .Params.story }} story{{ end }}">
   {{ else if .Params.hero.background }}

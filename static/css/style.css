@@ -1003,6 +1003,65 @@ main.article article .license ul li,
 main.article article .license ol li {
   padding-left: 1ex;
 }
+main.article article .actions .unit,
+main.article article .content .unit,
+main.article article .attribution .unit,
+main.article article .patreon-link .unit,
+main.article article .license .unit {
+  position: relative;
+  /*
+
+  .original {
+    color: $color-unit-text !important;
+    box-shadow: 0 0 0 1px $color-unit;
+    padding: 1px 3px;
+    border-radius: 2px;
+  }
+
+  .imperial {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    margin-top: 2px;
+
+    color: $color-unit-text;
+    display: table;
+    background-color: $color-unit;
+    box-shadow: 0 0 0 1px $color-unit-border;
+    border-radius: 2px;
+    padding: 0px 3px;
+
+    pointer-events: none;
+    opacity: 0;
+
+    transition: opacity $anim-fast ease;
+  }
+
+  &:hover {
+    .imperial {
+      opacity: 1;
+    }
+  }
+
+  */
+}
+main.article article .actions .unit .original:after,
+main.article article .content .unit .original:after,
+main.article article .attribution .unit .original:after,
+main.article article .patreon-link .unit .original:after,
+main.article article .license .unit .original:after {
+  content: " (";
+  display: inline;
+}
+main.article article .actions .unit .imperial:after,
+main.article article .content .unit .imperial:after,
+main.article article .attribution .unit .imperial:after,
+main.article article .patreon-link .unit .imperial:after,
+main.article article .license .unit .imperial:after {
+  content: ")";
+  display: inline;
+}
 main.article article .actions aside.note,
 main.article article .content aside.note,
 main.article article .attribution aside.note,
@@ -1014,6 +1073,16 @@ main.article article .license aside.note {
   border-radius: 2px;
   padding: 16px;
   color: #4d3d00;
+  /*
+  @media(min-width: $breakpoint-tablet + 1px) {
+    display: block;
+    float: right;
+    width: 60%;
+
+    margin-left: $grid * 2;
+    margin-right: $grid * 2;
+  }
+  */
 }
 main.article article .actions aside.note header,
 main.article article .content aside.note header,
@@ -1431,7 +1500,7 @@ main.article article.article .warning {
   font-size: 14px;
   font-style: italic;
   text-align: center;
-  margin-top: -32px;
+  margin-top: -16px;
   margin-bottom: 48px;
   margin-left: -16px;
   margin-right: -16px;
@@ -2201,6 +2270,53 @@ body.story .article-list article {
 .article-list article .summary ul li, .article-list article .summary ol li {
   padding-left: 1ex;
 }
+.article-list article .summary .unit {
+  position: relative;
+  /*
+
+  .original {
+    color: $color-unit-text !important;
+    box-shadow: 0 0 0 1px $color-unit;
+    padding: 1px 3px;
+    border-radius: 2px;
+  }
+
+  .imperial {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    margin-top: 2px;
+
+    color: $color-unit-text;
+    display: table;
+    background-color: $color-unit;
+    box-shadow: 0 0 0 1px $color-unit-border;
+    border-radius: 2px;
+    padding: 0px 3px;
+
+    pointer-events: none;
+    opacity: 0;
+
+    transition: opacity $anim-fast ease;
+  }
+
+  &:hover {
+    .imperial {
+      opacity: 1;
+    }
+  }
+
+  */
+}
+.article-list article .summary .unit .original:after {
+  content: " (";
+  display: inline;
+}
+.article-list article .summary .unit .imperial:after {
+  content: ")";
+  display: inline;
+}
 .article-list article .summary aside.note {
   margin: 16px -8px;
   background-color: #fff5cc;
@@ -2208,6 +2324,16 @@ body.story .article-list article {
   border-radius: 2px;
   padding: 16px;
   color: #4d3d00;
+  /*
+  @media(min-width: $breakpoint-tablet + 1px) {
+    display: block;
+    float: right;
+    width: 60%;
+
+    margin-left: $grid * 2;
+    margin-right: $grid * 2;
+  }
+  */
 }
 .article-list article .summary aside.note header {
   margin-bottom: 8px;
@@ -3228,6 +3354,9 @@ main > .headline.taxonomy .title {
   font-family: "Roboto Mono", monospace;
   font-weight: normal;
   padding-bottom: 0.3ex;
+}
+body.story main > .headline.taxonomy .title {
+  color: rgba(0, 0, 0, 0.87);
 }
 main > .headline .taxonomy {
   background-color: #333;

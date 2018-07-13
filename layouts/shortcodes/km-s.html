@@ -1,0 +1,1 @@
+<!-- Displays km/s and mph --><span class="unit" data-unit="km/s" data-value="{{ .Get 0 }}"><span class="original">{{ (lang.NumFmt (default "0" (.Get 1)) (.Get 0)) }}&nbsp;km/s</span><span class="imperial">{{ (lang.NumFmt 0 (mul 2236.94 (float (.Get 0)))) }}&nbsp;mph</span></span>

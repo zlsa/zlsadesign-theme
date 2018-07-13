@@ -86,8 +86,13 @@ main {
         font-family: 'Roboto Mono', monospace;
         font-weight: normal;
         padding-bottom: 0.3ex;
+
       }
       
+      body.story & .title {
+        color: $color-foreground-primary;
+      }
+
     }
 
     .taxonomy {

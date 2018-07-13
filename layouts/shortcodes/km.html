@@ -1,0 +1,1 @@
+<!-- Displays km and miles --><span class="unit" data-unit="km" data-value="{{ .Get 0 }}"><span class="original">{{ (lang.NumFmt (default "0" (.Get 1)) (.Get 0)) }}&nbsp;km</span><span class="imperial">{{ (lang.NumFmt 0 (mul 0.621371 (float (.Get 0)))) }}&nbsp;miles</span></span>
