@@ -6,7 +6,7 @@
   
   <section class="body">
     <section class="summary">
-      {{ .Summary }}
+      {{ partial "article-list-item-summary.html" . }}
       
       {{ if .Truncated }}
       <span class="read-more">
