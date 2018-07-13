@@ -306,6 +306,35 @@ $code-blue: #1177aa;
     
   }
 
+  aside.note {
+    margin: $grid * 2 (-$grid);
+
+    background-color: $color-note;
+
+    border: 1px solid $color-note-border;
+    border-radius: 2px;
+
+    padding: $grid * 2;
+
+    color: $color-note-text;
+
+    header {
+      margin-bottom: $grid * 1;
+
+      .title {
+        font-size: 100%;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+    }
+
+    @media(max-width: $breakpoint-mobile) {
+      margin: $grid * 2 (-$grid * 2);
+    }
+
+  }
+
   figure {
 
     background: white;
@@ -388,7 +417,7 @@ $code-blue: #1177aa;
     @media (min-width: 1440px) {
 
       &.left, &.right {
-        box-shadow: 0 2px 10px rgba(black, 0.3);
+        box-shadow: 0 $grid/4 $grid/1.2 rgba(black, 0.3);
         padding: $grid;
         margin: $grid * 2 $grid * 4;
       }

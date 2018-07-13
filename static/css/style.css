@@ -222,6 +222,9 @@ body.mini-header #page-header:hover {
     align-items: flex-start;
     height: 64px;
   }
+  body.story #page-header .container {
+    box-shadow: 0 2px 0 0 #ddd;
+  }
   #page-header .container .toggle-nav {
     display: flex;
     justify-content: center;
@@ -1000,6 +1003,43 @@ main.article article .license ul li,
 main.article article .license ol li {
   padding-left: 1ex;
 }
+main.article article .actions aside.note,
+main.article article .content aside.note,
+main.article article .attribution aside.note,
+main.article article .patreon-link aside.note,
+main.article article .license aside.note {
+  margin: 16px -8px;
+  background-color: #fff5cc;
+  border: 1px solid #ffeb99;
+  border-radius: 2px;
+  padding: 16px;
+  color: #4d3d00;
+}
+main.article article .actions aside.note header,
+main.article article .content aside.note header,
+main.article article .attribution aside.note header,
+main.article article .patreon-link aside.note header,
+main.article article .license aside.note header {
+  margin-bottom: 8px;
+}
+main.article article .actions aside.note header .title,
+main.article article .content aside.note header .title,
+main.article article .attribution aside.note header .title,
+main.article article .patreon-link aside.note header .title,
+main.article article .license aside.note header .title {
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (max-width: 750px) {
+  main.article article .actions aside.note,
+main.article article .content aside.note,
+main.article article .attribution aside.note,
+main.article article .patreon-link aside.note,
+main.article article .license aside.note {
+    margin: 16px -16px;
+  }
+}
 main.article article .actions figure,
 main.article article .content figure,
 main.article article .attribution figure,
@@ -1122,7 +1162,7 @@ main.article article .patreon-link figure.left,
 main.article article .patreon-link figure.right,
 main.article article .license figure.left,
 main.article article .license figure.right {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6.6666666667px rgba(0, 0, 0, 0.3);
     padding: 8px;
     margin: 16px 32px;
   }
@@ -2161,6 +2201,27 @@ body.story .article-list article {
 .article-list article .summary ul li, .article-list article .summary ol li {
   padding-left: 1ex;
 }
+.article-list article .summary aside.note {
+  margin: 16px -8px;
+  background-color: #fff5cc;
+  border: 1px solid #ffeb99;
+  border-radius: 2px;
+  padding: 16px;
+  color: #4d3d00;
+}
+.article-list article .summary aside.note header {
+  margin-bottom: 8px;
+}
+.article-list article .summary aside.note header .title {
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (max-width: 750px) {
+  .article-list article .summary aside.note {
+    margin: 16px -16px;
+  }
+}
 .article-list article .summary figure {
   background: white;
   padding: 16px 0;
@@ -2219,7 +2280,7 @@ body.loaded .article-list article .summary figure img {
 }
 @media (min-width: 1440px) {
   .article-list article .summary figure.left, .article-list article .summary figure.right {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6.6666666667px rgba(0, 0, 0, 0.3);
     padding: 8px;
     margin: 16px 32px;
   }
@@ -2627,6 +2688,9 @@ body.mini-header #page-header:hover {
     flex-direction: column !important;
     align-items: flex-start;
     height: 64px;
+  }
+  body.story #page-header .container {
+    box-shadow: 0 2px 0 0 #ddd;
   }
   #page-header .container .toggle-nav {
     display: flex;

@@ -299,6 +299,10 @@ body.mini-header #page-header {
       
       height: $grid * 8;
 
+      body.story & {
+        box-shadow: 0 2px 0 0 #ddd;
+      }
+
       .toggle-nav {
         display: flex;
         justify-content: center;
