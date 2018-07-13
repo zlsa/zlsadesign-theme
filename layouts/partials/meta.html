@@ -30,10 +30,10 @@
 
 {{ if .Params.art.image }}
 <meta property="og:image"              content="/images/art/{{ .Params.art.image }}-preview.jpg" />
-{{ end }}
-
-{{ if .Params.infographic.file }}
+{{ else if .Params.infographic.file }}
 <meta property="og:image"              content="/infographics/{{ .Params.infographic.file }}.png" />
+{{ else }}
+<meta property="og:image"              content="/img/logo-big.png" />
 {{ end }}
 
 {{ end }}
