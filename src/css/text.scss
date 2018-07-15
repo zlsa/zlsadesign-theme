@@ -399,7 +399,7 @@ $code-blue: #1177aa;
 
   }
 
-  figure {
+  figure.img {
 
     background: white;
 
@@ -527,6 +527,45 @@ $code-blue: #1177aa;
       
     }
     
+  }
+
+  figure.sequence {
+
+    margin: $grid * 6 0;
+
+    .images {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      img {
+        flex: 1;
+        display: inline-block;
+        max-width: 128px !important;
+
+        @media (min-width: $breakpoint-mobile) {
+          margin: 0 $grid * 2;
+        }
+
+      }
+      
+    }
+
+    figcaption {
+      font-size: 12px;
+      font-style: italic;
+
+      text-align: center;
+
+    }
+
+    > figcaption {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
   }
 
   table {

@@ -1,0 +1,10 @@
+<figure class="sequence{{ with .Get "class" }} {{.}}{{ end }}">
+  <div class="images">
+    {{ .Inner }}
+  </div>
+  {{ with .Get "title" }}
+  <figcaption>
+    <span class="title">{{ . }}</span>
+  </figcaption>
+  {{ end }}
+</figure>

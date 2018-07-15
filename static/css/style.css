@@ -1109,192 +1109,245 @@ main.article article .license aside.note {
     margin: 16px -16px;
   }
 }
-main.article article .actions figure,
-main.article article .content figure,
-main.article article .attribution figure,
-main.article article .patreon-link figure,
-main.article article .license figure {
+main.article article .actions figure.img,
+main.article article .content figure.img,
+main.article article .attribution figure.img,
+main.article article .patreon-link figure.img,
+main.article article .license figure.img {
   background: white;
   padding: 16px 0;
   margin: 16px auto;
 }
-main.article article .actions figure img,
-main.article article .content figure img,
-main.article article .attribution figure img,
-main.article article .patreon-link figure img,
-main.article article .license figure img {
+main.article article .actions figure.img img,
+main.article article .content figure.img img,
+main.article article .attribution figure.img img,
+main.article article .patreon-link figure.img img,
+main.article article .license figure.img img {
   width: 100%;
   opacity: 0;
   transition: opacity 0.2s ease-out;
 }
-body.loaded main.article article .actions figure img,
-body.loaded main.article article .content figure img,
-body.loaded main.article article .attribution figure img,
-body.loaded main.article article .patreon-link figure img,
-body.loaded main.article article .license figure img {
+body.loaded main.article article .actions figure.img img,
+body.loaded main.article article .content figure.img img,
+body.loaded main.article article .attribution figure.img img,
+body.loaded main.article article .patreon-link figure.img img,
+body.loaded main.article article .license figure.img img {
   opacity: 1;
 }
-main.article article .actions figure.left, main.article article .actions figure.right, main.article article .actions figure.small,
-main.article article .content figure.left,
-main.article article .content figure.right,
-main.article article .content figure.small,
-main.article article .attribution figure.left,
-main.article article .attribution figure.right,
-main.article article .attribution figure.small,
-main.article article .patreon-link figure.left,
-main.article article .patreon-link figure.right,
-main.article article .patreon-link figure.small,
-main.article article .license figure.left,
-main.article article .license figure.right,
-main.article article .license figure.small {
+main.article article .actions figure.img.left, main.article article .actions figure.img.right, main.article article .actions figure.img.small,
+main.article article .content figure.img.left,
+main.article article .content figure.img.right,
+main.article article .content figure.img.small,
+main.article article .attribution figure.img.left,
+main.article article .attribution figure.img.right,
+main.article article .attribution figure.img.small,
+main.article article .patreon-link figure.img.left,
+main.article article .patreon-link figure.img.right,
+main.article article .patreon-link figure.img.small,
+main.article article .license figure.img.left,
+main.article article .license figure.img.right,
+main.article article .license figure.img.small {
   max-width: 640px;
 }
-main.article article .actions figure.full-bleed,
-main.article article .content figure.full-bleed,
-main.article article .attribution figure.full-bleed,
-main.article article .patreon-link figure.full-bleed,
-main.article article .license figure.full-bleed {
+main.article article .actions figure.img.full-bleed,
+main.article article .content figure.img.full-bleed,
+main.article article .attribution figure.img.full-bleed,
+main.article article .patreon-link figure.img.full-bleed,
+main.article article .license figure.img.full-bleed {
   margin-left: -32px;
   margin-right: -32px;
   padding-left: 0;
   padding-right: 0;
 }
 @media (max-width: 600px) {
-  main.article article .actions figure.full-bleed,
-main.article article .content figure.full-bleed,
-main.article article .attribution figure.full-bleed,
-main.article article .patreon-link figure.full-bleed,
-main.article article .license figure.full-bleed {
+  main.article article .actions figure.img.full-bleed,
+main.article article .content figure.img.full-bleed,
+main.article article .attribution figure.img.full-bleed,
+main.article article .patreon-link figure.img.full-bleed,
+main.article article .license figure.img.full-bleed {
     margin-left: -16px;
     margin-right: -16px;
   }
 }
 @media (min-width: 800px) {
-  main.article article .actions figure.left, main.article article .actions figure.right,
-main.article article .content figure.left,
-main.article article .content figure.right,
-main.article article .attribution figure.left,
-main.article article .attribution figure.right,
-main.article article .patreon-link figure.left,
-main.article article .patreon-link figure.right,
-main.article article .license figure.left,
-main.article article .license figure.right {
+  main.article article .actions figure.img.left, main.article article .actions figure.img.right,
+main.article article .content figure.img.left,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.left,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.left,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.left,
+main.article article .license figure.img.right {
     padding: 16px;
     margin: 16px;
     width: calc(50% - (8px * 2));
     max-width: 50%;
   }
-  main.article article .actions figure.left,
-main.article article .content figure.left,
-main.article article .attribution figure.left,
-main.article article .patreon-link figure.left,
-main.article article .license figure.left {
+  main.article article .actions figure.img.left,
+main.article article .content figure.img.left,
+main.article article .attribution figure.img.left,
+main.article article .patreon-link figure.img.left,
+main.article article .license figure.img.left {
     float: left;
     padding-left: 0;
     margin-left: 0;
     clear: left;
   }
-  main.article article .actions figure.right,
-main.article article .content figure.right,
-main.article article .attribution figure.right,
-main.article article .patreon-link figure.right,
-main.article article .license figure.right {
+  main.article article .actions figure.img.right,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.right {
     float: right;
     padding-right: 0;
     margin-right: 0;
     clear: right;
   }
 }
-main.article article .actions figure figcaption,
-main.article article .content figure figcaption,
-main.article article .attribution figure figcaption,
-main.article article .patreon-link figure figcaption,
-main.article article .license figure figcaption {
+main.article article .actions figure.img figcaption,
+main.article article .content figure.img figcaption,
+main.article article .attribution figure.img figcaption,
+main.article article .patreon-link figure.img figcaption,
+main.article article .license figure.img figcaption {
   font-size: 12px;
   font-style: italic;
   text-align: center;
 }
-main.article article .actions figure figcaption .credit,
-main.article article .content figure figcaption .credit,
-main.article article .attribution figure figcaption .credit,
-main.article article .patreon-link figure figcaption .credit,
-main.article article .license figure figcaption .credit {
+main.article article .actions figure.img figcaption .credit,
+main.article article .content figure.img figcaption .credit,
+main.article article .attribution figure.img figcaption .credit,
+main.article article .patreon-link figure.img figcaption .credit,
+main.article article .license figure.img figcaption .credit {
   display: block;
 }
 @media (min-width: 1440px) {
-  main.article article .actions figure.left, main.article article .actions figure.right,
-main.article article .content figure.left,
-main.article article .content figure.right,
-main.article article .attribution figure.left,
-main.article article .attribution figure.right,
-main.article article .patreon-link figure.left,
-main.article article .patreon-link figure.right,
-main.article article .license figure.left,
-main.article article .license figure.right {
+  main.article article .actions figure.img.left, main.article article .actions figure.img.right,
+main.article article .content figure.img.left,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.left,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.left,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.left,
+main.article article .license figure.img.right {
     box-shadow: 0 2px 6.6666666667px rgba(0, 0, 0, 0.3);
     padding: 8px;
     margin: 16px 32px;
   }
-  main.article article .actions figure.left,
-main.article article .content figure.left,
-main.article article .attribution figure.left,
-main.article article .patreon-link figure.left,
-main.article article .license figure.left {
+  main.article article .actions figure.img.left,
+main.article article .content figure.img.left,
+main.article article .attribution figure.img.left,
+main.article article .patreon-link figure.img.left,
+main.article article .license figure.img.left {
     margin-left: -256px;
     max-width: 320px;
   }
-  main.article article .actions figure.right,
-main.article article .content figure.right,
-main.article article .attribution figure.right,
-main.article article .patreon-link figure.right,
-main.article article .license figure.right {
+  main.article article .actions figure.img.right,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.right {
     margin-right: -256px;
   }
 }
 @media (min-width: 1900px) {
-  main.article article .actions figure.left, main.article article .actions figure.right,
-main.article article .content figure.left,
-main.article article .content figure.right,
-main.article article .attribution figure.left,
-main.article article .attribution figure.right,
-main.article article .patreon-link figure.left,
-main.article article .patreon-link figure.right,
-main.article article .license figure.left,
-main.article article .license figure.right {
+  main.article article .actions figure.img.left, main.article article .actions figure.img.right,
+main.article article .content figure.img.left,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.left,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.left,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.left,
+main.article article .license figure.img.right {
     max-width: 480px;
     padding: 8px;
     margin: 16px 32px;
   }
-  main.article article .actions figure.left,
-main.article article .content figure.left,
-main.article article .attribution figure.left,
-main.article article .patreon-link figure.left,
-main.article article .license figure.left {
+  main.article article .actions figure.img.left,
+main.article article .content figure.img.left,
+main.article article .attribution figure.img.left,
+main.article article .patreon-link figure.img.left,
+main.article article .license figure.img.left {
     margin-left: -384px;
   }
-  main.article article .actions figure.right,
-main.article article .content figure.right,
-main.article article .attribution figure.right,
-main.article article .patreon-link figure.right,
-main.article article .license figure.right {
+  main.article article .actions figure.img.right,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.right {
     margin-right: -384px;
   }
 }
 @media (min-width: 2400px) {
-  main.article article .actions figure.left,
-main.article article .content figure.left,
-main.article article .attribution figure.left,
-main.article article .patreon-link figure.left,
-main.article article .license figure.left {
+  main.article article .actions figure.img.left,
+main.article article .content figure.img.left,
+main.article article .attribution figure.img.left,
+main.article article .patreon-link figure.img.left,
+main.article article .license figure.img.left {
     margin-left: -460px;
   }
-  main.article article .actions figure.right,
-main.article article .content figure.right,
-main.article article .attribution figure.right,
-main.article article .patreon-link figure.right,
-main.article article .license figure.right {
+  main.article article .actions figure.img.right,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.right {
     margin-right: -460px;
   }
+}
+main.article article .actions figure.sequence,
+main.article article .content figure.sequence,
+main.article article .attribution figure.sequence,
+main.article article .patreon-link figure.sequence,
+main.article article .license figure.sequence {
+  margin: 48px 0;
+}
+main.article article .actions figure.sequence .images,
+main.article article .content figure.sequence .images,
+main.article article .attribution figure.sequence .images,
+main.article article .patreon-link figure.sequence .images,
+main.article article .license figure.sequence .images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main.article article .actions figure.sequence .images img,
+main.article article .content figure.sequence .images img,
+main.article article .attribution figure.sequence .images img,
+main.article article .patreon-link figure.sequence .images img,
+main.article article .license figure.sequence .images img {
+  flex: 1;
+  display: inline-block;
+  max-width: 128px !important;
+}
+@media (min-width: 750px) {
+  main.article article .actions figure.sequence .images img,
+main.article article .content figure.sequence .images img,
+main.article article .attribution figure.sequence .images img,
+main.article article .patreon-link figure.sequence .images img,
+main.article article .license figure.sequence .images img {
+    margin: 0 16px;
+  }
+}
+main.article article .actions figure.sequence figcaption,
+main.article article .content figure.sequence figcaption,
+main.article article .attribution figure.sequence figcaption,
+main.article article .patreon-link figure.sequence figcaption,
+main.article article .license figure.sequence figcaption {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+main.article article .actions figure.sequence > figcaption,
+main.article article .content figure.sequence > figcaption,
+main.article article .attribution figure.sequence > figcaption,
+main.article article .patreon-link figure.sequence > figcaption,
+main.article article .license figure.sequence > figcaption {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
 }
 main.article article .actions table,
 main.article article .content table,
@@ -2348,96 +2401,125 @@ body.story .article-list article {
     margin: 16px -16px;
   }
 }
-.article-list article .summary figure {
+.article-list article .summary figure.img {
   background: white;
   padding: 16px 0;
   margin: 16px auto;
 }
-.article-list article .summary figure img {
+.article-list article .summary figure.img img {
   width: 100%;
   opacity: 0;
   transition: opacity 0.2s ease-out;
 }
-body.loaded .article-list article .summary figure img {
+body.loaded .article-list article .summary figure.img img {
   opacity: 1;
 }
-.article-list article .summary figure.left, .article-list article .summary figure.right, .article-list article .summary figure.small {
+.article-list article .summary figure.img.left, .article-list article .summary figure.img.right, .article-list article .summary figure.img.small {
   max-width: 640px;
 }
-.article-list article .summary figure.full-bleed {
+.article-list article .summary figure.img.full-bleed {
   margin-left: -32px;
   margin-right: -32px;
   padding-left: 0;
   padding-right: 0;
 }
 @media (max-width: 600px) {
-  .article-list article .summary figure.full-bleed {
+  .article-list article .summary figure.img.full-bleed {
     margin-left: -16px;
     margin-right: -16px;
   }
 }
 @media (min-width: 800px) {
-  .article-list article .summary figure.left, .article-list article .summary figure.right {
+  .article-list article .summary figure.img.left, .article-list article .summary figure.img.right {
     padding: 16px;
     margin: 16px;
     width: calc(50% - (8px * 2));
     max-width: 50%;
   }
-  .article-list article .summary figure.left {
+  .article-list article .summary figure.img.left {
     float: left;
     padding-left: 0;
     margin-left: 0;
     clear: left;
   }
-  .article-list article .summary figure.right {
+  .article-list article .summary figure.img.right {
     float: right;
     padding-right: 0;
     margin-right: 0;
     clear: right;
   }
 }
-.article-list article .summary figure figcaption {
+.article-list article .summary figure.img figcaption {
   font-size: 12px;
   font-style: italic;
   text-align: center;
 }
-.article-list article .summary figure figcaption .credit {
+.article-list article .summary figure.img figcaption .credit {
   display: block;
 }
 @media (min-width: 1440px) {
-  .article-list article .summary figure.left, .article-list article .summary figure.right {
+  .article-list article .summary figure.img.left, .article-list article .summary figure.img.right {
     box-shadow: 0 2px 6.6666666667px rgba(0, 0, 0, 0.3);
     padding: 8px;
     margin: 16px 32px;
   }
-  .article-list article .summary figure.left {
+  .article-list article .summary figure.img.left {
     margin-left: -256px;
     max-width: 320px;
   }
-  .article-list article .summary figure.right {
+  .article-list article .summary figure.img.right {
     margin-right: -256px;
   }
 }
 @media (min-width: 1900px) {
-  .article-list article .summary figure.left, .article-list article .summary figure.right {
+  .article-list article .summary figure.img.left, .article-list article .summary figure.img.right {
     max-width: 480px;
     padding: 8px;
     margin: 16px 32px;
   }
-  .article-list article .summary figure.left {
+  .article-list article .summary figure.img.left {
     margin-left: -384px;
   }
-  .article-list article .summary figure.right {
+  .article-list article .summary figure.img.right {
     margin-right: -384px;
   }
 }
 @media (min-width: 2400px) {
-  .article-list article .summary figure.left {
+  .article-list article .summary figure.img.left {
     margin-left: -460px;
   }
-  .article-list article .summary figure.right {
+  .article-list article .summary figure.img.right {
     margin-right: -460px;
   }
+}
+.article-list article .summary figure.sequence {
+  margin: 48px 0;
+}
+.article-list article .summary figure.sequence .images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.article-list article .summary figure.sequence .images img {
+  flex: 1;
+  display: inline-block;
+  max-width: 128px !important;
+}
+@media (min-width: 750px) {
+  .article-list article .summary figure.sequence .images img {
+    margin: 0 16px;
+  }
+}
+.article-list article .summary figure.sequence figcaption {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+.article-list article .summary figure.sequence > figcaption {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
 }
 .article-list article .summary table {
   margin: 32px auto;

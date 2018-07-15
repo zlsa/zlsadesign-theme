@@ -1,0 +1,8 @@
+<div class="single-image">
+  <img src="{{ .Get 0 }}" />
+  {{ with .Get 1 }}
+  <figcaption>
+    <span class="title">{{ . }}</span>
+  </figcaption>
+  {{ end }}
+</div>
