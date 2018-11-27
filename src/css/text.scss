@@ -372,7 +372,7 @@ $code-blue: #1177aa;
     color: $color-note-text;
 
     header {
-      margin-bottom: $grid * 1;
+      margin-bottom: -$grid * 2;
 
       .title {
         font-size: 100%;

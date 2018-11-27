@@ -1089,7 +1089,7 @@ main.article article .content aside.note header,
 main.article article .attribution aside.note header,
 main.article article .patreon-link aside.note header,
 main.article article .license aside.note header {
-  margin-bottom: 8px;
+  margin-bottom: -16px;
 }
 main.article article .actions aside.note header .title,
 main.article article .content aside.note header .title,
@@ -2389,7 +2389,7 @@ body.story .article-list article {
   */
 }
 .article-list article .summary aside.note header {
-  margin-bottom: 8px;
+  margin-bottom: -16px;
 }
 .article-list article .summary aside.note header .title {
   font-size: 100%;
