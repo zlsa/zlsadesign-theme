@@ -84,21 +84,24 @@ body.story #page-background {
 #hero {
   z-index: 10;
 
-  @include limit-width();
-  
+  //@include limit-width();
+
+  width: 100%;
+
   min-height: 20em;
   height: 100vh;
-  max-height: 150vw;
-
   margin: 0 auto;
-  padding-bottom: $hero-bottom-overlap + $hero-gap;
+
+  //padding-bottom: $hero-bottom-overlap + $hero-gap;
   margin-bottom: -$hero-bottom-overlap - $header-expanded-height;
 
-  padding-top: $header-expanded-height;
+  //padding-top: $header-expanded-height;
 
   @media (max-width: $breakpoint-tablet) {
     padding-top: 0;
-    margin-bottom: -$header-expanded-height + $grid * 4;
+    height: 125vw;
+    max-height: 95vh;
+    margin-bottom: $hero-gap;
   }
   
   .hero-contents {
@@ -116,6 +119,7 @@ body.story #page-background {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    align-items: center;
     justify-content: center;
 
     width: 100%;
@@ -127,11 +131,13 @@ body.story #page-background {
     
     .message-box {
 
+      @include limit-width();
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
 
-      margin-left: -$grid;
+      //margin-left: -$grid;
 
       .message {
         box-shadow: 0 2px 4px rgba(black, 0.3);

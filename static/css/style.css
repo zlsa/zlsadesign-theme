@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -165,13 +165,14 @@ body.loaded #page-header {
 }
 
 body.hero #page-header {
-  position: fixed;
+  position: fixed !important;
   width: 100%;
   top: 0;
   left: 0;
 }
 body.hero #page-header.expanded {
   background-color: transparent;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 
 @media (max-width: 900px) {
@@ -2723,7 +2724,7 @@ body.loaded main.article-list article .headline .publish-time {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -2840,13 +2841,14 @@ body.loaded #page-header {
 }
 
 body.hero #page-header {
-  position: fixed;
+  position: fixed !important;
   width: 100%;
   top: 0;
   left: 0;
 }
 body.hero #page-header.expanded {
   background-color: transparent;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 
 @media (max-width: 900px) {
@@ -3226,22 +3228,18 @@ body.story #page-background:after {
 
 #hero {
   z-index: 10;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1024px;
   width: 100%;
   min-height: 20em;
   height: 100vh;
-  max-height: 150vw;
   margin: 0 auto;
-  padding-bottom: 112px;
   margin-bottom: -224px;
-  padding-top: 128px;
 }
 @media (max-width: 900px) {
   #hero {
     padding-top: 0;
-    margin-bottom: -96px;
+    height: 125vw;
+    max-height: 95vh;
+    margin-bottom: 16px;
   }
 }
 #hero .hero-contents {
@@ -3253,6 +3251,7 @@ body.story #page-background:after {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -3266,10 +3265,13 @@ body.story #page-background:after {
   height: 96px;
 }
 #hero .hero-contents .message-box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: -8px;
 }
 #hero .hero-contents .message-box .message {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);

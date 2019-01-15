@@ -15,10 +15,12 @@ function parallax() {
 
   var scroll_px = $(window).scrollTop();
 
-  var scroll = Math.pow(lerp(0, scroll_px, $(window).height() - $('#page-header').height() * 3, 0, 1), 0.5);
+  var height = $(window).height();
+
+  var scroll = Math.pow(lerp(0, scroll_px, 128, 0, 1), 0.5);
 
   //if(body.hasClass('hero')) {
-  //  $('#hero .message-box').css('transform', 'translateY(' + scroll_px * 0.1 + 'px)');
+  //  $('#hero .message-box').css('transform', 'translateY(' + scroll_px * 2 + 'px)');
   //}
   
   if(false) {
@@ -33,8 +35,10 @@ function parallax() {
     header.css('background-color', 'rgba('+ color + ', ' + color + ', ' + color + ', ' + scroll + ')');
     header.css('height', clerp(0, scroll, 1, 128, 64));
 
-  } else {
-    if(scroll_px > 24) {
+  }
+
+  if($("body.hero").length != 0) {
+    if(scroll_px > 32) {
       header.removeClass('expanded');
     } else {
       header.addClass('expanded');
@@ -46,6 +50,7 @@ function parallax() {
   //$('html').css('background-position', '0px ' + Math.round(parallax_offset) + 'px');
 
   $('#page-background').css('transform', 'translateY(' + -parallax_offset + 'px)');
+  //$('#hero').css('transform', 'translateY(' + parallax_offset * 0.666 + 'px)');
   
 }
 

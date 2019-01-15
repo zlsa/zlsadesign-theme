@@ -44,7 +44,7 @@ $header-logo-title-height: 48px;
   flex-direction: row;
   align-items: center;
 
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -206,7 +206,7 @@ body.loaded #page-header {
 }
 
 body.hero #page-header {
-  position: fixed;
+  position: fixed !important;
   width: 100%;
   top: 0;
   left: 0;
@@ -215,6 +215,7 @@ body.hero #page-header {
   
   &.expanded {
     background-color: transparent;
+    background: linear-gradient(to bottom, rgba(black, 0.4), rgba(black, 0));
   }
   
 }
