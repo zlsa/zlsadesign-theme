@@ -44,6 +44,12 @@ body {
   }
 }
 
+@media print {
+  body.story {
+    background-color: none;
+  }
+}
+
 main {
   z-index: 20;
   color: $color-foreground-primary;

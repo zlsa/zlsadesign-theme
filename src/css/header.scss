@@ -545,3 +545,8 @@ body.story[data-section=project] #page-header nav ul li.link-projects a {
   @include header-link-active(white);
 }
 
+@media print {
+  #page-header {
+    display: none;
+  }
+}

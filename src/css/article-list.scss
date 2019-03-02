@@ -167,7 +167,11 @@ $headline-padding-vertical: $grid * 1.5;
         }
         
       }
-      
+
+      .raw-time {
+        display: none;
+      }
+
       @media (max-width: 800px) {
 
         padding-bottom: $grid * 2;

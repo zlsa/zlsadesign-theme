@@ -93,12 +93,18 @@ $(document).ready(function() {
   
   $('time').each(function() {
     var _this = $(this);
+    _this.addClass("relative");
 
     var date = moment(_this.attr('datetime'), "YYYY-MM-DD");
 
     _this.attr('title', date.format("MMMM Do, YYYY k:mm"));
     
     _this.text(calculateElapsed(date));
+
+    var raw_time = $(document.createElement("time"));
+    raw_time.text(date.format("MMMM Do, YYYY"));
+    raw_time.addClass("raw-time");
+    _this.before(raw_time);
   });
   
   // Toggle navigation area

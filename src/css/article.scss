@@ -55,6 +55,10 @@ main.article article {
         color: $color-foreground-primary;
       }
 
+      @media print {
+        color: #000;
+      }
+
     }
 
     .publish-time {
@@ -74,6 +78,25 @@ main.article article {
       time, .reading-time {
         display: inline-block;
         white-space: nowrap;
+      }
+
+      time.raw-time {
+        display: none;
+      }
+
+      @media print {
+        .reading-time {
+          display: none;
+        }
+
+        time.relative {
+          display: none;
+        }
+
+        time.raw-time {
+          display: inline-block;
+        }
+
       }
 
       .reading-time:after {
@@ -122,6 +145,11 @@ main.article article {
     body.story & {
       box-shadow: 0 $grid/4 $grid rgba(black, 0.2);
     }
+
+    @media print {
+      box-shadow: none !important;
+    }
+
   }
 
   .actions,
@@ -166,6 +194,14 @@ main.article article {
       
     }
     
+  }
+
+  .actions,
+  .patreon-link {
+    @media print {
+      display: none;
+    }
+
   }
 
   /*
@@ -435,6 +471,11 @@ article {
   }
   
   .meta {
+    
+    @media print {
+      display: none;
+    }
+
     background-color: $color-meta-background;
 
 
@@ -484,6 +525,7 @@ article {
         }
         
       }
+
 
       li {
         color: rgba(black, 0.4);

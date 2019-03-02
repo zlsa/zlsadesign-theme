@@ -420,6 +420,11 @@ body.story[data-section=project] #page-header nav ul li.link-projects a span {
   border-color: white;
 }
 
+@media print {
+  #page-header {
+    display: none;
+  }
+}
 main.article article {
   /*
     .actions.app-info {
@@ -479,6 +484,11 @@ main.article article .headline .title {
 body.story main.article article .headline .title {
   color: rgba(0, 0, 0, 0.87);
 }
+@media print {
+  main.article article .headline .title {
+    color: #000;
+  }
+}
 main.article article .headline .publish-time {
   color: white;
   font-style: italic;
@@ -492,6 +502,20 @@ main.article article .headline .publish-time {
 main.article article .headline .publish-time time, main.article article .headline .publish-time .reading-time {
   display: inline-block;
   white-space: nowrap;
+}
+main.article article .headline .publish-time time.raw-time {
+  display: none;
+}
+@media print {
+  main.article article .headline .publish-time .reading-time {
+    display: none;
+  }
+  main.article article .headline .publish-time time.relative {
+    display: none;
+  }
+  main.article article .headline .publish-time time.raw-time {
+    display: inline-block;
+  }
 }
 main.article article .headline .publish-time .reading-time:after {
   content: "/";
@@ -528,6 +552,11 @@ main.article article .body {
 }
 body.story main.article article .body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+@media print {
+  main.article article .body {
+    box-shadow: none !important;
+  }
 }
 main.article article .actions,
 main.article article .content,
@@ -1206,6 +1235,33 @@ main.article article .license figure.img.right {
     clear: right;
   }
 }
+@media print {
+  main.article article .actions figure.img,
+main.article article .content figure.img,
+main.article article .attribution figure.img,
+main.article article .patreon-link figure.img,
+main.article article .license figure.img {
+    display: block !important;
+    break-before: avoid;
+    break-after: avoid;
+    break-inside: avoid;
+  }
+}
+@media print {
+  main.article article .actions figure.img.left, main.article article .actions figure.img.right,
+main.article article .content figure.img.left,
+main.article article .content figure.img.right,
+main.article article .attribution figure.img.left,
+main.article article .attribution figure.img.right,
+main.article article .patreon-link figure.img.left,
+main.article article .patreon-link figure.img.right,
+main.article article .license figure.img.left,
+main.article article .license figure.img.right {
+    max-width: 35%;
+    margin-left: 16px;
+    float: right;
+  }
+}
 main.article article .actions figure.img figcaption,
 main.article article .content figure.img figcaption,
 main.article article .attribution figure.img figcaption,
@@ -1475,6 +1531,12 @@ main.article article .actions a:hover {
     line-height: 32px;
   }
 }
+@media print {
+  main.article article .actions,
+main.article article .patreon-link {
+    display: none;
+  }
+}
 main.article article .attribution {
   padding: 0 32px;
   padding-bottom: 8px;
@@ -1649,6 +1711,11 @@ article .meta {
 
    }
   */
+}
+@media print {
+  article .meta {
+    display: none;
+  }
 }
 body.story article .meta {
   background-color: transparent;
@@ -2078,6 +2145,9 @@ body.story .article-list article {
 .article-list article .headline .publish-time:hover {
   text-decoration: none;
 }
+.article-list article .headline .raw-time {
+  display: none;
+}
 @media (max-width: 800px) {
   .article-list article .headline {
     padding-bottom: 16px;
@@ -2448,6 +2518,21 @@ body.loaded .article-list article .summary figure.img img {
     padding-right: 0;
     margin-right: 0;
     clear: right;
+  }
+}
+@media print {
+  .article-list article .summary figure.img {
+    display: block !important;
+    break-before: avoid;
+    break-after: avoid;
+    break-inside: avoid;
+  }
+}
+@media print {
+  .article-list article .summary figure.img.left, .article-list article .summary figure.img.right {
+    max-width: 35%;
+    margin-left: 16px;
+    float: right;
   }
 }
 .article-list article .summary figure.img figcaption {
@@ -3096,6 +3181,11 @@ body.story[data-section=project] #page-header nav ul li.link-projects a span {
   border-color: white;
 }
 
+@media print {
+  #page-header {
+    display: none;
+  }
+}
 #footer {
   z-index: 100;
   margin-top: 64px;
@@ -3187,6 +3277,11 @@ body.story #footer > .container .donate a {
   }
 }
 
+@media print {
+  #footer .donate, #footer .donate-thanks, #footer .contact {
+    display: none;
+  }
+}
 #page-background {
   position: absolute;
   width: 100% !important;
@@ -3400,6 +3495,11 @@ body.story {
   background-color: #f4f4f4;
 }
 
+@media print {
+  body.story {
+    background-color: none;
+  }
+}
 main {
   z-index: 20;
   color: rgba(0, 0, 0, 0.87);

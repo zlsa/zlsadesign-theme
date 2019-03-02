@@ -116,3 +116,11 @@ $footer-margin: $grid * 5;
   }
 
 }
+
+@media print {
+  #footer {
+    .donate, .donate-thanks, .contact {
+      display: none;
+    }
+  }
+}

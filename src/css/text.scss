@@ -466,6 +466,22 @@ $code-blue: #1177aa;
       
     }
 
+    @media print {
+      display: block !important;
+      break-before: avoid;
+      break-after: avoid;
+      break-inside: avoid;
+    }
+
+    &.left, &.right {
+      @media print {
+        max-width: 35%;
+
+        margin-left: $grid * 2;
+        float: right;
+      }
+    }
+
     figcaption {
       font-size: 12px;
       font-style: italic;
