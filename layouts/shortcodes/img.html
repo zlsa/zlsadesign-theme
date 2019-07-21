@@ -1,6 +1,6 @@
 <figure {{ with .Get "class" }}class="img {{.}}"{{ end }}>
-  {{ with .Get "link"}}<a href="{{.}}">
-  {{ else }}<a href="{{ .Get "attrlink" }}">{{ end }}
+  {{ with .Get "attrlink"}}<a href="{{.}}">
+  {{ else }}<a href="{{ .Get "src" }}">{{ end }}
   <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
   </a>
   
@@ -9,8 +9,10 @@
         <span class="title">{{ .Get "title" }}</span>{{ end }}
         {{ if or (.Get "caption") (.Get "attr")}}<p>
         {{ .Get "caption" }}
+        {{ if .Get "attr" }}
           <span class="credit">Credit:
-          {{ with .Get "attrlink"}}<a href="{{.}}">{{ else }}<a>{{ end }}{{ .Get "attr" }}</a></span>
+            {{ with .Get "attrlink"}}<a href="{{.}}">{{ else }}<a>{{ end }}{{ .Get "attr" }}</a></span>
+          {{ end }}
         </p> {{ end }}
     </figcaption>
     {{ end }}
