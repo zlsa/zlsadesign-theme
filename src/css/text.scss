@@ -3,324 +3,365 @@ $code-red: #CC1111;
 $code-orange: #BF360C;
 $code-burntorange: #BF7550;
 $code-green: #1B5E20;
-$code-purple: #4A148C;
 $code-blue: #1177aa;
+
+$code-keyword: #8A048C;
+
+$code-comment: #888;
+$code-string: #1b8e40;
+
+/* TODO: SCSS has ways around this but I'm too lazy to bother. */
+@-webkit-keyframes target-fade {
+    from { background-color: $color-target; }
+    to { background-color: $color-target-fade; }
+}
+
+@-moz-keyframes target-fade {
+    from { background-color: $color-target; }
+    to { background-color: $color-target-fade; }
+}
+
+@-o-keyframes target-fade {
+    from { background-color: $color-target; }
+    to { background-color: $color-target-fade; }
+}
+
+@keyframes target-fade {
+    from { background-color: $color-target; }
+    to { background-color: $color-target-fade; }
+}
 
 @mixin text() {
 
-  line-height: 1.8em;
+    line-height: 1.8em;
 
-  * + p {
-    margin-top: 1.5em;
-  }
-
-  a[href] {
-    color: $color-primary;
-  }
-
-  em {
-    font-style: italic;
-  }
-
-  strong {
-    font-weight: bold;
-  }
-
-  hr {
-    
-    &:after {
-      content: "***";
-      display: block;
-      text-align: center;
-      
-      margin: $grid * 2 auto;
-      padding-left: 2em;
-      letter-spacing: 2em;
-    }
-    
-  }
-
-  blockquote {
-    border-left: 4px solid rgba(black, 0.3);
-
-    margin: $grid * 4 $grid;
-    margin-right: 0;
-    
-    padding: $grid * 2 $grid * 3;
-    padding-right: 0;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 2em;
-    margin-bottom: 1ex;
-  }
-
-  h1 {
-    font-size: $grid * 3;
-    font-weight: bold;
-  }
-  
-  h2 {
-    font-size: $grid * 2.5;
-  }
-  
-  h3 {
-    font-size: $grid * 2;
-    font-weight: bold;
-  }
-  
-  h4 {
-    font-size: $grid * 1.6;
-    font-weight: bold;
-  }
-
-  .footnote {
-
-    position: relative;
-
-    a {
-      color: inherit !important;
-      text-decoration: none !important;
-
-      box-shadow: 0 $grid/4 0 0 $color-footnote, inset 0 (-0.2em 0 0 $color-footnote);
-
-      transition: box-shadow $anim-fast ease, background-color $anim-fast ease;
+    p + p {
+        margin-top: 1.5em;
     }
 
     a[href] {
-      box-shadow: 0 $grid/4 0 0 $color-footnote-link, inset 0 (-0.2em 0 0 $color-footnote-link);
+        color: $color-primary;
     }
 
-    .hover {
-      position: absolute;
-      top: 1em;
-      left: -$grid;
-      margin-top: $grid/2;
-
-      background-color: lighten(black, 23%);
-      border-radius: 4px;
-
-      display: table;
-      padding: ($grid/2) $grid;
-      z-index: 1000;
-
-      pointer-events: none;
-
-      color: white;
-      font-style: italic;
-      font-size: 80%;
-      line-height: 135%;
-
-      opacity: 0;
-
-      transition: opacity $anim-fast ease;
+    em {
+        font-style: italic;
     }
 
-    &:hover {
+    strong {
+        font-weight: bold;
+    }
 
-      a {
-        background-color: $color-footnote;
-
-        &[href] {
-          background-color: $color-footnote-link;
+    hr {
+        
+        &:after {
+            content: "***";
+            display: block;
+            text-align: center;
+            
+            margin: $grid * 2 auto;
+            padding-left: 2em;
+            letter-spacing: 2em;
         }
-      }
-
-      .hover {
-        opacity: 1;
-      }
+        
     }
 
-  }
+    blockquote {
+        border-left: 4px solid rgba(black, 0.3);
 
-  img {
-    max-width: 100%;
-  }
-
-  code {
-    font-family: 'Roboto Mono', monospace;
-
-    font-size: 0.8em;
-
-    border-radius: 2px;
-    background-color: #eee;
-    padding: 1px 3px;
-    margin: 0 2px;
-
-    overflow-wrap: break-word;
-
-    &[data-lang] {
-
-      color: rgba(black, 0.75);
-
-      .kd {
-        color: $code-orange;
-      }
-
-      .k {
-        color: $code-purple;
-      }
-
-      .kt {
-        color: $code-blue;
-        font-weight: bold;
-      }
-
-      .n,
-      .nc {
-        color: rgba(black, 1);
-      }
-      
-      .nd {
-        color: rgba(black, 0.5);
-      }
-      
-      .na, .nc {
-        font-weight: bold;
-      }
-      
-      .nt {
-        color: $code-red;
-      }
-      
-      .s, .s1 {
-        color: $code-green;
-      }
-
-      .c, .cm, .cp, .c1, .cs {
-        color: rgba($code-burntorange, 0.8);
-        //color: rgba($code-green, 0.7);
-      }
-
-      .m, .mb, .mf, .mh, .mi, .il, .mo {
-        font-weight: bold;
-      }
-
+        margin: $grid * 4 $grid;
+        margin-right: 0;
+        
+        padding: $grid * 2 $grid * 3;
+        padding-right: 0;
     }
 
-  }
+    > h1, > h2, > h3, > h4, > h5, > h6 {
+        margin-top: 2rem;
 
-  a[href] code {
-    font-weight: bold;
-    background: transparent;
-  }
-    
-  pre {
+        margin-left: -$grid * 6;
+        margin-right: -$grid * 6;
+        padding: $grid * 1.5 $grid * 6;
+        
+    }
 
-    overflow-x: auto;
-    width: calc(100% + #{$grid} * 4);
-
-    font-size: 0.8em;
-
-    background-color: #eee;
-    padding: $grid * 2 $grid * 6;
-    margin: $grid * 2 (-$grid * 4) !important;
-
-    line-height: 140%;
-
-    @media (max-width: 800px) {
-      padding: $grid * 2 $grid * 4;
+    > h1 {
+        font-size: $grid * 3;
+        font-weight: bold;
     }
     
-    @media (max-width: 600px) {
-      padding: $grid * 2 $grid * 2;
-      margin: $grid * 2 (-$grid * 2) !important;
-      width: calc(100% + #{$grid} * 2);
+    > h2 {
+        font-size: $grid * 2.75;
     }
     
+    > h3 {
+        font-size: $grid * 2;
+        font-weight: bold;
+    }
+    
+    > h4 {
+        font-size: $grid * 1.6;
+        font-weight: bold;
+    }
+
+    :target {
+        background-color: $color-target-fade;
+        -webkit-animation: target-fade 3s;
+        -moz-animation: target-fade 3s;
+        -o-animation: target-fade 3s;
+        animation: target-fade 3s;
+    }
+
+    .footnote {
+
+        position: relative;
+
+        a {
+            color: inherit !important;
+            text-decoration: none !important;
+
+            box-shadow: 0 $grid/4 0 0 $color-footnote, inset 0 (-0.2em 0 0 $color-footnote);
+
+            transition: box-shadow $anim-fast ease, background-color $anim-fast ease;
+        }
+
+        a[href] {
+            box-shadow: 0 $grid/4 0 0 $color-footnote-link, inset 0 (-0.2em 0 0 $color-footnote-link);
+        }
+
+        .hover {
+            position: absolute;
+            top: 1em;
+            left: -$grid;
+            margin-top: $grid/2;
+
+            background-color: lighten(black, 23%);
+            border-radius: 4px;
+
+            display: table;
+            padding: ($grid/2) $grid;
+            z-index: 1000;
+
+            pointer-events: none;
+
+            color: white;
+            font-style: italic;
+            font-size: 80%;
+            line-height: 135%;
+
+            opacity: 0;
+
+            transition: opacity $anim-fast ease;
+        }
+
+        &:hover {
+
+            a {
+                background-color: $color-footnote;
+
+                &[href] {
+                    background-color: $color-footnote-link;
+                }
+            }
+
+            .hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    img {
+        max-width: 100%;
+    }
+
     code {
-      border: none;
-      background-color: transparent;
-      padding: 0;
-      margin: 0;
-      
-      font-size: inherit;
-      font-weight: normal;
+        /* I love Hack. */
+        font-family: 'Hack', 'Roboto Mono', monospace;
+
+        font-size: 0.8em;
+
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.075);
+        padding: 1px 3px;
+        margin: 0 2px;
+
+        overflow-wrap: break-word;
+
+        &[data-lang] {
+
+            color: rgba(black, 0.75);
+
+            .kd {
+                color: $code-orange;
+            }
+
+            .k {
+                color: $code-keyword;
+            }
+
+            .kt {
+                color: $code-blue;
+                font-weight: bold;
+            }
+
+            .n,
+            .nc {
+                color: rgba(black, 1);
+            }
+            
+            .nd {
+                color: rgba(black, 0.5);
+            }
+            
+            .na, .nc {
+                font-weight: bold;
+            }
+            
+            .nt {
+                color: $code-red;
+            }
+            
+            .s, .s1 {
+                color: $code-string;
+            }
+
+            .c, .cm, .cp, .c1, .cs {
+                //color: rgba($code-burntorange, 0.8);
+                color: rgba($code-comment, 1.0);
+                font-style: italic;
+            }
+
+            .m, .mb, .mf, .mh, .mi, .il, .mo {
+                font-weight: bold;
+            }
+
+        }
+
+    }
+
+    a[href] code {
+        font-weight: bold;
+        background: transparent;
     }
     
-  }
+    pre {
 
-  div.language-file-indicator {
-    //background-color: #f8f8f8;
-    //background: linear-gradient(to bottom, #f8f8f8, #fcfcfc);
-    
-    color: rgba(black, 0.7);
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.8em;
+        overflow-x: auto;
+        width: calc(100% + #{$grid} * 12);
 
-    margin-bottom: -$grid * 2;
-    margin-top: $grid * 3;
+        font-size: 0.8em;
 
-    margin-left: -$grid * 4;
-    margin-right: -$grid * 4;
-    
-    padding-left: $grid * 4;
+        background-color: #eee;
+        padding: $grid * 2 $grid * 6;
+        margin: $grid * 2 (-$grid * 6) !important;
 
-    @media (max-width: 800px) {
-      padding-left: $grid * 1;
-      margin-left: -$grid;
-    }
+        line-height: 140%;
 
-    .indicator {
-      display: inline-block;
-      padding: $grid / 2 $grid * 2;
-      border-bottom: 2px solid #aaa;
-      margin: 0;
-
-      position: relative;
-
-      &:after {
-        border: 8px solid transparent;
-        border-top-color: #aaa;
+	@media (max-width: $breakpoint-mini) {
+            padding: $grid * 2 $grid * 2;
+            margin: $grid * 2 (-$grid * 2) !important;
+            width: calc(100% + #{$grid} * 2);
+        }
         
-        content: '';
-        display: block;
-
-        position: absolute;
-        bottom: -18px;
-        left: $grid * 2 + 8px;
+        code {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            
+            font-size: inherit;
+            font-weight: normal;
+        }
         
-        opacity: 0;
-      }
-      
-    }
-    
-    .language {
-      font-weight: bold;
     }
 
-    .file {
-      color: rgba(black, 0.4);
+    div.language-file-indicator {
+        //background-color: #f8f8f8;
+        //background: linear-gradient(to bottom, #f8f8f8, #fcfcfc);
+        
+        color: rgba(black, 0.7);
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.8em;
+
+        margin-bottom: -$grid * 2;
+        margin-top: $grid * 3;
+
+        margin-left: -$grid * 6;
+        margin-right: -$grid * 6;
+        
+        padding-left: $grid * 4;
+
+        @media (max-width: 800px) {
+            padding-left: $grid * 1;
+            margin-left: -$grid;
+        }
+
+        .indicator {
+            display: inline-block;
+            padding: $grid / 2 $grid * 2;
+            padding-bottom: 0;
+            border-bottom: 2px solid #aaa;
+            margin: 0;
+
+            position: relative;
+
+            &:after {
+                border: 8px solid transparent;
+                border-top-color: #aaa;
+                
+                content: '';
+                display: block;
+
+                position: absolute;
+                bottom: -18px;
+                left: $grid * 2 + 8px;
+                
+                opacity: 0;
+            }
+            
+        }
+        
+        .language {
+            font-weight: bold;
+        }
+
+        .file {
+            color: rgba(black, 0.4);
+        }
+        
     }
-    
-  }
 
-  ul, ol {
-    margin: $grid * 2 $grid;
+    ul, ol {
+        margin: $grid * 3 $grid;
 
-    padding-left: $grid * 2;
+        padding-left: $grid * 2;
 
-    li {
-      padding-left: 1ex;
-    }
-    
-  }
-
-  .unit {
-
-    position: relative;
-
-    .original:after {
-      content: ' (';
-      display: inline;
+        li {
+            padding-left: 1ex;
+            margin-top: $grid / 2;
+        }
+        
     }
 
-    .imperial:after {
-      content: ')';
-      display: inline;
+    ul ol, ol ul, ol ol, ul ul {
+        margin-top: $grid * 1.5
     }
 
-    /*
+    .unit {
+
+        position: relative;
+
+        .original:after {
+            content: ' (';
+            display: inline;
+        }
+
+        .imperial:after {
+            content: ')';
+            display: inline;
+        }
+
+/*
 
     .original {
       color: $color-unit-text !important;
@@ -355,38 +396,62 @@ $code-blue: #1177aa;
       }
     }
 
-    */
-
-  }
-
-  aside.note {
-    margin: $grid * 2 (-$grid);
-
-    background-color: $color-note;
-
-    border: 1px solid $color-note-border;
-    border-radius: 2px;
-
-    padding: $grid * 2;
-
-    color: $color-note-text;
-
-    header {
-      margin-bottom: -$grid * 2;
-
-      .title {
-        font-size: 100%;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
+*/
 
     }
 
-    @media(max-width: $breakpoint-mobile) {
-      margin: $grid * 2 (-$grid * 2);
-    }
+    section.note {
+        margin: $grid * 4 (-$grid * 6);
 
-    /*
+        header {
+            margin: 0 $grid * 4;
+            margin-top: $grid * 2;
+            
+            color: $color-note-title;
+
+            .title {
+		display: inline-block;
+                padding: 0 $grid * 2;
+                
+                font-size: 100%;
+                font-weight: bold;
+                text-transform: uppercase;
+                
+                border-bottom: 2px solid $color-note-border;
+
+		code {
+		    background-color: darken($color-note, 2%);
+		    padding: 0 8px;
+		    font-size: 1.0em;
+		}
+            }
+
+        }
+
+        .note-content {
+            background-color: $color-note;
+
+            border: 0 solid $color-note-border;
+	    //border-width: 1px 0;
+            border-radius: 3px;
+
+            padding: $grid * 2 $grid * 6;
+
+            padding-top: $grid * 1.5;
+
+            color: $color-note-text;
+        }
+
+	@media (max-width: $breakpoint-mini) {
+            margin: $grid * 2 (-$grid * 4);
+
+	    .note-content {
+		padding-left: $grid * 4;
+		padding-right: $grid * 4;
+	    }
+        }
+
+/*
     @media(min-width: $breakpoint-tablet + 1px) {
       display: block;
       float: right;
@@ -395,244 +460,283 @@ $code-blue: #1177aa;
       margin-left: $grid * 2;
       margin-right: $grid * 2;
     }
-    */
-
-  }
-
-  figure.img {
-
-    background: white;
-
-    padding: $grid * 2 0;
-    margin: $grid * 2 auto;
-
-    img {
-      width: 100%;
-      opacity: 0;
-
-      transition: opacity $anim-load ease-out;
-
-      body.loaded & {
-        opacity: 1;
-      }
+*/
 
     }
 
-    &.left,
-    &.right,
-    &.small {
-      max-width: 640px;
-    }
-    
-    &.full-bleed {
-      margin-left: -$grid * 4;
-      margin-right: -$grid * 4;
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
-    @media (max-width: 600px) {
-      
-      &.full-bleed {
+    a.source-link {
+        margin: $grid * 2;
         margin-left: -$grid * 2;
         margin-right: -$grid * 2;
-      }
-      
-    }
-    
-    @media (min-width: 800px) {
+        
+        padding: $grid * 1.5 $grid * 4;
 
-      &.left, &.right {
-        padding: $grid * 2;
-        margin: $grid * 2;
-    
-        width: calc(50% - (#{$grid} * 2));
-        max-width: 50%;
-      }
+        padding-right: $grid * 4 + 32px;
 
-      &.left {
-        float: left;
-        padding-left: 0;
-        margin-left: 0;
-        clear: left;
-      }
-      
-      &.right {
-        float: right;
-        padding-right: 0;
-        margin-right: 0;
-        clear: right;
-      }
-      
-    }
+        font-size: 115%;
+        font-weight: bold;
 
-    @media print {
-      display: block !important;
-      break-before: avoid;
-      break-after: avoid;
-      break-inside: avoid;
-    }
+        border-radius: 3px;
+        
+        background-color: $color-info;
+        border: 1px solid $color-info-border;
 
-    &.left, &.right {
-      @media print {
-        max-width: 35%;
+        background-image: url('/img/source-arrow-right.png');
+        background-position: 100% 50%;
+        background-position: calc(100% - #{$grid * 2}) 50%;
+        background-repeat: no-repeat;
 
-        margin-left: $grid * 2;
-        float: right;
-      }
-    }
+        transition: background-color 0.1s ease, border-color 0.1s ease, background-position 0.15s ease;
 
-    figcaption {
-      font-size: 12px;
-      font-style: italic;
-
-      text-align: center;
-
-      .credit {
-        display: block;
-      }
-      
-    }
-    
-    @media (min-width: 1440px) {
-
-      &.left, &.right {
-        box-shadow: 0 $grid/4 $grid/1.2 rgba(black, 0.3);
-        padding: $grid;
-        margin: $grid * 2 $grid * 4;
-      }
-    
-      &.left {
-        margin-left: -256px;
-        max-width: 320px;
-      }
-      
-      &.right {
-        margin-right: -256px;
-      }
-      
-    }
-    
-    @media (min-width: 1900px) {
-
-      &.left, &.right {
-        max-width: 480px;
-        padding: $grid;
-        margin: $grid * 2 $grid * 4;
-      }
-      
-      &.left {
-        margin-left: -384px;
-      }
-      
-      &.right {
-        margin-right: -384px;
-      }
-      
-    }
-    
-    @media (min-width: 2400px) {
-
-      &.left {
-        margin-left: -460px;
-      }
-      
-      &.right {
-        margin-right: -460px;
-      }
-      
-    }
-    
-  }
-
-  figure.sequence {
-
-    margin: $grid * 6 0;
-
-    .images {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-
-      img {
-        flex: 1;
-        display: inline-block;
-        max-width: 128px !important;
-
-        @media (min-width: $breakpoint-mobile) {
-          margin: 0 $grid * 2;
+        .pre-text, .name {
+            color: $color-info-text;
         }
 
-      }
-      
+        &:hover {
+            background-color: mix($color-info, #fff, 50%);
+            border-color: lighten($color-info-border, 5%);
+            background-position: calc(100% - #{$grid * 1.5}) 50%;
+        }
     }
 
-    figcaption {
-      font-size: 12px;
-      font-style: italic;
+    figure.img {
 
-      text-align: center;
+        background: white;
 
+        @media print {
+            display: block !important;
+            break-before: avoid;
+            break-after: avoid;
+            break-inside: avoid;
+        }
+
+        &.left, &.right {
+            @media print {
+                max-width: 35%;
+
+                margin-left: $grid * 2;
+                float: right;
+            }
+        }
+
+        figcaption {
+            font-size: 12px;
+            font-style: italic;
+            padding: $grid * 2 0;
+            margin: $grid * 2 auto;
+
+            img {
+                width: 100%;
+                opacity: 0;
+
+                transition: opacity $anim-load ease-out;
+
+                body.loaded & {
+                    opacity: 1;
+                }
+
+            }
+
+            &.left,
+            &.right,
+            &.small {
+                max-width: 640px;
+            }
+            
+            &.full-bleed {
+                margin-left: -$grid * 4;
+                margin-right: -$grid * 4;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            @media (max-width: 600px) {
+                
+                &.full-bleed {
+                    margin-left: -$grid * 2;
+                    margin-right: -$grid * 2;
+                }
+                
+            }
+            
+            @media (min-width: 800px) {
+
+                &.left, &.right {
+                    padding: $grid * 2;
+                    margin: $grid * 2;
+                    
+                    width: calc(50% - (#{$grid} * 2));
+                    max-width: 50%;
+                }
+
+                &.left {
+                    float: left;
+                    padding-left: 0;
+                    margin-left: 0;
+                    clear: left;
+                }
+                
+                &.right {
+                    float: right;
+                    padding-right: 0;
+                    margin-right: 0;
+                    clear: right;
+                }
+                
+            }
+
+            figcaption {
+                font-size: 12px;
+                font-style: italic;
+
+                text-align: center;
+
+                .credit {
+                    display: block;
+                }
+                
+            }
+            
+            @media (min-width: 1440px) {
+
+                &.left, &.right {
+                    box-shadow: 0 $grid/4 $grid/1.2 rgba(black, 0.3);
+                    padding: $grid;
+                    margin: $grid * 2 $grid * 4;
+                }
+                
+                &.left {
+                    margin-left: -256px;
+                    max-width: 480px;
+                }
+                
+                &.right {
+                    margin-right: -256px;
+                }
+                
+            }
+            
+            @media (min-width: 1900px) {
+
+                &.left, &.right {
+                    max-width: 480px;
+                    padding: $grid;
+                    margin: $grid * 2 $grid * 4;
+                }
+                
+                &.left {
+                    margin-left: -384px;
+                }
+                
+                &.right {
+                    margin-right: -384px;
+                }
+                
+            }
+            
+            @media (min-width: 2400px) {
+
+                &.left {
+                    margin-left: -460px;
+                }
+                
+                &.right {
+                    margin-right: -460px;
+                }
+                
+            }
+            
+        }
+
+        figure.sequence {
+
+            margin: $grid * 6 0;
+
+            .images {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                img {
+                    flex: 1;
+                    display: inline-block;
+                    max-width: 128px !important;
+
+                    @media (min-width: $breakpoint-mobile) {
+                        margin: 0 $grid * 2;
+                    }
+
+                }
+                
+            }
+
+            figcaption {
+                font-size: 12px;
+                font-style: italic;
+
+                text-align: center;
+
+            }
+
+            > figcaption {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+        }
+
+        table {
+            margin: $grid * 4 auto;
+
+            box-sizing: content-box;
+
+            border-collapse: collapse;
+
+            th, td {
+                border: none;
+                padding: $grid/2 $grid * 2;
+
+                vertical-align: top;
+            }
+
+            th {
+                border-bottom: $style-solid-border;
+                
+                font-weight: bold;
+
+                padding: $grid $grid * 2;
+
+                white-space: nowrap;
+            }
+
+            td:first-child, th:first-child {
+                border-left: none;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            @media (max-width: 800px) {
+                
+                th, td {
+                    padding-left: $grid;
+                    padding-right: $grid;
+                }
+                
+            }
+            
+        }
+
+        :first-child {
+            margin-top: 0;
+        }
+        
+        :last-child {
+            margin-bottom: 0;
+        }
+        
     }
-
-    > figcaption {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-  }
-
-  table {
-    margin: $grid * 4 auto;
-
-    box-sizing: content-box;
-
-    border-collapse: collapse;
-
-    th, td {
-      border: none;
-      padding: $grid/2 $grid * 2;
-
-      vertical-align: top;
-    }
-
-    th {
-      border-bottom: $style-solid-border;
-      
-      font-weight: bold;
-
-      padding: $grid $grid * 2;
-
-      white-space: nowrap;
-    }
-
-    td:first-child, th:first-child {
-      border-left: none;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    @media (max-width: 800px) {
-      
-      th, td {
-        padding-left: $grid;
-        padding-right: $grid;
-      }
-      
-    }
-    
-  }
-
-  :first-child {
-    margin-top: 0;
-  }
-  
-  :last-child {
-    margin-bottom: 0;
-  }
-  
 }

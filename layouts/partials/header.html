@@ -3,7 +3,7 @@
   <head>
     {{ partial "meta.html" . }}
     
-    <base href="{{ .Site.BaseURL }}">
+    <base href="{{ .Params.url }}">
     <link rel="canonical" href="{{ .Permalink }}">
     
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sass src/css/main.scss static/css/style.css --watch
+sass --watch src/css/main.scss:static/css/style.css

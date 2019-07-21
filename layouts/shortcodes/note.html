@@ -1,6 +1,9 @@
-<aside class="note">
+{{ $_hugo_config := `{ "version": 1 }` }}
+<section class="note">
   {{ with .Get "title" }}
-  <header><h1 class="title">{{ . }}</h1></header>
+  <header><h1 class="title">{{ . | markdownify }}</h1></header>
   {{ end }}
-  {{ .Inner }}
-</aside>
+  <div class="note-content">
+    {{ .Inner }}
+  </div>
+</section>

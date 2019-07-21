@@ -157,7 +157,7 @@ main.article article {
   .attribution,
   .patreon-link,
   .license {
-    padding: $grid * 4 $grid * 4;
+    padding: $grid * 4 $grid * 6;
 
     @include text();
     
