@@ -10,6 +10,8 @@ $code-keyword: #8A048C;
 $code-comment: #888;
 $code-string: #1b8e40;
 
+@import url('https://fonts.googleapis.com/css?family=Literata:400,400i,700&display=swap');
+
 /* TODO: SCSS has ways around this but I'm too lazy to bother. */
 @-webkit-keyframes target-fade {
     from { background-color: $color-target; }
@@ -35,6 +37,11 @@ $code-string: #1b8e40;
 
     line-height: 1.8em;
 
+    body.serif & {
+        font-family: 'Literata', serif;
+        line-height: 2em;
+    }
+
     p + p {
         margin-top: 1.5em;
     }
@@ -58,7 +65,7 @@ $code-string: #1b8e40;
             display: block;
             text-align: center;
             
-            margin: $grid * 2 auto;
+            margin: $grid * 4 auto;
             padding-left: 2em;
             letter-spacing: 2em;
         }
@@ -66,13 +73,12 @@ $code-string: #1b8e40;
     }
 
     blockquote {
-        border-left: 4px solid rgba(black, 0.3);
+        background-color: rgba(black, 0.02);
+        border-left: 4px solid rgba(black, 0.15);
 
-        margin: $grid * 4 $grid;
-        margin-right: 0;
+        margin: $grid * 3 0;
         
         padding: $grid * 2 $grid * 3;
-        padding-right: 0;
     }
 
     > h1, > h2, > h3, > h4, > h5, > h6 {

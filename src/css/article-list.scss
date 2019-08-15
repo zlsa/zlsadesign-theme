@@ -249,6 +249,10 @@ $headline-padding-vertical: $grid * 1.5;
     .meta {
 
       justify-content: center;
+
+      .categories {
+        background: transparent;
+      }
       
       .tags {
         display: none;
