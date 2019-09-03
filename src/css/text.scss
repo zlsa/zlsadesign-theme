@@ -82,12 +82,14 @@ $code-string: #1b8e40;
     }
 
     > h1, > h2, > h3, > h4, > h5, > h6 {
-        margin-top: 2rem;
-
         margin-left: -$grid * 6;
         margin-right: -$grid * 6;
         padding: $grid * 1.5 $grid * 6;
         
+    }
+
+    * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+        margin-top: 2rem;
     }
 
     > h1 {

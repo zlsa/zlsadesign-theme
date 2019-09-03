@@ -20,6 +20,10 @@ main.article article {
       display: block;
     }
 
+    body.serif & {
+      font-family: 'Literata', serif;
+    }
+
     .section {
 
       margin-right: $grid * 2;
