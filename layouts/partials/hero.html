@@ -1,9 +1,9 @@
 <div id="hero" class="{{ .Params.hero.class }}">
-  <div class="hero-contents" style="background-image: url('{{ .Params.hero.image }}')">
+  <a class="hero-contents" href="{{ .Params.hero.url }}" style="background-image: url('{{ .Params.hero.image }}')">
     <div class="message-box">
-      <span class="message small">Here&rsquo;s something I&rsquo;ve made:</span>
-      <a class="message large" href="{{ .Params.hero.url }}">{{ .Params.hero.title }}</a>
-      <span class="message small">Keep scrolling to see other things that I&rsquo;ve made.</span>
+      <!--<span class="message small">Here&rsquo;s something I&rsquo;ve made:</span>-->
+      <span class="message large">{{ .Params.hero.title }}</span>
+      <span class="message small">Below, see even more of my projects.</span>
     </div>
-  </div>
+  </a>
 </div>

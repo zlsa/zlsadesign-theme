@@ -27,6 +27,10 @@
   
 }
 */
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
 /*
   transform: translateY(-$offset);
   opacity: 0;
@@ -38,13 +42,17 @@
   
 }
 */
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
 #page-header {
   user-select: none;
   z-index: 1000;
   color: blue;
   width: 100%;
   height: 64px;
-  background-color: #303030;
+  background-color: #000;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
@@ -252,7 +260,7 @@ body.no-js nav,
   max-height: 392px !important; }
 
 body.no-js #page-header {
-  background: #303030 !important;
+  background: #000 !important;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
   height: auto !important;
   min-height: 80px !important; }
@@ -355,6 +363,14 @@ body.story[data-section=project] #page-header nav ul li.link-projects a span {
 @media print {
   #page-header {
     display: none; } }
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
 /* TODO: SCSS has ways around this but I'm too lazy to bother. */
 @-webkit-keyframes target-fade {
   from {
@@ -377,7 +393,8 @@ body.story[data-section=project] #page-header nav ul li.link-projects a span {
   to {
     background-color: #fae7d1; } }
 main.article article {
-  /*
+  font-size: 16px;
+    /*
   .actions.app-info {
 
     a {
@@ -397,11 +414,11 @@ main.article article {
       &:hover {
         background-color: transparent;
       }
-      
+    
     }
     
   }
-*/ }
+   */ }
   main.article article .headline {
     padding: 8px 32px;
     padding-top: 0;
@@ -475,6 +492,9 @@ main.article article {
       main.article article .headline {
         padding-left: 16px;
         padding-right: 16px; } }
+  main.article article.art .headline {
+    margin-top: 1em;
+    margin-bottom: 1em; }
   main.article article .body {
     background-color: white;
     box-shadow: 0 0 64px black; }
@@ -1066,22 +1086,22 @@ article .meta {
   flex-wrap: wrap;
   font-size: 12px;
   min-height: 48px;
-    /*
-    @media (max-width: 400px) {
-      align-items: stretch !important;
-      flex-direction: column;
-
-      ul {
-        border-left: none !important;
-        width: 100%;
+  /*
+      @media (max-width: 400px) {
+        align-items: stretch !important;
+        flex-direction: column;
+  
+        ul {
+          border-left: none !important;
+          width: 100%;
+        }
+  
+        ul + ul {
+          border-top: 4px solid $color-background;
+        }
+  
       }
-      
-      ul + ul {
-        border-top: 4px solid $color-background;
-      }
-      
-    }
-   */ }
+  */ }
   @media print {
     article .meta {
       display: none; } }
@@ -1123,11 +1143,11 @@ article .meta {
       background: #f4f4f4; }
       article .meta ul {
         flex: 1;
-       /*
-       flex-direction: column;
-       align-items: stretch;
-       justify-content: flex-start;
-      */
+        /*
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-start;
+       */
         padding: 0; }
       article .meta li {
         height: auto; }
@@ -1242,6 +1262,10 @@ body.story article .content .body a[href] {
   color: #07d !important;
   text-decoration: underline; }
 
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
 /* TODO: SCSS has ways around this but I'm too lazy to bother. */
 @-webkit-keyframes target-fade {
   from {
@@ -2014,13 +2038,17 @@ body.loaded main.article-list article .headline .publish-time {
   
 }
 */
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
 #page-header {
   user-select: none;
   z-index: 1000;
   color: blue;
   width: 100%;
   height: 64px;
-  background-color: #303030;
+  background-color: #000;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
@@ -2228,7 +2256,7 @@ body.no-js nav,
   max-height: 392px !important; }
 
 body.no-js #page-header {
-  background: #303030 !important;
+  background: #000 !important;
   box-shadow: 0 -100px 8px 100px rgba(0, 0, 0, 0.7), 0 -100px 20px 100px rgba(0, 0, 0, 0.5);
   height: auto !important;
   min-height: 80px !important; }
@@ -2331,6 +2359,14 @@ body.story[data-section=project] #page-header nav ul li.link-projects a span {
 @media print {
   #page-header {
     display: none; } }
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
+/* Black theme */
+/*
+$color-page-background: #000;
+*/
 #footer {
   z-index: 100;
   margin-top: 64px;
@@ -2440,7 +2476,7 @@ body.story #page-background:after {
   min-height: 20em;
   height: 100vh;
   margin: 0 auto;
-  margin-bottom: -224px; }
+  margin-bottom: -160px; }
   @media (max-width: 900px) {
     #hero {
       padding-top: 0;
@@ -2459,7 +2495,8 @@ body.story #page-background:after {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    padding-bottom: 32px; }
     @media (max-width: 750px) {
       #hero .hero-contents {
         box-shadow: none; } }
@@ -2488,6 +2525,18 @@ body.story #page-background:after {
           font-style: italic; }
       #hero .hero-contents .message-box a.message:hover {
         text-decoration: underline; }
+      #hero .hero-contents .message-box .message.large {
+        padding-right: 64px;
+        background-image: url("/img/source-arrow-right.png");
+        background-size: 32px;
+        background-position: 100% 50%;
+        background-position: calc(100% - 16px) 50%;
+        background-repeat: no-repeat;
+        transition: background-color 0.1s ease, border-color 0.1s ease, background-position 0.15s ease; }
+        #hero .hero-contents .message-box .message.large:hover {
+          background-color: #f9f9f9;
+          border-color: #e6e6e6;
+          background-position: calc(100% - 12px) 50%; }
     #hero .hero-contents .title {
       width: 100%;
       background-color: rgba(0, 0, 0, 0.7);
@@ -2501,8 +2550,14 @@ body.story #page-background:after {
       padding-top: 128px; }
 
 #hero.message-bottom .hero-contents {
-  justify-content: flex-end !important;
-  padding-bottom: 1em; }
+  justify-content: flex-end !important; }
+  #hero.message-bottom .hero-contents .message-box {
+    margin-bottom: 64px;
+    padding-bottom: 4vh; }
+  @media (max-width: 750px) {
+    #hero.message-bottom .hero-contents .message-box {
+      margin-bottom: 32px;
+      padding-bottom: 0; } }
 
 #hero.apps .message {
   background-color: #8BC34A; }

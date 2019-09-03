@@ -17,8 +17,8 @@
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="source-arrow-right.svg"
    inkscape:export-filename="/home/zlsa/documents/websites/zlsadesign.com/themes/zlsadesign/static/img/source-arrow-right.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-xdpi="192.00002"
+   inkscape:export-ydpi="192.00002">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="31.678384"
-     inkscape:cx="24.906204"
+     inkscape:cx="14.268036"
      inkscape:cy="17.487273"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -53,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -63,12 +63,12 @@
      id="layer1"
      transform="translate(0,-288.53332)">
     <path
-       style="fill:none;stroke:#606060;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#202020;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 2.1166666,292.76665 H 6.3499999"
        id="path3734"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#606060;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#202020;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 5.0270833,294.08957 1.3229166,-1.32292 -1.3229166,-1.32291"
        id="path4541"
        inkscape:connector-curvature="0"

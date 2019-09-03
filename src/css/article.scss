@@ -8,207 +8,214 @@
 
 main.article article {
 
-  .headline {
+    font-size: 16px;
 
-    padding: $grid * 1 $grid * 4;
-    padding-top: 0;
-    position: relative;
+    .headline {
 
-    display: flex;
+        padding: $grid * 1 $grid * 4;
+        padding-top: 0;
+        position: relative;
 
-    * {
-      display: block;
-    }
+        display: flex;
 
-    body.serif & {
-      font-family: 'Literata', serif;
-    }
-
-    .section {
-
-      margin-right: $grid * 2;
-      
-      a {
-        box-shadow: 0 0 $grid rgba(black, 0.5);
-        
-        background-color: rgba(white, 0.7);
-        
-        display: block;
-
-        height: $grid * 5;
-        line-height: $grid * 5;
-        
-        font-size: $grid * 2;
-        font-weight: bold;
-        text-transform: uppercase;
-
-        padding: 0 $grid * 2;
-      }
-      
-    }
-    
-    .title {
-      color: white;
-      
-      font-size: $grid * 4;
-      font-weight: bold;
-
-      margin-right: $grid * 4;
-
-      body.story & {
-        color: $color-foreground-primary;
-      }
-
-      @media print {
-        color: #000;
-      }
-
-    }
-
-    .publish-time {
-      color: white;
-      font-style: italic;
-      text-align: right;
-
-      opacity: 0;
-      
-      transition: opacity $anim-load ease;
-
-      flex: 1;
-
-      align-self: flex-end;
-      padding-bottom: $grid * 0.5;
-
-      time, .reading-time {
-        display: inline-block;
-        white-space: nowrap;
-      }
-
-      time.raw-time {
-        display: none;
-      }
-
-      @media print {
-        .reading-time {
-          display: none;
+        * {
+            display: block;
         }
 
-        time.relative {
-          display: none;
+        body.serif & {
+            font-family: 'Literata', serif;
         }
 
-        time.raw-time {
-          display: inline-block;
+        .section {
+
+            margin-right: $grid * 2;
+            
+            a {
+                box-shadow: 0 0 $grid rgba(black, 0.5);
+                
+                background-color: rgba(white, 0.7);
+                
+                display: block;
+
+                height: $grid * 5;
+                line-height: $grid * 5;
+                
+                font-size: $grid * 2;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                padding: 0 $grid * 2;
+            }
+            
+        }
+        
+        .title {
+            color: white;
+            
+            font-size: $grid * 4;
+            font-weight: bold;
+
+            margin-right: $grid * 4;
+
+            body.story & {
+                color: $color-foreground-primary;
+            }
+
+            @media print {
+                color: #000;
+            }
+
         }
 
-      }
+        .publish-time {
+            color: white;
+            font-style: italic;
+            text-align: right;
 
-      .reading-time:after {
-        content: "/";
-        display: inline-block;
-        padding: 0 4px;
-      }
+            opacity: 0;
+            
+            transition: opacity $anim-load ease;
 
-      body.story & {
-        color: $color-foreground-secondary;
-      }
+            flex: 1;
 
-    }
-    
-    @media (max-width: $breakpoint-mobile) {
+            align-self: flex-end;
+            padding-bottom: $grid * 0.5;
 
-      flex-direction: column;
-      padding: $grid * 1 $grid * 2;
+            time, .reading-time {
+                display: inline-block;
+                white-space: nowrap;
+            }
 
-      .section, .title, .publish-time {
-        display: block;
-        position: static;
+            time.raw-time {
+                display: none;
+            }
 
-        margin-top: 1ex;
-        align-self: flex-start;
-      }
+            @media print {
+                .reading-time {
+                    display: none;
+                }
 
-      .title {
-        font-size: $grid * 3;
-      }
+                time.relative {
+                    display: none;
+                }
 
-    }
-      
-    @media (max-width: $breakpoint-mini) {
-      padding-left: $grid * 2;
-      padding-right: $grid * 2;
-    }
-    
-  }
+                time.raw-time {
+                    display: inline-block;
+                }
 
-  .body {
-    background-color: white;
-    
-    box-shadow: 0 0 $grid * 8 black;
+            }
 
-    body.story & {
-      box-shadow: 0 $grid/4 $grid rgba(black, 0.2);
-    }
+            .reading-time:after {
+                content: "/";
+                display: inline-block;
+                padding: 0 4px;
+            }
 
-    @media print {
-      box-shadow: none !important;
-    }
+            body.story & {
+                color: $color-foreground-secondary;
+            }
 
-  }
+        }
+        
+        @media (max-width: $breakpoint-mobile) {
 
-  .actions,
-  .content,
-  .attribution,
-  .patreon-link,
-  .license {
-    padding: $grid * 4 $grid * 6;
+            flex-direction: column;
+            padding: $grid * 1 $grid * 2;
 
-    @include text();
-    
-    @media (max-width: $breakpoint-mini) {
-      padding: $grid * 2 $grid * 2;
-    }
+            .section, .title, .publish-time {
+                display: block;
+                position: static;
 
-    p:empty {
-      display: none;
-    }
-    
-  }
+                margin-top: 1ex;
+                align-self: flex-start;
+            }
 
-  .actions {
-    background-color: $color-meta-background;
+            .title {
+                font-size: $grid * 3;
+            }
 
-    @include button-row();
-
-    padding: $grid $grid * 2;
-    height: auto;
-
-    a {
-      @include button();
-      height: $grid * 6;
-      line-height: $grid * 6;
-      
-      padding: 0 $grid * 2;
-      margin-right: $grid * 2;
-      
-      @media (max-width: $breakpoint-tablet) {
-        height: $grid * 4;
-        line-height: $grid * 4;
-      }
-      
-    }
-    
-  }
-
-  .actions,
-  .patreon-link {
-    @media print {
-      display: none;
+        }
+        
+        @media (max-width: $breakpoint-mini) {
+            padding-left: $grid * 2;
+            padding-right: $grid * 2;
+        }
+        
     }
 
-  }
+    &.art .headline {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 
-  /*
+    .body {
+        background-color: white;
+        
+        box-shadow: 0 0 $grid * 8 black;
+
+        body.story & {
+            box-shadow: 0 $grid/4 $grid rgba(black, 0.2);
+        }
+
+        @media print {
+            box-shadow: none !important;
+        }
+
+    }
+
+    .actions,
+    .content,
+    .attribution,
+    .patreon-link,
+    .license {
+        padding: $grid * 4 $grid * 6;
+
+        @include text();
+        
+        @media (max-width: $breakpoint-mini) {
+            padding: $grid * 2 $grid * 2;
+        }
+
+        p:empty {
+            display: none;
+        }
+        
+    }
+
+    .actions {
+        background-color: $color-meta-background;
+
+        @include button-row();
+
+        padding: $grid $grid * 2;
+        height: auto;
+
+        a {
+            @include button();
+            height: $grid * 6;
+            line-height: $grid * 6;
+            
+            padding: 0 $grid * 2;
+            margin-right: $grid * 2;
+            
+            @media (max-width: $breakpoint-tablet) {
+                height: $grid * 4;
+                line-height: $grid * 4;
+            }
+            
+        }
+        
+    }
+
+    .actions,
+    .patreon-link {
+        @media print {
+            display: none;
+        }
+
+    }
+
+    /*
   .actions.app-info {
 
     a {
@@ -228,374 +235,374 @@ main.article article {
       &:hover {
         background-color: transparent;
       }
-      
+    
     }
     
   }
-*/
+   */
 
-  .attribution {
-    padding: 0 $grid * 4;
-    padding-bottom: $grid;
-    margin-top: $grid * 2;
+    .attribution {
+        padding: 0 $grid * 4;
+        padding-bottom: $grid;
+        margin-top: $grid * 2;
 
-    text-align: right;
+        text-align: right;
 
-    color: $color-foreground-secondary;
+        color: $color-foreground-secondary;
 
-    font-style: italic;
-  }
-  
-  .license {
-    padding: $grid * 2 $grid * 2;
-
-    padding-top: 0;
-
-    margin-top: $grid * 2;
-    
-    p {
-//      background-color: ;
-      color: $color-infographics;
-      
-      font-weight: bold;
-      text-align: center;
-      
-      padding: $grid * 1 $grid * 2;
-
-      a {
-        color: $color-infographics !important;
-        text-decoration: underline;
-      }
-      
-    }
-
-  }
-  
-  .patreon-link {
-    padding: $grid * 2 $grid * 2;
-
-    padding-top: 0;
-
-    margin-top: $grid * 2;
-    
-    p {
-      background-color: $color-donate;
-      color: #444;
-      
-      font-weight: bold;
-      text-align: center;
-      
-      padding: $grid * 1 $grid * 2;
-
-      a {
-        color: #444 !important;
-        text-decoration: underline;
-      }
-      
-    }
-
-  }
-  
-  .further-reading {
-
-    padding: $grid * 2 $grid * 4;
-
-    @media (max-width: 600px) {
-      padding: $grid * 2 $grid * 2;
+        font-style: italic;
     }
     
-    padding-top: 0;
+    .license {
+        padding: $grid * 2 $grid * 2;
 
-    .title {
-      font-size: $grid * 2;
-      font-weight: bold;
-      
-      margin-top: 1em;
-      margin-bottom: 1ex;
+        padding-top: 0;
 
-      display: none;
+        margin-top: $grid * 2;
+        
+        p {
+            //      background-color: ;
+            color: $color-infographics;
+            
+            font-weight: bold;
+            text-align: center;
+            
+            padding: $grid * 1 $grid * 2;
+
+            a {
+                color: $color-infographics !important;
+                text-decoration: underline;
+            }
+            
+        }
+
     }
     
-    ul {
-      
-      border-top: $style-border;
-      padding-top: $grid * 2;
-    
-      li {
-        list-style-type: none;
+    .patreon-link {
+        padding: $grid * 2 $grid * 2;
 
-        a {
-          color: $color-primary;
-          font-weight: bold;
+        padding-top: 0;
+
+        margin-top: $grid * 2;
+        
+        p {
+            background-color: $color-donate;
+            color: #444;
+            
+            font-weight: bold;
+            text-align: center;
+            
+            padding: $grid * 1 $grid * 2;
+
+            a {
+                color: #444 !important;
+                text-decoration: underline;
+            }
+            
+        }
+
+    }
+    
+    .further-reading {
+
+        padding: $grid * 2 $grid * 4;
+
+        @media (max-width: 600px) {
+            padding: $grid * 2 $grid * 2;
         }
         
-      }
-      
-    }
-    
-  }
-  
-  // Handling of different types
+        padding-top: 0;
 
-  &.project {
-    
-    .embed {
-
-      background-color: $color-projects;
-
-      &.sketchfab iframe {
-        display: block;
-        width: 100%;
-      }
-      
-    }
-    
-  }
-
-  &.article {
-
-    .warning {
-      background-color: $color-articles;
-      color: white;
-      font-size: 14px;
-      font-style: italic;
-      text-align: center;
-      
-      margin-top: -$grid * 2;
-      margin-bottom: $grid * 6;
-
-      margin-left: -$grid * 2;
-      margin-right: -$grid * 2;
-
-      padding: $grid $grid * 2;
-    }
-
-    @media (min-width: 800px) {
-      .headline {
-        padding-top: $grid * 4;
-        padding-bottom: $grid * 4;
-      }
-    }
-
-    .content {
-      font-size: 1.1em;
-
-      padding-top: $grid * 4;
-    }
-    
-  }
-
-  &.art,
-  &.infographic {
-
-    margin-top: -$grid * 2;
-
-    .art,
-    .infographic {
-      background-color: white;
-      padding: 0;
-
-      a {
-        display: block;
-      }
-
-      img {
-        display: block;
-        width: 100%;
-      }
-    }
-
-    .actions {
-
-    }
-
-    @media (min-width: 1100px) {
-      
-      &.infographic .headline .title {
-        display: none;
-        font-size: $grid * 2;
-      }
-      
-      &.aspect-wide {
-
-        .body {
-          display: flex;
-          flex-direction: column;
-
-          .image {
-            box-shadow: 0 0 $grid * 2 rgba(black, 0.5);
+        .title {
+            font-size: $grid * 2;
+            font-weight: bold;
             
-            align-self: center;
+            margin-top: 1em;
+            margin-bottom: 1ex;
+
+            display: none;
+        }
+        
+        ul {
             
-            width: 1820px;
-            max-width: 95vw;
-          }
+            border-top: $style-border;
+            padding-top: $grid * 2;
+            
+            li {
+                list-style-type: none;
+
+                a {
+                    color: $color-primary;
+                    font-weight: bold;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    // Handling of different types
+
+    &.project {
+        
+        .embed {
+
+            background-color: $color-projects;
+
+            &.sketchfab iframe {
+                display: block;
+                width: 100%;
+            }
+            
+        }
+        
+    }
+
+    &.article {
+
+        .warning {
+            background-color: $color-articles;
+            color: white;
+            font-size: 14px;
+            font-style: italic;
+            text-align: center;
+            
+            margin-top: -$grid * 2;
+            margin-bottom: $grid * 6;
+
+            margin-left: -$grid * 2;
+            margin-right: -$grid * 2;
+
+            padding: $grid $grid * 2;
+        }
+
+        @media (min-width: 800px) {
+            .headline {
+                padding-top: $grid * 4;
+                padding-bottom: $grid * 4;
+            }
+        }
+
+        .content {
+            font-size: 1.1em;
+
+            padding-top: $grid * 4;
+        }
+        
+    }
+
+    &.art,
+    &.infographic {
+
+        margin-top: -$grid * 2;
+
+        .art,
+        .infographic {
+            background-color: white;
+            padding: 0;
+
+            a {
+                display: block;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .actions {
 
         }
 
-      }
-      
+        @media (min-width: 1100px) {
+            
+            &.infographic .headline .title {
+                display: none;
+                font-size: $grid * 2;
+            }
+            
+            &.aspect-wide {
+
+                .body {
+                    display: flex;
+                    flex-direction: column;
+
+                    .image {
+                        box-shadow: 0 0 $grid * 2 rgba(black, 0.5);
+                        
+                        align-self: center;
+                        
+                        width: 1820px;
+                        max-width: 95vw;
+                    }
+
+                }
+
+            }
+            
+        }
+        
+    }
+
+    &.redirect {
+
+        .content {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
     }
     
-  }
-
-  &.redirect {
-
-    .content {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    
-  }
-  
 }
 
 main.article.static {
 
-  .section {
-    display: none !important;
-  }
+    .section {
+        display: none !important;
+    }
 
-  .publish-time {
-    display: none !important;
-  }
+    .publish-time {
+        display: none !important;
+    }
 
-  .meta {
-    display: none;
-  }
+    .meta {
+        display: none;
+    }
 
 }
 
 article {
 
-  .comments {
+    .comments {
 
-    margin: $grid * 2 $grid * 4;
-    
-  }
-  
-  .meta {
-    
-    @media print {
-      display: none;
-    }
-
-    background-color: $color-meta-background;
-
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-    clear: both;
-
-    flex-wrap: wrap;
-
-    font-size: 12px;
-
-    min-height: $grid * 6;
-
-    body.story & {
-      background-color: transparent;
-
-      border-top: $style-solid-border-thin;
-
-      padding: ($grid * 2) 0;
-    }
-
-    ul {
-      background-color: $color-meta-background;
-
-      body.story & {
-        background-color: transparent;
-      }
-    
-      display: flex;
-      align-items: center;
-
-      padding: 0 $grid * 2;
-
-      min-height: $grid * 4;
-      
-      flex-wrap: wrap;
-      
-      &.tags {
-        border-top: 4px solid $color-background;
-
-        font-family: 'Roboto Mono', monospace;
+        margin: $grid * 2 $grid * 4;
         
-        li {
-          text-transform: none !important;
+    }
+    
+    .meta {
+        
+        @media print {
+            display: none;
+        }
+
+        background-color: $color-meta-background;
+
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        clear: both;
+
+        flex-wrap: wrap;
+
+        font-size: 12px;
+
+        min-height: $grid * 6;
+
+        body.story & {
+            background-color: transparent;
+
+            border-top: $style-solid-border-thin;
+
+            padding: ($grid * 2) 0;
+        }
+
+        ul {
+            background-color: $color-meta-background;
+
+            body.story & {
+                background-color: transparent;
+            }
+            
+            display: flex;
+            align-items: center;
+
+            padding: 0 $grid * 2;
+
+            min-height: $grid * 4;
+            
+            flex-wrap: wrap;
+            
+            &.tags {
+                border-top: 4px solid $color-background;
+
+                font-family: 'Roboto Mono', monospace;
+                
+                li {
+                    text-transform: none !important;
+                }
+                
+            }
+
+
+            li {
+                color: rgba(black, 0.4);
+                font-weight: bold;
+                text-transform: uppercase;
+
+                display: block;
+                height: $grid * 4;
+
+                a {
+                    display: flex;
+                    height: 100%;
+
+                    justify-content: center;
+                    align-items: center;
+
+                    span {
+                        vertical-align: middle;
+                    }
+
+                    padding: 0 $grid * 1.5;
+                    
+                    transition: background-color $anim-fast ease;
+                }
+                
+            }
+            
         }
         
-      }
+        @media (max-width: 800px) {
 
-
-      li {
-        color: rgba(black, 0.4);
-        font-weight: bold;
-        text-transform: uppercase;
-
-        display: block;
-        height: $grid * 4;
-
-        a {
-          display: flex;
-          height: 100%;
-
-          justify-content: center;
-          align-items: center;
-
-          span {
-            vertical-align: middle;
-          }
-
-          padding: 0 $grid * 1.5;
-          
-          transition: background-color $anim-fast ease;
-        }
-        
-      }
-      
-    }
-    
-    @media (max-width: 800px) {
-
-      background: $color-meta-background;
-      //align-items: flex-start;
-      
-      ul {
-        flex: 1;
-        
-        /*
+            background: $color-meta-background;
+            //align-items: flex-start;
+            
+            ul {
+                flex: 1;
+                
+                /*
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
-       */
-        
-        //min-height: $grid * 4;
-        padding: 0;
-      }
-      
-      ul + ul {
-        //border-left: 4px solid $color-background;
-      }
+               */
+                
+                //min-height: $grid * 4;
+                padding: 0;
+            }
+            
+            ul + ul {
+                //border-left: 4px solid $color-background;
+            }
 
-      li {
-        height: auto;
-      }
+            li {
+                height: auto;
+            }
 
-      li a {
-        min-height: $grid * 4 !important;
-        
-        justify-content: flex-start !important;
-        
-        padding: 0 $grid * 2;
-      }
-      
-    }
+            li a {
+                min-height: $grid * 4 !important;
+                
+                justify-content: flex-start !important;
+                
+                padding: 0 $grid * 2;
+            }
+            
+        }
 
-    /*
+/*
     @media (max-width: 400px) {
       align-items: stretch !important;
       flex-direction: column;
@@ -604,20 +611,20 @@ article {
         border-left: none !important;
         width: 100%;
       }
-      
+
       ul + ul {
         border-top: 4px solid $color-background;
       }
-      
+
     }
-   */
-    
-  }
-  
-  a[href]:hover {
-    text-decoration: underline;
-  }
+*/
         
+    }
+    
+    a[href]:hover {
+        text-decoration: underline;
+    }
+    
 }
 
 main.article article .section.section-app,
@@ -626,124 +633,124 @@ main.article article .section.section-article,
 main.article article .section.section-infographic,
 main.article article .section.section-post,
 main.article article .section.section-project {
-  display: none;
-  
-  @media (max-width: $breakpoint-mobile) {
     display: none;
-  }
-  
+    
+    @media (max-width: $breakpoint-mobile) {
+        display: none;
+    }
+    
 }
-  
+
 article .section.section-app a,
 article .section.section-article a,
 article .section.section-infographic a,
 article .section.section-post a,
 article .section.section-project a,
 article .section.section-term a {
-  color: white;
+    color: white;
 }
 
 article .section.section-app a {
-  background-color: $color-apps !important;
+    background-color: $color-apps !important;
 }
 
 article.app .body .actions a[href],
 article.app .content a[href],
 article.app .links .name,
 article.app .body .read-more a[href] {
-  color: $color-apps !important;
+    color: $color-apps !important;
 }
 
 article .section.section-art a {
-  background-color: $color-art !important;
-  color: $color-page-background !important;
+    background-color: $color-art !important;
+    color: $color-page-background !important;
 }
 
 article.art .body .actions a[href],
 article.art .links .name,
 article.art .body .read-more a[href] {
-  color: $color-page-background !important;
+    color: $color-page-background !important;
 }
 
 article.art .content a[href] {
-  color: $color-primary !important;
+    color: $color-primary !important;
 }
 
 article .section.section-article a {
-  background-color: $color-articles !important;
+    background-color: $color-articles !important;
 }
 
 article.article .body .actions a[href],
 article.article .content a[href],
 article.article .links .name,
 article.article .body .read-more a[href] {
-  color: $color-articles !important;
+    color: $color-articles !important;
 }
 
 article .section.section-infographic a {
-  background-color: $color-infographics !important;
+    background-color: $color-infographics !important;
 }
 
 article.infographic .body .actions a[href],
 article.infographic .content a[href],
 article.infographic .links .name,
 article.infographic .body .read-more a[href] {
-  color: $color-infographics !important;
+    color: $color-infographics !important;
 }
 
 article.infographic .license a[href] {
-  //color: white !important;
+    //color: white !important;
 }
 
 article .section.section-post a {
-  background-color: $color-posts !important;
+    background-color: $color-posts !important;
 }
 
 article.post .content a[href],
 article.post .body .read-more a[href] {
-  color: $color-posts !important;
+    color: $color-posts !important;
 }
 
 article .section.section-project a {
-  background-color: $color-projects !important;
+    background-color: $color-projects !important;
 }
 
 article.project .body .actions a[href],
 article.project .content a[href],
 article.project .links .name,
 article.project .body .read-more a[href] {
-  color: $color-projects !important;
+    color: $color-projects !important;
 }
 
 article .section.section-term a {
-  background-color: $color-term !important;
+    background-color: $color-term !important;
 }
 
 article.section-term .headline .publish-time {
-  display: none;
+    display: none;
 }
 
 body.no-js article .headline .publish-time,
 body.loaded article .headline .publish-time {
-  opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 article .actions a[href].button.right {
-  margin-left: auto;
-  
-  @media (max-width: $breakpoint-mobile) {
-    margin-left: $grid * 2;
-  }
-  
+    margin-left: auto;
+    
+    @media (max-width: $breakpoint-mobile) {
+        margin-left: $grid * 2;
+    }
+    
 }
 
 article .actions a[href].button.buy {
-  box-shadow: 0 0 0 $grid / 4 $color-page-background;
-  background-color: $color-donate !important;
-  color: $color-page-background !important;
+    box-shadow: 0 0 0 $grid / 4 $color-page-background;
+    background-color: $color-donate !important;
+    color: $color-page-background !important;
 }
 
 body.story article .content .body a[href] {
-  color: $color-link !important;
-  text-decoration: underline;
+    color: $color-link !important;
+    text-decoration: underline;
 }

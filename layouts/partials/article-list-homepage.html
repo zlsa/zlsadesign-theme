@@ -1,8 +1,10 @@
 
 <div class="article-list">
-  
-  {{ range where .Paginator.Pages "Section" "!=" "term" }}
+
+  {{ range where .Paginator.Pages "Section" "!=" "term"}}
+  {{ if (not (and (strings.HasSuffix .Permalink $.Params.hero.url) (eq $.Paginator.PageNumber 1))) }}
     {{ partial "article-list-item.html" . }}
+  {{ end }}
   {{ end }}
   
 </div>
