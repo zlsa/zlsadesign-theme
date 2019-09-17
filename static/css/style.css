@@ -512,7 +512,8 @@ main.article article {
     body.serif main.article article .patreon-link,
     body.serif main.article article .license {
       font-family: 'Literata', serif;
-      line-height: 2em; }
+      line-height: 2em;
+      hanging-punctuation: first; }
     main.article article .actions p + p, main.article article .content p + p, main.article article .attribution p + p, main.article article .patreon-link p + p, main.article article .license p + p {
       margin-top: 1.5em; }
     main.article article .actions a[href], main.article article .content a[href], main.article article .attribution a[href], main.article article .patreon-link a[href], main.article article .license a[href] {
@@ -1496,7 +1497,8 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
     padding: 16px 32px; }
     body.serif .article-list article .summary {
       font-family: 'Literata', serif;
-      line-height: 2em; }
+      line-height: 2em;
+      hanging-punctuation: first; }
     .article-list article .summary p + p {
       margin-top: 1.5em; }
     .article-list article .summary a[href] {

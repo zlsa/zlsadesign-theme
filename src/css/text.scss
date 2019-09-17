@@ -40,6 +40,8 @@ $code-string: #1b8e40;
     body.serif & {
         font-family: 'Literata', serif;
         line-height: 2em;
+        
+        hanging-punctuation: first;
     }
 
     p + p {
