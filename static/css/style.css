@@ -1449,6 +1449,23 @@ main.article article .license section.note .note-content {
     color: #c6d9ec;
   }
 }
+main.article article .actions section.note .note-content a,
+main.article article .content section.note .note-content a,
+main.article article .attribution section.note .note-content a,
+main.article article .patreon-link section.note .note-content a,
+main.article article .license section.note .note-content a {
+  text-decoration: underline;
+  color: #00264d !important;
+}
+@media (prefers-color-scheme: dark) {
+  main.article article .actions section.note .note-content a,
+main.article article .content section.note .note-content a,
+main.article article .attribution section.note .note-content a,
+main.article article .patreon-link section.note .note-content a,
+main.article article .license section.note .note-content a {
+    color: #c6d9ec !important;
+  }
+}
 @media (max-width: 500px) {
   main.article article .actions section.note,
 main.article article .content section.note,
@@ -1961,6 +1978,11 @@ main.article article .actions {
   padding: 8px 16px;
   height: auto;
 }
+@media (prefers-color-scheme: dark) {
+  main.article article .actions {
+    background-color: #282828;
+  }
+}
 main.article article .actions a {
   background-color: transparent;
   display: block;
@@ -1996,6 +2018,11 @@ main.article article .attribution {
   text-align: right;
   color: rgba(0, 0, 0, 0.54);
   font-style: italic;
+}
+@media (prefers-color-scheme: dark) {
+  main.article article .attribution {
+    color: rgba(255, 255, 255, 0.75);
+  }
 }
 main.article article .license {
   padding: 16px 16px;
@@ -3091,6 +3118,15 @@ body.serif .article-list article .summary {
     background-color: #204060;
     border-color: #9cb3c9;
     color: #c6d9ec;
+  }
+}
+.article-list article .summary section.note .note-content a {
+  text-decoration: underline;
+  color: #00264d !important;
+}
+@media (prefers-color-scheme: dark) {
+  .article-list article .summary section.note .note-content a {
+    color: #c6d9ec !important;
   }
 }
 @media (max-width: 500px) {
@@ -4278,7 +4314,7 @@ body.story {
 }
 @media (prefers-color-scheme: dark) {
   body.story {
-    background-color: #111;
+    background-color: #1a1a1a;
   }
 }
 

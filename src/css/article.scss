@@ -203,6 +203,10 @@ main.article article {
 
     .actions {
         background-color: $color-meta-background;
+        
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-dark-meta-background;
+        }
 
         @include button-row();
 
@@ -269,6 +273,10 @@ main.article article {
 
         color: $color-foreground-secondary;
 
+        @media (prefers-color-scheme: dark) {
+            color: $color-dark-foreground-secondary;
+        }
+        
         font-style: italic;
     }
     

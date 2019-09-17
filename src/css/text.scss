@@ -513,6 +513,16 @@ $code-string: #1b8e40;
                 border-color: $color-dark-note-border;
                 color: $color-dark-note-text;
             }
+
+            a {
+                text-decoration: underline;
+                
+                color: $color-note-text !important;
+                
+                @media (prefers-color-scheme: dark) {
+                    color: $color-dark-note-text !important;
+                }
+            }
         }
 
         @media (max-width: $breakpoint-mini) {
