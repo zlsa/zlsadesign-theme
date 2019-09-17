@@ -52,6 +52,10 @@ main.article article {
         .title {
             color: white;
             
+            @media (prefers-color-scheme: dark) {
+                color: $color-dark-foreground-primary;
+            }
+            
             font-size: $grid * 4;
             font-weight: bold;
 
@@ -59,6 +63,11 @@ main.article article {
 
             body.story & {
                 color: $color-foreground-primary;
+                
+                @media (prefers-color-scheme: dark) {
+                    color: $color-dark-foreground-primary;
+                }
+                
             }
 
             @media print {
@@ -69,6 +78,7 @@ main.article article {
 
         .publish-time {
             color: white;
+            
             font-style: italic;
             text-align: right;
 
@@ -115,6 +125,10 @@ main.article article {
                 color: $color-foreground-secondary;
             }
 
+            @media (prefers-color-scheme: dark) {
+                color: $color-dark-foreground-secondary !important;
+            }
+            
         }
         
         @media (max-width: $breakpoint-mobile) {
@@ -149,12 +163,17 @@ main.article article {
     }
 
     .body {
-        background-color: white;
+        background-color: $color-story-background;
         
         box-shadow: 0 0 $grid * 8 black;
 
         body.story & {
             box-shadow: 0 $grid/4 $grid rgba(black, 0.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background: $color-dark-background;
+            color: $color-dark-foreground-primary;
         }
 
         @media print {
@@ -489,7 +508,10 @@ article {
 
         background-color: $color-meta-background;
 
-
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-dark-meta-background;
+        }
+        
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -508,11 +530,21 @@ article {
             border-top: $style-solid-border-thin;
 
             padding: ($grid * 2) 0;
+            
+            @media (prefers-color-scheme: dark) {
+                background-color: #181818;
+                border-top: none;
+            }
         }
+        
 
         ul {
             background-color: $color-meta-background;
 
+            @media (prefers-color-scheme: dark) {
+                background-color: $color-dark-meta-background;
+            }
+            
             body.story & {
                 background-color: transparent;
             }
@@ -529,6 +561,10 @@ article {
             &.tags {
                 border-top: 4px solid $color-background;
 
+                @media (prefers-color-scheme: dark) {
+                    border-color: $color-dark-background;
+                }
+
                 font-family: 'Roboto Mono', monospace;
                 
                 li {
@@ -540,6 +576,11 @@ article {
 
             li {
                 color: rgba(black, 0.4);
+                
+                @media (prefers-color-scheme: dark) {
+                    color: rgba(white, 0.5);
+                }
+                
                 font-weight: bold;
                 text-transform: uppercase;
 

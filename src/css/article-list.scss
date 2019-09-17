@@ -20,6 +20,10 @@ $headline-padding-vertical: $grid * 1.5;
 
     background-color: white;
 
+    @media (prefers-color-scheme: dark) {
+        background-color: $color-dark-background;
+    }
+    
     .headline {
 
       padding-top: $grid;
@@ -72,6 +76,11 @@ $headline-padding-vertical: $grid * 1.5;
           
           padding: $headline-padding-vertical 0;
           text-decoration: underline;
+          
+          @media (prefers-color-scheme: dark) {
+              color: #ddd;
+          }
+          
         }
 
         .links {
@@ -104,6 +113,11 @@ $headline-padding-vertical: $grid * 1.5;
               padding: 0 $grid;
               box-sizing: content-box;
               transition: opacity $anim-fast ease;
+              
+              @media (prefers-color-scheme: dark) {
+                  filter: invert(1);
+              }
+              
             }
 
             .name {
@@ -164,6 +178,10 @@ $headline-padding-vertical: $grid * 1.5;
       
         &:hover {
           text-decoration: none;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            color: $color-dark-foreground-secondary;
         }
         
       }
@@ -240,6 +258,11 @@ $headline-padding-vertical: $grid * 1.5;
           font-weight: normal;
           text-transform: none;
           margin-left: 1ex;
+          
+          @media (prefers-color-scheme: dark) {
+              color: $color-dark-foreground-secondary;
+          }
+          
         }
         
       }

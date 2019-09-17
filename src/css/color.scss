@@ -14,6 +14,13 @@ $color-background: #fff;
 $color-foreground-primary: rgba(black, 0.87);
 $color-foreground-secondary: rgba(black, 0.54);
 
+$color-dark-background: #222;
+
+$color-dark-foreground-primary: rgba(white, 0.85);
+$color-dark-foreground-secondary: rgba(white, 0.75);
+
+$color-story-background: #fff;
+
 $color-primary: #dd6644;
 
 $color-apps: #8BC34A;
@@ -27,6 +34,8 @@ $color-term: #00BCD4;
 $color-donate: #FFC107;
 
 $color-meta-background: #f4f4f4;
+
+$color-dark-meta-background: #282828;
 
 $style-page-border: 2px solid rgba(white, 0.2);
 $style-border: 2px solid rgba(black, 0.1);
@@ -46,6 +55,11 @@ $color-note-border: hsla(210, 70%, 70%, 1.0);
 $color-note-text: hsla(210, 100%, 15%, 1.0);
 $color-note-title: hsla(210, 80%, 35%, 1.0);
 
+$color-dark-note: hsla(210, 50%, 25%, 1.0);
+$color-dark-note-border: hsla(210, 30%, 70%, 1.0);
+$color-dark-note-text: hsla(210, 50%, 85%, 1.0);
+$color-dark-note-title: hsla(210, 80%, 75%, 1.0);
+
 $color-unit: hsla(240, 100%, 95%, 1.0);
 $color-unit-border: hsla(240, 100%, 88%, 1.0);
 $color-unit-text: hsla(240, 100%, 15%, 1.0);
@@ -53,6 +67,10 @@ $color-unit-text: hsla(240, 100%, 15%, 1.0);
 $color-info: hsla(0, 0%, 95%, 1.0);
 $color-info-text: hsla(0, 0%, 30%, 1.0);
 $color-info-border: hsla(0, 0%, 85%, 1.0);
+
+$color-dark-info: hsla(0, 0%, 15%, 1.0);
+$color-dark-info-text: hsla(0, 0%, 80%, 1.0);
+$color-dark-info-border: hsla(0, 0%, 20%, 1.0);
 
 $color-target: hsla(32, 80%, 60%, 1);
 $color-target-fade: hsla(32, 80%, 90%, 1);

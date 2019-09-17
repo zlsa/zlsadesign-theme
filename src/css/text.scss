@@ -7,6 +7,8 @@ $code-blue: #1177aa;
 
 $code-keyword: #8A048C;
 
+$code-dark-keyword: #fb9efc;
+
 $code-comment: #888;
 $code-string: #1b8e40;
 
@@ -87,7 +89,12 @@ $code-string: #1b8e40;
         margin-left: -$grid * 6;
         margin-right: -$grid * 6;
         padding: $grid * 1.5 $grid * 6;
-        
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @media (prefers-color-scheme: dark) {
+            color: rgba(white, 1);
+        }
     }
 
     * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
@@ -200,13 +207,18 @@ $code-string: #1b8e40;
         &[data-lang] {
 
             color: rgba(black, 0.75);
-
+            
             .kd {
                 color: $code-orange;
             }
 
             .k {
                 color: $code-keyword;
+                
+                @media (prefers-color-scheme: dark) {
+                    color: $code-dark-keyword;
+                }
+                
             }
 
             .kt {
@@ -244,9 +256,28 @@ $code-string: #1b8e40;
             .m, .mb, .mf, .mh, .mi, .il, .mo {
                 font-weight: bold;
             }
-
+            
         }
 
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        code[data-lang] {
+
+            span {
+                color: #eee;
+            }
+
+            .p, .o {
+                color: #888;
+            }
+
+            .n, .nc {
+                color: #ddd;
+            }
+            
+        }
     }
 
     a[href] code {
@@ -273,6 +304,10 @@ $code-string: #1b8e40;
             width: calc(100% + #{$grid} * 2);
         }
         
+        @media (prefers-color-scheme: dark) {
+            background-color: #282828;
+        }
+        
         code {
             border: none;
             background-color: transparent;
@@ -289,7 +324,7 @@ $code-string: #1b8e40;
         //background-color: #f8f8f8;
         //background: linear-gradient(to bottom, #f8f8f8, #fcfcfc);
         
-        color: rgba(black, 0.7);
+        color: $color-foreground-primary;
         font-family: 'Roboto Mono', monospace;
         font-size: 0.8em;
 
@@ -301,6 +336,10 @@ $code-string: #1b8e40;
         
         padding-left: $grid * 4;
 
+        @media (prefers-color-scheme: dark) {
+            color: $color-dark-foreground-primary;
+        }
+        
         @media (max-width: 800px) {
             padding-left: $grid * 1;
             margin-left: -$grid;
@@ -315,6 +354,10 @@ $code-string: #1b8e40;
 
             position: relative;
 
+            @media (prefers-color-scheme: dark) {
+                border-color: #444;
+            }
+            
             &:after {
                 border: 8px solid transparent;
                 border-top-color: #aaa;
@@ -337,6 +380,10 @@ $code-string: #1b8e40;
 
         .file {
             color: rgba(black, 0.4);
+
+            @media (prefers-color-scheme: dark) {
+                color: rgba(white, 0.4);
+            }
         }
         
     }
@@ -418,6 +465,10 @@ $code-string: #1b8e40;
             margin-top: $grid * 2;
             
             color: $color-note-title;
+            
+            @media (prefers-color-scheme: dark) {
+                color: $color-dark-note-title;
+            }
 
             .title {
                 display: inline-block;
@@ -433,6 +484,11 @@ $code-string: #1b8e40;
                     background-color: darken($color-note, 2%);
                     padding: 0 8px;
                     font-size: 1.0em;
+                    
+                    @media (prefers-color-scheme: dark) {
+                        background-color: darken($color-dark-note, 5%);
+                    }
+                    
                 }
             }
 
@@ -442,6 +498,7 @@ $code-string: #1b8e40;
             background-color: $color-note;
 
             border: 0 solid $color-note-border;
+            
             //border-width: 1px 0;
             //border-radius: 3px;
 
@@ -450,6 +507,12 @@ $code-string: #1b8e40;
             padding-top: $grid * 1.5;
 
             color: $color-note-text;
+            
+            @media (prefers-color-scheme: dark) {
+                background-color: $color-dark-note;
+                border-color: $color-dark-note-border;
+                color: $color-dark-note-text;
+            }
         }
 
         @media (max-width: $breakpoint-mini) {
@@ -491,21 +554,59 @@ $code-string: #1b8e40;
         background-color: $color-info;
         border: 1px solid $color-info-border;
 
-        background-image: url('/img/source-arrow-right.png');
-        background-position: 100% 50%;
-        background-position: calc(100% - #{$grid * 2}) 50%;
-        background-repeat: no-repeat;
+        position: relative;
 
-        transition: background-color 0.1s ease, border-color 0.1s ease, background-position 0.15s ease;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            
+            height: 100%;
+            right: 0;
+            top: 0;
+            width: 32px + $grid * 2;
+
+            background-image: url('/img/source-arrow-right.png');
+            background-size: 32px 32px;
+            background-position: 0% 50%;
+            background-repeat: no-repeat;
+            
+            @media (prefers-color-scheme: dark) {
+                filter: invert(1);
+                opacity: 0.75;
+            }
+            
+            transition: background-position 0.15s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-dark-info;
+            border-color: $color-dark-info-border;
+        }
+        
+        transition: background-color 0.1s ease, border-color 0.1s ease;
 
         .pre-text, .name {
             color: $color-info-text;
+            
+            @media (prefers-color-scheme: dark) {
+                color: $color-dark-info-text;
+            }
         }
 
         &:hover {
             background-color: mix($color-info, #fff, 50%);
             border-color: lighten($color-info-border, 5%);
-            background-position: calc(100% - #{$grid * 1.5}) 50%;
+
+            &:after {
+                background-position: 25% 50%;
+            }
+            
+            @media (prefers-color-scheme: dark) {
+                background-color: lighten($color-dark-info, 5%);
+                border-color: lighten($color-dark-info-border, 5%);
+            }
+            
         }
     }
 
@@ -513,6 +614,12 @@ $code-string: #1b8e40;
 
         background: white;
 
+        margin: $grid * 2 0;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-dark-background;
+        }
+        
         @media print {
             display: block !important;
             break-before: avoid;
@@ -535,6 +642,9 @@ $code-string: #1b8e40;
             padding: $grid * 2 0;
             margin: $grid * 2 auto;
 
+            padding-top: 0;
+            margin-top: 0;
+
             img {
                 width: 100%;
                 opacity: 0;
@@ -546,199 +656,200 @@ $code-string: #1b8e40;
                 }
 
             }
+            
+        }
 
-            &.left,
-            &.right,
-            &.small {
-                max-width: 640px;
-            }
+        &.left,
+        &.right,
+        &.small {
+            max-width: 640px;
+        }
+        
+        &.full-bleed {
+            margin-left: -$grid * 4;
+            margin-right: -$grid * 4;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        @media (max-width: 600px) {
             
             &.full-bleed {
-                margin-left: -$grid * 4;
-                margin-right: -$grid * 4;
+                margin-left: -$grid * 2;
+                margin-right: -$grid * 2;
+            }
+            
+        }
+        
+        @media (min-width: 800px) {
+
+            &.left, &.right {
+                padding: $grid * 2;
+                margin: $grid * 2;
+                
+                width: calc(50% - (#{$grid} * 2));
+                max-width: 50%;
+            }
+
+            &.left {
+                float: left;
                 padding-left: 0;
+                margin-left: 0;
+                clear: left;
+            }
+            
+            &.right {
+                float: right;
                 padding-right: 0;
-            }
-            
-            @media (max-width: 600px) {
-                
-                &.full-bleed {
-                    margin-left: -$grid * 2;
-                    margin-right: -$grid * 2;
-                }
-                
-            }
-            
-            @media (min-width: 800px) {
-
-                &.left, &.right {
-                    padding: $grid * 2;
-                    margin: $grid * 2;
-                    
-                    width: calc(50% - (#{$grid} * 2));
-                    max-width: 50%;
-                }
-
-                &.left {
-                    float: left;
-                    padding-left: 0;
-                    margin-left: 0;
-                    clear: left;
-                }
-                
-                &.right {
-                    float: right;
-                    padding-right: 0;
-                    margin-right: 0;
-                    clear: right;
-                }
-                
-            }
-
-            figcaption {
-                font-size: 12px;
-                font-style: italic;
-
-                text-align: center;
-
-                .credit {
-                    display: block;
-                }
-                
-            }
-            
-            @media (min-width: 1440px) {
-
-                &.left, &.right {
-                    box-shadow: 0 $grid/4 $grid/1.2 rgba(black, 0.3);
-                    padding: $grid;
-                    margin: $grid * 2 $grid * 4;
-                }
-                
-                &.left {
-                    margin-left: -256px;
-                    max-width: 480px;
-                }
-                
-                &.right {
-                    margin-right: -256px;
-                }
-                
-            }
-            
-            @media (min-width: 1900px) {
-
-                &.left, &.right {
-                    max-width: 480px;
-                    padding: $grid;
-                    margin: $grid * 2 $grid * 4;
-                }
-                
-                &.left {
-                    margin-left: -384px;
-                }
-                
-                &.right {
-                    margin-right: -384px;
-                }
-                
-            }
-            
-            @media (min-width: 2400px) {
-
-                &.left {
-                    margin-left: -460px;
-                }
-                
-                &.right {
-                    margin-right: -460px;
-                }
-                
+                margin-right: 0;
+                clear: right;
             }
             
         }
 
-        figure.sequence {
+        figcaption {
+            font-size: 12px;
+            font-style: italic;
 
-            margin: $grid * 6 0;
+            text-align: center;
 
-            .images {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
+            .credit {
+                display: block;
+            }
+            
+        }
+        
+        @media (min-width: 1440px) {
 
-                img {
-                    flex: 1;
-                    display: inline-block;
-                    max-width: 128px !important;
+            &.left, &.right {
+                box-shadow: 0 $grid/4 $grid/1.2 rgba(black, 0.3);
+                padding: $grid;
+                margin: $grid * 2 $grid * 4;
+            }
+            
+            &.left {
+                margin-left: -256px;
+                max-width: 480px;
+            }
+            
+            &.right {
+                margin-right: -256px;
+            }
+            
+        }
+        
+        @media (min-width: 1900px) {
 
-                    @media (min-width: $breakpoint-mobile) {
-                        margin: 0 $grid * 2;
-                    }
+            &.left, &.right {
+                max-width: 480px;
+                padding: $grid;
+                margin: $grid * 2 $grid * 4;
+            }
+            
+            &.left {
+                margin-left: -384px;
+            }
+            
+            &.right {
+                margin-right: -384px;
+            }
+            
+        }
+        
+        @media (min-width: 2400px) {
 
+            &.left {
+                margin-left: -460px;
+            }
+            
+            &.right {
+                margin-right: -460px;
+            }
+            
+        }
+        
+    }
+
+    figure.sequence {
+
+        margin: $grid * 6 0;
+
+        .images {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            img {
+                flex: 1;
+                display: inline-block;
+                max-width: 128px !important;
+
+                @media (min-width: $breakpoint-mobile) {
+                    margin: 0 $grid * 2;
                 }
-                
-            }
-
-            figcaption {
-                font-size: 12px;
-                font-style: italic;
-
-                text-align: center;
 
             }
+            
+        }
 
-            > figcaption {
-                font-style: normal;
-                font-weight: bold;
-                font-size: 16px;
-            }
+        figcaption {
+            font-size: 12px;
+            font-style: italic;
+
+            text-align: center;
 
         }
 
-        table {
-            margin: $grid * 4 auto;
+        > figcaption {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-            box-sizing: content-box;
+    }
 
-            border-collapse: collapse;
+    table {
+        margin: $grid * 4 auto;
 
+        box-sizing: content-box;
+
+        border-collapse: collapse;
+
+        th, td {
+            border: none;
+            padding: $grid/2 $grid * 2;
+
+            vertical-align: top;
+        }
+
+        th {
+            border-bottom: $style-solid-border;
+            
+            font-weight: bold;
+
+            padding: $grid $grid * 2;
+
+            white-space: nowrap;
+        }
+
+        td:first-child, th:first-child {
+            border-left: none;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        @media (max-width: 800px) {
+            
             th, td {
-                border: none;
-                padding: $grid/2 $grid * 2;
-
-                vertical-align: top;
-            }
-
-            th {
-                border-bottom: $style-solid-border;
-                
-                font-weight: bold;
-
-                padding: $grid $grid * 2;
-
-                white-space: nowrap;
-            }
-
-            td:first-child, th:first-child {
-                border-left: none;
-            }
-
-            tr:last-child td {
-                border-bottom: none;
-            }
-
-            @media (max-width: 800px) {
-                
-                th, td {
-                    padding-left: $grid;
-                    padding-right: $grid;
-                }
-                
+                padding-left: $grid;
+                padding-right: $grid;
             }
             
         }
+        
 
         :first-child {
             margin-top: 0;

@@ -41,7 +41,13 @@ body {
 
   &.story {
     background-color: $color-story-background;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #111;
+    }
+    
   }
+  
 }
 
 @media print {
@@ -54,6 +60,10 @@ main {
   z-index: 20;
   color: $color-foreground-primary;
 
+  @media (prefers-color-scheme: dark) {
+      color: $color-dark-foreground-primary;
+  }
+  
   margin: 0 16px;
   flex: 1;
 
