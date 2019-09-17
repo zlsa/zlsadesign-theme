@@ -267,7 +267,7 @@ $code-string: #1b8e40;
 
         line-height: 140%;
 
-	@media (max-width: $breakpoint-mini) {
+        @media (max-width: $breakpoint-mini) {
             padding: $grid * 2 $grid * 2;
             margin: $grid * 2 (-$grid * 2) !important;
             width: calc(100% + #{$grid} * 2);
@@ -420,7 +420,7 @@ $code-string: #1b8e40;
             color: $color-note-title;
 
             .title {
-		display: inline-block;
+                display: inline-block;
                 padding: 0 $grid * 2;
                 
                 font-size: 100%;
@@ -429,11 +429,11 @@ $code-string: #1b8e40;
                 
                 border-bottom: 2px solid $color-note-border;
 
-		code {
-		    background-color: darken($color-note, 2%);
-		    padding: 0 8px;
-		    font-size: 1.0em;
-		}
+                code {
+                    background-color: darken($color-note, 2%);
+                    padding: 0 8px;
+                    font-size: 1.0em;
+                }
             }
 
         }
@@ -442,8 +442,8 @@ $code-string: #1b8e40;
             background-color: $color-note;
 
             border: 0 solid $color-note-border;
-	    //border-width: 1px 0;
-            border-radius: 3px;
+            //border-width: 1px 0;
+            //border-radius: 3px;
 
             padding: $grid * 2 $grid * 6;
 
@@ -452,13 +452,13 @@ $code-string: #1b8e40;
             color: $color-note-text;
         }
 
-	@media (max-width: $breakpoint-mini) {
+        @media (max-width: $breakpoint-mini) {
             margin: $grid * 2 (-$grid * 4);
 
-	    .note-content {
-		padding-left: $grid * 4;
-		padding-right: $grid * 4;
-	    }
+            .note-content {
+                padding-left: $grid * 4;
+                padding-right: $grid * 4;
+            }
         }
 
 /*

@@ -767,7 +767,6 @@ main.article article {
       main.article article .actions section.note .note-content, main.article article .content section.note .note-content, main.article article .attribution section.note .note-content, main.article article .patreon-link section.note .note-content, main.article article .license section.note .note-content {
         background-color: #e6f2ff;
         border: 0 solid #7db3e8;
-        border-radius: 3px;
         padding: 16px 48px;
         padding-top: 12px;
         color: #00264d; }
@@ -1748,7 +1747,6 @@ body[data-title=Infographics] main.article-list.condensed .article-list {
       .article-list article .summary section.note .note-content {
         background-color: #e6f2ff;
         border: 0 solid #7db3e8;
-        border-radius: 3px;
         padding: 16px 48px;
         padding-top: 12px;
         color: #00264d; }
