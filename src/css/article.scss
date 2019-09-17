@@ -533,7 +533,11 @@ article {
             
             @media (prefers-color-scheme: dark) {
                 background-color: #181818;
+                background: transparent;
                 border-top: none;
+
+                padding-left: $grid * 2;
+                margin-top: $grid * 8;
             }
         }
         

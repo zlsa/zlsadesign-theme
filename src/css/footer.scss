@@ -14,7 +14,11 @@ $footer-margin: $grid * 5;
   color: rgba(white, 0.7);
 
   body.story & {
-    color: rgba(black, 0.54);
+      color: rgba(black, 0.54);
+      
+      @media (prefers-color-scheme: dark) {
+          color: $color-dark-foreground-secondary;
+      }
   }
 
   font-size: 12px;
@@ -24,6 +28,10 @@ $footer-margin: $grid * 5;
 
     body.story & {
       border-color: rgba(black, 0.05);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        border-color: #444 !important;
     }
     
     @include limit-width;
