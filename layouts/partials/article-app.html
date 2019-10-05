@@ -10,9 +10,10 @@
     "dateModified": {{ time .Date }},
 
     "name": "{{ .Params.app.name }}",
+        
     {{ if .Params.app.android.play }}
     "installUrl": "https://play.google.com/store/apps/details?id={{ .Params.app.android.id }}"
-    {{ else }}
+    {{ else if .Params.app.android.url }}
     "installUrl": "{{ .Params.app.android.url }}"
     {{ end }}
     }
@@ -20,6 +21,8 @@
 
   <section class="body">
     
+    {{ if or (.Params.app.android.id .Params.app.ios.id) }}
+      
     <section class="actions app-info">
       
       {{ if .Params.app.android.play }}
@@ -31,7 +34,7 @@
       </a>-->
       
       {{ end }}
-
+      
       {{ if .Params.app.android.url }}
       <a href="{{ .Params.app.android.url }}" title="Go to the app website">Get the app</a>
       {{ end }}
@@ -41,6 +44,8 @@
       {{ end }}
 
     </section>
+
+    {{ end }}
     
     <section class="content">
       {{ .Content }}

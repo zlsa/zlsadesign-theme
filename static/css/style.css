@@ -2196,11 +2196,6 @@ article .meta {
     display: none;
   }
 }
-@media (prefers-color-scheme: dark) {
-  article .meta {
-    background-color: #282828;
-  }
-}
 body.story article .meta {
   background-color: transparent;
   border-top: 1px solid #f2f2f2;
@@ -2288,6 +2283,11 @@ article .meta ul li a span {
     padding: 0 16px;
   }
 }
+@media (prefers-color-scheme: dark) {
+  article .meta {
+    background-color: #282828;
+  }
+}
 article a[href]:hover {
   text-decoration: underline;
 }
@@ -2340,6 +2340,13 @@ article.art .body .actions a[href],
 article.art .links .name,
 article.art .body .read-more a[href] {
   color: #242424 !important;
+}
+@media (prefers-color-scheme: dark) {
+  article.art .body .actions a[href],
+article.art .links .name,
+article.art .body .read-more a[href] {
+    color: white !important;
+  }
 }
 
 article.art .content a[href] {

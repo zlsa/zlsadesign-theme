@@ -516,10 +516,6 @@ article {
 
         background-color: $color-meta-background;
 
-        @media (prefers-color-scheme: dark) {
-            background-color: $color-dark-meta-background;
-        }
-        
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -655,6 +651,10 @@ article {
             
         }
 
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-dark-meta-background;
+        }
+        
 /*
     @media (max-width: 400px) {
       align-items: stretch !important;
@@ -723,6 +723,10 @@ article.art .body .actions a[href],
 article.art .links .name,
 article.art .body .read-more a[href] {
     color: $color-page-background !important;
+            
+    @media (prefers-color-scheme: dark) {
+        color: white !important;
+    }
 }
 
 article.art .content a[href] {
@@ -807,3 +811,4 @@ body.story article .content .body a[href] {
     color: $color-link !important;
     text-decoration: underline;
 }
+
